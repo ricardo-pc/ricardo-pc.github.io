@@ -1,0 +1,10 @@
+---
+title: "Projects"
+listing:
+  contents: posts # We will create a folder called 'posts' for individual project details
+  sort: "date desc"
+  type: default
+  categories: true
+---
+
+Here are some personal projects exploring data science, engineering, and machine learning.

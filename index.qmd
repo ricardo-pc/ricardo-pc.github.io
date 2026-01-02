@@ -1,0 +1,30 @@
+---
+title: "Ricardo Pérez Castillo"
+image: profile.jpg # Add a photo to your folder
+about:
+  template: trestles # This creates a nice sidebar layout
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/ricardoperezcastillo/
+    - icon: github
+      text: Github
+      href: https://github.com/ricardo-pc
+    - icon: envelope
+      text: Email
+      href: mailto:ricardoperez@berkeley.edu
+---
+
+I am a Graduate Student in Statistics at **UC Berkeley** with a background in large-scale data engineering and consulting.
+
+Previously, I was a Senior Software Delivery Analyst at **McKinsey & Company** and a Consulting Analyst at **Deloitte**, where I built ETL pipelines handling hundreds of millions of rows and designed data warehouse architectures.
+
+My focus is on the intersection of **robust data engineering** and **statistical inference**. I enjoy building reproducible pipelines that enable advanced analytics.
+
+## Education
+
+**University of California, Berkeley** | Berkeley, CA
+M.A. in Statistics | Aug 2025 - Present
+
+**Tecnológico de Monterrey** | Monterrey, Mexico
+B.S. in Chemical Engineering | Jan 2015 - Dec 2019

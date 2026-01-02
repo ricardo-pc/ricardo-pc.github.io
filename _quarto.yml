@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Ricardo Pérez Castillo"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/ricardo-pc
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ricardoperezcastillo/
+
+format:
+  html:
+    theme: cosmo  # "cosmo" or "flatly" are clean and professional
+    toc: true
+    css: styles.css
