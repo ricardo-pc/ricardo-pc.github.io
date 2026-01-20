@@ -15,11 +15,16 @@ about:
       href: mailto:ricardoperez@berkeley.edu
 ---
 
-I am a Graduate Student in Statistics at **UC Berkeley** with a background in large-scale data engineering and consulting.
+I’m a Statistics M.A. student at UC Berkeley preparing for a career in data science, focused on turning complex data into actionable insights.
 
-Previously, I was a Senior Software Delivery Analyst at **McKinsey & Company** and a Consulting Analyst at **Deloitte**, where I built ETL pipelines handling hundreds of millions of rows, designed data warehouse architectures and extracted insights from data.
+I bring a strong data engineering background from McKinsey and Deloitte, where I built large-scale ETL pipelines and data warehouse architectures, and I now apply those skills to modeling, experimentation, and decision-focused analytics.
 
-My focus is on the intersection of **robust data engineering** and **data science**. I enjoy building reproducible pipelines that enable advanced analytics.
+Current interests:
+- Statistical modeling and causal inference
+- ML for real-world decision-making
+- Reproducible data pipelines for analytics at scale
+
+Explore my projects or download my CV.
 
 ## Education
 
