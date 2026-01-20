@@ -7,60 +7,50 @@ title: "Coursework"
 Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.
 
 ### In Progress (Current Term)
-- **STAT 214 — Data Analysis and Machine Learning for Real-World Decision Making**: applied ML and decision-focused modeling.
-- **STAT 230A — Linear Models**: regression, GLMs, diagnostics, and inference.
-- **STAT 254 — Modern Statistical Prediction and Machine Learning**: generalization, optimization, and modern ML methods.
-- **COMPSCI 289A — Introduction to Machine Learning**: core ML theory and algorithms.
-- **STAT 238 — Bayesian Statistics**: hierarchical models, priors, and MCMC.
+- STAT 214 — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.
+- STAT 230A — Linear Models: regression, GLMs, diagnostics, and inference.
+- STAT 254 — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.
+- COMPSCI 289A — Introduction to Machine Learning: core ML theory and algorithms.
+- STAT 238 — Bayesian Statistics: hierarchical models, priors, and MCMC.
 
 ### Completed
-- **STAT 201A — Advanced Probability**
-- **STAT 201B — Advanced Statistics**
-- **STAT 243 — Statistical Computing**: projects and programming-focused assignments.
+- STAT 201A — Advanced Probability
+- STAT 201B — Advanced Statistics
+- STAT 243 — Statistical Computing: projects and programming-focused assignments.
 
 ### Selected Work
-::: {.row .g-3}
-::: {.col-12 .col-md-6 .col-lg-4}
-<a class="coursework-card" href="selected-work/stat243.html">
-  <div class="card h-100 shadow-sm">
-    <div class="card-body">
-      <h3 class="card-title h5">STAT 243</h3>
-      <p class="card-text">Projects and programming-focused assignments.</p>
+<div class="row g-3">
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title h5">STAT 243</h3>
+        <p class="card-text">Projects and programming-focused assignments.</p>
+        <a class="stretched-link" href="selected-work/stat243.html" aria-label="STAT 243"></a>
+      </div>
     </div>
   </div>
-</a>
-:::
-::: {.col-12 .col-md-6 .col-lg-4}
-<a class="coursework-card" href="selected-work/stat201.html">
-  <div class="card h-100 shadow-sm">
-    <div class="card-body">
-      <h3 class="card-title h5">STAT 201A/201B</h3>
-      <p class="card-text">Selected probability and statistics writeups.</p>
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title h5">STAT 201A/201B</h3>
+        <p class="card-text">Selected probability and statistics writeups.</p>
+        <a class="stretched-link" href="selected-work/stat201.html" aria-label="STAT 201A/201B"></a>
+      </div>
     </div>
   </div>
-</a>
-:::
-::: {.col-12 .col-md-6 .col-lg-4}
-<a class="coursework-card" href="selected-work/ml-current.html">
-  <div class="card h-100 shadow-sm">
-    <div class="card-body">
-      <h3 class="card-title h5">Current ML Courses</h3>
-      <p class="card-text">Project notebooks and reports in progress.</p>
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title h5">Current ML Courses</h3>
+        <p class="card-text">Project notebooks and reports in progress.</p>
+        <a class="stretched-link" href="selected-work/ml-current.html" aria-label="Current ML Courses"></a>
+      </div>
     </div>
   </div>
-</a>
-:::
-:::
+</div>
 
 <style>
-.coursework-card {
-  color: inherit;
-  text-decoration: none;
-}
-.coursework-card .card {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.coursework-card .card:hover {
+.card:hover {
   transform: translateY(-2px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
