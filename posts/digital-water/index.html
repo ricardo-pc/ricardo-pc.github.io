@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ricardo Pérez Castillo">
+<meta name="dcterms.date" content="2020-08-01">
+<meta name="description" content="Machine Learning prototype to forecast city-level water demand and safe water levels.">
 
-<title>index – Ricardo Pérez Castillo</title>
+<title>Digital Water Forecast – Ricardo Pérez Castillo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,17 +130,95 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem">The Problem</a></li>
+  <li><a href="#the-solution" id="toc-the-solution" class="nav-link" data-scroll-target="#the-solution">The Solution</a>
+  <ul class="collapse">
+  <li><a href="#key-technologies" id="toc-key-technologies" class="nav-link" data-scroll-target="#key-technologies">Key Technologies</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Digital Water Forecast</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Time Series</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Machine Learning prototype to forecast city-level water demand and safe water levels.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ricardo Pérez Castillo </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 1, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
 
 
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>Atos IT Challenge 2020 - 2nd Place Winner</strong></p>
+<p>For the Atos IT Challenge, our team developed a machine learning prototype designed to help city utility managers forecast water demand and prevent shortages. The system analyzed network data to estimate “days-to-threshold” for safe water levels.</p>
+</section>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>City water networks struggle with efficiency. Leaks and unpredicted demand spikes can lead to critical shortages. Our goal was to move from reactive maintenance to proactive forecasting.</p>
+</section>
+<section id="the-solution" class="level2">
+<h2 class="anchored" data-anchor-id="the-solution">The Solution</h2>
+<p>We built an end-to-end Python pipeline that: 1. Ingested historical consumption data. 2. Cleaned and aggregated time-series data. 3. Trained a forecasting model (using libraries like Scikit-Learn/Statsmodels). 4. Visualized the “Days to Critical Threshold” on a dashboard.</p>
+<section id="key-technologies" class="level3">
+<h3 class="anchored" data-anchor-id="key-technologies">Key Technologies</h3>
+<ul>
+<li><strong>Python:</strong> Core logic and data processing.</li>
+<li><strong>Pandas/NumPy:</strong> Time-series manipulation.</li>
+<li><strong>Scikit-Learn:</strong> Model training.</li>
+</ul>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<ul>
+<li>Placed <strong>2nd among hundreds of international teams</strong>.</li>
+<li>Presented the solution directly to the CEO of Atos and the Scientific Board.</li>
+</ul>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -212,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ricardo-pc\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
