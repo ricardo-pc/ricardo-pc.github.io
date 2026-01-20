@@ -1,24 +1,31 @@
 [
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
+    "objectID": "coursework.html",
+    "href": "coursework.html",
+    "title": "Coursework",
     "section": "",
-    "text": "Download the PDF: Curriculum_RicardoPerezCastillo.pdf"
+    "text": "NoteSTAT 201A — Advanced Probability\n\n\n\n\n\n\nSelected homework writeups: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\nNoteSTAT 201B — Advanced Statistics\n\n\n\n\n\n\nSelected homework writeups: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\nNoteSTAT 243 — Statistical Computing\n\n\n\n\n\n\nProjects/homeworks: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteMachine Learning (3 courses, current term)\n\n\n\n\n\n\nProjects/homeworks: add links or brief descriptions\n\n\n\n\nIf you’d like, I can add summaries and link directly to PDFs, notebooks, or GitHub repos."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ricardo Pérez Castillo",
+    "objectID": "coursework.html#uc-berkeley-m.a.-in-statistics",
+    "href": "coursework.html#uc-berkeley-m.a.-in-statistics",
+    "title": "Coursework",
     "section": "",
-    "text": "I’m a Statistics M.A. student at UC Berkeley preparing for a career in data science, focused on turning complex data into actionable insights.\nI bring a strong data engineering background from McKinsey and Deloitte, where I built large-scale ETL pipelines and data warehouse architectures, and I now apply those skills to modeling, experimentation, and decision-focused analytics.\nCurrent interests:\nExplore my projects or download my CV."
+    "text": "NoteSTAT 201A — Advanced Probability\n\n\n\n\n\n\nSelected homework writeups: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\nNoteSTAT 201B — Advanced Statistics\n\n\n\n\n\n\nSelected homework writeups: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\nNoteSTAT 243 — Statistical Computing\n\n\n\n\n\n\nProjects/homeworks: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteMachine Learning (3 courses, current term)\n\n\n\n\n\n\nProjects/homeworks: add links or brief descriptions\n\n\n\n\nIf you’d like, I can add summaries and link directly to PDFs, notebooks, or GitHub repos."
   },
   {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Ricardo Pérez Castillo",
-    "section": "Education",
-    "text": "Education\nUniversity of California, Berkeley | Berkeley, CA\nM.A. in Statistics | Aug 2025 - Present\nTecnológico de Monterrey | Monterrey, Mexico\nB.S. in Chemical Engineering | Jan 2015 - Dec 2019"
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Personal Website"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine learning prototype to forecast city water demand and available capacity.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/digital-water/index.html",
@@ -77,17 +84,24 @@
     "text": "Note\nThis solution was built between Nov 2019 and Jul 2020. The notebooks are kept as-is; today I would redesign the data engineering and modeling approach."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ricardo Pérez Castillo",
     "section": "",
-    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine learning prototype to forecast city water demand and available capacity.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
+    "text": "I’m a Statistics M.A. student at UC Berkeley preparing for a career in data science, focused on turning complex data into actionable insights.\nI bring a strong data analytics, data engineering, and consulting background from McKinsey and Deloitte. There, I built large-scale ETL pipelines, data warehouse architectures, and extracted insights from large datasets, and I now apply those skills to modeling, experimentation, and decision-focused analytics.\nCurrent interests:\nExplore my projects or download my CV."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Ricardo Pérez Castillo",
+    "section": "Education",
+    "text": "Education\nUniversity of California, Berkeley | Berkeley, CA\nM.A. in Statistics | Aug 2025 - Present\nTecnológico de Monterrey | Monterrey, Mexico\nB.S. in Chemical Engineering | Jan 2015 - Dec 2019"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
     "section": "",
-    "text": "Personal Website"
+    "text": "Download the PDF: Curriculum_RicardoPerezCastillo.pdf"
   }
 ]
