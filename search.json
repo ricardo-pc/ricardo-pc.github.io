@@ -1,17 +1,24 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
     "section": "",
-    "text": "Personal Website"
+    "text": "Download the PDF: Curriculum_RicardoPerezCastillo.pdf"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ricardo Pérez Castillo",
     "section": "",
-    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine Learning prototype to forecast city-level water demand and safe water levels.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
+    "text": "I am a Graduate Student in Statistics at UC Berkeley with a background in large-scale data engineering and consulting.\nPreviously, I was a Senior Software Delivery Analyst at McKinsey & Company and a Consulting Analyst at Deloitte, where I built ETL pipelines handling hundreds of millions of rows, designed data warehouse architectures and extracted insights from data.\nMy focus is on the intersection of robust data engineering and data science. I enjoy building reproducible pipelines that enable advanced analytics."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Ricardo Pérez Castillo",
+    "section": "Education",
+    "text": "Education\nUniversity of California, Berkeley | Berkeley, CA M.A. in Statistics | Aug 2025 - Present\nTecnológico de Monterrey | Monterrey, Mexico B.S. in Chemical Engineering | Jan 2015 - Dec 2019"
   },
   {
     "objectID": "posts/digital-water/index.html",
@@ -49,17 +56,17 @@
     "text": "Results\n\nPlaced 2nd among hundreds of international teams.\nPresented the solution directly to the CEO of Atos and the Scientific Board."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ricardo Pérez Castillo",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "I am a Graduate Student in Statistics at UC Berkeley with a background in large-scale data engineering and consulting.\nPreviously, I was a Senior Software Delivery Analyst at McKinsey & Company and a Consulting Analyst at Deloitte, where I built ETL pipelines handling hundreds of millions of rows, designed data warehouse architectures and extracted insights from data.\nMy focus is on the intersection of robust data engineering and data science. I enjoy building reproducible pipelines that enable advanced analytics."
+    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine Learning prototype to forecast city-level water demand and safe water levels.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Ricardo Pérez Castillo",
-    "section": "Education",
-    "text": "Education\nUniversity of California, Berkeley | Berkeley, CA M.A. in Statistics | Aug 2025 - Present\nTecnológico de Monterrey | Monterrey, Mexico B.S. in Chemical Engineering | Jan 2015 - Dec 2019"
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Personal Website"
   }
 ]

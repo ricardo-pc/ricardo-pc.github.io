@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ricardo-pc.github.io/about.html</loc>
-    <lastmod>2026-01-07T02:35:45.565Z</lastmod>
+    <loc>https://ricardo-pc.github.io/cv.html</loc>
+    <lastmod>2026-01-20T06:28:13.260Z</lastmod>
   </url>
   <url>
-    <loc>https://ricardo-pc.github.io/projects.html</loc>
-    <lastmod>2026-01-07T02:36:14.732Z</lastmod>
+    <loc>https://ricardo-pc.github.io/index.html</loc>
+    <lastmod>2026-01-07T02:33:36.168Z</lastmod>
   </url>
   <url>
     <loc>https://ricardo-pc.github.io/posts/digital-water/index.html</loc>
     <lastmod>2026-01-07T02:37:27.212Z</lastmod>
   </url>
   <url>
-    <loc>https://ricardo-pc.github.io/index.html</loc>
-    <lastmod>2026-01-07T02:33:36.168Z</lastmod>
+    <loc>https://ricardo-pc.github.io/projects.html</loc>
+    <lastmod>2026-01-07T02:36:14.732Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ricardo-pc.github.io/about.html</loc>
+    <lastmod>2026-01-07T02:35:45.565Z</lastmod>
   </url>
 </urlset>
