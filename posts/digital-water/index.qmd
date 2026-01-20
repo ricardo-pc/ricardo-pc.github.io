@@ -1,0 +1,32 @@
+---
+title: "Digital Water Forecast"
+description: "Machine Learning prototype to forecast city-level water demand and safe water levels."
+author: "Ricardo Pérez Castillo"
+date: "2020-08-01"
+categories: [Machine Learning, Python, Time Series]
+image: "water-plot.png" # You can add an image file to this folder later
+---
+
+## Overview
+**Atos IT Challenge 2020 - 2nd Place Winner**
+
+For the Atos IT Challenge, our team developed a machine learning prototype designed to help city utility managers forecast water demand and prevent shortages. The system analyzed network data to estimate "days-to-threshold" for safe water levels.
+
+## The Problem
+City water networks struggle with efficiency. Leaks and unpredicted demand spikes can lead to critical shortages. Our goal was to move from reactive maintenance to proactive forecasting.
+
+## The Solution
+We built an end-to-end Python pipeline that:
+1.  Ingested historical consumption data.
+2.  Cleaned and aggregated time-series data.
+3.  Trained a forecasting model (using libraries like Scikit-Learn/Statsmodels).
+4.  Visualized the "Days to Critical Threshold" on a dashboard.
+
+### Key Technologies
+*   **Python:** Core logic and data processing.
+*   **Pandas/NumPy:** Time-series manipulation.
+*   **Scikit-Learn:** Model training.
+
+## Results
+*   Placed **2nd among hundreds of international teams**.
+*   Presented the solution directly to the CEO of Atos and the Scientific Board.

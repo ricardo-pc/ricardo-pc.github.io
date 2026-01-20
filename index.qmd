@@ -1,6 +1,6 @@
 ---
 title: "Ricardo Pérez Castillo"
-image: profile.jpg # Add a photo to your folder
+image: RJ1_5539.jpg 
 about:
   template: trestles # This creates a nice sidebar layout
   links:
@@ -17,9 +17,9 @@ about:
 
 I am a Graduate Student in Statistics at **UC Berkeley** with a background in large-scale data engineering and consulting.
 
-Previously, I was a Senior Software Delivery Analyst at **McKinsey & Company** and a Consulting Analyst at **Deloitte**, where I built ETL pipelines handling hundreds of millions of rows and designed data warehouse architectures.
+Previously, I was a Senior Software Delivery Analyst at **McKinsey & Company** and a Consulting Analyst at **Deloitte**, where I built ETL pipelines handling hundreds of millions of rows, designed data warehouse architectures and extracted insights from data.
 
-My focus is on the intersection of **robust data engineering** and **statistical inference**. I enjoy building reproducible pipelines that enable advanced analytics.
+My focus is on the intersection of **robust data engineering** and **data science**. I enjoy building reproducible pipelines that enable advanced analytics.
 
 ## Education
 
