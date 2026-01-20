@@ -4,14 +4,14 @@
     "href": "coursework.html",
     "title": "Coursework",
     "section": "",
-    "text": "NoteSTAT 201A — Advanced Probability\n\n\n\n\n\n\nSelected homework writeups: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\nNoteSTAT 201B — Advanced Statistics\n\n\n\n\n\n\nSelected homework writeups: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\nNoteSTAT 243 — Statistical Computing\n\n\n\n\n\n\nProjects/homeworks: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteMachine Learning (3 courses, current term)\n\n\n\n\n\n\nProjects/homeworks: add links or brief descriptions\n\n\n\n\nIf you’d like, I can add summaries and link directly to PDFs, notebooks, or GitHub repos."
+    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\nSTAT 214 — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.\nSTAT 230A — Linear Models: regression, GLMs, diagnostics, and inference.\nSTAT 254 — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.\nCOMPSCI 289A — Introduction to Machine Learning: core ML theory and algorithms.\nSTAT 238 — Bayesian Statistics: hierarchical models, priors, and MCMC.\n\n\n\n\n\nSTAT 201A — Advanced Probability\nSTAT 201B — Advanced Statistics\nSTAT 243 — Statistical Computing: projects and programming-focused assignments.\n\n\n\n\n\n\n\n\n&lt;div class=\"card-body\"&gt;\n  &lt;h3 class=\"card-title h5\"&gt;STAT 243&lt;/h3&gt;\n  &lt;p class=\"card-text\"&gt;Projects and programming-focused assignments.&lt;/p&gt;\n&lt;/div&gt;\n\n\n\n\n\n\n&lt;div class=\"card-body\"&gt;\n  &lt;h3 class=\"card-title h5\"&gt;STAT 201A/201B&lt;/h3&gt;\n  &lt;p class=\"card-text\"&gt;Selected probability and statistics writeups.&lt;/p&gt;\n&lt;/div&gt;\n\n\n\n\n\n\n&lt;div class=\"card-body\"&gt;\n  &lt;h3 class=\"card-title h5\"&gt;Current ML Courses&lt;/h3&gt;\n  &lt;p class=\"card-text\"&gt;Project notebooks and reports in progress.&lt;/p&gt;\n&lt;/div&gt;"
   },
   {
     "objectID": "coursework.html#uc-berkeley-m.a.-in-statistics",
     "href": "coursework.html#uc-berkeley-m.a.-in-statistics",
     "title": "Coursework",
     "section": "",
-    "text": "NoteSTAT 201A — Advanced Probability\n\n\n\n\n\n\nSelected homework writeups: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\nNoteSTAT 201B — Advanced Statistics\n\n\n\n\n\n\nSelected homework writeups: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\nNoteSTAT 243 — Statistical Computing\n\n\n\n\n\n\nProjects/homeworks: add links or brief descriptions\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteMachine Learning (3 courses, current term)\n\n\n\n\n\n\nProjects/homeworks: add links or brief descriptions\n\n\n\n\nIf you’d like, I can add summaries and link directly to PDFs, notebooks, or GitHub repos."
+    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\nSTAT 214 — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.\nSTAT 230A — Linear Models: regression, GLMs, diagnostics, and inference.\nSTAT 254 — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.\nCOMPSCI 289A — Introduction to Machine Learning: core ML theory and algorithms.\nSTAT 238 — Bayesian Statistics: hierarchical models, priors, and MCMC.\n\n\n\n\n\nSTAT 201A — Advanced Probability\nSTAT 201B — Advanced Statistics\nSTAT 243 — Statistical Computing: projects and programming-focused assignments.\n\n\n\n\n\n\n\n\n&lt;div class=\"card-body\"&gt;\n  &lt;h3 class=\"card-title h5\"&gt;STAT 243&lt;/h3&gt;\n  &lt;p class=\"card-text\"&gt;Projects and programming-focused assignments.&lt;/p&gt;\n&lt;/div&gt;\n\n\n\n\n\n\n&lt;div class=\"card-body\"&gt;\n  &lt;h3 class=\"card-title h5\"&gt;STAT 201A/201B&lt;/h3&gt;\n  &lt;p class=\"card-text\"&gt;Selected probability and statistics writeups.&lt;/p&gt;\n&lt;/div&gt;\n\n\n\n\n\n\n&lt;div class=\"card-body\"&gt;\n  &lt;h3 class=\"card-title h5\"&gt;Current ML Courses&lt;/h3&gt;\n  &lt;p class=\"card-text\"&gt;Project notebooks and reports in progress.&lt;/p&gt;\n&lt;/div&gt;"
   },
   {
     "objectID": "about.html",
@@ -26,6 +26,27 @@
     "title": "Projects",
     "section": "",
     "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine learning prototype to forecast city water demand and available capacity.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "selected-work/stat243.html",
+    "href": "selected-work/stat243.html",
+    "title": "STAT 243 — Statistical Computing",
+    "section": "",
+    "text": "Use this page to showcase projects and assignments from STAT 243."
+  },
+  {
+    "objectID": "selected-work/stat243.html#highlights",
+    "href": "selected-work/stat243.html#highlights",
+    "title": "STAT 243 — Statistical Computing",
+    "section": "Highlights",
+    "text": "Highlights\n\nAdd a brief summary of the most relevant project or assignment"
+  },
+  {
+    "objectID": "selected-work/stat243.html#artifacts",
+    "href": "selected-work/stat243.html#artifacts",
+    "title": "STAT 243 — Statistical Computing",
+    "section": "Artifacts",
+    "text": "Artifacts\n\nLink to notebooks, PDFs, or GitHub repos"
   },
   {
     "objectID": "posts/digital-water/index.html",
@@ -82,6 +103,48 @@
     "title": "Digital Water Forecast",
     "section": "Note",
     "text": "Note\nThis solution was built between Nov 2019 and Jul 2020. The notebooks are kept as-is; today I would redesign the data engineering and modeling approach."
+  },
+  {
+    "objectID": "selected-work/ml-current.html",
+    "href": "selected-work/ml-current.html",
+    "title": "Current ML Courses — Projects",
+    "section": "",
+    "text": "Use this page to collect projects or reports from your current ML courses."
+  },
+  {
+    "objectID": "selected-work/ml-current.html#highlights",
+    "href": "selected-work/ml-current.html#highlights",
+    "title": "Current ML Courses — Projects",
+    "section": "Highlights",
+    "text": "Highlights\n\nAdd a brief description of the strongest project"
+  },
+  {
+    "objectID": "selected-work/ml-current.html#artifacts",
+    "href": "selected-work/ml-current.html#artifacts",
+    "title": "Current ML Courses — Projects",
+    "section": "Artifacts",
+    "text": "Artifacts\n\nLink to notebooks, PDFs, or GitHub repos"
+  },
+  {
+    "objectID": "selected-work/stat201.html",
+    "href": "selected-work/stat201.html",
+    "title": "STAT 201A/201B — Advanced Probability and Statistics",
+    "section": "",
+    "text": "Use this page to showcase selected writeups or problem sets."
+  },
+  {
+    "objectID": "selected-work/stat201.html#highlights",
+    "href": "selected-work/stat201.html#highlights",
+    "title": "STAT 201A/201B — Advanced Probability and Statistics",
+    "section": "Highlights",
+    "text": "Highlights\n\nAdd a short overview of the work you want to emphasize"
+  },
+  {
+    "objectID": "selected-work/stat201.html#artifacts",
+    "href": "selected-work/stat201.html#artifacts",
+    "title": "STAT 201A/201B — Advanced Probability and Statistics",
+    "section": "Artifacts",
+    "text": "Artifacts\n\nLink to PDFs or repositories"
   },
   {
     "objectID": "index.html",
