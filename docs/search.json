@@ -11,56 +11,77 @@
     "href": "index.html",
     "title": "Ricardo Pérez Castillo",
     "section": "",
-    "text": "I’m a Statistics M.A. student at UC Berkeley preparing for a career in data science, focused on turning complex data into actionable insights.\nI bring a strong data engineering background from McKinsey and Deloitte, where I built large-scale ETL pipelines and data warehouse architectures, and I now apply those skills to modeling, experimentation, and decision-focused analytics.\nCurrent interests: - Statistical modeling and causal inference - ML for real-world decision-making - Reproducible data pipelines for analytics at scale\nExplore my projects or download my CV."
+    "text": "I’m a Statistics M.A. student at UC Berkeley preparing for a career in data science, focused on turning complex data into actionable insights.\nI bring a strong data engineering background from McKinsey and Deloitte, where I built large-scale ETL pipelines and data warehouse architectures, and I now apply those skills to modeling, experimentation, and decision-focused analytics.\nCurrent interests:\nExplore my projects or download my CV."
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Ricardo Pérez Castillo",
     "section": "Education",
-    "text": "Education\nUniversity of California, Berkeley | Berkeley, CA M.A. in Statistics | Aug 2025 - Present\nTecnológico de Monterrey | Monterrey, Mexico B.S. in Chemical Engineering | Jan 2015 - Dec 2019"
+    "text": "Education\nUniversity of California, Berkeley | Berkeley, CA\nM.A. in Statistics | Aug 2025 - Present\nTecnológico de Monterrey | Monterrey, Mexico\nB.S. in Chemical Engineering | Jan 2015 - Dec 2019"
   },
   {
     "objectID": "posts/digital-water/index.html",
     "href": "posts/digital-water/index.html",
     "title": "Digital Water Forecast",
     "section": "",
-    "text": "Atos IT Challenge 2020 - 2nd Place Winner\nFor the Atos IT Challenge, our team developed a machine learning prototype designed to help city utility managers forecast water demand and prevent shortages. The system analyzed network data to estimate “days-to-threshold” for safe water levels."
+    "text": "Atos IT Challenge 2020 — 2nd Place (First Mexican team in the competition’s history)\nDigital Water is a cooperative-AI prototype built to help city utilities forecast water demand and available capacity. Using official data from Agua y Drenaje de Monterrey (SADM), we modeled daily demand and dam capacity to surface early warning signals for shortages."
   },
   {
     "objectID": "posts/digital-water/index.html#overview",
     "href": "posts/digital-water/index.html#overview",
     "title": "Digital Water Forecast",
     "section": "",
-    "text": "Atos IT Challenge 2020 - 2nd Place Winner\nFor the Atos IT Challenge, our team developed a machine learning prototype designed to help city utility managers forecast water demand and prevent shortages. The system analyzed network data to estimate “days-to-threshold” for safe water levels."
+    "text": "Atos IT Challenge 2020 — 2nd Place (First Mexican team in the competition’s history)\nDigital Water is a cooperative-AI prototype built to help city utilities forecast water demand and available capacity. Using official data from Agua y Drenaje de Monterrey (SADM), we modeled daily demand and dam capacity to surface early warning signals for shortages."
   },
   {
-    "objectID": "posts/digital-water/index.html#the-problem",
-    "href": "posts/digital-water/index.html#the-problem",
+    "objectID": "posts/digital-water/index.html#context",
+    "href": "posts/digital-water/index.html#context",
     "title": "Digital Water Forecast",
-    "section": "The Problem",
-    "text": "The Problem\nCity water networks struggle with efficiency. Leaks and unpredicted demand spikes can lead to critical shortages. Our goal was to move from reactive maintenance to proactive forecasting."
+    "section": "Context",
+    "text": "Context\nThis project focused on Monterrey, Mexico, my hometown. At the time, we did not realize the city was on the verge of a major water crisis that unfolded two years later. The work highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning."
   },
   {
-    "objectID": "posts/digital-water/index.html#the-solution",
-    "href": "posts/digital-water/index.html#the-solution",
+    "objectID": "posts/digital-water/index.html#approach",
+    "href": "posts/digital-water/index.html#approach",
     "title": "Digital Water Forecast",
-    "section": "The Solution",
-    "text": "The Solution\nWe built an end-to-end Python pipeline that: 1. Ingested historical consumption data. 2. Cleaned and aggregated time-series data. 3. Trained a forecasting model (using libraries like Scikit-Learn/Statsmodels). 4. Visualized the “Days to Critical Threshold” on a dashboard.\n\nKey Technologies\n\nPython: Core logic and data processing.\nPandas/NumPy: Time-series manipulation.\nScikit-Learn: Model training."
+    "section": "Approach",
+    "text": "Approach\nWe built an end-to-end Python workflow that: 1. Cleaned and aligned multi-source time-series data (consumption + dam capacity). 2. Trained two LSTM models to forecast daily demand and daily capacity. 3. Produced outputs that estimated “days-to-threshold” for safe levels. 4. Presented results via a web dashboard (hosted on Heroku at the time)."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#features",
+    "href": "posts/digital-water/index.html#features",
+    "title": "Digital Water Forecast",
+    "section": "Features",
+    "text": "Features\n\nGoogle Colab notebooks for both LSTM models\nCurated datasets with field dictionary\nResearch summaries on Monterrey’s water network\nTechnical report and presentation materials\nShort demo video of the platform"
   },
   {
     "objectID": "posts/digital-water/index.html#results",
     "href": "posts/digital-water/index.html#results",
     "title": "Digital Water Forecast",
     "section": "Results",
-    "text": "Results\n\nPlaced 2nd among hundreds of international teams.\nPresented the solution directly to the CEO of Atos and the Scientific Board."
+    "text": "Results\n\n2nd place among thousands of international teams at Atos IT Challenge 2020.\nPresented to the Atos CEO and Scientific Board."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#links",
+    "href": "posts/digital-water/index.html#links",
+    "title": "Digital Water Forecast",
+    "section": "Links",
+    "text": "Links\n\nProject repository: https://github.com/ricardo-pc/DigitalWater\nDemo video: https://youtu.be/AiQcQ7dyW38"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#note",
+    "href": "posts/digital-water/index.html#note",
+    "title": "Digital Water Forecast",
+    "section": "Note",
+    "text": "Note\nThis solution was built between Nov 2019 and Jul 2020. The notebooks are kept as-is; today I would redesign the data engineering and modeling approach."
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine Learning prototype to forecast city-level water demand and safe water levels.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
+    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine learning prototype to forecast city water demand and available capacity.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

@@ -20,6 +20,7 @@ I’m a Statistics M.A. student at UC Berkeley preparing for a career in data sc
 I bring a strong data engineering background from McKinsey and Deloitte, where I built large-scale ETL pipelines and data warehouse architectures, and I now apply those skills to modeling, experimentation, and decision-focused analytics.
 
 Current interests:
+
 - Statistical modeling and causal inference
 - ML for real-world decision-making
 - Reproducible data pipelines for analytics at scale
@@ -29,7 +30,9 @@ Explore my projects or download my CV.
 ## Education
 
 **University of California, Berkeley** | Berkeley, CA
+
 M.A. in Statistics | Aug 2025 - Present
 
 **Tecnológico de Monterrey** | Monterrey, Mexico
+
 B.S. in Chemical Engineering | Jan 2015 - Dec 2019

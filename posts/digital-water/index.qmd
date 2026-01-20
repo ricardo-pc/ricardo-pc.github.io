@@ -1,6 +1,6 @@
 ---
 title: "Digital Water Forecast"
-description: "Machine Learning prototype to forecast city-level water demand and safe water levels."
+description: "Machine learning prototype to forecast city water demand and available capacity."
 author: "Ricardo Pérez Castillo"
 date: "2020-08-01"
 categories: [Machine Learning, Python, Time Series]
@@ -8,25 +8,34 @@ image: "water-plot.png" # You can add an image file to this folder later
 ---
 
 ## Overview
-**Atos IT Challenge 2020 - 2nd Place Winner**
+**Atos IT Challenge 2020 — 2nd Place (First Mexican team in the competition's history)**
 
-For the Atos IT Challenge, our team developed a machine learning prototype designed to help city utility managers forecast water demand and prevent shortages. The system analyzed network data to estimate "days-to-threshold" for safe water levels.
+Digital Water is a cooperative-AI prototype built to help city utilities forecast water demand and available capacity. Using official data from Agua y Drenaje de Monterrey (SADM), we modeled daily demand and dam capacity to surface early warning signals for shortages.
 
-## The Problem
-City water networks struggle with efficiency. Leaks and unpredicted demand spikes can lead to critical shortages. Our goal was to move from reactive maintenance to proactive forecasting.
+## Context
+This project focused on Monterrey, Mexico, my hometown. At the time, we did not realize the city was on the verge of a major water crisis that unfolded two years later. The work highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning.
 
-## The Solution
-We built an end-to-end Python pipeline that:
-1.  Ingested historical consumption data.
-2.  Cleaned and aggregated time-series data.
-3.  Trained a forecasting model (using libraries like Scikit-Learn/Statsmodels).
-4.  Visualized the "Days to Critical Threshold" on a dashboard.
+## Approach
+We built an end-to-end Python workflow that:
+1. Cleaned and aligned multi-source time-series data (consumption + dam capacity).
+2. Trained two LSTM models to forecast daily demand and daily capacity.
+3. Produced outputs that estimated "days-to-threshold" for safe levels.
+4. Presented results via a web dashboard (hosted on Heroku at the time).
 
-### Key Technologies
-*   **Python:** Core logic and data processing.
-*   **Pandas/NumPy:** Time-series manipulation.
-*   **Scikit-Learn:** Model training.
+## Features
+- Google Colab notebooks for both LSTM models
+- Curated datasets with field dictionary
+- Research summaries on Monterrey's water network
+- Technical report and presentation materials
+- Short demo video of the platform
 
 ## Results
-*   Placed **2nd among hundreds of international teams**.
-*   Presented the solution directly to the CEO of Atos and the Scientific Board.
+- **2nd place among thousands of international teams** at Atos IT Challenge 2020.
+- Presented to the Atos CEO and Scientific Board.
+
+## Links
+- Project repository: https://github.com/ricardo-pc/DigitalWater
+- Demo video: https://youtu.be/AiQcQ7dyW38
+
+## Note
+This solution was built between Nov 2019 and Jul 2020. The notebooks are kept as-is; today I would redesign the data engineering and modeling approach.
