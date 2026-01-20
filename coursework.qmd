@@ -19,35 +19,40 @@ Coursework highlights the tools and theory I use for data science, with an empha
 - STAT 243 — Statistical Computing: projects and programming-focused assignments.
 
 ### Selected Work
-<div class="row g-3">
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="card h-100 shadow-sm">
-      <div class="card-body">
-        <h3 class="card-title h5">STAT 243</h3>
-        <p class="card-text">Projects and programming-focused assignments.</p>
-        <a class="stretched-link" href="selected-work/stat243.html" aria-label="STAT 243"></a>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="card h-100 shadow-sm">
-      <div class="card-body">
-        <h3 class="card-title h5">STAT 201A/201B</h3>
-        <p class="card-text">Selected probability and statistics writeups.</p>
-        <a class="stretched-link" href="selected-work/stat201.html" aria-label="STAT 201A/201B"></a>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="card h-100 shadow-sm">
-      <div class="card-body">
-        <h3 class="card-title h5">Current ML Courses</h3>
-        <p class="card-text">Project notebooks and reports in progress.</p>
-        <a class="stretched-link" href="selected-work/ml-current.html" aria-label="Current ML Courses"></a>
-      </div>
-    </div>
-  </div>
-</div>
+::: {.row .g-3}
+::: {.col-12 .col-md-6 .col-lg-4}
+::: {.card .h-100 .shadow-sm}
+::: {.card-body}
+### STAT 243
+Projects and programming-focused assignments.
+
+[](selected-work/stat243.html){.stretched-link aria-label="STAT 243"}
+:::
+:::
+:::
+
+::: {.col-12 .col-md-6 .col-lg-4}
+::: {.card .h-100 .shadow-sm}
+::: {.card-body}
+### STAT 201A/201B
+Selected probability and statistics writeups.
+
+[](selected-work/stat201.html){.stretched-link aria-label="STAT 201A/201B"}
+:::
+:::
+:::
+
+::: {.col-12 .col-md-6 .col-lg-4}
+::: {.card .h-100 .shadow-sm}
+::: {.card-body}
+### Current ML Courses
+Project notebooks and reports in progress.
+
+[](selected-work/ml-current.html){.stretched-link aria-label="Current ML Courses"}
+:::
+:::
+:::
+:::
 
 <style>
 .card:hover {
