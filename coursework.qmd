@@ -7,16 +7,16 @@ title: "Coursework"
 Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.
 
 ### In Progress (Current Term)
-- STAT 214 — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.
-- STAT 230A — Linear Models: regression, GLMs, diagnostics, and inference.
-- STAT 254 — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.
-- COMPSCI 289A — Introduction to Machine Learning: core ML theory and algorithms.
-- STAT 238 — Bayesian Statistics: hierarchical models, priors, and MCMC.
+- **STAT 214** — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.
+- **STAT 230A** — Linear Models: regression, GLMs, diagnostics, and inference.
+- **STAT 254** — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.
+- **COMPSCI 289A** — Introduction to Machine Learning: core ML theory and algorithms.
+- **STAT 238** — Bayesian Statistics: hierarchical models, priors, and MCMC.
 
 ### Completed
-- STAT 201A — Advanced Probability
-- STAT 201B — Advanced Statistics
-- STAT 243 — Statistical Computing: projects and programming-focused assignments.
+- **STAT 201A** — Advanced Probability
+- **STAT 201B** — Advanced Statistics
+- **STAT 243** — Statistical Computing
 
 ### Selected Work
 ::: {.row .g-3}
@@ -24,7 +24,7 @@ Coursework highlights the tools and theory I use for data science, with an empha
 ::: {.card .h-100 .shadow-sm}
 ::: {.card-body}
 ### STAT 243
-Projects and programming-focused assignments.
+Showcase of selected projects and assignments.
 
 [](selected-work/stat243.html){.stretched-link aria-label="STAT 243"}
 :::
@@ -35,7 +35,7 @@ Projects and programming-focused assignments.
 ::: {.card .h-100 .shadow-sm}
 ::: {.card-body}
 ### STAT 201A/201B
-Selected probability and statistics writeups.
+Showcase of selected assignments.
 
 [](selected-work/stat201.html){.stretched-link aria-label="STAT 201A/201B"}
 :::
@@ -46,7 +46,7 @@ Selected probability and statistics writeups.
 ::: {.card .h-100 .shadow-sm}
 ::: {.card-body}
 ### Current ML Courses
-Project notebooks and reports in progress.
+Showcase in progress.
 
 [](selected-work/ml-current.html){.stretched-link aria-label="Current ML Courses"}
 :::
