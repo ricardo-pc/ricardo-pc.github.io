@@ -1,0 +1,11 @@
+---
+title: "STAT 243 — Statistical Computing"
+---
+
+Use this page to showcase projects and assignments from STAT 243.
+
+## Highlights
+- _Add a brief summary of the most relevant project or assignment_
+
+## Artifacts
+- _Link to notebooks, PDFs, or GitHub repos_

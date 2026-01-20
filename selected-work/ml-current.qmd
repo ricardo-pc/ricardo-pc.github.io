@@ -1,0 +1,11 @@
+---
+title: "Current ML Courses — Projects"
+---
+
+Use this page to collect projects or reports from your current ML courses.
+
+## Highlights
+- _Add a brief description of the strongest project_
+
+## Artifacts
+- _Link to notebooks, PDFs, or GitHub repos_
