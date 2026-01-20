@@ -14,6 +14,8 @@ website:
         text: Projects
       - href: cv.qmd
         text: CV
+      - href: coursework.qmd
+        text: Coursework
     right:
       - icon: github
         href: https://github.com/ricardo-pc

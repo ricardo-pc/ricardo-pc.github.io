@@ -1,0 +1,31 @@
+---
+title: "Coursework"
+---
+
+## UC Berkeley M.A. in Statistics
+
+### Completed
+
+::: {.callout-note collapse="true"}
+## STAT 201A — Advanced Probability
+- Selected homework writeups: _add links or brief descriptions_
+:::
+
+::: {.callout-note collapse="true"}
+## STAT 201B — Advanced Statistics
+- Selected homework writeups: _add links or brief descriptions_
+:::
+
+::: {.callout-note collapse="true"}
+## STAT 243 — Statistical Computing
+- Projects/homeworks: _add links or brief descriptions_
+:::
+
+### In Progress
+
+::: {.callout-note collapse="true"}
+## Machine Learning (3 courses, current term)
+- Projects/homeworks: _add links or brief descriptions_
+:::
+
+If you'd like, I can add summaries and link directly to PDFs, notebooks, or GitHub repos.
