@@ -21,9 +21,9 @@ I bring a strong data analytics, data engineering, and consulting background fro
 
 Current interests:
 
-- Statistical modeling and causal inference
 - ML for real-world decision-making
 - Reproducible data pipelines for analytics at scale
+- Statistical modeling
 
 Explore my projects or download my CV.
 

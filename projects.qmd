@@ -1,10 +1,12 @@
 ---
 title: "Projects"
 listing:
-  contents: posts # folder 'posts' for individual project details
+  contents: posts
   sort: "date desc"
-  type: default
+  type: grid
   categories: true
+  fields: [title, description, date, categories]
+  grid-columns: 2
 ---
 
 Here are some personal projects exploring data science, data engineering, and machine learning.

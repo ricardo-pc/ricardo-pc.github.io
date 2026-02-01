@@ -1,0 +1,191 @@
+---
+title: "Evolutionary Feature Selection: A Genetic Algorithm Package"
+description: "Building a production-quality Python package for automated variable selection using evolutionary computation principles."
+author: "Ricardo Pérez Castillo"
+date: "2024-12-15"
+categories: [Python, Statistical Computing, Machine Learning, Software Engineering]
+---
+
+::: {.callout-note appearance="simple" icon=false}
+## Project Overview
+
+A collaborative final project for STAT 243 (Statistical Computing) implementing a genetic algorithm for automated variable selection. Built as a production-ready Python package with comprehensive testing, modular architecture, and support for multiple regression methods.
+
+**Team:** Collaborative project with two classmates • **Duration:** 4 weeks • **Language:** Python
+:::
+
+## The Challenge: Variable Selection at Scale
+
+In predictive modeling, choosing the right set of variables is crucial. Too few predictors and you miss important signals. Too many and you overfit, harming generalization. When facing datasets with dozens or hundreds of potential predictors, exhaustive search becomes computationally infeasible—exploring all possible combinations grows exponentially.
+
+**The assignment:** Build a Python package implementing genetic algorithms for variable selection that balances predictive accuracy against model complexity.
+
+## What Are Genetic Algorithms?
+
+Genetic algorithms mimic natural selection to solve optimization problems. Instead of evaluating every possible solution, they:
+
+1. **Initialize** a population of random variable combinations (chromosomes)
+2. **Evaluate** fitness using cross-validated predictive performance
+3. **Select** the best-performing combinations as parents
+4. **Crossover** parent chromosomes to create offspring
+5. **Mutate** randomly to explore new solutions
+6. **Evolve** iteratively across generations toward optimal feature sets
+
+This evolutionary approach efficiently searches massive solution spaces by learning from successful combinations.
+
+## Our Solution: The `GA` Package
+
+We developed a flexible, well-tested Python package that brings genetic algorithms to practical variable selection tasks.
+
+### Core Features
+
+::: {.callout-tip icon=false}
+## Key Capabilities
+
+**Multiple Model Types** • Linear Regression • LASSO Regression • Decision Trees
+
+**Flexible Selection** • Rank-based parent selection • Tournament selection
+
+**Crossover Methods** • Single-point recombination • Double-point recombination
+
+**Penalized Optimization** • Balance accuracy vs. complexity • Adjustable sparsity penalty
+:::
+
+### Architecture & Design
+
+The package follows software engineering best practices:
+
+**Modular Design**
+- Core `select()` function as primary interface
+- Discrete methods for initialization, fitness evaluation, selection, crossover, mutation
+- Clear separation of concerns across components
+
+**Robust Testing**
+- Unit tests for individual genetic operators
+- Integration tests for full algorithm
+- pytest framework with automated GitHub Actions CI/CD
+- Validation against known benchmarks
+
+**Performance Optimization**
+- Vectorized operations within generations
+- Parallel cross-validation for fitness evaluation
+- Efficient NumPy/scikit-learn implementations
+
+**Professional Documentation**
+- Comprehensive README with examples
+- Docstrings following Python standards
+- Clear usage demonstrations
+
+### Technical Implementation
+
+The algorithm evaluates fitness using **cross-validated R²** with optional complexity penalties:
+
+$$
+\text{Penalized Fitness} = R^2 - \lambda \cdot f
+$$
+
+where:
+- $R^2$ = cross-validated coefficient of determination
+- $\lambda$ = penalty parameter (controls sparsity)
+- $f$ = fraction of total predictors selected
+
+This formulation prevents overfitting while encouraging parsimonious models.
+
+## Development Process
+
+### Collaborative Workflow
+
+Working as a three-person team, we:
+
+1. **Mapped architecture** before writing code—defining modular components and interfaces
+2. **Divided responsibilities** across initialization, genetic operators, fitness evaluation, and testing
+3. **Used Git workflows** with branches and pull requests for code review
+4. **Cross-tested components** — each person's code was reviewed and tested by teammates
+5. **Integrated continuously** via automated testing on GitHub Actions
+
+### Technical Requirements Met
+
+::: {style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;"}
+::: {style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.25rem; border-radius: 8px; color: white;"}
+**✓ Modular Architecture**
+Clean separation of genetic operators
+:::
+
+::: {style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 1.25rem; border-radius: 8px; color: white;"}
+**✓ Formal Testing**
+pytest suite with CI/CD automation
+:::
+
+::: {style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 1.25rem; border-radius: 8px; color: white;"}
+**✓ Performance**
+Vectorization & parallel processing
+:::
+
+::: {style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 1.25rem; border-radius: 8px; color: white;"}
+**✓ Documentation**
+Complete README & docstrings
+:::
+:::
+
+## Results & Applications
+
+The package successfully identifies important predictors across various scenarios:
+
+- **Baseball statistics** (original benchmark dataset)
+- **Simulated data** with known true predictors
+- **Real-world datasets** with complex predictor relationships
+
+Performance highlights:
+- Efficiently handles datasets with 20+ potential predictors
+- Balances predictive accuracy with model sparsity
+- Reasonable runtime under default settings (~minutes for typical problems)
+- Supports experimentation with different GA parameters
+
+## Technologies & Tools
+
+**Core Stack**
+- **Python** — Primary implementation language
+- **scikit-learn** — Regression models and cross-validation
+- **NumPy** — Vectorized numerical operations
+- **pytest** — Testing framework
+
+**Development Tools**
+- **Git/GitHub** — Version control and collaboration
+- **GitHub Actions** — Automated testing and CI/CD
+- **VSCode** — Development environment
+
+## Key Takeaways
+
+### Software Engineering in Statistics
+
+This project reinforced the importance of treating statistical code as production software:
+
+1. **Modularity matters** — Breaking algorithms into discrete, testable components
+2. **Testing is essential** — Formal tests catch bugs and ensure reliability
+3. **Documentation enables use** — Clear READMEs and docstrings make code accessible
+4. **Performance counts** — Vectorization and parallelization for real-world speed
+5. **Collaboration requires structure** — Git workflows and code review maintain quality
+
+### Evolutionary Computation Insights
+
+Implementing genetic algorithms from scratch provided deep understanding:
+
+- How crossover and mutation balance exploration vs. exploitation
+- The impact of selection pressure on convergence speed
+- Trade-offs between population size and number of generations
+- Importance of fitness function design for optimization success
+
+## Links & Resources
+
+- **[GitHub Repository](https://github.com/ricardo-pc/GA-dev)** — Complete source code and documentation
+- **[Project Specification](project.pdf)** — Original assignment requirements
+
+## Reflection
+
+Building a production-quality statistical computing package taught me that good statistical software requires more than correct algorithms—it demands thoughtful architecture, comprehensive testing, performance optimization, and clear documentation.
+
+The collaborative aspect was equally valuable. Working as a team meant negotiating interfaces, reviewing each other's code, and maintaining consistency across components. These skills translate directly to professional data science and software engineering.
+
+---
+
+*Completed December 2024 as the final project for STAT 243: Statistical Computing at UC Berkeley.*

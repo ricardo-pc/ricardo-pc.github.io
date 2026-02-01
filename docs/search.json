@@ -4,14 +4,14 @@
     "href": "coursework.html",
     "title": "Coursework",
     "section": "",
-    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\nSTAT 214 — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.\nSTAT 230A — Linear Models: regression, GLMs, diagnostics, and inference.\nSTAT 254 — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.\nCOMPSCI 289A — Introduction to Machine Learning: core ML theory and algorithms.\nSTAT 238 — Bayesian Statistics: hierarchical models, priors, and MCMC.\n\n\n\n\n\nSTAT 201A — Advanced Probability\nSTAT 201B — Advanced Statistics\nSTAT 243 — Statistical Computing\n\n\n\n\n\n\n\n\n\n\nShowcase of selected projects and assignments.\n\n\n\n\n\n\n\n\nShowcase of selected assignments.\n\n\n\n\n\n\n\n\nShowcase in progress."
+    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\n\n\n\n\n\n\nApplied machine learning for real-world decision-making. Focuses on model evaluation under uncertainty, causal inference methods, and practical deployment of ML systems for high-impact decisions.\n\nPython Applied ML Causal Inference\n\n\n\n\n\n\n\n\n\n\n\nComprehensive regression theory from OLS and Gauss-Markov theorem to GLMs and generalized estimating equations. Covers heteroskedasticity, cluster-robust inference, model selection, shrinkage methods (Ridge/LASSO), and extensions to categorical and count outcomes.\n\nPython Regression GLMs\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic machine learning theory covering empirical risk minimization, complexity bounds, and uniform laws. Emphasizes model evaluation via cross-validation, regularization schemes, classification with proxy losses, and connections between linear models and sophisticated ML methods.\n\nPython Deep Learning Optimization\n\n\n\n\n\n\n\n\n\n\n\nTheoretical foundations and applications of ML from problem formulation to model deployment. Covers unsupervised learning (k-means, PCA), regression and classification, deep learning architectures (CNNs, RNNs, transformers), and generative models (LLMs, GANs). Includes PyTorch implementation and backpropagation.\n\nPython ML Theory Algorithms\n\n\n\n\n\n\n\n\n\n\n\nBayesian inference framework including prior elicitation, conjugate analysis, and hierarchical modeling. Focuses on MCMC methods (Gibbs sampling, Metropolis-Hastings), modern computational techniques (HMC, variational inference), and applications to complex statistical models.\n\nPython MCMC Hierarchical Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure-theoretic probability, convergence concepts, laws of large numbers, central limit theorems, and foundational theory for statistical inference.\n\nTheory Measure Theory Convergence\n\n\n\n\n\n\n\n\n\n\n\nStatistical inference theory including sufficiency, exponential families, hypothesis testing, asymptotic theory, and decision theory foundations.\n\nTheory Inference Asymptotics\n\n\n\n\n\n\n\n\n\n\n\nStatistical computing and data science using Python. Covers UNIX/bash scripting, version control, data manipulation, text processing, object-oriented programming, parallel processing, databases and big data, computer arithmetic, simulation and Monte Carlo methods, numerical linear algebra, and optimization.\n\nPython UNIX/Bash Parallel Computing Numerical Methods"
   },
   {
     "objectID": "coursework.html#uc-berkeley-m.a.-in-statistics",
     "href": "coursework.html#uc-berkeley-m.a.-in-statistics",
     "title": "Coursework",
     "section": "",
-    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\nSTAT 214 — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.\nSTAT 230A — Linear Models: regression, GLMs, diagnostics, and inference.\nSTAT 254 — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.\nCOMPSCI 289A — Introduction to Machine Learning: core ML theory and algorithms.\nSTAT 238 — Bayesian Statistics: hierarchical models, priors, and MCMC.\n\n\n\n\n\nSTAT 201A — Advanced Probability\nSTAT 201B — Advanced Statistics\nSTAT 243 — Statistical Computing\n\n\n\n\n\n\n\n\n\n\nShowcase of selected projects and assignments.\n\n\n\n\n\n\n\n\nShowcase of selected assignments.\n\n\n\n\n\n\n\n\nShowcase in progress."
+    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\n\n\n\n\n\n\nApplied machine learning for real-world decision-making. Focuses on model evaluation under uncertainty, causal inference methods, and practical deployment of ML systems for high-impact decisions.\n\nPython Applied ML Causal Inference\n\n\n\n\n\n\n\n\n\n\n\nComprehensive regression theory from OLS and Gauss-Markov theorem to GLMs and generalized estimating equations. Covers heteroskedasticity, cluster-robust inference, model selection, shrinkage methods (Ridge/LASSO), and extensions to categorical and count outcomes.\n\nPython Regression GLMs\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic machine learning theory covering empirical risk minimization, complexity bounds, and uniform laws. Emphasizes model evaluation via cross-validation, regularization schemes, classification with proxy losses, and connections between linear models and sophisticated ML methods.\n\nPython Deep Learning Optimization\n\n\n\n\n\n\n\n\n\n\n\nTheoretical foundations and applications of ML from problem formulation to model deployment. Covers unsupervised learning (k-means, PCA), regression and classification, deep learning architectures (CNNs, RNNs, transformers), and generative models (LLMs, GANs). Includes PyTorch implementation and backpropagation.\n\nPython ML Theory Algorithms\n\n\n\n\n\n\n\n\n\n\n\nBayesian inference framework including prior elicitation, conjugate analysis, and hierarchical modeling. Focuses on MCMC methods (Gibbs sampling, Metropolis-Hastings), modern computational techniques (HMC, variational inference), and applications to complex statistical models.\n\nPython MCMC Hierarchical Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure-theoretic probability, convergence concepts, laws of large numbers, central limit theorems, and foundational theory for statistical inference.\n\nTheory Measure Theory Convergence\n\n\n\n\n\n\n\n\n\n\n\nStatistical inference theory including sufficiency, exponential families, hypothesis testing, asymptotic theory, and decision theory foundations.\n\nTheory Inference Asymptotics\n\n\n\n\n\n\n\n\n\n\n\nStatistical computing and data science using Python. Covers UNIX/bash scripting, version control, data manipulation, text processing, object-oriented programming, parallel processing, databases and big data, computer arithmetic, simulation and Monte Carlo methods, numerical linear algebra, and optimization.\n\nPython UNIX/Bash Parallel Computing Numerical Methods"
   },
   {
     "objectID": "about.html",
@@ -25,7 +25,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine learning prototype to forecast city water demand and available capacity.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
+    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\nImpact\n\n\n\nHow our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "selected-work/stat243.html",
@@ -51,9 +51,9 @@
   {
     "objectID": "posts/digital-water/index.html",
     "href": "posts/digital-water/index.html",
-    "title": "Digital Water Forecast",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
     "section": "",
-    "text": "Atos IT Challenge 2020 — 2nd Place (First Mexican team in the competition’s history)\nDigital Water is a cooperative-AI prototype built to help city utilities forecast water demand and available capacity. Using official data from Agua y Drenaje de Monterrey (SADM), we modeled daily demand and dam capacity to surface early warning signals for shortages."
+    "text": "NoteThe Story at a Glance\n\n\n\nIn 2020, our team built an AI system to forecast water demand for my hometown of Monterrey, Mexico. We won 2nd place globally at the Atos IT Challenge, the first Mexican team ever to achieve this distinction in the competition’s 10-year history.\nTwo years later, our predictions came true. Monterrey plunged into a severe water crisis, forcing 5 million residents to survive on minimal daily water allocations for nearly two years."
   },
   {
     "objectID": "posts/digital-water/index.html#overview",
@@ -166,5 +166,61 @@
     "title": "CV",
     "section": "",
     "text": "Download the PDF: Curriculum_RicardoPerezCastillo.pdf"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
+    "href": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "What If You Could See a Crisis Coming?",
+    "text": "What If You Could See a Crisis Coming?\nBetween November 2019 and July 2020, my team developed Digital Water, a machine learning platform to forecast water demand and capacity at the city level. Working with real data from Monterrey’s official water utility (SADM), we built LSTM neural networks that could predict daily water consumption and available dam capacity.\nAt the time, we were focused on winning an international competition. We didn’t realize we were documenting the early warning signs of a catastrophe."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#the-challenge",
+    "href": "posts/digital-water/index.html#the-challenge",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "The Challenge",
+    "text": "The Challenge\nMonterrey is Mexico’s third-largest metro area and a major industrial hub. The city’s water system serves over 5 million people, drawing from a network of dams and underground sources. But water scarcity was becoming more frequent, and utilities were operating reactively, responding to shortages rather than preventing them.\nOur goal: Build a forecasting system that could shift water management from reactive to preventative, giving utilities early warning signals before reaching critical thresholds."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#our-solution",
+    "href": "posts/digital-water/index.html#our-solution",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Our Solution",
+    "text": "Our Solution\nWe developed an end-to-end machine learning pipeline:\n\nData Engineering\n\nCollected and cleaned multi-source time-series data from SADM\nAligned daily consumption records with dam capacity measurements\nCreated comprehensive field dictionaries and documentation\n\n\n\nPredictive Models\n\nTrained two LSTM neural networks (one for demand, one for capacity)\nForecasted daily water demand and available capacity\nCalculated “days-to-threshold” estimates for safe operating levels\nImplemented in Python using TensorFlow\n\n\n\nDeployment\n\nBuilt an interactive web dashboard (hosted on Heroku)\nCreated Google Colab notebooks for accessibility and reproducibility\nProduced technical documentation and presentation materials\n\n\n\n\n\n\n\nTipKey Technologies\n\n\n\nPython • TensorFlow • LSTM Networks • Time Series Forecasting • Google Colab • Heroku"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#recognition",
+    "href": "posts/digital-water/index.html#recognition",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Recognition",
+    "text": "Recognition\n\n\n🏆 2nd Place Globally Atos IT Challenge 2020\n\n\n🇲🇽 First Mexican Team In competition’s 10-year history\n\n\n👥 5M People Impacted By predicted crisis\n\n\nWe presented our work to the Atos CEO and Scientific Board, competing against thousands of international teams."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#what-happened-next-the-crisis",
+    "href": "posts/digital-water/index.html#what-happened-next-the-crisis",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "What Happened Next: The Crisis",
+    "text": "What Happened Next: The Crisis\nIn 2022, everything our models predicted came to pass.\nMonterrey experienced a devastating water crisis that lasted nearly two years. The city’s 5 million residents were reduced to minimal daily water allocations. Neighborhoods received water only a few hours per week. Businesses struggled. The crisis validated our forecasting approach—but also showed the human cost of delayed action.\n\n\n\n\n\n\nWarningTimeline\n\n\n\n2019-2020: Built forecasting models with SADM data\nJuly 2020: Won 2nd place at Atos IT Challenge\n2022: Water crisis begins—predictions validated\n2022-2024: Nearly two years of severe rationing for 5M residents\n2024: Crisis subsides\n\n\nThe crisis highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning—and why such systems need to be deployed, not just built."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#technical-details",
+    "href": "posts/digital-water/index.html#technical-details",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Technical Details",
+    "text": "Technical Details\nFor those interested in the implementation:\n\nModels: Two LSTM neural networks (demand + capacity forecasting)\nData: Official records from Agua y Drenaje de Monterrey (SADM)\nFeatures: Multi-variate time series including consumption patterns, dam levels, and seasonal factors\nOutputs: Daily forecasts + “days-to-threshold” risk estimates\nCode: Open-source notebooks in Google Colab\nDocumentation: Complete technical report and research summaries"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#links-resources",
+    "href": "posts/digital-water/index.html#links-resources",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — Code, notebooks, and documentation\nDemo Video — Platform walkthrough"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#reflection",
+    "href": "posts/digital-water/index.html#reflection",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Reflection",
+    "text": "Reflection\nThis project was completed in 2020, and the notebooks remain as-is in the repository. Looking back (5 years later) with more experience in ML, I would redesign the data pipeline, modeling aproach, stability and predictability of the model and scalability. But the core lesson remains: predictive models only create impact when they’re deployed and acted upon.\nThe crisis our system forecasted was preventable. The data was there. The models worked. What was missing was the infrastructure and institutional will to act on early warnings.\n\nBuilt between November 2019 and July 2020 as part of the Atos IT Challenge."
   }
 ]

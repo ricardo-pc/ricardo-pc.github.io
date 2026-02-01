@@ -7,56 +7,204 @@ title: "Coursework"
 Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.
 
 ### In Progress (Current Term)
-- **STAT 214** — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.
-- **STAT 230A** — Linear Models: regression, GLMs, diagnostics, and inference.
-- **STAT 254** — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.
-- **COMPSCI 289A** — Introduction to Machine Learning: core ML theory and algorithms.
-- **STAT 238** — Bayesian Statistics: hierarchical models, priors, and MCMC.
+
+::: {.row .g-4}
+::: {.col-6}
+::: {.card .h-100 .border-primary .border-2}
+::: {.card-body}
+#### STAT 214
+##### Data Analysis & ML for Decision Making
+
+Applied machine learning for real-world decision-making. Focuses on model evaluation under uncertainty, causal inference methods, and practical deployment of ML systems for high-impact decisions.
+
+::: {.mt-3}
+<span class="badge bg-primary">Python</span>
+<span class="badge bg-secondary">Applied ML</span>
+<span class="badge bg-info">Causal Inference</span>
+:::
+:::
+:::
+:::
+
+::: {.col-6}
+::: {.card .h-100 .border-primary .border-2}
+::: {.card-body}
+#### STAT 230A
+##### Linear Models
+
+Comprehensive regression theory from OLS and Gauss-Markov theorem to GLMs and generalized estimating equations. Covers heteroskedasticity, cluster-robust inference, model selection, shrinkage methods (Ridge/LASSO), and extensions to categorical and count outcomes.
+
+::: {.mt-3}
+<span class="badge bg-primary">Python</span>
+<span class="badge bg-secondary">Regression</span>
+<span class="badge bg-info">GLMs</span>
+:::
+:::
+:::
+:::
+
+::: {.col-6}
+::: {.card .h-100 .border-primary .border-2}
+::: {.card-body}
+#### STAT 254
+##### Modern Statistical Prediction & ML
+
+Probabilistic machine learning theory covering empirical risk minimization, complexity bounds, and uniform laws. Emphasizes model evaluation via cross-validation, regularization schemes, classification with proxy losses, and connections between linear models and sophisticated ML methods.
+
+::: {.mt-3}
+<span class="badge bg-primary">Python</span>
+<span class="badge bg-secondary">Deep Learning</span>
+<span class="badge bg-info">Optimization</span>
+:::
+:::
+:::
+:::
+
+::: {.col-6}
+::: {.card .h-100 .border-primary .border-2}
+::: {.card-body}
+#### COMPSCI 289A
+##### Introduction to Machine Learning
+
+Theoretical foundations and applications of ML from problem formulation to model deployment. Covers unsupervised learning (k-means, PCA), regression and classification, deep learning architectures (CNNs, RNNs, transformers), and generative models (LLMs, GANs). Includes PyTorch implementation and backpropagation.
+
+::: {.mt-3}
+<span class="badge bg-primary">Python</span>
+<span class="badge bg-secondary">ML Theory</span>
+<span class="badge bg-info">Algorithms</span>
+:::
+:::
+:::
+:::
+
+::: {.col-6}
+::: {.card .h-100 .border-primary .border-2}
+::: {.card-body}
+#### STAT 238
+##### Bayesian Statistics
+
+Bayesian inference framework including prior elicitation, conjugate analysis, and hierarchical modeling. Focuses on MCMC methods (Gibbs sampling, Metropolis-Hastings), modern computational techniques (HMC, variational inference), and applications to complex statistical models.
+
+::: {.mt-3}
+<span class="badge bg-primary">Python</span>
+<span class="badge bg-secondary">MCMC</span>
+<span class="badge bg-info">Hierarchical Models</span>
+:::
+:::
+:::
+:::
+:::
 
 ### Completed
-- **STAT 201A** — Advanced Probability
-- **STAT 201B** — Advanced Statistics
-- **STAT 243** — Statistical Computing
 
-### Selected Work
-::: {.row .g-3}
-::: {.col-12 .col-md-6 .col-lg-4}
-::: {.card .h-100 .shadow-sm}
+::: {.row .g-4}
+::: {.col-6}
+::: {.card .h-100 .border-success}
 ::: {.card-body}
-### STAT 243
-Showcase of selected projects and assignments.
+#### STAT 201A
+##### Advanced Probability
 
-[](selected-work/stat243.html){.stretched-link aria-label="STAT 243"}
+Measure-theoretic probability, convergence concepts, laws of large numbers, central limit theorems, and foundational theory for statistical inference.
+
+::: {.mt-3}
+<span class="badge bg-success">Theory</span>
+<span class="badge bg-secondary">Measure Theory</span>
+<span class="badge bg-info">Convergence</span>
+:::
 :::
 :::
 :::
 
-::: {.col-12 .col-md-6 .col-lg-4}
-::: {.card .h-100 .shadow-sm}
+::: {.col-6}
+::: {.card .h-100 .border-success}
 ::: {.card-body}
-### STAT 201A/201B
-Showcase of selected assignments.
+#### STAT 201B
+##### Advanced Statistics
 
-[](selected-work/stat201.html){.stretched-link aria-label="STAT 201A/201B"}
+Statistical inference theory including sufficiency, exponential families, hypothesis testing, asymptotic theory, and decision theory foundations.
+
+::: {.mt-3}
+<span class="badge bg-success">Theory</span>
+<span class="badge bg-secondary">Inference</span>
+<span class="badge bg-info">Asymptotics</span>
+:::
 :::
 :::
 :::
 
-::: {.col-12 .col-md-6 .col-lg-4}
-::: {.card .h-100 .shadow-sm}
+::: {.col-6}
+::: {.card .h-100 .border-success}
 ::: {.card-body}
-### Current ML Courses
-Showcase in progress.
+#### STAT 243
+##### Statistical Computing
 
-[](selected-work/ml-current.html){.stretched-link aria-label="Current ML Courses"}
+Statistical computing and data science using Python. Covers UNIX/bash scripting, version control, data manipulation, text processing, object-oriented programming, parallel processing, databases and big data, computer arithmetic, simulation and Monte Carlo methods, numerical linear algebra, and optimization.
+
+::: {.mt-3}
+<span class="badge bg-primary">Python</span>
+<span class="badge bg-secondary">UNIX/Bash</span>
+<span class="badge bg-info">Parallel Computing</span>
+<span class="badge bg-secondary">Numerical Methods</span>
+:::
 :::
 :::
 :::
 :::
 
 <style>
+.row {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.5rem !important;
+}
+
+@media (max-width: 576px) {
+  .row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.col-6 {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card h4 {
+  color: #1e40af;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card h5 {
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.65rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.border-primary {
+  border-left: 4px solid #3b82f6 !important;
+}
+
+.border-success {
+  border-left: 4px solid #10b981 !important;
 }
 </style>

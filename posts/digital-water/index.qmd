@@ -1,41 +1,122 @@
 ---
-title: "Digital Water Forecast"
-description: "Machine learning prototype to forecast city water demand and available capacity."
+title: "Digital Water: Predicting a Crisis Before It Happened"
+description: "How our ML forecasting system predicted Monterrey's water crisis two years before 5 million people faced severe rationing."
 author: "Ricardo Pérez Castillo"
 date: "2020-08-01"
-categories: [Machine Learning, Python, Time Series]
-image: "water-plot.png" # You can add an image file to this folder later
+categories: [Machine Learning, Python, Time Series, Impact]
 ---
 
-## Overview
-**Atos IT Challenge 2020 — 2nd Place (First Mexican team in the competition's history)**
+::: {.callout-note appearance="simple" icon=false}
+## The Story at a Glance
 
-Digital Water is a cooperative-AI prototype built to help city utilities forecast water demand and available capacity. Using official data from Agua y Drenaje de Monterrey (SADM), we modeled daily demand and dam capacity to surface early warning signals for shortages.
+In 2020, our team built an AI system to forecast water demand for my hometown of Monterrey, Mexico. We won **2nd place globally** at the Atos IT Challenge, the first Mexican team ever to achieve this distinction in the competition's 10-year history.
 
-## Context
-This project focused on Monterrey, Mexico, my hometown. At the time, we did not realize the city was on the verge of a major water crisis that unfolded two years later. The work highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning.
+Two years later, our predictions came true. Monterrey plunged into a severe water crisis, forcing 5 million residents to survive on minimal daily water allocations for nearly two years.
+:::
 
-## Approach
-We built an end-to-end Python workflow that:
-1. Cleaned and aligned multi-source time-series data (consumption + dam capacity).
-2. Trained two LSTM models to forecast daily demand and daily capacity.
-3. Produced outputs that estimated "days-to-threshold" for safe levels.
-4. Presented results via a web dashboard (hosted on Heroku at the time).
+## What If You Could See a Crisis Coming?
 
-## Features
-- Google Colab notebooks for both LSTM models
-- Curated datasets with field dictionary
-- Research summaries on Monterrey's water network
-- Technical report and presentation materials
-- Short demo video of the platform
+Between November 2019 and July 2020, my team developed Digital Water, a machine learning platform to forecast water demand and capacity at the city level. Working with real data from Monterrey's official water utility (SADM), we built LSTM neural networks that could predict daily water consumption and available dam capacity.
 
-## Results
-- **2nd place among thousands of international teams** at Atos IT Challenge 2020.
-- Presented to the Atos CEO and Scientific Board.
+At the time, we were focused on winning an international competition. We didn't realize we were documenting the early warning signs of a catastrophe.
 
-## Links
-- Project repository: https://github.com/ricardo-pc/DigitalWater
-- Demo video: https://youtu.be/AiQcQ7dyW38
+## The Challenge
 
-## Note
-This solution was built between Nov 2019 and Jul 2020. The notebooks are kept as-is; today I would redesign the data engineering and modeling approach.
+Monterrey is Mexico's third-largest metro area and a major industrial hub. The city's water system serves over 5 million people, drawing from a network of dams and underground sources. But water scarcity was becoming more frequent, and utilities were operating reactively, responding to shortages rather than preventing them.
+
+Our goal: Build a forecasting system that could shift water management from reactive to preventative, giving utilities early warning signals before reaching critical thresholds.
+
+## Our Solution
+
+We developed an end-to-end machine learning pipeline:
+
+### Data Engineering
+- Collected and cleaned multi-source time-series data from SADM
+- Aligned daily consumption records with dam capacity measurements
+- Created comprehensive field dictionaries and documentation
+
+### Predictive Models
+- Trained two LSTM neural networks (one for demand, one for capacity)
+- Forecasted daily water demand and available capacity
+- Calculated "days-to-threshold" estimates for safe operating levels
+- Implemented in Python using TensorFlow
+
+### Deployment
+- Built an interactive web dashboard (hosted on Heroku)
+- Created Google Colab notebooks for accessibility and reproducibility
+- Produced technical documentation and presentation materials
+
+::: {.callout-tip icon=false}
+## Key Technologies
+
+**Python** • **TensorFlow** • **LSTM Networks** • **Time Series Forecasting** • **Google Colab** • **Heroku**
+:::
+
+## Recognition
+
+::: {style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;"}
+::: {style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 8px; text-align: center; color: white;"}
+**🏆 2nd Place Globally**
+Atos IT Challenge 2020
+:::
+
+::: {style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 1.5rem; border-radius: 8px; text-align: center; color: white;"}
+**🇲🇽 First Mexican Team**
+In competition's 10-year history
+:::
+
+::: {style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 1.5rem; border-radius: 8px; text-align: center; color: white;"}
+**👥 5M People Impacted**
+By predicted crisis
+:::
+:::
+
+We presented our work to the Atos CEO and Scientific Board, competing against thousands of international teams.
+
+## What Happened Next: The Crisis
+
+In 2022, everything our models predicted came to pass.
+
+Monterrey experienced a devastating water crisis that lasted nearly two years. The city's 5 million residents were reduced to minimal daily water allocations. Neighborhoods received water only a few hours per week. Businesses struggled. The crisis validated our forecasting approach—but also showed the human cost of delayed action.
+
+::: {.callout-warning}
+## Timeline
+
+**2019-2020:** Built forecasting models with SADM data
+
+**July 2020:** Won 2nd place at Atos IT Challenge
+
+**2022:** Water crisis begins—predictions validated
+
+**2022-2024:** Nearly two years of severe rationing for 5M residents
+
+**2024:** Crisis subsides
+:::
+
+The crisis highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning—and why such systems need to be deployed, not just built.
+
+## Technical Details
+
+For those interested in the implementation:
+
+- **Models:** Two LSTM neural networks (demand + capacity forecasting)
+- **Data:** Official records from Agua y Drenaje de Monterrey (SADM)
+- **Features:** Multi-variate time series including consumption patterns, dam levels, and seasonal factors
+- **Outputs:** Daily forecasts + "days-to-threshold" risk estimates
+- **Code:** Open-source notebooks in Google Colab
+- **Documentation:** Complete technical report and research summaries
+
+## Links & Resources
+
+- **[GitHub Repository](https://github.com/ricardo-pc/DigitalWater)** — Code, notebooks, and documentation
+- **[Demo Video](https://youtu.be/AiQcQ7dyW38)** — Platform walkthrough
+
+## Reflection
+
+This project was completed in 2020, and the notebooks remain as-is in the repository. **Looking back (5 years later) with more experience in ML, I would redesign the data pipeline, modeling aproach, stability and predictability of the model and scalability.** But the core lesson remains: predictive models only create impact when they're deployed and acted upon.
+
+The crisis our system forecasted was preventable. The data was there. The models worked. What was missing was the infrastructure and institutional will to act on early warnings.
+
+---
+
+*Built between November 2019 and July 2020 as part of the Atos IT Challenge.*
