@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ricardo Pérez Castillo">
+<meta name="dcterms.date" content="2024-12-15">
+<meta name="description" content="Building a production-quality Python package for automated variable selection using evolutionary computation principles.">
 
-<title>Projects – Ricardo Pérez Castillo</title>
+<title>Evolutionary Feature Selection: A Genetic Algorithm Package – Ricardo Pérez Castillo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -130,7 +102,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -140,9 +112,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Ricardo Pérez Castillo</span>
     </a>
   </div>
@@ -153,19 +125,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./coursework.html"> 
+    <a class="nav-link" href="../../coursework.html"> 
 <span class="menu-text">Coursework</span></a>
   </li>  
 </ul>
@@ -192,21 +164,71 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW1wYWN0">Impact <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U29mdHdhcmUlMjBFbmdpbmVlcmluZw==">Software Engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3RhdGlzdGljYWwlMjBDb21wdXRpbmc=">Statistical Computing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGltZSUyMFNlcmllcw==">Time Series <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-challenge-variable-selection-at-scale" id="toc-the-challenge-variable-selection-at-scale" class="nav-link active" data-scroll-target="#the-challenge-variable-selection-at-scale">The Challenge: Variable Selection at Scale</a></li>
+  <li><a href="#what-are-genetic-algorithms" id="toc-what-are-genetic-algorithms" class="nav-link" data-scroll-target="#what-are-genetic-algorithms">What Are Genetic Algorithms?</a></li>
+  <li><a href="#our-solution-the-ga-package" id="toc-our-solution-the-ga-package" class="nav-link" data-scroll-target="#our-solution-the-ga-package">Our Solution: The <code>GA</code> Package</a>
+  <ul class="collapse">
+  <li><a href="#core-features" id="toc-core-features" class="nav-link" data-scroll-target="#core-features">Core Features</a></li>
+  <li><a href="#architecture-design" id="toc-architecture-design" class="nav-link" data-scroll-target="#architecture-design">Architecture &amp; Design</a></li>
+  <li><a href="#technical-implementation" id="toc-technical-implementation" class="nav-link" data-scroll-target="#technical-implementation">Technical Implementation</a></li>
+  </ul></li>
+  <li><a href="#development-process" id="toc-development-process" class="nav-link" data-scroll-target="#development-process">Development Process</a>
+  <ul class="collapse">
+  <li><a href="#collaborative-workflow" id="toc-collaborative-workflow" class="nav-link" data-scroll-target="#collaborative-workflow">Collaborative Workflow</a></li>
+  <li><a href="#technical-requirements-met" id="toc-technical-requirements-met" class="nav-link" data-scroll-target="#technical-requirements-met">Technical Requirements Met</a></li>
+  </ul></li>
+  <li><a href="#results-applications" id="toc-results-applications" class="nav-link" data-scroll-target="#results-applications">Results &amp; Applications</a></li>
+  <li><a href="#technologies-tools" id="toc-technologies-tools" class="nav-link" data-scroll-target="#technologies-tools">Technologies &amp; Tools</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a>
+  <ul class="collapse">
+  <li><a href="#software-engineering-in-statistics" id="toc-software-engineering-in-statistics" class="nav-link" data-scroll-target="#software-engineering-in-statistics">Software Engineering in Statistics</a></li>
+  <li><a href="#evolutionary-computation-insights" id="toc-evolutionary-computation-insights" class="nav-link" data-scroll-target="#evolutionary-computation-insights">Evolutionary Computation Insights</a></li>
+  </ul></li>
+  <li><a href="#links-resources" id="toc-links-resources" class="nav-link" data-scroll-target="#links-resources">Links &amp; Resources</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
-</div>
+<h1 class="title">Evolutionary Feature Selection: A Genetic Algorithm Package</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Statistical Computing</div>
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Software Engineering</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Building a production-quality Python package for automated variable selection using evolutionary computation principles.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ricardo Pérez Castillo </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 15, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -216,74 +238,166 @@ window.Quarto = {
 </header>
 
 
-<p>Here are some personal projects exploring data science, data engineering, and machine learning.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="UHl0aG9uJTJDU3RhdGlzdGljYWwlMjBDb21wdXRpbmclMkNNYWNoaW5lJTIwTGVhcm5pbmclMkNTb2Z0d2FyZSUyMEVuZ2luZWVyaW5n" data-listing-date-sort="1734249600000" data-listing-file-modified-sort="1769928198947" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="815">
-<a href="./posts/genetic-algorithm/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Evolutionary Feature Selection: A Genetic Algorithm Package
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBDb21wdXRpbmc='); return false;">Statistical Computing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBFbmdpbmVlcmluZw=='); return false;">Software Engineering</div>
-
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="card-text listing-description delink">
-<p>Building a production-quality Python package for automated variable selection using evolutionary computation principles.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Dec 15, 2024
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Project Overview
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>A collaborative final project for STAT 243 (Statistical Computing) implementing a genetic algorithm for automated variable selection. Built as a production-ready Python package with comprehensive testing, modular architecture, and support for multiple regression methods.</p>
+<p><strong>Team:</strong> Collaborative project with two classmates • <strong>Duration:</strong> 4 weeks • <strong>Language:</strong> Python</p>
 </div>
-</div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHl0aG9uJTJDVGltZSUyMFNlcmllcyUyQ0ltcGFjdA==" data-listing-date-sort="1596265200000" data-listing-file-modified-sort="1769927770996" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="701">
-<a href="./posts/digital-water/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Digital Water: Predicting a Crisis Before It Happened
-</h5>
-<div class="listing-categories">
+<section id="the-challenge-variable-selection-at-scale" class="level2">
+<h2 class="anchored" data-anchor-id="the-challenge-variable-selection-at-scale">The Challenge: Variable Selection at Scale</h2>
+<p>In predictive modeling, choosing the right set of variables is crucial. Too few predictors and you miss important signals. Too many and you overfit, harming generalization. When facing datasets with dozens or hundreds of potential predictors, exhaustive search becomes computationally infeasible—exploring all possible combinations grows exponentially.</p>
+<p><strong>The assignment:</strong> Build a Python package implementing genetic algorithms for variable selection that balances predictive accuracy against model complexity.</p>
+</section>
+<section id="what-are-genetic-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-genetic-algorithms">What Are Genetic Algorithms?</h2>
+<p>Genetic algorithms mimic natural selection to solve optimization problems. Instead of evaluating every possible solution, they:</p>
+<ol type="1">
+<li><strong>Initialize</strong> a population of random variable combinations (chromosomes)</li>
+<li><strong>Evaluate</strong> fitness using cross-validated predictive performance</li>
+<li><strong>Select</strong> the best-performing combinations as parents</li>
+<li><strong>Crossover</strong> parent chromosomes to create offspring</li>
+<li><strong>Mutate</strong> randomly to explore new solutions</li>
+<li><strong>Evolve</strong> iteratively across generations toward optimal feature sets</li>
+</ol>
+<p>This evolutionary approach efficiently searches massive solution spaces by learning from successful combinations.</p>
+</section>
+<section id="our-solution-the-ga-package" class="level2">
+<h2 class="anchored" data-anchor-id="our-solution-the-ga-package">Our Solution: The <code>GA</code> Package</h2>
+<p>We developed a flexible, well-tested Python package that brings genetic algorithms to practical variable selection tasks.</p>
+<section id="core-features" class="level3">
+<h3 class="anchored" data-anchor-id="core-features">Core Features</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key Capabilities
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Multiple Model Types</strong> • Linear Regression • LASSO Regression • Decision Trees</p>
+<p><strong>Flexible Selection</strong> • Rank-based parent selection • Tournament selection</p>
+<p><strong>Crossover Methods</strong> • Single-point recombination • Double-point recombination</p>
+<p><strong>Penalized Optimization</strong> • Balance accuracy vs.&nbsp;complexity • Adjustable sparsity penalty</p>
+</div>
+</div>
+</section>
+<section id="architecture-design" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-design">Architecture &amp; Design</h3>
+<p>The package follows software engineering best practices:</p>
+<p><strong>Modular Design</strong> - Core <code>select()</code> function as primary interface - Discrete methods for initialization, fitness evaluation, selection, crossover, mutation - Clear separation of concerns across components</p>
+<p><strong>Robust Testing</strong> - Unit tests for individual genetic operators - Integration tests for full algorithm - pytest framework with automated GitHub Actions CI/CD - Validation against known benchmarks</p>
+<p><strong>Performance Optimization</strong> - Vectorized operations within generations - Parallel cross-validation for fitness evaluation - Efficient NumPy/scikit-learn implementations</p>
+<p><strong>Professional Documentation</strong> - Comprehensive README with examples - Docstrings following Python standards - Clear usage demonstrations</p>
+</section>
+<section id="technical-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="technical-implementation">Technical Implementation</h3>
+<p>The algorithm evaluates fitness using <strong>cross-validated R²</strong> with optional complexity penalties:</p>
+<p><span class="math display">\[
+\text{Penalized Fitness} = R^2 - \lambda \cdot f
+\]</span></p>
+<p>where: - <span class="math inline">\(R^2\)</span> = cross-validated coefficient of determination - <span class="math inline">\(\lambda\)</span> = penalty parameter (controls sparsity) - <span class="math inline">\(f\)</span> = fraction of total predictors selected</p>
+<p>This formulation prevents overfitting while encouraging parsimonious models.</p>
+</section>
+</section>
+<section id="development-process" class="level2">
+<h2 class="anchored" data-anchor-id="development-process">Development Process</h2>
+<section id="collaborative-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="collaborative-workflow">Collaborative Workflow</h3>
+<p>Working as a three-person team, we:</p>
+<ol type="1">
+<li><strong>Mapped architecture</strong> before writing code—defining modular components and interfaces</li>
+<li><strong>Divided responsibilities</strong> across initialization, genetic operators, fitness evaluation, and testing</li>
+<li><strong>Used Git workflows</strong> with branches and pull requests for code review</li>
+<li><strong>Cross-tested components</strong> — each person’s code was reviewed and tested by teammates</li>
+<li><strong>Integrated continuously</strong> via automated testing on GitHub Actions</li>
+</ol>
+</section>
+<section id="technical-requirements-met" class="level3">
+<h3 class="anchored" data-anchor-id="technical-requirements-met">Technical Requirements Met</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.25rem; border-radius: 8px; color: white;">
+<p><strong>✓ Modular Architecture</strong> Clean separation of genetic operators</p>
+</div>
+<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 1.25rem; border-radius: 8px; color: white;">
+<p><strong>✓ Formal Testing</strong> pytest suite with CI/CD automation</p>
+</div>
+<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 1.25rem; border-radius: 8px; color: white;">
+<p><strong>✓ Performance</strong> Vectorization &amp; parallel processing</p>
+</div>
+<div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 1.25rem; border-radius: 8px; color: white;">
+<p><strong>✓ Documentation</strong> Complete README &amp; docstrings</p>
+</div>
+</div>
+</section>
+</section>
+<section id="results-applications" class="level2">
+<h2 class="anchored" data-anchor-id="results-applications">Results &amp; Applications</h2>
+<p>The package successfully identifies important predictors across various scenarios:</p>
+<ul>
+<li><strong>Baseball statistics</strong> (original benchmark dataset)</li>
+<li><strong>Simulated data</strong> with known true predictors</li>
+<li><strong>Real-world datasets</strong> with complex predictor relationships</li>
+</ul>
+<p>Performance highlights: - Efficiently handles datasets with 20+ potential predictors - Balances predictive accuracy with model sparsity - Reasonable runtime under default settings (~minutes for typical problems) - Supports experimentation with different GA parameters</p>
+</section>
+<section id="technologies-tools" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-tools">Technologies &amp; Tools</h2>
+<p><strong>Core Stack</strong> - <strong>Python</strong> — Primary implementation language - <strong>scikit-learn</strong> — Regression models and cross-validation - <strong>NumPy</strong> — Vectorized numerical operations - <strong>pytest</strong> — Testing framework</p>
+<p><strong>Development Tools</strong> - <strong>Git/GitHub</strong> — Version control and collaboration - <strong>GitHub Actions</strong> — Automated testing and CI/CD - <strong>VSCode</strong> — Development environment</p>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<section id="software-engineering-in-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="software-engineering-in-statistics">Software Engineering in Statistics</h3>
+<p>This project reinforced the importance of treating statistical code as production software:</p>
+<ol type="1">
+<li><strong>Modularity matters</strong> — Breaking algorithms into discrete, testable components</li>
+<li><strong>Testing is essential</strong> — Formal tests catch bugs and ensure reliability</li>
+<li><strong>Documentation enables use</strong> — Clear READMEs and docstrings make code accessible</li>
+<li><strong>Performance counts</strong> — Vectorization and parallelization for real-world speed</li>
+<li><strong>Collaboration requires structure</strong> — Git workflows and code review maintain quality</li>
+</ol>
+</section>
+<section id="evolutionary-computation-insights" class="level3">
+<h3 class="anchored" data-anchor-id="evolutionary-computation-insights">Evolutionary Computation Insights</h3>
+<p>Implementing genetic algorithms from scratch provided deep understanding:</p>
+<ul>
+<li>How crossover and mutation balance exploration vs.&nbsp;exploitation</li>
+<li>The impact of selection pressure on convergence speed</li>
+<li>Trade-offs between population size and number of generations</li>
+<li>Importance of fitness function design for optimization success</li>
+</ul>
+</section>
+</section>
+<section id="links-resources" class="level2">
+<h2 class="anchored" data-anchor-id="links-resources">Links &amp; Resources</h2>
+<ul>
+<li><strong><a href="https://github.com/ricardo-pc/GA-dev">GitHub Repository</a></strong> — Complete source code and documentation</li>
+<li><strong><a href="project.pdf">Project Specification</a></strong> — Original assignment requirements</li>
+</ul>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>Building a production-quality statistical computing package taught me that good statistical software requires more than correct algorithms—it demands thoughtful architecture, comprehensive testing, performance optimization, and clear documentation.</p>
+<p>The collaborative aspect was equally valuable. Working as a team meant negotiating interfaces, reviewing each other’s code, and maintaining consistency across components. These skills translate directly to professional data science and software engineering.</p>
+<hr>
+<p><em>Completed December 2024 as the final project for STAT 243: Statistical Computing at UC Berkeley.</em></p>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('VGltZSUyMFNlcmllcw=='); return false;">Time Series</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW1wYWN0'); return false;">Impact</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>How our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 1, 2020
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

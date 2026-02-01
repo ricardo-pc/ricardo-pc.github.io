@@ -4,14 +4,14 @@
     "href": "coursework.html",
     "title": "Coursework",
     "section": "",
-    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\nSTAT 214 — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.\nSTAT 230A — Linear Models: regression, GLMs, diagnostics, and inference.\nSTAT 254 — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.\nCOMPSCI 289A — Introduction to Machine Learning: core ML theory and algorithms.\nSTAT 238 — Bayesian Statistics: hierarchical models, priors, and MCMC.\n\n\n\n\n\nSTAT 201A — Advanced Probability\nSTAT 201B — Advanced Statistics\nSTAT 243 — Statistical Computing\n\n\n\n\n\n\n\n\n\n\nShowcase of selected projects and assignments.\n\n\n\n\n\n\n\n\nShowcase of selected assignments.\n\n\n\n\n\n\n\n\nShowcase in progress."
+    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\n\n\n\n\n\n\nApplied machine learning for real-world decision-making. Focuses on model evaluation under uncertainty, causal inference methods, and practical deployment of ML systems for high-impact decisions.\n\nPython Applied ML Causal Inference\n\n\n\n\n\n\n\n\n\n\n\nComprehensive regression theory from OLS and Gauss-Markov theorem to GLMs and generalized estimating equations. Covers heteroskedasticity, cluster-robust inference, model selection, shrinkage methods (Ridge/LASSO), and extensions to categorical and count outcomes.\n\nPython Regression GLMs\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic machine learning theory covering empirical risk minimization, complexity bounds, and uniform laws. Emphasizes model evaluation via cross-validation, regularization schemes, classification with proxy losses, and connections between linear models and sophisticated ML methods.\n\nPython Deep Learning Optimization\n\n\n\n\n\n\n\n\n\n\n\nTheoretical foundations and applications of ML from problem formulation to model deployment. Covers unsupervised learning (k-means, PCA), regression and classification, deep learning architectures (CNNs, RNNs, transformers), and generative models (LLMs, GANs). Includes PyTorch implementation and backpropagation.\n\nPython ML Theory Algorithms\n\n\n\n\n\n\n\n\n\n\n\nBayesian inference framework including prior elicitation, conjugate analysis, and hierarchical modeling. Focuses on MCMC methods (Gibbs sampling, Metropolis-Hastings), modern computational techniques (HMC, variational inference), and applications to complex statistical models.\n\nPython MCMC Hierarchical Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure-theoretic probability, convergence concepts, laws of large numbers, central limit theorems, and foundational theory for statistical inference.\n\nTheory Measure Theory Convergence\n\n\n\n\n\n\n\n\n\n\n\nStatistical inference theory including sufficiency, exponential families, hypothesis testing, asymptotic theory, and decision theory foundations.\n\nTheory Inference Asymptotics\n\n\n\n\n\n\n\n\n\n\n\nStatistical computing and data science using Python. Covers UNIX/bash scripting, version control, data manipulation, text processing, object-oriented programming, parallel processing, databases and big data, computer arithmetic, simulation and Monte Carlo methods, numerical linear algebra, and optimization.\n\nPython UNIX/Bash Parallel Computing Numerical Methods"
   },
   {
     "objectID": "coursework.html#uc-berkeley-m.a.-in-statistics",
     "href": "coursework.html#uc-berkeley-m.a.-in-statistics",
     "title": "Coursework",
     "section": "",
-    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\nSTAT 214 — Data Analysis and Machine Learning for Real-World Decision Making: applied ML and decision-focused modeling.\nSTAT 230A — Linear Models: regression, GLMs, diagnostics, and inference.\nSTAT 254 — Modern Statistical Prediction and Machine Learning: generalization, optimization, and modern ML methods.\nCOMPSCI 289A — Introduction to Machine Learning: core ML theory and algorithms.\nSTAT 238 — Bayesian Statistics: hierarchical models, priors, and MCMC.\n\n\n\n\n\nSTAT 201A — Advanced Probability\nSTAT 201B — Advanced Statistics\nSTAT 243 — Statistical Computing\n\n\n\n\n\n\n\n\n\n\nShowcase of selected projects and assignments.\n\n\n\n\n\n\n\n\nShowcase of selected assignments.\n\n\n\n\n\n\n\n\nShowcase in progress."
+    "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\n\n\n\n\n\n\nApplied machine learning for real-world decision-making. Focuses on model evaluation under uncertainty, causal inference methods, and practical deployment of ML systems for high-impact decisions.\n\nPython Applied ML Causal Inference\n\n\n\n\n\n\n\n\n\n\n\nComprehensive regression theory from OLS and Gauss-Markov theorem to GLMs and generalized estimating equations. Covers heteroskedasticity, cluster-robust inference, model selection, shrinkage methods (Ridge/LASSO), and extensions to categorical and count outcomes.\n\nPython Regression GLMs\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic machine learning theory covering empirical risk minimization, complexity bounds, and uniform laws. Emphasizes model evaluation via cross-validation, regularization schemes, classification with proxy losses, and connections between linear models and sophisticated ML methods.\n\nPython Deep Learning Optimization\n\n\n\n\n\n\n\n\n\n\n\nTheoretical foundations and applications of ML from problem formulation to model deployment. Covers unsupervised learning (k-means, PCA), regression and classification, deep learning architectures (CNNs, RNNs, transformers), and generative models (LLMs, GANs). Includes PyTorch implementation and backpropagation.\n\nPython ML Theory Algorithms\n\n\n\n\n\n\n\n\n\n\n\nBayesian inference framework including prior elicitation, conjugate analysis, and hierarchical modeling. Focuses on MCMC methods (Gibbs sampling, Metropolis-Hastings), modern computational techniques (HMC, variational inference), and applications to complex statistical models.\n\nPython MCMC Hierarchical Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure-theoretic probability, convergence concepts, laws of large numbers, central limit theorems, and foundational theory for statistical inference.\n\nTheory Measure Theory Convergence\n\n\n\n\n\n\n\n\n\n\n\nStatistical inference theory including sufficiency, exponential families, hypothesis testing, asymptotic theory, and decision theory foundations.\n\nTheory Inference Asymptotics\n\n\n\n\n\n\n\n\n\n\n\nStatistical computing and data science using Python. Covers UNIX/bash scripting, version control, data manipulation, text processing, object-oriented programming, parallel processing, databases and big data, computer arithmetic, simulation and Monte Carlo methods, numerical linear algebra, and optimization.\n\nPython UNIX/Bash Parallel Computing Numerical Methods"
   },
   {
     "objectID": "about.html",
@@ -25,7 +25,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Water Forecast\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\n\n\nMachine learning prototype to forecast city water demand and available capacity.\n\n\n\n\n\nAug 1, 2020\n\n\nRicardo Pérez Castillo\n\n\n\n\n\nNo matching items"
+    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\nEvolutionary Feature Selection: A Genetic Algorithm Package\n\n\n\nPython\n\nStatistical Computing\n\nMachine Learning\n\nSoftware Engineering\n\n\n\nBuilding a production-quality Python package for automated variable selection using evolutionary computation principles.\n\n\n\nDec 15, 2024\n\n\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\nImpact\n\n\n\nHow our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "selected-work/stat243.html",
@@ -51,58 +51,135 @@
   {
     "objectID": "posts/digital-water/index.html",
     "href": "posts/digital-water/index.html",
-    "title": "Digital Water Forecast",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
     "section": "",
-    "text": "Atos IT Challenge 2020 — 2nd Place (First Mexican team in the competition’s history)\nDigital Water is a cooperative-AI prototype built to help city utilities forecast water demand and available capacity. Using official data from Agua y Drenaje de Monterrey (SADM), we modeled daily demand and dam capacity to surface early warning signals for shortages."
+    "text": "NoteThe Story at a Glance\n\n\n\nIn 2020, our team built an AI system to forecast water demand for my hometown of Monterrey, Mexico. We won 2nd place globally at the Atos IT Challenge, the first Mexican team ever to achieve this distinction in the competition’s 10-year history.\nTwo years later, our predictions came true. Monterrey plunged into a severe water crisis, forcing 5 million residents to survive on minimal daily water allocations for nearly two years."
   },
   {
-    "objectID": "posts/digital-water/index.html#overview",
-    "href": "posts/digital-water/index.html#overview",
-    "title": "Digital Water Forecast",
+    "objectID": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
+    "href": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "What If You Could See a Crisis Coming?",
+    "text": "What If You Could See a Crisis Coming?\nBetween November 2019 and July 2020, my team developed Digital Water, a machine learning platform to forecast water demand and capacity at the city level. Working with real data from Monterrey’s official water utility (SADM), we built LSTM neural networks that could predict daily water consumption and available dam capacity.\nAt the time, we were focused on winning an international competition. We didn’t realize we were documenting the early warning signs of a catastrophe."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#the-challenge",
+    "href": "posts/digital-water/index.html#the-challenge",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "The Challenge",
+    "text": "The Challenge\nMonterrey is Mexico’s third-largest metro area and a major industrial hub. The city’s water system serves over 5 million people, drawing from a network of dams and underground sources. But water scarcity was becoming more frequent, and utilities were operating reactively, responding to shortages rather than preventing them.\nOur goal: Build a forecasting system that could shift water management from reactive to preventative, giving utilities early warning signals before reaching critical thresholds."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#our-solution",
+    "href": "posts/digital-water/index.html#our-solution",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Our Solution",
+    "text": "Our Solution\nWe developed an end-to-end machine learning pipeline:\n\nData Engineering\n\nCollected and cleaned multi-source time-series data from SADM\nAligned daily consumption records with dam capacity measurements\nCreated comprehensive field dictionaries and documentation\n\n\n\nPredictive Models\n\nTrained two LSTM neural networks (one for demand, one for capacity)\nForecasted daily water demand and available capacity\nCalculated “days-to-threshold” estimates for safe operating levels\nImplemented in Python using TensorFlow\n\n\n\nDeployment\n\nBuilt an interactive web dashboard (hosted on Heroku)\nCreated Google Colab notebooks for accessibility and reproducibility\nProduced technical documentation and presentation materials\n\n\n\n\n\n\n\nTipKey Technologies\n\n\n\nPython • TensorFlow • LSTM Networks • Time Series Forecasting • Google Colab • Heroku"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#recognition",
+    "href": "posts/digital-water/index.html#recognition",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Recognition",
+    "text": "Recognition\n\n\n🏆 2nd Place Globally Atos IT Challenge 2020\n\n\n🇲🇽 First Mexican Team In competition’s 10-year history\n\n\n👥 5M People Impacted By predicted crisis\n\n\nWe presented our work to the Atos CEO and Scientific Board, competing against thousands of international teams."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#what-happened-next-the-crisis",
+    "href": "posts/digital-water/index.html#what-happened-next-the-crisis",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "What Happened Next: The Crisis",
+    "text": "What Happened Next: The Crisis\nIn 2022, everything our models predicted came to pass.\nMonterrey experienced a devastating water crisis that lasted nearly two years. The city’s 5 million residents were reduced to minimal daily water allocations. Neighborhoods received water only a few hours per week. Businesses struggled. The crisis validated our forecasting approach—but also showed the human cost of delayed action.\n\n\n\n\n\n\nWarningTimeline\n\n\n\n2019-2020: Built forecasting models with SADM data\nJuly 2020: Won 2nd place at Atos IT Challenge\n2022: Water crisis begins—predictions validated\n2022-2024: Nearly two years of severe rationing for 5M residents\n2024: Crisis subsides\n\n\nThe crisis highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning—and why such systems need to be deployed, not just built."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#technical-details",
+    "href": "posts/digital-water/index.html#technical-details",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Technical Details",
+    "text": "Technical Details\nFor those interested in the implementation:\n\nModels: Two LSTM neural networks (demand + capacity forecasting)\nData: Official records from Agua y Drenaje de Monterrey (SADM)\nFeatures: Multi-variate time series including consumption patterns, dam levels, and seasonal factors\nOutputs: Daily forecasts + “days-to-threshold” risk estimates\nCode: Open-source notebooks in Google Colab\nDocumentation: Complete technical report and research summaries"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#links-resources",
+    "href": "posts/digital-water/index.html#links-resources",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — Code, notebooks, and documentation\nDemo Video — Platform walkthrough"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#reflection",
+    "href": "posts/digital-water/index.html#reflection",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Reflection",
+    "text": "Reflection\nThis project was completed in 2020, and the notebooks remain as-is in the repository. Looking back (5 years later) with more experience in ML, I would redesign the data pipeline, modeling aproach, stability and predictability of the model and scalability. But the core lesson remains: predictive models only create impact when they’re deployed and acted upon.\nThe crisis our system forecasted was preventable. The data was there. The models worked. What was missing was the infrastructure and institutional will to act on early warnings.\n\nBuilt between November 2019 and July 2020 as part of the Atos IT Challenge."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html",
+    "href": "posts/genetic-algorithm/index.html",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
     "section": "",
-    "text": "Atos IT Challenge 2020 — 2nd Place (First Mexican team in the competition’s history)\nDigital Water is a cooperative-AI prototype built to help city utilities forecast water demand and available capacity. Using official data from Agua y Drenaje de Monterrey (SADM), we modeled daily demand and dam capacity to surface early warning signals for shortages."
+    "text": "NoteProject Overview\n\n\n\nA collaborative final project for STAT 243 (Statistical Computing) implementing a genetic algorithm for automated variable selection. Built as a production-ready Python package with comprehensive testing, modular architecture, and support for multiple regression methods.\nTeam: Collaborative project with two classmates • Duration: 4 weeks • Language: Python"
   },
   {
-    "objectID": "posts/digital-water/index.html#context",
-    "href": "posts/digital-water/index.html#context",
-    "title": "Digital Water Forecast",
-    "section": "Context",
-    "text": "Context\nThis project focused on Monterrey, Mexico, my hometown. At the time, we did not realize the city was on the verge of a major water crisis that unfolded two years later. The work highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning."
+    "objectID": "posts/genetic-algorithm/index.html#the-challenge-variable-selection-at-scale",
+    "href": "posts/genetic-algorithm/index.html#the-challenge-variable-selection-at-scale",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "The Challenge: Variable Selection at Scale",
+    "text": "The Challenge: Variable Selection at Scale\nIn predictive modeling, choosing the right set of variables is crucial. Too few predictors and you miss important signals. Too many and you overfit, harming generalization. When facing datasets with dozens or hundreds of potential predictors, exhaustive search becomes computationally infeasible—exploring all possible combinations grows exponentially.\nThe assignment: Build a Python package implementing genetic algorithms for variable selection that balances predictive accuracy against model complexity."
   },
   {
-    "objectID": "posts/digital-water/index.html#approach",
-    "href": "posts/digital-water/index.html#approach",
-    "title": "Digital Water Forecast",
-    "section": "Approach",
-    "text": "Approach\nWe built an end-to-end Python workflow that: 1. Cleaned and aligned multi-source time-series data (consumption + dam capacity). 2. Trained two LSTM models to forecast daily demand and daily capacity. 3. Produced outputs that estimated “days-to-threshold” for safe levels. 4. Presented results via a web dashboard (hosted on Heroku at the time)."
+    "objectID": "posts/genetic-algorithm/index.html#what-are-genetic-algorithms",
+    "href": "posts/genetic-algorithm/index.html#what-are-genetic-algorithms",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "What Are Genetic Algorithms?",
+    "text": "What Are Genetic Algorithms?\nGenetic algorithms mimic natural selection to solve optimization problems. Instead of evaluating every possible solution, they:\n\nInitialize a population of random variable combinations (chromosomes)\nEvaluate fitness using cross-validated predictive performance\nSelect the best-performing combinations as parents\nCrossover parent chromosomes to create offspring\nMutate randomly to explore new solutions\nEvolve iteratively across generations toward optimal feature sets\n\nThis evolutionary approach efficiently searches massive solution spaces by learning from successful combinations."
   },
   {
-    "objectID": "posts/digital-water/index.html#features",
-    "href": "posts/digital-water/index.html#features",
-    "title": "Digital Water Forecast",
-    "section": "Features",
-    "text": "Features\n\nGoogle Colab notebooks for both LSTM models\nCurated datasets with field dictionary\nResearch summaries on Monterrey’s water network\nTechnical report and presentation materials\nShort demo video of the platform"
+    "objectID": "posts/genetic-algorithm/index.html#our-solution-the-ga-package",
+    "href": "posts/genetic-algorithm/index.html#our-solution-the-ga-package",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Our Solution: The GA Package",
+    "text": "Our Solution: The GA Package\nWe developed a flexible, well-tested Python package that brings genetic algorithms to practical variable selection tasks.\n\nCore Features\n\n\n\n\n\n\nTipKey Capabilities\n\n\n\nMultiple Model Types • Linear Regression • LASSO Regression • Decision Trees\nFlexible Selection • Rank-based parent selection • Tournament selection\nCrossover Methods • Single-point recombination • Double-point recombination\nPenalized Optimization • Balance accuracy vs. complexity • Adjustable sparsity penalty\n\n\n\n\nArchitecture & Design\nThe package follows software engineering best practices:\nModular Design - Core select() function as primary interface - Discrete methods for initialization, fitness evaluation, selection, crossover, mutation - Clear separation of concerns across components\nRobust Testing - Unit tests for individual genetic operators - Integration tests for full algorithm - pytest framework with automated GitHub Actions CI/CD - Validation against known benchmarks\nPerformance Optimization - Vectorized operations within generations - Parallel cross-validation for fitness evaluation - Efficient NumPy/scikit-learn implementations\nProfessional Documentation - Comprehensive README with examples - Docstrings following Python standards - Clear usage demonstrations\n\n\nTechnical Implementation\nThe algorithm evaluates fitness using cross-validated R² with optional complexity penalties:\n\\[\n\\text{Penalized Fitness} = R^2 - \\lambda \\cdot f\n\\]\nwhere: - \\(R^2\\) = cross-validated coefficient of determination - \\(\\lambda\\) = penalty parameter (controls sparsity) - \\(f\\) = fraction of total predictors selected\nThis formulation prevents overfitting while encouraging parsimonious models."
   },
   {
-    "objectID": "posts/digital-water/index.html#results",
-    "href": "posts/digital-water/index.html#results",
-    "title": "Digital Water Forecast",
-    "section": "Results",
-    "text": "Results\n\n2nd place among thousands of international teams at Atos IT Challenge 2020.\nPresented to the Atos CEO and Scientific Board."
+    "objectID": "posts/genetic-algorithm/index.html#development-process",
+    "href": "posts/genetic-algorithm/index.html#development-process",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Development Process",
+    "text": "Development Process\n\nCollaborative Workflow\nWorking as a three-person team, we:\n\nMapped architecture before writing code—defining modular components and interfaces\nDivided responsibilities across initialization, genetic operators, fitness evaluation, and testing\nUsed Git workflows with branches and pull requests for code review\nCross-tested components — each person’s code was reviewed and tested by teammates\nIntegrated continuously via automated testing on GitHub Actions\n\n\n\nTechnical Requirements Met\n\n\n✓ Modular Architecture Clean separation of genetic operators\n\n\n✓ Formal Testing pytest suite with CI/CD automation\n\n\n✓ Performance Vectorization & parallel processing\n\n\n✓ Documentation Complete README & docstrings"
   },
   {
-    "objectID": "posts/digital-water/index.html#links",
-    "href": "posts/digital-water/index.html#links",
-    "title": "Digital Water Forecast",
-    "section": "Links",
-    "text": "Links\n\nProject repository: https://github.com/ricardo-pc/DigitalWater\nDemo video: https://youtu.be/AiQcQ7dyW38"
+    "objectID": "posts/genetic-algorithm/index.html#results-applications",
+    "href": "posts/genetic-algorithm/index.html#results-applications",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Results & Applications",
+    "text": "Results & Applications\nThe package successfully identifies important predictors across various scenarios:\n\nBaseball statistics (original benchmark dataset)\nSimulated data with known true predictors\nReal-world datasets with complex predictor relationships\n\nPerformance highlights: - Efficiently handles datasets with 20+ potential predictors - Balances predictive accuracy with model sparsity - Reasonable runtime under default settings (~minutes for typical problems) - Supports experimentation with different GA parameters"
   },
   {
-    "objectID": "posts/digital-water/index.html#note",
-    "href": "posts/digital-water/index.html#note",
-    "title": "Digital Water Forecast",
-    "section": "Note",
-    "text": "Note\nThis solution was built between Nov 2019 and Jul 2020. The notebooks are kept as-is; today I would redesign the data engineering and modeling approach."
+    "objectID": "posts/genetic-algorithm/index.html#technologies-tools",
+    "href": "posts/genetic-algorithm/index.html#technologies-tools",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nCore Stack - Python — Primary implementation language - scikit-learn — Regression models and cross-validation - NumPy — Vectorized numerical operations - pytest — Testing framework\nDevelopment Tools - Git/GitHub — Version control and collaboration - GitHub Actions — Automated testing and CI/CD - VSCode — Development environment"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#key-takeaways",
+    "href": "posts/genetic-algorithm/index.html#key-takeaways",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nSoftware Engineering in Statistics\nThis project reinforced the importance of treating statistical code as production software:\n\nModularity matters — Breaking algorithms into discrete, testable components\nTesting is essential — Formal tests catch bugs and ensure reliability\nDocumentation enables use — Clear READMEs and docstrings make code accessible\nPerformance counts — Vectorization and parallelization for real-world speed\nCollaboration requires structure — Git workflows and code review maintain quality\n\n\n\nEvolutionary Computation Insights\nImplementing genetic algorithms from scratch provided deep understanding:\n\nHow crossover and mutation balance exploration vs. exploitation\nThe impact of selection pressure on convergence speed\nTrade-offs between population size and number of generations\nImportance of fitness function design for optimization success"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#links-resources",
+    "href": "posts/genetic-algorithm/index.html#links-resources",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — Complete source code and documentation\nProject Specification — Original assignment requirements"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#reflection",
+    "href": "posts/genetic-algorithm/index.html#reflection",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Reflection",
+    "text": "Reflection\nBuilding a production-quality statistical computing package taught me that good statistical software requires more than correct algorithms—it demands thoughtful architecture, comprehensive testing, performance optimization, and clear documentation.\nThe collaborative aspect was equally valuable. Working as a team meant negotiating interfaces, reviewing each other’s code, and maintaining consistency across components. These skills translate directly to professional data science and software engineering.\n\nCompleted December 2024 as the final project for STAT 243: Statistical Computing at UC Berkeley."
   },
   {
     "objectID": "selected-work/ml-current.html",
