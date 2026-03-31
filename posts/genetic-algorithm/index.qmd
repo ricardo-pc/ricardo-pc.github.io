@@ -2,7 +2,7 @@
 title: "Evolutionary Feature Selection: A Genetic Algorithm Package"
 description: "Building a production-quality Python package for automated variable selection using evolutionary computation principles."
 author: "Ricardo Pérez Castillo"
-date: "2024-12-15"
+date: "2025-12-15"
 categories: [Python, Statistical Computing, Machine Learning, Software Engineering]
 ---
 
@@ -125,4 +125,4 @@ The collaborative aspect was equally valuable. Working as a team meant negotiati
 
 ---
 
-*Completed December 2024 as the final project for STAT 243: Statistical Computing at UC Berkeley.*
+*Completed December 2025 as the final project for STAT 243: Statistical Computing at UC Berkeley.*
