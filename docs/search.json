@@ -25,7 +25,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\nImpact\n\n\n\nHow our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
+    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\n\nPython\n\nMachine Learning\n\nStatistical Computing\n\nBayesian Inference\n\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\nEvolutionary Feature Selection: A Genetic Algorithm Package\n\n\n\nPython\n\nStatistical Computing\n\nMachine Learning\n\nSoftware Engineering\n\n\n\nBuilding a production-quality Python package for automated variable selection using evolutionary computation principles.\n\n\n\nDec 15, 2024\n\n\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\nImpact\n\n\n\nHow our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "selected-work/stat243.html",
@@ -56,53 +56,186 @@
     "text": "NoteThe Story at a Glance\n\n\n\nIn 2020, our team built an AI system to forecast water demand for my hometown of Monterrey, Mexico. We won 2nd place globally at the Atos IT Challenge, the first Mexican team ever to achieve this distinction in the competition’s 10-year history.\nTwo years later, our predictions came true. Monterrey plunged into a severe water crisis, forcing 5 million residents to survive on minimal daily water allocations for nearly two years."
   },
   {
-    "objectID": "posts/digital-water/index.html#overview",
-    "href": "posts/digital-water/index.html#overview",
-    "title": "Digital Water Forecast",
+    "objectID": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
+    "href": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "What If You Could See a Crisis Coming?",
+    "text": "What If You Could See a Crisis Coming?\nBetween November 2019 and July 2020, my team developed Digital Water, a machine learning platform to forecast water demand and capacity at the city level. Working with real data from Monterrey’s official water utility (SADM), we built LSTM neural networks that could predict daily water consumption and available dam capacity.\nAt the time, we were focused on winning an international competition. We didn’t realize we were documenting the early warning signs of a catastrophe."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#the-challenge",
+    "href": "posts/digital-water/index.html#the-challenge",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "The Challenge",
+    "text": "The Challenge\nMonterrey is Mexico’s third-largest metro area and a major industrial hub. The city’s water system serves over 5 million people, drawing from a network of dams and underground sources. But water scarcity was becoming more frequent, and utilities were operating reactively, responding to shortages rather than preventing them.\nOur goal: Build a forecasting system that could shift water management from reactive to preventative, giving utilities early warning signals before reaching critical thresholds."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#our-solution",
+    "href": "posts/digital-water/index.html#our-solution",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Our Solution",
+    "text": "Our Solution\nWe developed an end-to-end machine learning pipeline:\n\nData Engineering\n\nCollected and cleaned multi-source time-series data from SADM\nAligned daily consumption records with dam capacity measurements\nCreated comprehensive field dictionaries and documentation\n\n\n\nPredictive Models\n\nTrained two LSTM neural networks (one for demand, one for capacity)\nForecasted daily water demand and available capacity\nCalculated “days-to-threshold” estimates for safe operating levels\nImplemented in Python using TensorFlow\n\n\n\nDeployment\n\nBuilt an interactive web dashboard (hosted on Heroku)\nCreated Google Colab notebooks for accessibility and reproducibility\nProduced technical documentation and presentation materials\n\n\n\n\n\n\n\nTipKey Technologies\n\n\n\nPython • TensorFlow • LSTM Networks • Time Series Forecasting • Google Colab • Heroku"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#recognition",
+    "href": "posts/digital-water/index.html#recognition",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Recognition",
+    "text": "Recognition\n\n\n🏆 2nd Place Globally Atos IT Challenge 2020\n\n\n🇲🇽 First Mexican Team In competition’s 10-year history\n\n\n👥 5M People Impacted By predicted crisis\n\n\nWe presented our work to the Atos CEO and Scientific Board, competing against thousands of international teams."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#what-happened-next-the-crisis",
+    "href": "posts/digital-water/index.html#what-happened-next-the-crisis",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "What Happened Next: The Crisis",
+    "text": "What Happened Next: The Crisis\nIn 2022, everything our models predicted came to pass.\nMonterrey experienced a devastating water crisis that lasted nearly two years. The city’s 5 million residents were reduced to minimal daily water allocations. Neighborhoods received water only a few hours per week. Businesses struggled. The crisis validated our forecasting approach—but also showed the human cost of delayed action.\n\n\n\n\n\n\nWarningTimeline\n\n\n\n2019-2020: Built forecasting models with SADM data\nJuly 2020: Won 2nd place at Atos IT Challenge\n2022: Water crisis begins—predictions validated\n2022-2024: Nearly two years of severe rationing for 5M residents\n2024: Crisis subsides\n\n\nThe crisis highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning—and why such systems need to be deployed, not just built."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#technical-details",
+    "href": "posts/digital-water/index.html#technical-details",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Technical Details",
+    "text": "Technical Details\nFor those interested in the implementation:\n\nModels: Two LSTM neural networks (demand + capacity forecasting)\nData: Official records from Agua y Drenaje de Monterrey (SADM)\nFeatures: Multi-variate time series including consumption patterns, dam levels, and seasonal factors\nOutputs: Daily forecasts + “days-to-threshold” risk estimates\nCode: Open-source notebooks in Google Colab\nDocumentation: Complete technical report and research summaries"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#links-resources",
+    "href": "posts/digital-water/index.html#links-resources",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — Code, notebooks, and documentation\nDemo Video — Platform walkthrough"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#reflection",
+    "href": "posts/digital-water/index.html#reflection",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Reflection",
+    "text": "Reflection\nThis project was completed in 2020, and the notebooks remain as-is in the repository. Looking back (5 years later) with more experience in ML, I would redesign the data pipeline, modeling aproach, stability and predictability of the model and scalability. But the core lesson remains: predictive models only create impact when they’re deployed and acted upon.\nThe crisis our system forecasted was preventable. The data was there. The models worked. What was missing was the infrastructure and institutional will to act on early warnings.\n\nBuilt between November 2019 and July 2020 as part of the Atos IT Challenge."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html",
+    "href": "posts/genetic-algorithm/index.html",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
     "section": "",
-    "text": "Atos IT Challenge 2020 — 2nd Place (First Mexican team in the competition’s history)\nDigital Water is a cooperative-AI prototype built to help city utilities forecast water demand and available capacity. Using official data from Agua y Drenaje de Monterrey (SADM), we modeled daily demand and dam capacity to surface early warning signals for shortages."
+    "text": "NoteProject Overview\n\n\n\nA collaborative final project for STAT 243 (Statistical Computing) implementing a genetic algorithm for automated variable selection. Built as a production-ready Python package with comprehensive testing, modular architecture, and support for multiple regression methods.\nTeam: collaborative project with two classmates · Duration: 4 weeks · Language: Python"
   },
   {
-    "objectID": "posts/digital-water/index.html#context",
-    "href": "posts/digital-water/index.html#context",
-    "title": "Digital Water Forecast",
-    "section": "Context",
-    "text": "Context\nThis project focused on Monterrey, Mexico, my hometown. At the time, we did not realize the city was on the verge of a major water crisis that unfolded two years later. The work highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning."
+    "objectID": "posts/genetic-algorithm/index.html#the-challenge-variable-selection-at-scale",
+    "href": "posts/genetic-algorithm/index.html#the-challenge-variable-selection-at-scale",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "The Challenge: Variable Selection at Scale",
+    "text": "The Challenge: Variable Selection at Scale\nIn predictive modeling, choosing the right set of variables is crucial. Too few predictors and you miss important signals. Too many and you overfit, harming generalization. When facing datasets with dozens or hundreds of potential predictors, exhaustive search becomes computationally infeasible, as exploring all possible combinations grows exponentially.\nThe assignment: build a Python package implementing genetic algorithms for variable selection that balances predictive accuracy against model complexity."
   },
   {
-    "objectID": "posts/digital-water/index.html#approach",
-    "href": "posts/digital-water/index.html#approach",
-    "title": "Digital Water Forecast",
-    "section": "Approach",
-    "text": "Approach\nWe built an end-to-end Python workflow that: 1. Cleaned and aligned multi-source time-series data (consumption + dam capacity). 2. Trained two LSTM models to forecast daily demand and daily capacity. 3. Produced outputs that estimated “days-to-threshold” for safe levels. 4. Presented results via a web dashboard (hosted on Heroku at the time)."
+    "objectID": "posts/genetic-algorithm/index.html#what-are-genetic-algorithms",
+    "href": "posts/genetic-algorithm/index.html#what-are-genetic-algorithms",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "What Are Genetic Algorithms?",
+    "text": "What Are Genetic Algorithms?\nGenetic algorithms mimic natural selection to solve optimization problems. Instead of evaluating every possible solution, they:\n\nInitialize a population of random variable combinations (chromosomes)\nEvaluate fitness using cross-validated predictive performance\nSelect the best-performing combinations as parents\nCrossover parent chromosomes to create offspring\nMutate randomly to explore new solutions\nEvolve iteratively across generations toward optimal feature sets\n\nThis evolutionary approach efficiently searches massive solution spaces by learning from successful combinations."
   },
   {
-    "objectID": "posts/digital-water/index.html#features",
-    "href": "posts/digital-water/index.html#features",
-    "title": "Digital Water Forecast",
-    "section": "Features",
-    "text": "Features\n\nGoogle Colab notebooks for both LSTM models\nCurated datasets with field dictionary\nResearch summaries on Monterrey’s water network\nTechnical report and presentation materials\nShort demo video of the platform"
+    "objectID": "posts/genetic-algorithm/index.html#our-solution-the-ga-package",
+    "href": "posts/genetic-algorithm/index.html#our-solution-the-ga-package",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Our Solution: The GA Package",
+    "text": "Our Solution: The GA Package\nWe developed a flexible, well-tested Python package that brings genetic algorithms to practical variable selection tasks.\n\nCore Features\n\n\n\n\n\n\nTipKey Capabilities\n\n\n\nMultiple model types: linear regression, LASSO, decision trees\nFlexible selection: rank-based parent selection and tournament selection\nCrossover methods: single-point and double-point recombination\nPenalized optimization: adjustable sparsity penalty to balance accuracy vs. complexity\n\n\n\n\nArchitecture & Design\nThe package follows software engineering best practices:\nModular design: core select() function as primary interface, with discrete methods for initialization, fitness evaluation, selection, crossover, and mutation\nRobust testing: unit tests for individual genetic operators, integration tests for the full algorithm, and a pytest suite with automated GitHub Actions CI/CD\nPerformance: vectorized operations within generations and parallel cross-validation for fitness evaluation\nDocumentation: comprehensive README with examples and docstrings following Python standards\n\n\nTechnical Implementation\nThe algorithm evaluates fitness using cross-validated \\(R^2\\) with optional complexity penalties:\n\\[\\text{Penalized Fitness} = R^2 - \\lambda \\cdot f\\]\nwhere \\(R^2\\) is the cross-validated coefficient of determination, \\(\\lambda\\) is the penalty parameter controlling sparsity, and \\(f\\) is the fraction of total predictors selected. This formulation prevents overfitting while encouraging parsimonious models."
   },
   {
-    "objectID": "posts/digital-water/index.html#results",
-    "href": "posts/digital-water/index.html#results",
-    "title": "Digital Water Forecast",
-    "section": "Results",
-    "text": "Results\n\n2nd place among thousands of international teams at Atos IT Challenge 2020.\nPresented to the Atos CEO and Scientific Board."
+    "objectID": "posts/genetic-algorithm/index.html#development-process",
+    "href": "posts/genetic-algorithm/index.html#development-process",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Development Process",
+    "text": "Development Process\n\nCollaborative Workflow\nWorking as a three-person team, we mapped the architecture before writing code, divided responsibilities across initialization, genetic operators, fitness evaluation, and testing, used Git branches and pull requests for code review, and integrated continuously via automated testing on GitHub Actions.\n\n\nTechnical Requirements Met\n\n\n\n\n\n\n\nRequirement\nImplementation\n\n\n\n\nModular architecture\nClean separation of genetic operators into discrete, testable components\n\n\nFormal testing\npytest suite with CI/CD automation via GitHub Actions\n\n\nPerformance\nVectorized operations and parallel cross-validation\n\n\nDocumentation\nComplete README and docstrings"
   },
   {
-    "objectID": "posts/digital-water/index.html#links",
-    "href": "posts/digital-water/index.html#links",
-    "title": "Digital Water Forecast",
-    "section": "Links",
-    "text": "Links\n\nProject repository: https://github.com/ricardo-pc/DigitalWater\nDemo video: https://youtu.be/AiQcQ7dyW38"
+    "objectID": "posts/genetic-algorithm/index.html#results-applications",
+    "href": "posts/genetic-algorithm/index.html#results-applications",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Results & Applications",
+    "text": "Results & Applications\nThe package successfully identifies important predictors across various scenarios:\n\nBaseball statistics (original benchmark dataset)\nSimulated data with known true predictors\nReal-world datasets with complex predictor relationships\n\nIt efficiently handles datasets with 20+ potential predictors, balances predictive accuracy with model sparsity, and supports experimentation with different GA parameters."
   },
   {
-    "objectID": "posts/digital-water/index.html#note",
-    "href": "posts/digital-water/index.html#note",
-    "title": "Digital Water Forecast",
-    "section": "Note",
-    "text": "Note\nThis solution was built between Nov 2019 and Jul 2020. The notebooks are kept as-is; today I would redesign the data engineering and modeling approach."
+    "objectID": "posts/genetic-algorithm/index.html#technologies-tools",
+    "href": "posts/genetic-algorithm/index.html#technologies-tools",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nCore stack: Python, scikit-learn, NumPy, pytest\nDevelopment tools: Git/GitHub, GitHub Actions, VSCode"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#key-takeaways",
+    "href": "posts/genetic-algorithm/index.html#key-takeaways",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nSoftware Engineering in Statistics\nThis project reinforced the importance of treating statistical code as production software: modularity makes algorithms testable, formal tests catch bugs early, documentation enables others to use the code, and vectorization matters for real-world speed.\n\n\nEvolutionary Computation Insights\nImplementing genetic algorithms from scratch provided concrete understanding of how crossover and mutation balance exploration vs. exploitation, the impact of selection pressure on convergence speed, and the importance of fitness function design for optimization success."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#links-resources",
+    "href": "posts/genetic-algorithm/index.html#links-resources",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — complete source code and documentation\nProject Specification — original assignment requirements"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#reflection",
+    "href": "posts/genetic-algorithm/index.html#reflection",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Reflection",
+    "text": "Reflection\nBuilding a production-quality statistical computing package taught me that good statistical software requires more than correct algorithms; it demands thoughtful architecture, comprehensive testing, performance optimization, and clear documentation.\nThe collaborative aspect was equally valuable. Working as a team meant negotiating interfaces, reviewing each other’s code, and maintaining consistency across components. These skills translate directly to professional data science and software engineering.\n\nCompleted December 2024 as the final project for STAT 243: Statistical Computing at UC Berkeley."
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html",
+    "href": "posts/stat214-lab1/index.html",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA full analysis of the PECARN pediatric head trauma dataset, from data cleaning and exploratory analysis to Bayesian inference and classification modeling, centered on the question of when to recommend a CT scan for a child with a head injury.\nCourse: STAT 214: Data Analysis and Machine Learning for Real-World Decision Making · Semester: Spring 2026 · Language: Python"
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#background",
+    "href": "posts/stat214-lab1/index.html#background",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Background",
+    "text": "Background\nTraumatic brain injuries (TBI) are a leading cause of death in patients younger than 18. CT scans are the standard diagnostic tool, but radiation exposure in childhood increases cancer incidence, so unnecessary scans carry real risk. The clinical challenge is identifying the small fraction of children (under 1%) with clinically-important TBI (ciTBI) while sparing the rest from unnecessary radiation.\nThe Kuppermann rule (2009) is the standard clinical decision rule used in practice: a short checklist of binary symptoms where any positive flag triggers a CT recommendation. It achieves near-perfect sensitivity but low specificity, meaning it catches almost every true TBI case but recommends CT for a large number of children who don’t need one.\nThis lab investigates: Can we do better?"
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#the-data",
+    "href": "posts/stat214-lab1/index.html#the-data",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "The Data",
+    "text": "The Data\nThe PECARN dataset comes from a multi-center prospective cohort study conducted across 25 emergency departments between 2004 and 2006. It contains 43,399 patients and 125 clinical features.\n\n\n\n\n\n\nTipDataset Highlights\n\n\n\n43,399 patients enrolled across 25 emergency departments\n125 features spanning injury mechanism, symptoms, GCS scores, neurological signs, and demographics\n0.89% ciTBI prevalence, with only 376 positive cases out of 42,047 after exclusion criteria\nFinal analysis dataset matches the Kuppermann et al. study population\n\n\nData cleaning covered column renaming, type enforcement, missingness quantification, duplicate checks, range validation, and consistency checks. All steps were documented against the original data dictionary."
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#key-findings",
+    "href": "posts/stat214-lab1/index.html#key-findings",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nFinding 1: Missed Patients Are Not Asymptomatic\nThe Kuppermann rule achieves 100% sensitivity for children under 2, but misses 32 of 278 TBI cases (11.5%) in children aged 2 and older. These 32 patients have none of the features the rule checks for that age group, but that does not mean they were healthy-looking. Only 3 of the 32 (9.4%) had zero non-Kuppermann clinical features. The rest presented with identifiable symptoms the rule simply ignores for older children:\n\n50% were not acting normally\n46.9% had a scalp hematoma\n37.5% reported headache of any severity\n25% had moderate headache (the rule flags only severe headache)\n\nScalp hematoma and acting abnormally are both used by Kuppermann for children under 2 but dropped for older children. Their prevalence among missed patients suggests these features carry predictive value across age groups, a gap a learned model could exploit.\n\n\n\nNon-Kuppermann features present among the 32 missed TBI patients (aged ≥ 2). Red bars indicate features present in at least 25% of missed patients. Only 3 patients (9.4%) were truly asymptomatic.\n\n\n\n\nFinding 2: Sensitivity-Specificity Tradeoff\nA natural response to Finding 1 is to add those features to the rule. The results illustrate the core limitation of binary OR-rules:\n\nAdding scalp hematoma recovers 13 more TBI cases but flags 6,264 additional non-TBI children\nAdding moderate headache recovers 8 more but flags 2,451 additional\nAdding both recovers 18 more but requires 7,786 additional CT scans, dropping specificity from 55.1% to 30.2%\n\nThe improvement has to come from a model that learns to weight combinations of features, not one that simply ORs more flags together. This motivated the logistic regression and random forest approaches in the modeling section below.\n\n\n\nSensitivity-specificity tradeoff for Kuppermann rule variants (aged ≥ 2). Adding features improves sensitivity but sharply reduces specificity, illustrating the core limitation of binary OR-rules.\n\n\n\n\nFinding 3: Bayesian Symptom Posteriors\nStarting from a prior \\(P(\\text{TBI}) = 0.0089\\) (the 0.89% base rate in the dataset), I computed the posterior probability of TBI given each observed symptom \\(s\\) using Bayes’ theorem:\n\\[P(\\text{TBI} \\mid s) = \\frac{P(s \\mid \\text{TBI}) \\cdot P(\\text{TBI})}{P(s)}\\]\nThe key quantity for comparing symptoms is the Bayes factor, which measures how much observing a symptom shifts the odds of TBI relative to the prior:\n\\[\\text{BF}_s = \\frac{P(s \\mid \\text{TBI})}{P(s \\mid \\text{no TBI})}\\]\nA Bayes factor of 1 means the symptom is uninformative. A value of 20 means the posterior odds are 20 times the prior odds. This is clearest in the log-odds representation, where the update is additive:\n\\[\\underbrace{\\log \\frac{P(\\text{TBI} \\mid s)}{P(\\text{no TBI} \\mid s)}}_{\\text{posterior log-odds}} = \\underbrace{\\log \\frac{P(\\text{TBI})}{P(\\text{no TBI})}}_{\\text{prior log-odds}} + \\underbrace{\\log \\text{BF}_s}_{\\text{evidence}}\\]\nThis framing makes the incremental diagnostic value of each symptom explicit and independent of the base rate, which matters here because the 0.89% prevalence makes all raw posteriors look small.\nThe results reveal a sharp two-tier structure:\n\n\n\n\n\n\n\n\n\n\nSymptom\n\\(P(s \\mid \\text{TBI})\\)\n\\(P(s)\\)\n\\(P(\\text{TBI} \\mid s)\\)\nBayes Factor\n\n\n\n\nPalpable skull fracture\n6.6%\n0.4%\n15.6%\n20.5\n\n\nBasilar skull fracture\n10.9%\n0.7%\n14.3%\n18.5\n\n\nAltered mental status\n59.6%\n13.0%\n4.1%\n4.7\n\n\nSeizure\n4.5%\n1.2%\n3.4%\n3.9\n\n\nLoss of consciousness\n30.9%\n10.5%\n2.6%\n3.0\n\n\nVomiting\n30.9%\n13.2%\n2.1%\n2.4\n\n\nScalp hematoma\n61.2%\n39.8%\n1.4%\n1.5\n\n\nHeadache\n43.4%\n30.2%\n1.3%\n1.4\n\n\nActing normally\n33.2%\n78.1%\n0.38%\n0.4\n\n\n\nThe most striking pattern is that diagnostic power is determined by rarity, not by prevalence among TBI cases. Palpable skull fracture appears in 6.6% of TBI patients but only 0.4% of all patients, yielding a Bayes factor of 20.5. Scalp hematoma appears in 61.2% of TBI cases but has a population base rate of 39.8%, which dilutes its posterior to 1.4% and a Bayes factor of only 1.5. The difference between these two symptoms is almost entirely explained by \\(P(s)\\) in the denominator, not by \\(P(s \\mid \\text{TBI})\\).\nActing normally is the only symptom with a Bayes factor below 1 (BF = 0.4), meaning its presence reduces the posterior probability of TBI. In log-odds terms, observing it subtracts \\(\\log(0.4) \\approx -0.92\\) from the prior log-odds, a moderately protective signal.\nA bootstrap stability check (1,000 resamples of the full dataset) confirmed that the symptom ranking is stable, though rare symptoms carry substantial estimation uncertainty. The 95% CI for palpable skull fracture spans [13.1, 30.2], reflecting the fact that only 0.4% of patients present with it. Common symptoms are estimated precisely: scalp hematoma has a 95% CI of [1.4, 1.7].\nAn important caveat is that this analysis treats symptoms as independent. In practice they are not: among TBI-positive patients, scalp hematoma co-occurs with nearly every other symptom at rates above 60%, and altered mental status co-occurs with loss of consciousness in over a third of cases. These rates far exceed independence assumptions, which means that simply multiplying Bayes factors across symptoms would overcount evidence. Capturing these dependencies is part of what motivates the multivariate models in the next section."
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#modeling",
+    "href": "posts/stat214-lab1/index.html#modeling",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Modeling",
+    "text": "Modeling\nThree models were trained on a stratified 70/15/15 train/validation/test split, all evaluated on the same held-out test set (\\(n = 6{,}307\\)). The 112:1 class imbalance was addressed with balanced class weights throughout.\n\nModel Comparison\n\n\n\nMetric\nKuppermann Rule\nLogistic Regression\nRandom Forest\n\n\n\n\nSensitivity\n91.2%\n84.2%\n84.2%\n\n\nSpecificity\n43.9%\n72.7%\n79.0%\n\n\nUnnecessary CTs\n3,506\n1,707\n1,312\n\n\nMissed TBI Cases\n5\n9\n9\n\n\nAUC-ROC\nN/A\n0.857\n0.874\n\n\n\nThe three models trace a clear tradeoff. The Kuppermann rule catches the most TBI cases (91.2% sensitivity) but recommends CT for over half the non-TBI patients. Logistic regression cuts unnecessary scans by 51% relative to Kuppermann, and the random forest reduces them by 63%, with both matching at 84.2% sensitivity.\nLogistic regression feature coefficients confirmed the EDA findings. The top positive predictors were injury severity (\\(\\hat{\\beta} = +0.53\\)), scalp hematoma (\\(\\hat{\\beta} = +0.50\\)), and altered mental status (\\(\\hat{\\beta} = +0.49\\)), with acting normally as the strongest protective feature (\\(\\hat{\\beta} = -0.46\\)). Scalp hematoma receiving the second-highest coefficient despite being excluded from the Kuppermann rule for children aged 2 and older is consistent with Finding 1.\nBootstrap stability analysis (200 resamples) showed that the Kuppermann rule is the most stable, while the random forest has more variance in sensitivity across resamples, reflecting the greater flexibility of tree-based learning from finite training data."
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#technologies-tools",
+    "href": "posts/stat214-lab1/index.html#technologies-tools",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nCore stack: Python, pandas, NumPy, scikit-learn, matplotlib, seaborn\nStatistical methods: Bayesian posterior inference with bootstrap confidence intervals, PCA, stratified train/val/test splitting, threshold optimization on the validation set"
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#links-resources",
+    "href": "posts/stat214-lab1/index.html#links-resources",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — full code, notebooks, and report\nLab Report (PDF) — complete write-up with all figures and tables"
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#reflection",
+    "href": "posts/stat214-lab1/index.html#reflection",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Reflection",
+    "text": "Reflection\nThis lab made concrete a tension that is easy to state but hard to internalize: in high-stakes classification, the right model depends on what you are optimizing for. A 91% sensitivity rule that sends 3,500 children to unnecessary CT scans is not obviously better or worse than an 84% sensitivity model that reduces that number to 1,300. That tradeoff depends on how you weigh radiation risk against missed diagnoses, which is a clinical and ethical judgment, not a statistical one.\nThe EDA finding that missed patients are not asymptomatic was the most satisfying result. It meant the 32 children were not random noise beyond any model’s reach, but a structured subset the Kuppermann rule was never designed to catch. That kind of gap, visible only after careful data exploration, is exactly what motivates moving beyond fixed decision rules toward learned models.\n\nCompleted March 2026 as Lab 1 for STAT 214 at UC Berkeley."
   },
   {
     "objectID": "selected-work/ml-current.html",
@@ -166,61 +299,5 @@
     "title": "CV",
     "section": "",
     "text": "Download the PDF: Curriculum_RicardoPerezCastillo.pdf"
-  },
-  {
-    "objectID": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
-    "href": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "What If You Could See a Crisis Coming?",
-    "text": "What If You Could See a Crisis Coming?\nBetween November 2019 and July 2020, my team developed Digital Water, a machine learning platform to forecast water demand and capacity at the city level. Working with real data from Monterrey’s official water utility (SADM), we built LSTM neural networks that could predict daily water consumption and available dam capacity.\nAt the time, we were focused on winning an international competition. We didn’t realize we were documenting the early warning signs of a catastrophe."
-  },
-  {
-    "objectID": "posts/digital-water/index.html#the-challenge",
-    "href": "posts/digital-water/index.html#the-challenge",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "The Challenge",
-    "text": "The Challenge\nMonterrey is Mexico’s third-largest metro area and a major industrial hub. The city’s water system serves over 5 million people, drawing from a network of dams and underground sources. But water scarcity was becoming more frequent, and utilities were operating reactively, responding to shortages rather than preventing them.\nOur goal: Build a forecasting system that could shift water management from reactive to preventative, giving utilities early warning signals before reaching critical thresholds."
-  },
-  {
-    "objectID": "posts/digital-water/index.html#our-solution",
-    "href": "posts/digital-water/index.html#our-solution",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Our Solution",
-    "text": "Our Solution\nWe developed an end-to-end machine learning pipeline:\n\nData Engineering\n\nCollected and cleaned multi-source time-series data from SADM\nAligned daily consumption records with dam capacity measurements\nCreated comprehensive field dictionaries and documentation\n\n\n\nPredictive Models\n\nTrained two LSTM neural networks (one for demand, one for capacity)\nForecasted daily water demand and available capacity\nCalculated “days-to-threshold” estimates for safe operating levels\nImplemented in Python using TensorFlow\n\n\n\nDeployment\n\nBuilt an interactive web dashboard (hosted on Heroku)\nCreated Google Colab notebooks for accessibility and reproducibility\nProduced technical documentation and presentation materials\n\n\n\n\n\n\n\nTipKey Technologies\n\n\n\nPython • TensorFlow • LSTM Networks • Time Series Forecasting • Google Colab • Heroku"
-  },
-  {
-    "objectID": "posts/digital-water/index.html#recognition",
-    "href": "posts/digital-water/index.html#recognition",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Recognition",
-    "text": "Recognition\n\n\n🏆 2nd Place Globally Atos IT Challenge 2020\n\n\n🇲🇽 First Mexican Team In competition’s 10-year history\n\n\n👥 5M People Impacted By predicted crisis\n\n\nWe presented our work to the Atos CEO and Scientific Board, competing against thousands of international teams."
-  },
-  {
-    "objectID": "posts/digital-water/index.html#what-happened-next-the-crisis",
-    "href": "posts/digital-water/index.html#what-happened-next-the-crisis",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "What Happened Next: The Crisis",
-    "text": "What Happened Next: The Crisis\nIn 2022, everything our models predicted came to pass.\nMonterrey experienced a devastating water crisis that lasted nearly two years. The city’s 5 million residents were reduced to minimal daily water allocations. Neighborhoods received water only a few hours per week. Businesses struggled. The crisis validated our forecasting approach—but also showed the human cost of delayed action.\n\n\n\n\n\n\nWarningTimeline\n\n\n\n2019-2020: Built forecasting models with SADM data\nJuly 2020: Won 2nd place at Atos IT Challenge\n2022: Water crisis begins—predictions validated\n2022-2024: Nearly two years of severe rationing for 5M residents\n2024: Crisis subsides\n\n\nThe crisis highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning—and why such systems need to be deployed, not just built."
-  },
-  {
-    "objectID": "posts/digital-water/index.html#technical-details",
-    "href": "posts/digital-water/index.html#technical-details",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Technical Details",
-    "text": "Technical Details\nFor those interested in the implementation:\n\nModels: Two LSTM neural networks (demand + capacity forecasting)\nData: Official records from Agua y Drenaje de Monterrey (SADM)\nFeatures: Multi-variate time series including consumption patterns, dam levels, and seasonal factors\nOutputs: Daily forecasts + “days-to-threshold” risk estimates\nCode: Open-source notebooks in Google Colab\nDocumentation: Complete technical report and research summaries"
-  },
-  {
-    "objectID": "posts/digital-water/index.html#links-resources",
-    "href": "posts/digital-water/index.html#links-resources",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Links & Resources",
-    "text": "Links & Resources\n\nGitHub Repository — Code, notebooks, and documentation\nDemo Video — Platform walkthrough"
-  },
-  {
-    "objectID": "posts/digital-water/index.html#reflection",
-    "href": "posts/digital-water/index.html#reflection",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Reflection",
-    "text": "Reflection\nThis project was completed in 2020, and the notebooks remain as-is in the repository. Looking back (5 years later) with more experience in ML, I would redesign the data pipeline, modeling aproach, stability and predictability of the model and scalability. But the core lesson remains: predictive models only create impact when they’re deployed and acted upon.\nThe crisis our system forecasted was preventable. The data was there. The models worked. What was missing was the infrastructure and institutional will to act on early warnings.\n\nBuilt between November 2019 and July 2020 as part of the Atos IT Challenge."
   }
 ]
