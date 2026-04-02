@@ -104,21 +104,53 @@ Data scientist with 4+ years at McKinsey and Deloitte, where I built data pipeli
 
 ## Education
 
-**University of California, Berkeley** | Berkeley, CA
-M.A. in Statistics | Aug 2025 – Present
-Coursework: Advanced Probability and Statistics, Statistical Computing, Linear Models, Machine Learning.
+```{=html}
+<div class="rpc-entries">
 
-**Tecnológico de Monterrey, Campus Monterrey** | Monterrey, Mexico
-B.S. in Chemical Engineering | Jan 2015 – Dec 2019
+  <div class="rpc-entry">
+    <div class="rpc-entry-header">
+      <span class="rpc-entry-org">University of California, Berkeley</span>
+      <span class="rpc-entry-date">Aug 2025 – Present</span>
+    </div>
+    <div class="rpc-entry-sub">M.A. in Statistics &nbsp;·&nbsp; Berkeley, CA</div>
+    <div class="rpc-entry-note"><a href="coursework.html">View coursework →</a></div>
+  </div>
+
+  <div class="rpc-entry">
+    <div class="rpc-entry-header">
+      <span class="rpc-entry-org">Tecnológico de Monterrey, Campus Monterrey</span>
+      <span class="rpc-entry-date">Jan 2015 – Dec 2019</span>
+    </div>
+    <div class="rpc-entry-sub">B.S. in Chemical Engineering &nbsp;·&nbsp; Monterrey, México</div>
+  </div>
+
+</div>
+```
 
 ---
 
 ## Experience
 
-**McKinsey and Company** | San Pedro Garza García, Mexico
-Sr. Software Delivery Analyst, Data | Jul 2022 – Jul 2025
+```{=html}
+<div class="rpc-entries">
 
-**Deloitte** | Monterrey, Mexico
-Consulting Analyst | Jan 2021 – Jun 2022
+  <div class="rpc-entry">
+    <div class="rpc-entry-header">
+      <span class="rpc-entry-org">McKinsey &amp; Company</span>
+      <span class="rpc-entry-date">Jul 2022 – Jul 2025</span>
+    </div>
+    <div class="rpc-entry-sub">Sr. Software Delivery Analyst, Data &nbsp;·&nbsp; San Pedro Garza García, México</div>
+  </div>
+
+  <div class="rpc-entry">
+    <div class="rpc-entry-header">
+      <span class="rpc-entry-org">Deloitte</span>
+      <span class="rpc-entry-date">Jan 2021 – Jun 2022</span>
+    </div>
+    <div class="rpc-entry-sub">Consulting Analyst &nbsp;·&nbsp; Monterrey, México</div>
+  </div>
+
+</div>
+```
 
 :::
