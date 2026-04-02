@@ -2,23 +2,24 @@
 title: ""
 page-layout: full
 toc: false
+title-block-banner: false
 ---
 
 ```{=html}
-<div class="rpc-hero">
+<div style="display:flex; align-items:center; gap:2rem; max-width:960px; margin:0 auto; padding:2.5rem 1.5rem 1.5rem 1.5rem;">
   <img src="RJ1_5539.jpg" alt="Ricardo Pérez Castillo"
        style="width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;">
-  <div class="rpc-hero-text">
-    <h1 class="rpc-hero-name">Ricardo Pérez Castillo</h1>
-    <p class="rpc-hero-tagline">M.A. Statistics, UC Berkeley &nbsp;·&nbsp; Data Science &nbsp;·&nbsp; Statistical Inference &amp; ML</p>
-    <div class="rpc-hero-links">
-      <a href="https://www.linkedin.com/in/ricardoperezcastillo/" target="_blank">
+  <div>
+    <div style="font-size:1.9rem;font-weight:700;line-height:1.2;margin-bottom:0.3rem;">Ricardo Pérez Castillo</div>
+    <div style="font-size:0.95rem;color:#555;margin-bottom:0.75rem;">M.A. Statistics, UC Berkeley &nbsp;·&nbsp; Data Science &nbsp;·&nbsp; Statistical Inference &amp; ML</div>
+    <div style="display:flex;flex-wrap:wrap;gap:1.25rem;font-size:0.88rem;">
+      <a href="https://www.linkedin.com/in/ricardoperezcastillo/" target="_blank" style="color:#333;text-decoration:none;">
         <i class="bi bi-linkedin"></i> LinkedIn
       </a>
-      <a href="https://github.com/ricardo-pc" target="_blank">
+      <a href="https://github.com/ricardo-pc" target="_blank" style="color:#333;text-decoration:none;">
         <i class="bi bi-github"></i> GitHub
       </a>
-      <a href="mailto:ricardoperez@berkeley.edu">
+      <a href="mailto:ricardoperez@berkeley.edu" style="color:#333;text-decoration:none;">
         <i class="bi bi-envelope"></i> ricardoperez@berkeley.edu
       </a>
     </div>
