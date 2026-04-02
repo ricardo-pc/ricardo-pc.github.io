@@ -1,38 +1,109 @@
 ---
 title: "Ricardo Pérez Castillo"
-image: RJ1_5539.jpg 
+image: RJ1_5539.jpg
 about:
-  template: trestles # This creates a nice sidebar layout
+  template: trestles
   links:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/ricardoperezcastillo/
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/ricardo-pc
     - icon: envelope
       text: Email
       href: mailto:ricardoperez@berkeley.edu
 ---
 
-I’m a Statistics M.A. student at UC Berkeley preparing for a career in data science, focused on turning complex data into actionable insights.
+I'm a Statistics M.A. student at UC Berkeley with five years of industry experience at McKinsey and Deloitte. My work sits at the intersection of rigorous statistical modeling and practical decision-making — from clinical prediction rules in pediatric medicine to causal inference in large-scale A/B experiments.
 
-I bring a strong data analytics, data engineering, and consulting background from McKinsey and Deloitte. There, I built large-scale ETL pipelines, data warehouse architectures, and extracted insights from large datasets, and I now apply those skills to modeling, experimentation, and decision-focused analytics.
+Before Berkeley, I built large-scale ETL pipelines, data warehouse architectures, and analytics products used by enterprise clients across Latin America. I came back to graduate school to formalize the foundations behind the models I was already shipping.
 
-Current interests:
+**Open to data science and applied scientist roles starting December 2026.** [Get in touch](mailto:ricardoperez@berkeley.edu)
 
-- ML for real-world decision-making
-- Reproducible data pipelines for analytics at scale
-- Statistical modeling
+---
 
-Explore my projects or download my CV.
+## Featured Projects
+
+:::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body">
+<h5 class="card-title">Pediatric TBI Clinical Decision Rule</h5>
+<p class="card-text text-muted small">STAT 214 · Bayesian Inference · Machine Learning</p>
+<p class="card-text">Reproduced and extended the PECARN traumatic brain injury prediction rule. Audited model performance across demographic subgroups and derived a Bayesian framework for patient-level risk thresholds.</p>
+<a href="posts/stat214-lab1/index.html" class="btn btn-sm btn-outline-dark mt-2">View project →</a>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body">
+<h5 class="card-title">Digital Water Crisis Detection</h5>
+<p class="card-text text-muted small">NLP · Time Series · Public Health</p>
+<p class="card-text">Built a pipeline to detect water crisis events from digital news and social media signals, benchmarking classification methods against ground-truth humanitarian reports.</p>
+<a href="posts/digital-water/index.html" class="btn btn-sm btn-outline-dark mt-2">View project →</a>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body">
+<h5 class="card-title">Evolutionary Feature Selection</h5>
+<p class="card-text text-muted small">Genetic Algorithms · Scikit-learn · Python</p>
+<p class="card-text">Implemented a genetic algorithm for wrapper-based feature selection, evaluating fitness via cross-validated model accuracy across datasets with high-dimensional feature spaces.</p>
+<a href="posts/genetic-algorithm/index.html" class="btn btn-sm btn-outline-dark mt-2">View project →</a>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body">
+<h5 class="card-title">A/B Testing at Scale — Headline Experiments</h5>
+<p class="card-text text-muted small">STAT 230A · Causal Inference · In Progress</p>
+<p class="card-text">Analyzing 22,000 Upworthy headline experiments using cluster-robust standard errors, regression adjustment, and heterogeneous treatment effects to understand what makes content compelling.</p>
+<a href="projects.html" class="btn btn-sm btn-outline-secondary mt-2">Coming soon</a>
+</div>
+</div>
+:::
+
+::::
+
+[See all projects →](projects.html)
+
+---
+
+## Skills
+
+**Languages & Tools**
+Python · R · SQL · Git · Quarto · LaTeX
+
+**Methods**
+Causal Inference · Bayesian Inference · Regression Modeling · A/B Testing · Machine Learning · Cluster-Robust Inference · NLP
+
+**Platforms**
+scikit-learn · pandas · NumPy · ggplot2 · Spark · dbt · Snowflake
+
+---
 
 ## Education
 
 **University of California, Berkeley** | Berkeley, CA
-
-M.A. in Statistics | Aug 2025 - Present
+M.A. in Statistics | Aug 2025 – Present
 
 **Tecnológico de Monterrey** | Monterrey, Mexico
+B.S. in Chemical Engineering | Jan 2015 – Dec 2019
 
-B.S. in Chemical Engineering | Jan 2015 - Dec 2019
+---
+
+## Experience
+
+**McKinsey & Company** | Monterrey, Mexico
+Data & Analytics Consultant | 2022 – 2025
+
+**Deloitte** | Monterrey, Mexico
+Data Engineer & Analytics Consultant | 2020 – 2022
