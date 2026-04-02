@@ -1,10 +1,60 @@
-/* ── Global ───────────────────────────────────────────── */
-body {
-  font-size: 0.97rem;
-  color: #1a1a1a;
+/* ── Page body container ─────────────────────────────── */
+/* Centers and constrains all main content on the full-width layout */
+.rpc-body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem 1.5rem;
 }
 
-/* ── Project cards on the home page ─────────────────── */
+/* ── Hero section ────────────────────────────────────── */
+.rpc-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+}
+
+.rpc-hero-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+}
+
+.rpc-hero-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.2;
+}
+
+.rpc-hero-tagline {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 0.75rem 0;
+}
+
+.rpc-hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.88rem;
+}
+
+.rpc-hero-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.rpc-hero-links a:hover {
+  color: #0d6efd;
+}
+
+/* ── Project cards ───────────────────────────────────── */
 .card {
   border-radius: 8px;
   transition: box-shadow 0.18s ease, transform 0.18s ease;
@@ -31,37 +81,10 @@ body {
   padding: 0.25rem 0.65rem;
 }
 
-/* ── Skills section ──────────────────────────────────── */
-.skills-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.5rem;
-}
-
-/* ── Horizontal rule spacing ─────────────────────────── */
+/* ── Horizontal rule ─────────────────────────────────── */
 hr {
   margin: 1.8rem 0;
   border-color: #e0e0e0;
-}
-
-/* ── "See all projects" link ─────────────────────────── */
-a[href="projects.html"] {
-  font-size: 0.9rem;
-}
-
-/* ── Hero section ────────────────────────────────────── */
-.hero-section {
-  padding-bottom: 0.5rem;
-}
-
-.hero-section a {
-  color: #444;
-  text-decoration: none;
-}
-
-.hero-section a:hover {
-  color: #0d6efd;
 }
 
 /* ── Post / project page improvements ───────────────── */
@@ -72,4 +95,18 @@ a[href="projects.html"] {
 /* ── Callout refinement ──────────────────────────────── */
 .callout {
   border-radius: 6px;
+}
+
+/* ── Responsive: stack hero on small screens ─────────── */
+@media (max-width: 576px) {
+  .rpc-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+
+  .rpc-hero-name {
+    font-size: 1.6rem;
+  }
 }
