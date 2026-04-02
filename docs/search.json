@@ -284,7 +284,7 @@
     "href": "index.html",
     "title": "Ricardo Pérez Castillo",
     "section": "",
-    "text": "I’m a Statistics M.A. student at UC Berkeley with five years of industry experience at McKinsey and Deloitte. My work sits at the intersection of rigorous statistical modeling and practical decision-making — from clinical prediction rules in pediatric medicine to causal inference in large-scale A/B experiments.\nBefore Berkeley, I built large-scale ETL pipelines, data warehouse architectures, and analytics products used by enterprise clients across Latin America. I came back to graduate school to formalize the foundations behind the models I was already shipping.\nOpen to data science and applied scientist roles starting December 2026. Get in touch"
+    "text": "M.A. Statistics, UC Berkeley  |  Data Science  |  Causal Inference\n      \n      \n        \n           LinkedIn\n        \n        \n           GitHub\n        \n        \n           ricardoperez@berkeley.edu\nI’m a Statistics M.A. student at UC Berkeley with five years of industry experience at McKinsey and Deloitte. My work focuses on rigorous statistical modeling and decision-focused analytics.\nBefore Berkeley, I built large-scale ETL pipelines, data warehouse architectures, and analytics products serving enterprise clients in the US. I returned to graduate school to build the statistical foundations needed to make the shift from data engineering into data science.\nOpen to data science roles starting May 2026. Get in touch"
   },
   {
     "objectID": "index.html#education",
@@ -305,20 +305,20 @@
     "href": "index.html#featured-projects",
     "title": "Ricardo Pérez Castillo",
     "section": "Featured Projects",
-    "text": "Featured Projects\n\n\n\n\n\nPediatric TBI Clinical Decision Rule\n\n\nSTAT 214 · Bayesian Inference · Machine Learning\n\n\nReproduced and extended the PECARN traumatic brain injury prediction rule. Audited model performance across demographic subgroups and derived a Bayesian framework for patient-level risk thresholds.\n\nView project →\n\n\n\n\n\n\n\nDigital Water Crisis Detection\n\n\nNLP · Time Series · Public Health\n\n\nBuilt a pipeline to detect water crisis events from digital news and social media signals, benchmarking classification methods against ground-truth humanitarian reports.\n\nView project →\n\n\n\n\n\n\n\nEvolutionary Feature Selection\n\n\nGenetic Algorithms · Scikit-learn · Python\n\n\nImplemented a genetic algorithm for wrapper-based feature selection, evaluating fitness via cross-validated model accuracy across datasets with high-dimensional feature spaces.\n\nView project →\n\n\n\n\n\n\n\nA/B Testing at Scale — Headline Experiments\n\n\nSTAT 230A · Causal Inference · In Progress\n\n\nAnalyzing 22,000 Upworthy headline experiments using cluster-robust standard errors, regression adjustment, and heterogeneous treatment effects to understand what makes content compelling.\n\nComing soon\n\n\n\n\nSee all projects →"
+    "text": "Featured Projects\n\n\n\n\n\nPediatric TBI Clinical Decision Rule\n\n\nSTAT 214 · Bayesian Inference · Machine Learning\n\n\nReproduced and extended the PECARN traumatic brain injury prediction rule. Audited model performance across demographic subgroups and derived a Bayesian framework for patient-level risk thresholds.\n\nView project →\n\n\n\n\n\n\n\nDigital Water Crisis Detection\n\n\nNLP · Time Series · Public Health\n\n\nBuilt a pipeline to detect water crisis events from digital news and social media signals, benchmarking classification methods against ground-truth humanitarian reports.\n\nView project →\n\n\n\n\n\n\n\nEvolutionary Feature Selection\n\n\nGenetic Algorithms · Scikit-learn · Python\n\n\nImplemented a genetic algorithm for wrapper-based feature selection, evaluating fitness via cross-validated model accuracy across high-dimensional datasets.\n\nView project →\n\n\n\n\n\n\n\nA/B Testing at Scale: Headline Experiments\n\n\nSTAT 230A · Causal Inference · In Progress\n\n\nAnalyzing 22,000 Upworthy headline experiments using cluster-robust standard errors, regression adjustment, and heterogeneous treatment effects to understand what drives engagement.\n\nComing soon\n\n\n\n\nSee all projects →"
   },
   {
     "objectID": "index.html#skills",
     "href": "index.html#skills",
     "title": "Ricardo Pérez Castillo",
     "section": "Skills",
-    "text": "Skills\nLanguages & Tools Python · R · SQL · Git · Quarto · LaTeX\nMethods Causal Inference · Bayesian Inference · Regression Modeling · A/B Testing · Machine Learning · Cluster-Robust Inference · NLP\nPlatforms scikit-learn · pandas · NumPy · ggplot2 · Spark · dbt · Snowflake"
+    "text": "Skills\nLanguages and Tools Python · R · SQL · Git · Quarto · LaTeX\nMethods Causal Inference · Bayesian Inference · Regression Modeling · A/B Testing · Machine Learning · Cluster-Robust Inference · NLP\nPlatforms scikit-learn · pandas · NumPy · ggplot2 · Spark · dbt · Snowflake"
   },
   {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
     "title": "Ricardo Pérez Castillo",
     "section": "Experience",
-    "text": "Experience\nMcKinsey & Company | Monterrey, Mexico Data & Analytics Consultant | 2022 – 2025\nDeloitte | Monterrey, Mexico Data Engineer & Analytics Consultant | 2020 – 2022"
+    "text": "Experience\nMcKinsey & Company | Monterrey, Mexico Data and Analytics Consultant | 2022 – 2025\nDeloitte | Monterrey, Mexico Data Engineer and Analytics Consultant | 2020 – 2022"
   }
 ]
