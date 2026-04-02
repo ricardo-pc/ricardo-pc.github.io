@@ -6,7 +6,8 @@ toc: false
 
 ```{=html}
 <div class="rpc-hero">
-  <img src="RJ1_5539.jpg" alt="Ricardo Pérez Castillo" class="rpc-hero-photo">
+  <img src="RJ1_5539.jpg" alt="Ricardo Pérez Castillo"
+       style="width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;">
   <div class="rpc-hero-text">
     <h1 class="rpc-hero-name">Ricardo Pérez Castillo</h1>
     <p class="rpc-hero-tagline">M.A. Statistics, UC Berkeley &nbsp;·&nbsp; Data Science &nbsp;·&nbsp; Statistical Inference &amp; ML</p>
