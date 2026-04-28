@@ -9,9 +9,9 @@ categories: [Data Engineering, Web App, AI-Assisted Development, OpenAI]
 ::: {.callout-note appearance="simple" icon=false}
 ## Project Overview
 
-A fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe's, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built entirely with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.
+A fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe's, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.
 
-[Live site](https://berkeley-grocery-tracker.vercel.app/) · [GitHub](https://github.com/ricardo-pc/berkeley-grocery-tracker)
+[Live site](https://berkeley-grocery-tracker.vercel.app/)
 :::
 
 ## The Problem
@@ -47,9 +47,9 @@ The whole infrastructure costs $0 per month. Vercel hosts the frontend, Supabase
 
 ## What Codex Actually Did
 
-Almost everything. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. I gave direction, reviewed output, caught issues, and steered toward what I wanted. Codex handled the implementation.
+A lot. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. My role was to define the architecture, make the key design calls, review and validate every piece of output, catch edge cases, and course-correct when things drifted. Codex accelerated the implementation significantly, but the product decisions and data model were mine to own.
 
-The most impressive part was how it managed the data model across iterations. The schema evolved significantly as the project grew, and Codex kept up with each change, writing migrations, updating scripts, and maintaining consistency across the codebase without me having to manually track every dependency.
+The most impressive part was how it kept up with schema changes across iterations. As the data model evolved, it updated migrations, scripts, and pipeline logic in sync without losing track of what had changed.
 
 ## What Is Still Being Built
 
