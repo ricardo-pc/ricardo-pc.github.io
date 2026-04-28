@@ -1,0 +1,60 @@
+---
+title: "Berkeley Grocery Tracker"
+description: "A live price tracker for Trader Joe's, Whole Foods, and Safeway across Berkeley, built end-to-end with OpenAI Codex."
+author: "Ricardo Pérez Castillo"
+date: "2026-04-26"
+categories: [Data Engineering, Web App, AI-Assisted Development, OpenAI]
+---
+
+::: {.callout-note appearance="simple" icon=false}
+## Project Overview
+
+A fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe's, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built entirely with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.
+
+[Live site](https://berkeley-grocery-tracker.vercel.app/) · [GitHub](https://github.com/ricardo-pc/berkeley-grocery-tracker)
+:::
+
+## The Problem
+
+Living in Berkeley, I noticed that grocery prices vary a lot depending on which store you go to and when. A dozen eggs at Trader Joe's and the same dozen at Whole Foods are rarely the same price, and the gap shifts over time. There was no easy way to see this data in one place, let alone track it over time or figure out which store makes the most sense for your weekly basket. I wanted to build exactly that.
+
+## Why Codex
+
+OpenAI opened a challenge for developers to build with Codex, offering $100 in API credits and a Pro subscription to participants. I treated it as an opportunity to see how far an AI coding agent could take a real, multi-layer software project. The answer turned out to be: pretty far.
+
+The entire stack was designed and built through Codex. I described what I wanted, iterated on the output, reviewed the code, and pushed forward. It was less about avoiding effort and more about compressing weeks of setup into days, without cutting corners on architecture.
+
+## What It Does
+
+The live site shows price data for a curated set of staple items, things like eggs, milk, bananas, chicken breast, olive oil, across multiple Berkeley-area locations. You can:
+
+- See the latest prices for each item across stores
+- Explore price trends over time with a time-series view
+- Build a basket and estimate total cost, both at the cheapest individual store per item and at the single best store overall
+- Compare against Berkeley meal plan pricing as a reference point
+
+## How It Works
+
+The data pipeline runs automatically. Three scrapers, one per grocery chain, pull full product catalogs from each store on a monthly schedule using GitHub Actions. Trader Joe's exposes an internal GraphQL API; Whole Foods has a structured product feed; Safeway required Playwright to handle anti-bot protections on some runs.
+
+Raw scraped data lands in a staging table first. From there, a matching pipeline normalizes product names across stores into canonical items, using fuzzy text matching with quantity-awareness, a semantic embedding stage via the OpenAI API for harder cases, and a hand-curated staples bridge for the most important items. The confidence of each match is tracked, so auto-matched, semantically matched, and manually curated prices are all distinguished.
+
+Once matched, prices flow into an append-only observations table that gives historical trends for free. The frontend, a Next.js app connected to Supabase Postgres, reads this data at request time and renders it on the dashboard.
+
+For Trader Joe's historical pricing before the scraper launched, I filtered a publicly available third-party price dump through the curated staples allowlist and loaded it into a separate proxy history table, keeping it isolated from live scrape data.
+
+The whole infrastructure costs $0 per month. Vercel hosts the frontend, Supabase handles the database on its free tier, and GitHub Actions runs the scrapers.
+
+## What Codex Actually Did
+
+Almost everything. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. I gave direction, reviewed output, caught issues, and steered toward what I wanted. Codex handled the implementation.
+
+The most impressive part was how it managed the data model across iterations. The schema evolved significantly as the project grew, and Codex kept up with each change, writing migrations, updating scripts, and maintaining consistency across the codebase without me having to manually track every dependency.
+
+## What Is Still Being Built
+
+The matching pipeline is solid for Trader Joe's and Whole Foods. Safeway is scraped but the matching pass hasn't run at full scale yet. The next phases are a staples-focused weekly scrape cadence, QA dashboards to monitor scrape quality, and eventually crowdsourced price contributions with receipt upload.
+
+---
+
+*Built April 2026 as part of the OpenAI Codex challenge. Stack: Next.js, Supabase, GitHub Actions, Vercel, OpenAI API.*
