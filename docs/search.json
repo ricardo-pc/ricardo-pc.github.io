@@ -25,7 +25,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\n\nPython\n\nMachine Learning\n\nStatistical Computing\n\nBayesian Inference\n\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\nEvolutionary Feature Selection: A Genetic Algorithm Package\n\n\n\nPython\n\nStatistical Computing\n\nMachine Learning\n\nSoftware Engineering\n\n\n\nBuilding a production-quality Python package for automated variable selection using evolutionary computation principles.\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\nImpact\n\n\n\nHow our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
+    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\nBerkeley Grocery Tracker\n\n\n\nData Engineering\n\nWeb App\n\nAI-Assisted Development\n\nOpenAI\n\n\n\nA live price tracker for Trader Joe’s, Whole Foods, and Safeway across Berkeley, built end-to-end with OpenAI Codex.\n\n\n\nApr 26, 2026\n\n\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\n\nPython\n\nMachine Learning\n\nStatistical Computing\n\nBayesian Inference\n\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\nEvolutionary Feature Selection: A Genetic Algorithm Package\n\n\n\nPython\n\nStatistical Computing\n\nMachine Learning\n\nSoftware Engineering\n\n\n\nBuilding a production-quality Python package for automated variable selection using evolutionary computation principles.\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\nImpact\n\n\n\nHow our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "selected-work/stat243.html",
@@ -182,6 +182,55 @@
     "text": "Reflection\nBuilding a production-quality statistical computing package taught me that good statistical software requires more than correct algorithms; it demands thoughtful architecture, comprehensive testing, performance optimization, and clear documentation.\nThe collaborative aspect was equally valuable. Working as a team meant negotiating interfaces, reviewing each other’s code, and maintaining consistency across components. These skills translate directly to professional data science and software engineering.\n\nCompleted December 2025 as the final project for STAT 243: Statistical Computing at UC Berkeley."
   },
   {
+    "objectID": "posts/berkeley-grocery-tracker/index.html",
+    "href": "posts/berkeley-grocery-tracker/index.html",
+    "title": "Berkeley Grocery Tracker",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe’s, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built entirely with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.\nLive site · GitHub"
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#the-problem",
+    "href": "posts/berkeley-grocery-tracker/index.html#the-problem",
+    "title": "Berkeley Grocery Tracker",
+    "section": "The Problem",
+    "text": "The Problem\nLiving in Berkeley, I noticed that grocery prices vary a lot depending on which store you go to and when. A dozen eggs at Trader Joe’s and the same dozen at Whole Foods are rarely the same price, and the gap shifts over time. There was no easy way to see this data in one place, let alone track it over time or figure out which store makes the most sense for your weekly basket. I wanted to build exactly that."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#why-codex",
+    "href": "posts/berkeley-grocery-tracker/index.html#why-codex",
+    "title": "Berkeley Grocery Tracker",
+    "section": "Why Codex",
+    "text": "Why Codex\nOpenAI opened a challenge for developers to build with Codex, offering $100 in API credits and a Pro subscription to participants. I treated it as an opportunity to see how far an AI coding agent could take a real, multi-layer software project. The answer turned out to be: pretty far.\nThe entire stack was designed and built through Codex. I described what I wanted, iterated on the output, reviewed the code, and pushed forward. It was less about avoiding effort and more about compressing weeks of setup into days, without cutting corners on architecture."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-it-does",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-it-does",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What It Does",
+    "text": "What It Does\nThe live site shows price data for a curated set of staple items, things like eggs, milk, bananas, chicken breast, olive oil, across multiple Berkeley-area locations. You can:\n\nSee the latest prices for each item across stores\nExplore price trends over time with a time-series view\nBuild a basket and estimate total cost, both at the cheapest individual store per item and at the single best store overall\nCompare against Berkeley meal plan pricing as a reference point"
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#how-it-works",
+    "href": "posts/berkeley-grocery-tracker/index.html#how-it-works",
+    "title": "Berkeley Grocery Tracker",
+    "section": "How It Works",
+    "text": "How It Works\nThe data pipeline runs automatically. Three scrapers, one per grocery chain, pull full product catalogs from each store on a monthly schedule using GitHub Actions. Trader Joe’s exposes an internal GraphQL API; Whole Foods has a structured product feed; Safeway required Playwright to handle anti-bot protections on some runs.\nRaw scraped data lands in a staging table first. From there, a matching pipeline normalizes product names across stores into canonical items, using fuzzy text matching with quantity-awareness, a semantic embedding stage via the OpenAI API for harder cases, and a hand-curated staples bridge for the most important items. The confidence of each match is tracked, so auto-matched, semantically matched, and manually curated prices are all distinguished.\nOnce matched, prices flow into an append-only observations table that gives historical trends for free. The frontend, a Next.js app connected to Supabase Postgres, reads this data at request time and renders it on the dashboard.\nFor Trader Joe’s historical pricing before the scraper launched, I filtered a publicly available third-party price dump through the curated staples allowlist and loaded it into a separate proxy history table, keeping it isolated from live scrape data.\nThe whole infrastructure costs $0 per month. Vercel hosts the frontend, Supabase handles the database on its free tier, and GitHub Actions runs the scrapers."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What Codex Actually Did",
+    "text": "What Codex Actually Did\nAlmost everything. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. I gave direction, reviewed output, caught issues, and steered toward what I wanted. Codex handled the implementation.\nThe most impressive part was how it managed the data model across iterations. The schema evolved significantly as the project grew, and Codex kept up with each change, writing migrations, updating scripts, and maintaining consistency across the codebase without me having to manually track every dependency."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What Is Still Being Built",
+    "text": "What Is Still Being Built\nThe matching pipeline is solid for Trader Joe’s and Whole Foods. Safeway is scraped but the matching pass hasn’t run at full scale yet. The next phases are a staples-focused weekly scrape cadence, QA dashboards to monitor scrape quality, and eventually crowdsourced price contributions with receipt upload.\n\nBuilt April 2026 as part of the OpenAI Codex challenge. Stack: Next.js, Supabase, GitHub Actions, Vercel, OpenAI API."
+  },
+  {
     "objectID": "posts/stat214-lab1/index.html",
     "href": "posts/stat214-lab1/index.html",
     "title": "PECARN Traumatic Brain Injury Analysis",
@@ -287,20 +336,6 @@
     "text": "Ricardo Pérez Castillo\n    M.A. Statistics, UC Berkeley  ·  Data Science  ·  Statistical Inference & ML\n    \n      \n         LinkedIn\n      \n      \n         GitHub\n      \n      \n         ricardoperez@berkeley.edu"
   },
   {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Ricardo Pérez Castillo",
-    "section": "Education",
-    "text": "Education\n\n\n  \n    \n      University of California, Berkeley\n      Aug 2025 – Present\n    \n    M.A. in Statistics  ·  Berkeley, CA\n    View coursework →\n  \n\n  \n    \n      Tecnológico de Monterrey, Campus Monterrey\n      Jan 2015 – Dec 2019\n    \n    B.S. in Chemical Engineering  ·  Monterrey, México"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
-    "section": "",
-    "text": "Download the PDF: Curriculum_RicardoPerezCastillo.pdf"
-  },
-  {
     "objectID": "index.html#featured-projects",
     "href": "index.html#featured-projects",
     "title": "Ricardo Pérez Castillo",
@@ -315,10 +350,24 @@
     "text": "Skills\nStatistical Modeling and ML: Regression, Bayesian Inference, PCA, Classification, Clustering, Cross-Validation, Hypothesis Testing, A/B Testing\nProgramming: Python, R, SQL\nLibraries: pandas, NumPy, scikit-learn, statsmodels, spaCy, matplotlib, seaborn\nData Engineering: SQL Server, Snowflake, SnapLogic, APIs, SFTP/S3, Star-Schema Modeling\nCloud and BI: Azure, Google Cloud, Git, Power BI, Tableau"
   },
   {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Ricardo Pérez Castillo",
+    "section": "Education",
+    "text": "Education\n\n\n  \n    \n      University of California, Berkeley\n      Aug 2025 – Present\n    \n    M.A. in Statistics  ·  Berkeley, CA\n    View coursework →\n  \n\n  \n    \n      Tecnológico de Monterrey, Campus Monterrey\n      Jan 2015 – Dec 2019\n    \n    B.S. in Chemical Engineering  ·  Monterrey, México"
+  },
+  {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
     "title": "Ricardo Pérez Castillo",
     "section": "Experience",
     "text": "Experience\n\n\n  \n    \n      McKinsey & Company\n      Jul 2022 – Jul 2025\n    \n    Data Engineer / Data Analyst / Consultant  ·  San Pedro Garza García, México\n  \n\n  \n    \n      Deloitte\n      Jan 2021 – Jun 2022\n    \n    Consulting Analyst  ·  Monterrey, México"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Download the PDF: Curriculum_RicardoPerezCastillo.pdf"
   }
 ]
