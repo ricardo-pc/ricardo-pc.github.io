@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.21">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Ricardo Pérez Castillo">
+<meta name="dcterms.date" content="2026-05-27">
+<meta name="description" content="A Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, applied to three real tuning problems: a synthetic benchmark, NCF hyperparameter search on MovieLens 1M, and Upworthy classifier threshold optimization.">
+
+<title>Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive – Ricardo Pérez Castillo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em;
+  vertical-align: middle;
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": ["f", "/", "s"],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = { typesetMath };
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo"></a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Ricardo Pérez Castillo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"><span class="menu-text">Home</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"><span class="menu-text">Projects</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html"><span class="menu-text">CV</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../coursework.html"><span class="menu-text">Coursework</span></a>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ricardo-pc"><i class="bi bi-github" role="img"></i><span class="menu-text"></span></a>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"><i class="bi bi-linkedin" role="img"></i><span class="menu-text"></span></a>
+  </li>
+</ul>
+          </div>
+            <div class="quarto-navbar-tools"></div>
+      </div>
+    </nav>
+</header>
+
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+  <ul>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link active" data-scroll-target="#the-problem">The Problem</a></li>
+  <li><a href="#the-method" id="toc-the-method" class="nav-link" data-scroll-target="#the-method">The Method</a></li>
+  <li><a href="#three-experiments" id="toc-three-experiments" class="nav-link" data-scroll-target="#three-experiments">Three Experiments</a>
+    <ul>
+      <li><a href="#branin-benchmark" id="toc-branin-benchmark" class="nav-link" data-scroll-target="#branin-benchmark">Branin Benchmark</a></li>
+      <li><a href="#ncf-on-movielens-1m" id="toc-ncf-on-movielens-1m" class="nav-link" data-scroll-target="#ncf-on-movielens-1m">NCF on MovieLens 1M</a></li>
+      <li><a href="#upworthy-classifier-thresholds" id="toc-upworthy-classifier-thresholds" class="nav-link" data-scroll-target="#upworthy-classifier-thresholds">Upworthy Classifier Thresholds</a></li>
+    </ul>
+  </li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#technologies-tools" id="toc-technologies-tools" class="nav-link" data-scroll-target="#technologies-tools">Technologies &amp; Tools</a></li>
+  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Bayesian Inference</div>
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Statistical Computing</div>
+  </div>
+</div>
+
+<div>
+  <div class="description">
+    A Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems where evaluations cost minutes to hours of GPU time.
+  </div>
+</div>
+
+<div class="quarto-title-meta">
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ricardo Pérez Castillo </p>
+          </div>
+  </div>
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 27, 2026</p>
+    </div>
+  </div>
+</div>
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon no-icon"></i></div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Project Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A from-scratch implementation of Bayesian Optimization using a Gaussian Process surrogate with squared-exponential kernel and Expected Improvement acquisition, applied to three experiments spanning a synthetic benchmark, neural network hyperparameter tuning, and classifier threshold optimization.</p>
+<p>Course: STAT 238: Bayesian Statistics · Semester: Spring 2026 · Language: Python</p>
+<p><a href="https://github.com/ricardo-pc/bayesian-optimization-ml">GitHub Repository</a></p>
+</div>
+</div>
+
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>Tuning a machine learning model involves making a sequence of decisions under uncertainty. You pick a learning rate, train for hours, observe validation performance, and then have to decide what to try next. Grid search wastes evaluations on systematically spaced points regardless of what the results say. Random search is better, but it treats each trial independently, ignoring everything learned from previous runs.</p>
+<p>Bayesian Optimization (BO) does something smarter: it builds a probabilistic model of the objective function from every evaluation so far, then uses that model to decide where to look next. It is the principled answer to the question of how to optimize an expensive black-box function with a tight budget.</p>
+<p>For this project, I implemented the full BO pipeline from scratch — no hyperopt, no optuna — and ran it on three problems with very different cost structures.</p>
+</section>
+
+<section id="the-method" class="level2">
+<h2 class="anchored" data-anchor-id="the-method">The Method</h2>
+<p>The implementation has three components, each in its own module.</p>
+<p><strong>Gaussian Process surrogate (<code>gp.py</code>).</strong> A GP is a distribution over functions. Given observations, it produces a posterior: a mean function <span class="math inline">\(\mu(x)\)</span> (best guess at each point) and a variance function <span class="math inline">\(\sigma^2(x)\)</span> (uncertainty). The kernel is squared-exponential with three hyperparameters: output scale <span class="math inline">\(\alpha\)</span>, length scale <span class="math inline">\(\ell\)</span>, and noise variance <span class="math inline">\(\sigma^2_n\)</span>. These are fit by maximizing the log marginal likelihood at each iteration via L-BFGS-B. Cholesky decomposition keeps the linear algebra numerically stable.</p>
+<p><strong>Expected Improvement acquisition (<code>acquisition.py</code>).</strong> EI is the expected amount by which the next evaluation will beat the current best:</p>
+<p><span class="math display">\[\text{EI}(x) = (\mu(x) - f^*)\,\Phi(Z) + \sigma(x)\,\phi(Z), \quad Z = \frac{\mu(x) - f^*}{\sigma(x)}\]</span></p>
+<p>The first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence — no manual tuning of an exploration parameter.</p>
+<p><strong>BO loop (<code>bo.py</code>).</strong> Inputs are normalized to <span class="math inline">\([0,1]^d\)</span> before each GP fit, and outputs are standardized to zero mean and unit variance. This keeps the kernel hyperparameters in comparable ranges regardless of the original scales. Each iteration fits the GP on all observations so far, maximizes EI over the input space (multi-start L-BFGS-B), evaluates the objective at the new point, and appends to the history.</p>
+</section>
+
+<section id="three-experiments" class="level2">
+<h2 class="anchored" data-anchor-id="three-experiments">Three Experiments</h2>
+
+<section id="branin-benchmark" class="level3">
+<h3 class="anchored" data-anchor-id="branin-benchmark">Branin Benchmark</h3>
+<p>Before running BO on real problems, I validated it on the Branin function: a classic 2D test with three known global minima at <span class="math inline">\(f^* \approx 0.398\)</span>. A correct BO implementation should converge reliably across random seeds; grid search should fail when the optimum falls between grid lines.</p>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="branin_bo_snapshots.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>GP surrogate (top row) and Expected Improvement surface (bottom row) at trials 5, 10, 20, and 40. The posterior concentrates around the three Branin optima as observations accumulate. EI collapses near already-explored regions, forcing the algorithm to search elsewhere.</figcaption>
+</figure>
+</div>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="branin_convergence.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>BO converges to within 0.03 of the true optimum across 5 random seeds. Random search plateaus more than 2x worse; grid search never escapes its fixed points.</figcaption>
+</figure>
+</div>
+</section>
+
+<section id="ncf-on-movielens-1m" class="level3">
+<h3 class="anchored" data-anchor-id="ncf-on-movielens-1m">NCF on MovieLens 1M</h3>
+<p>The first real application was hyperparameter tuning for the Neural Collaborative Filtering model from my <a href="../cs289-ranking/index.html">CS 289A recommender systems project</a>. Each evaluation required training NCF for 10 epochs on an RTX 2080 Ti, costing about 22 minutes per trial. With a budget of 15 trials total (5 random initialization, 10 BO steps), there was no room to waste evaluations.</p>
+<p>The search space was 5-dimensional: embedding dimension (4 discrete values), MLP architecture (3 options), learning rate and L2 decay (both log-encoded continuous), and WMF confidence scale (linear continuous).</p>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ncf_convergence.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>After 5 random trials, the best NDCG@10 was 0.3745. BO improved this to 0.4056 in 10 more steps, an 8.3% relative gain. The dashed line marks the best random-init result; every BO step from trial 8 onward exceeds it.</figcaption>
+</figure>
+</div>
+
+<p>The configuration BO converged to was interpretable: largest embedding dimension (256), deepest MLP (four layers), minimal L2 regularization, and the smallest confidence scale. These cluster around a coherent region of parameter space, which suggests the GP genuinely learned the landscape rather than finding a lucky outlier.</p>
+</section>
+
+<section id="upworthy-classifier-thresholds" class="level3">
+<h3 class="anchored" data-anchor-id="upworthy-classifier-thresholds">Upworthy Classifier Thresholds</h3>
+<p>The second real application came from my <a href="../upworthy-ab-testing/index.html">STAT 230A headline analysis project</a>, where I used a BART zero-shot NLI model to classify 54,956 headlines into topic categories. The classifier outputs a confidence score, and two thresholds control how those scores are used: a minimum confidence to accept a label, and a minimum category size to keep in the analysis.</p>
+<p>The objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR) — higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.</p>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="upworthy_convergence.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>BO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO's advantage here is not just the final value but the path: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.</figcaption>
+</figure>
+</div>
+
+<p>The BO-optimal confidence threshold was 0.256 — lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone.</p>
+</section>
+</section>
+
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Experiment</th>
+<th style="text-align: center;">Budget</th>
+<th style="text-align: center;">BO result</th>
+<th style="text-align: center;">Best baseline</th>
+<th style="text-align: center;">Gain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Branin (2D synthetic)</td>
+<td style="text-align: center;">40 trials</td>
+<td style="text-align: center;">-0.43</td>
+<td style="text-align: center;">Random: -0.83</td>
+<td style="text-align: center;">2x better</td>
+</tr>
+<tr class="even">
+<td>NCF hyperparameters (5D, GPU)</td>
+<td style="text-align: center;">15 trials</td>
+<td style="text-align: center;">NDCG = 0.406</td>
+<td style="text-align: center;">Random: 0.375</td>
+<td style="text-align: center;">+8.3%</td>
+</tr>
+<tr class="odd">
+<td>Upworthy thresholds (2D, fast)</td>
+<td style="text-align: center;">60 trials</td>
+<td style="text-align: center;">F = 1,569</td>
+<td style="text-align: center;">Random: 1,514</td>
+<td style="text-align: center;">+3.6%</td>
+</tr>
+</tbody>
+</table>
+
+<p>One consistent observation across all three: BO's advantage is largest when the budget is tightest relative to the search space. The Branin result (2x improvement over random) reflects a 40-trial budget over a smooth 2D space where the GP can learn the landscape quickly. The NCF result (+8.3%) came from 15 trials over a 5-dimensional mixed space where each random trial burns 22 minutes. The Upworthy result (+3.6%) is smaller partly because 60 trials over a 2D smooth space is generous enough that random search also converges reasonably well.</p>
+</section>
+
+<section id="technologies-tools" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-tools">Technologies &amp; Tools</h2>
+<p>Core stack: Python, NumPy, SciPy (L-BFGS-B, ANOVA), matplotlib</p>
+<p>Implementation: GP with squared-exponential kernel, Cholesky decomposition for posterior inference, log marginal likelihood maximization for kernel hyperparameter fitting, multi-start EI maximization</p>
+<p>Experiments: Branin benchmark (analytic), NCF black-box wrapper (subprocess CLI to PyTorch training script), Upworthy black-box wrapper (pandas + SciPy F-test)</p>
+</section>
+
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/ricardo-pc/bayesian-optimization-ml">GitHub Repository</a>: full implementation, notebooks, and experiment results</li>
+</ul>
+</section>
+
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>The most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch was not just a course exercise — it was a tool that made two other projects better, with quantifiable improvements in both cases.</p>
+<p>The hardest implementation detail was the input/output normalization. Mapping inputs to <span class="math inline">\([0,1]^d\)</span> and standardizing outputs before each GP fit sounds simple, but getting it wrong causes the kernel hyperparameters to drift into bad regions and the EI surface to behave unexpectedly. The Branin simulation study was essential for catching those bugs before running on experiments that cost hours of GPU time.</p>
+<hr>
+<p><em>Completed May 2026 as a final project for STAT 238: Bayesian Statistics at UC Berkeley.</em></p>
+</section>
+
+</main>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = { placement: 'right', icon: icon };
+    anchorJS.add('.anchored');
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        return codeEl.innerText;
+      }
+    });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+    var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        if (link.dataset.originalHref !== undefined) link.href = link.dataset.originalHref;
+      }
+    }
+  });
+</script>
+</div>
+
+</body></html>
