@@ -151,7 +151,7 @@ window.Quarto = { typesetMath };
   <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a></li>
   <li><a href="#fourteen-features" id="toc-fourteen-features" class="nav-link" data-scroll-target="#fourteen-features">Fourteen Features</a></li>
   <li><a href="#the-estimation-problem" id="toc-the-estimation-problem" class="nav-link" data-scroll-target="#the-estimation-problem">The Estimation Problem</a></li>
-  <li><a href="#what-we-found" id="toc-what-we-found" class="nav-link" data-scroll-target="#what-we-found">What We Found</a></li>
+  <li><a href="#what-i-found" id="toc-what-i-found" class="nav-link" data-scroll-target="#what-i-found">What I Found</a></li>
   <li><a href="#the-practical-picture" id="toc-the-practical-picture" class="nav-link" data-scroll-target="#the-practical-picture">The Practical Picture</a></li>
   <li><a href="#technologies-tools" id="toc-technologies-tools" class="nav-link" data-scroll-target="#technologies-tools">Technologies &amp; Tools</a></li>
   <li><a href="#links-resources" id="toc-links-resources" class="nav-link" data-scroll-target="#links-resources">Links &amp; Resources</a></li>
@@ -204,7 +204,7 @@ window.Quarto = { typesetMath };
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A regression analysis of the Upworthy Research Archive — 54,956 headline packages across 11,649 formally controlled A/B tests — asking which headline features predict click-through rate and how to estimate those effects correctly when observations are clustered within the same experiment.</p>
+<p>A regression analysis of the Upworthy Research Archive: 54,956 headline packages across 11,649 formally controlled A/B tests, asking which headline features predict click-through rate and how to estimate those effects correctly when observations are clustered within the same experiment.</p>
 <p>Course: STAT 230A: Linear Models · Semester: Spring 2026 · Language: Python</p>
 <p><a href="https://github.com/ricardo-pc/upworthy-ab-testing">GitHub Repository</a></p>
 </div>
@@ -221,11 +221,11 @@ window.Quarto = { typesetMath };
 <h2 class="anchored" data-anchor-id="the-data">The Data</h2>
 <p>The final analysis dataset covers 54,956 headline packages from 11,649 A/B tests between 2013 and 2015. Three cleaning steps shaped it:</p>
 <ul>
-<li>Single-variant tests were dropped — no competitor means no comparison.</li>
+<li>Single-variant tests were dropped (no competitor means no comparison).</li>
 <li>Tests where the image varied across packages (~35% of raw data) were excluded, since image differences confound headline effects.</li>
 <li>A Cloudflare misconfiguration in late 2013 corrupted impression counts for some tests; affected rows were removed.</li>
 </ul>
-<p>Raw click-through rate is badly skewed — most headlines receive a 1–3% CTR while a handful go viral and pull the mean up. The outcome variable is log-transformed CTR, which compresses the tail and makes regression coefficients interpretable as proportional changes: a coefficient of 0.06 means roughly +6% more clicks.</p>
+<p>Raw click-through rate is badly skewed: most headlines receive a 1–3% CTR while a handful go viral and pull the mean up. The outcome variable is log-transformed CTR, which compresses the tail and makes regression coefficients interpretable as proportional changes: a coefficient of 0.06 means roughly +6% more clicks.</p>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -260,8 +260,8 @@ window.Quarto = { typesetMath };
 <p>All ten statistically significant features retain their sign and significance across all four specifications. The coefficient estimates are stable; only the confidence intervals change.</p>
 </section>
 
-<section id="what-we-found" class="level2">
-<h2 class="anchored" data-anchor-id="what-we-found">What We Found</h2>
+<section id="what-i-found" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-found">What I Found</h2>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -270,7 +270,7 @@ window.Quarto = { typesetMath };
 </figure>
 </div>
 
-<p>The clearest finding is the one the chart title says outright: exclamation marks are the single biggest negative predictor. Headlines with "!" have substantially lower CTR than otherwise equivalent headlines — the coefficient puts it in the range of a 30% relative reduction. Collective framing ("we/our") is the second-largest suppressor, followed by question marks and curiosity-gap openers ("how/why/what").</p>
+<p>The clearest finding is the one the chart title says outright: exclamation marks are the single biggest negative predictor. Headlines with "!" have substantially lower CTR than otherwise equivalent headlines, with the coefficient putting the effect in the range of a 30% relative reduction. Collective framing ("we/our") is the second-largest suppressor, followed by question marks and curiosity-gap openers ("how/why/what").</p>
 <p>On the positive side, numeric content wins. Headlines starting with a digit and headlines containing any number both show reliable positive effects. "Has superlative word" is also positive and significant, though smaller.</p>
 <p>Sentiment tells a counterintuitive story. The VADER score has a negative coefficient: more <em>positive</em> sentiment predicts more clicks. Readers, at least in this sample, responded better to emotionally neutral or affirmative frames than to alarming or negative ones. This runs counter to the usual claim that negative news spreads better, though the effect here is associational rather than causal.</p>
 
@@ -349,7 +349,7 @@ window.Quarto = { typesetMath };
 
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>The most interesting methodological moment in this project was building the four-model progression. Adding cluster-robust standard errors inflated the SEs by 1.3 to 2.2 times relative to OLS — enough to flip a few borderline-significant features to not significant. That gap is the difference between publishing a result and not, and it came entirely from acknowledging that rows within the same A/B test are not independent observations. The data structure matters as much as the model.</p>
+<p>The most interesting methodological moment in this project was building the four-model progression. Adding cluster-robust standard errors inflated the SEs by 1.3 to 2.2 times relative to OLS, enough to flip a few borderline-significant features to not significant. That gap is the difference between publishing a result and not, and it came entirely from acknowledging that rows within the same A/B test are not independent observations. The data structure matters as much as the model.</p>
 <p>The sentiment finding was the biggest surprise. I expected negativity to win — most of the pop-science writing on clickbait says it does. Finding the opposite, and then finding that the pattern held uniformly across content categories, made me take the result seriously even knowing it is associational. Sometimes the data just says something different than the conventional wisdom, and the job is to report that clearly rather than explain it away.</p>
 <hr>
 <p><em>Completed May 2026 as a final project for STAT 230A: Linear Models at UC Berkeley.</em></p>
