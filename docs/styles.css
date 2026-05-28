@@ -1,57 +1,115 @@
+/* ── Accent / theme tokens ────────────────────────────── */
+:root {
+  --rpc-accent:    #2563eb;
+  --rpc-hero-bg:   #0f172a;
+  --rpc-hero-text: #f1f5f9;
+  --rpc-hero-muted:#94a3b8;
+}
+
 /* ── Page body container ─────────────────────────────── */
-/* Centers and constrains all main content on the full-width layout */
 .rpc-body {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1.5rem 3rem 1.5rem;
+  padding: 2rem 1.5rem 3rem 1.5rem;
 }
 
 /* ── Hero section ────────────────────────────────────── */
-.rpc-hero {
+.rpc-hero-section {
+  background: var(--rpc-hero-bg);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 3.5rem 1.5rem;
+}
+
+.rpc-hero-inner {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  max-width: 960px;
+  gap: 2.75rem;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
 }
 
 .rpc-hero-photo {
-  width: 140px;
-  height: 140px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
   flex-shrink: 0;
+  border: 3px solid var(--rpc-accent);
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.18);
 }
 
 .rpc-hero-name {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin: 0 0 0.3rem 0;
-  line-height: 1.2;
+  color: var(--rpc-hero-text);
+  margin: 0 0 0.35rem 0;
+  line-height: 1.15;
 }
 
-.rpc-hero-tagline {
-  font-size: 0.95rem;
-  color: #555;
-  margin: 0 0 0.75rem 0;
+.rpc-hero-blurb {
+  font-size: 0.97rem;
+  color: var(--rpc-hero-muted);
+  margin: 0 0 1.1rem 0;
+  max-width: 520px;
+  line-height: 1.55;
+}
+
+.rpc-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.rpc-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--rpc-hero-text);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+.rpc-badge-accent {
+  background: rgba(37, 99, 235, 0.22);
+  border-color: rgba(37, 99, 235, 0.55);
+  color: #93c5fd;
+  font-weight: 600;
 }
 
 .rpc-hero-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
-  font-size: 0.88rem;
+  gap: 1.35rem;
+  font-size: 0.875rem;
 }
 
 .rpc-hero-links a {
-  color: #333;
+  color: var(--rpc-hero-muted);
   text-decoration: none;
+  transition: color 0.15s;
 }
 
 .rpc-hero-links a:hover {
-  color: #0d6efd;
+  color: var(--rpc-hero-text);
+}
+
+/* ── Section headings ────────────────────────────────── */
+.rpc-body h2 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  padding-left: 0.7rem;
+  border-left: 3px solid var(--rpc-accent);
+  margin-bottom: 1.25rem;
+  margin-top: 0;
 }
 
 /* ── Project cards ───────────────────────────────────── */
@@ -79,12 +137,59 @@
 .btn-outline-dark {
   font-size: 0.82rem;
   padding: 0.25rem 0.65rem;
+  border-color: var(--rpc-accent) !important;
+  color: var(--rpc-accent) !important;
+}
+
+.btn-outline-dark:hover {
+  background: var(--rpc-accent) !important;
+  color: #fff !important;
 }
 
 /* ── Horizontal rule ─────────────────────────────────── */
 hr {
   margin: 1.8rem 0;
-  border-color: #e0e0e0;
+  border-color: #e2e8f0;
+}
+
+/* ── Skills ──────────────────────────────────────────── */
+.rpc-skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rpc-skill-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.rpc-skill-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  min-width: 130px;
+  padding-top: 0.28rem;
+  flex-shrink: 0;
+}
+
+.rpc-skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.rpc-pill {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #334155;
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.8rem;
+  border: 1px solid #e2e8f0;
 }
 
 /* ── Education / Experience entries ─────────────────── */
@@ -133,16 +238,33 @@ hr {
   border-radius: 6px;
 }
 
-/* ── Responsive: stack hero on small screens ─────────── */
-@media (max-width: 576px) {
-  .rpc-hero {
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .rpc-hero-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.25rem;
-    padding: 1.5rem 1rem 1rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .rpc-hero-section {
+    padding: 2.5rem 1.25rem;
   }
 
   .rpc-hero-name {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
+  }
+
+  .rpc-hero-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .rpc-skill-group {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .rpc-skill-label {
+    min-width: unset;
   }
 }
