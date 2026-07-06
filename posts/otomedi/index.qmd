@@ -1,0 +1,63 @@
+---
+title: "Otomedi: Multi-Agent Healthcare Automation"
+description: "A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical."
+author: "Ricardo Pérez Castillo"
+date: "2026-06-21"
+categories: [AI Agents, Python, LLMs, Healthcare]
+image: otomedic_graphic.png
+---
+
+::: {.callout-note appearance="simple" icon=false}
+## Project Overview
+
+An end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026). Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.
+
+Event: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase
+
+[GitHub Repository](https://github.com/ricardo-pc/Berkeley-AI-Hackathon)
+:::
+
+## The Problem
+
+By the end of a day at a hospital front desk, tens or hundreds of missed calls have piled up. Listening to every voicemail, writing down what the patient needs, and executing the request is slow — and the majority of those calls are one of just three things: a prescription refill, a schedule change, or a message for the doctor. Each one takes a series of clicks and lookups that lasts longer than the action itself.
+
+Otomedi turns that voicemail backlog into a dashboard of pre-verified, one-click approvals. Repetitive requests get automated up to the point of human sign-off; edge cases are organized and surfaced for manual review instead of getting lost in an inbox.
+
+## How It Works
+
+![Otomedi pipeline: from voicemail to one-click approval.](otomedic_architecture.png){width=100%}
+
+A voicemail flows through a pipeline of specialized agents, each with a single job:
+
+1. **Intake Agent** — receives the Deepgram speech-to-text transcript and uses Claude to extract structured data: patient identity, insurance plan, and a `requests` array (a single voicemail can contain multiple workflow items, e.g. a refill *and* a message relay). Relative dates like "next Tuesday" are resolved to absolute dates at this stage, and missing fields are flagged explicitly.
+2. **Triage Sentinel** — scans for emergency signals. Anything urgent bypasses automation entirely and escalates immediately.
+3. **Eligibility Agents** — verify the request against patient records: insurance acceptance, refill eligibility (visit history, dosage match, conflicting medications), or scheduling constraints, depending on request type.
+4. **Scheduling Agent** — finds an appointment slot given provider availability and urgency, writing a proposed action rather than a final one.
+5. **Human approval** — a certified healthcare worker reviews the proposed action in the dashboard. Only after they click Approve does the backend execute it.
+6. **Confirmation & Summary Agents** — send SMS/email confirmations to the patient and compile a daily digest for the front desk.
+
+The agents don't message each other directly. Every agent reads and writes a shared task row in Supabase, which makes the pipeline observable, testable, and easy to resume when a step fails.
+
+## Designed Around Safety
+
+The most important design decisions were about what *not* to automate:
+
+- **Emergencies bypass automation entirely.** The triage sentinel runs before any workflow logic, and an urgent signal short-circuits the whole pipeline into human escalation.
+- **No clinical action executes without human sign-off.** Agents can parse, verify, and propose — but the write to prescriptions, appointments, or messages only happens after a healthcare worker approves it.
+- **Regression tests pinned to specific scenarios.** Per our mentor's guidance, each agent ships with tests for named failure cases (garbled audio, missing fields, conflicting medications), not just happy paths.
+
+## Technologies & Tools
+
+Agents & backend: Python, FastAPI, Claude API for extraction and verification, Deepgram for speech-to-text
+
+Frontend: Next.js dashboards — a CHW approval dashboard, a demo EHR, and an audio-upload demo
+
+Data: Supabase (Postgres) as the shared task store and system of record for patients, visits, prescriptions, and schedules
+
+## Reflection
+
+The interesting engineering problem wasn't getting an LLM to read a voicemail — it was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table.
+
+---
+
+*Built at the UC Berkeley AI Hackathon, June 2026.*

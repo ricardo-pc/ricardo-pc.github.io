@@ -1,97 +1,287 @@
-/* ── Page body container ─────────────────────────────── */
-/* Centers and constrains all main content on the full-width layout */
-.rpc-body {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1.5rem 3rem 1.5rem;
+/* ── Google Fonts ─────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* ── Design tokens ────────────────────────────────────── */
+:root {
+  --rpc-accent:        #2563eb;
+  --rpc-accent-light:  #93c5fd;
+  --rpc-accent-ring:   rgba(37, 99, 235, 0.18);
+
+  --rpc-hero-bg:       #0f172a;
+  --rpc-hero-text:     #f1f5f9;
+  --rpc-hero-muted:    #94a3b8;
+
+  --rpc-bg:            #f8fafc;
+  --rpc-card-bg:       #ffffff;
+  --rpc-text:          #18181b;
+  --rpc-text-2:        #475569;
+  --rpc-text-3:        #94a3b8;
+  --rpc-border:        #e2e8f0;
 }
 
-/* ── Hero section ────────────────────────────────────── */
-.rpc-hero {
+/* ── Base ─────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--rpc-bg);
+  color: var(--rpc-text);
+}
+
+/* ── Page body container ─────────────────────────────── */
+.rpc-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem 1.5rem;
+}
+
+/* ── Kill AnchorJS hover icons ───────────────────────── */
+.anchorjs-link {
+  display: none !important;
+}
+
+/* ── Hide <hr> within the home page body ────────────── */
+.rpc-body hr {
+  display: none;
+}
+
+/* ── Section spacing (replaces hr visual gap) ────────── */
+.rpc-body section.level2 {
+  padding-bottom: 2.75rem;
+}
+
+/* ── Hero ─────────────────────────────────────────────── */
+.rpc-hero-section {
+  background: linear-gradient(150deg, #0f172a 0%, #0d1d38 100%);
+  border-bottom: 2px solid rgba(37, 99, 235, 0.3);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 4rem 1.5rem;
+  min-height: 44vh;
   display: flex;
   align-items: center;
-  gap: 2rem;
-  max-width: 960px;
+}
+
+.rpc-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 2.75rem;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  width: 100%;
 }
 
 .rpc-hero-photo {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
   flex-shrink: 0;
+  border: 3px solid var(--rpc-accent);
+  box-shadow: 0 0 0 6px var(--rpc-accent-ring);
 }
 
 .rpc-hero-name {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  margin: 0 0 0.3rem 0;
-  line-height: 1.2;
+  color: var(--rpc-hero-text);
+  margin: 0 0 0.4rem 0;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
-.rpc-hero-tagline {
-  font-size: 0.95rem;
-  color: #555;
-  margin: 0 0 0.75rem 0;
+.rpc-hero-blurb {
+  font-size: 0.97rem;
+  color: var(--rpc-hero-muted);
+  margin: 0 0 1.25rem 0;
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+.rpc-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rpc-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--rpc-hero-text);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+.rpc-badge-accent {
+  background: rgba(37, 99, 235, 0.22);
+  border-color: rgba(37, 99, 235, 0.55);
+  color: #93c5fd;
+  font-weight: 600;
 }
 
 .rpc-hero-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
-  font-size: 0.88rem;
+  gap: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .rpc-hero-links a {
-  color: #333;
+  color: var(--rpc-hero-muted);
   text-decoration: none;
+  transition: color 0.15s;
 }
 
 .rpc-hero-links a:hover {
-  color: #0d6efd;
+  color: var(--rpc-hero-text);
 }
 
-/* ── Project cards ───────────────────────────────────── */
-.card {
-  border-radius: 8px;
-  transition: box-shadow 0.18s ease, transform 0.18s ease;
+/* ── Section headings ────────────────────────────────── */
+.rpc-body h2 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--rpc-text-2);
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--rpc-accent);
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
-.card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10) !important;
+/* ── Featured project cards (home page) ──────────────── */
+.rpc-card {
+  background: var(--rpc-card-bg) !important;
+  border: 1px solid var(--rpc-border) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.rpc-card:hover {
+  border-color: var(--rpc-accent-light) !important;
+  box-shadow: 0 4px 22px rgba(37, 99, 235, 0.09) !important;
   transform: translateY(-2px);
 }
 
-.card-title {
-  font-size: 1rem;
+.rpc-card .card-title {
+  font-size: 0.97rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  color: var(--rpc-text);
+  line-height: 1.4;
+  margin-bottom: 0.35rem;
 }
 
-.card-text {
-  font-size: 0.88rem;
-  line-height: 1.5;
+.rpc-card .card-text.text-muted {
+  font-size: 0.78rem !important;
+  color: var(--rpc-text-3) !important;
+  margin-bottom: 0.5rem;
 }
 
-.btn-outline-dark {
+.rpc-card .card-text:not(.text-muted) {
+  font-size: 0.875rem;
+  color: var(--rpc-text-2);
+  line-height: 1.6;
+}
+
+/* Arrow link replacing the button */
+.rpc-card-link {
   font-size: 0.82rem;
-  padding: 0.25rem 0.65rem;
+  font-weight: 600;
+  color: var(--rpc-accent);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.75rem;
+  transition: letter-spacing 0.15s ease;
 }
 
-/* ── Horizontal rule ─────────────────────────────────── */
-hr {
-  margin: 1.8rem 0;
-  border-color: #e0e0e0;
+.rpc-card-link:hover {
+  color: var(--rpc-accent);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+/* ── "See all projects" link ─────────────────────────── */
+.rpc-see-all {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.rpc-see-all a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rpc-accent);
+  text-decoration: none;
+}
+
+.rpc-see-all a:hover {
+  text-decoration: underline;
+}
+
+/* ── Quarto listing cards (projects page) ─────────────── */
+.quarto-grid-item.card {
+  background: var(--rpc-card-bg) !important;
+  border: 1px solid var(--rpc-border) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.quarto-grid-item.card:hover {
+  border-color: var(--rpc-accent-light) !important;
+  box-shadow: 0 4px 22px rgba(37, 99, 235, 0.09) !important;
+  transform: translateY(-2px);
+}
+
+/* ── Skills ──────────────────────────────────────────── */
+.rpc-skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rpc-skill-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.rpc-skill-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--rpc-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  min-width: 130px;
+  padding-top: 0.28rem;
+  flex-shrink: 0;
+}
+
+.rpc-skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.rpc-pill {
+  display: inline-block;
+  background: var(--rpc-card-bg);
+  color: var(--rpc-text-2);
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--rpc-border);
 }
 
 /* ── Education / Experience entries ─────────────────── */
 .rpc-entries {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.1rem;
 }
 
 .rpc-entry-header {
@@ -104,45 +294,86 @@ hr {
 .rpc-entry-org {
   font-weight: 600;
   font-size: 0.97rem;
+  color: var(--rpc-text);
 }
 
 .rpc-entry-date {
-  font-size: 0.85rem;
-  color: #666;
+  font-size: 0.82rem;
+  color: var(--rpc-text-3);
   white-space: nowrap;
 }
 
 .rpc-entry-sub {
-  font-size: 0.9rem;
-  color: #444;
+  font-size: 0.88rem;
+  color: var(--rpc-text-2);
   margin-top: 0.1rem;
 }
 
 .rpc-entry-note {
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   margin-top: 0.2rem;
 }
 
-/* ── Post / project page improvements ───────────────── */
+.rpc-entry-note a,
+.rpc-see-all a,
+.rpc-card-link {
+  color: var(--rpc-accent);
+}
+
+/* ── Post page refinements ───────────────────────────── */
 .quarto-title-meta {
   font-size: 0.85rem;
 }
 
-/* ── Callout refinement ──────────────────────────────── */
 .callout {
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-/* ── Responsive: stack hero on small screens ─────────── */
-@media (max-width: 576px) {
-  .rpc-hero {
+/* Horizontal rules inside post content (not home page) */
+hr {
+  margin: 2rem 0;
+  border-color: var(--rpc-border);
+  opacity: 1;
+}
+
+/* ── Coursework cards ────────────────────────────────── */
+.card.h-100.border-success {
+  border-radius: 10px !important;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .rpc-hero-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.25rem;
-    padding: 1.5rem 1rem 1rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .rpc-hero-section {
+    padding: 2.75rem 1.25rem;
+    min-height: unset;
   }
 
   .rpc-hero-name {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    letter-spacing: -0.015em;
+  }
+
+  .rpc-hero-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .rpc-skill-group {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .rpc-skill-label {
+    min-width: unset;
+  }
+
+  .rpc-see-all {
+    text-align: left;
   }
 }

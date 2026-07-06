@@ -4,7 +4,6 @@ listing:
   contents: posts
   sort: "date desc"
   type: grid
-  categories: true
   fields: [title, description, date, categories]
   grid-columns: 2
 ---

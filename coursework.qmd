@@ -6,11 +6,11 @@ title: "Coursework"
 
 Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.
 
-### In Progress (Current Term)
+### Completed (Spring 2026)
 
 ::: {.row .g-4}
 ::: {.col-6}
-::: {.card .h-100 .border-primary .border-2}
+::: {.card .h-100 .border-success}
 ::: {.card-body}
 #### STAT 214
 ##### Data Analysis & ML for Decision Making
@@ -27,7 +27,7 @@ Applied machine learning for real-world decision-making. Focuses on model evalua
 :::
 
 ::: {.col-6}
-::: {.card .h-100 .border-primary .border-2}
+::: {.card .h-100 .border-success}
 ::: {.card-body}
 #### STAT 230A
 ##### Linear Models
@@ -44,7 +44,7 @@ Comprehensive regression theory from OLS and Gauss-Markov theorem to GLMs and ge
 :::
 
 ::: {.col-6}
-::: {.card .h-100 .border-primary .border-2}
+::: {.card .h-100 .border-success}
 ::: {.card-body}
 #### STAT 254
 ##### Modern Statistical Prediction & ML
@@ -61,7 +61,7 @@ Probabilistic machine learning theory covering empirical risk minimization, comp
 :::
 
 ::: {.col-6}
-::: {.card .h-100 .border-primary .border-2}
+::: {.card .h-100 .border-success}
 ::: {.card-body}
 #### COMPSCI 289A
 ##### Introduction to Machine Learning
@@ -78,7 +78,7 @@ Theoretical foundations and applications of ML from problem formulation to model
 :::
 
 ::: {.col-6}
-::: {.card .h-100 .border-primary .border-2}
+::: {.card .h-100 .border-success}
 ::: {.card-body}
 #### STAT 238
 ##### Bayesian Statistics

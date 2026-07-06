@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   resources:
-    - Curriculum_RicardoPerezCastillo.pdf
+    - RicardoPerezCastillo_resume.pdf
 
 website:
   title: "Ricardo Pérez Castillo"
