@@ -14,7 +14,7 @@ A mutation-aware drug-repurposing triage tool for translational-oncology researc
 
 Event: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP
 
-[Live App](https://mutationrx.onrender.com) · [GitHub Repository](https://github.com/ricardo-pc/anthropic-hackathon)
+[Live App](https://mutationrx.onrender.com)
 :::
 
 ## The Problem

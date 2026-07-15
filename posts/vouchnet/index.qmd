@@ -14,7 +14,7 @@ A deployed reputation service for AI agents: check another agent's track record 
 
 Event: NANDAHack (MIT Media Lab) · July 2026 · Stack: Python, FastAPI, PostgreSQL (Supabase), REST API
 
-[GitHub Repository](https://github.com/ricardo-pc/vouchnet) · [Live App](https://vouchnet.onrender.com) · [API Docs](https://vouchnet.onrender.com/docs)
+[Live App](https://vouchnet.onrender.com)
 :::
 
 ## The Problem

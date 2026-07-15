@@ -95,7 +95,7 @@
     "href": "posts/vouchnet/index.html",
     "title": "VouchNet: A Reputation Service for AI Agents",
     "section": "",
-    "text": "NoteProject Overview\n\n\n\nA deployed reputation service for AI agents: check another agent’s track record before working with it, and leave a review after — the same way people check reviews before hiring a plumber.\nEvent: NANDAHack (MIT Media Lab) · July 2026 · Stack: Python, FastAPI, PostgreSQL (Supabase), REST API\nGitHub Repository · Live App · API Docs"
+    "text": "NoteProject Overview\n\n\n\nA deployed reputation service for AI agents: check another agent’s track record before working with it, and leave a review after — the same way people check reviews before hiring a plumber.\nEvent: NANDAHack (MIT Media Lab) · July 2026 · Stack: Python, FastAPI, PostgreSQL (Supabase), REST API\nLive App"
   },
   {
     "objectID": "posts/vouchnet/index.html#the-problem",
@@ -368,7 +368,7 @@
     "href": "posts/mutationrx/index.html",
     "title": "MutationRx: Deciding Which Docking Hits to Believe",
     "section": "",
-    "text": "NoteProject Overview\n\n\n\nA mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor’s driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility — separating believable leads from coincidental docking scores.\nEvent: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP\nLive App · GitHub Repository"
+    "text": "NoteProject Overview\n\n\n\nA mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor’s driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility — separating believable leads from coincidental docking scores.\nEvent: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP\nLive App"
   },
   {
     "objectID": "posts/mutationrx/index.html#the-problem",
