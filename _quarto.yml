@@ -1,8 +1,6 @@
 project:
   type: website
   output-dir: docs
-  resources:
-    - RicardoPerezCastillo_resume.pdf
 
 website:
   title: "Ricardo Pérez Castillo"
@@ -12,8 +10,6 @@ website:
         text: Home
       - href: projects.qmd
         text: Projects
-      - href: cv.qmd
-        text: CV
       - href: coursework.qmd
         text: Coursework
     right:

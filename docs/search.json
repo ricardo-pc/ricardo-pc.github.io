@@ -14,494 +14,123 @@
     "text": "Coursework highlights the tools and theory I use for data science, with an emphasis on modeling, decision-making, and scalable computation.\n\n\n\n\n\n\n\n\n\nApplied machine learning for real-world decision-making. Focuses on model evaluation under uncertainty, causal inference methods, and practical deployment of ML systems for high-impact decisions.\n\nPython Applied ML Causal Inference\n\n\n\n\n\n\n\n\n\n\n\nComprehensive regression theory from OLS and Gauss-Markov theorem to GLMs and generalized estimating equations. Covers heteroskedasticity, cluster-robust inference, model selection, shrinkage methods (Ridge/LASSO), and extensions to categorical and count outcomes.\n\nPython Regression GLMs\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic machine learning theory covering empirical risk minimization, complexity bounds, and uniform laws. Emphasizes model evaluation via cross-validation, regularization schemes, classification with proxy losses, and connections between linear models and sophisticated ML methods.\n\nPython Deep Learning Optimization\n\n\n\n\n\n\n\n\n\n\n\nTheoretical foundations and applications of ML from problem formulation to model deployment. Covers unsupervised learning (k-means, PCA), regression and classification, deep learning architectures (CNNs, RNNs, transformers), and generative models (LLMs, GANs). Includes PyTorch implementation and backpropagation.\n\nPython ML Theory Algorithms\n\n\n\n\n\n\n\n\n\n\n\nBayesian inference framework including prior elicitation, conjugate analysis, and hierarchical modeling. Focuses on MCMC methods (Gibbs sampling, Metropolis-Hastings), modern computational techniques (HMC, variational inference), and applications to complex statistical models.\n\nPython MCMC Hierarchical Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure-theoretic probability, convergence concepts, laws of large numbers, central limit theorems, and foundational theory for statistical inference.\n\nTheory Measure Theory Convergence\n\n\n\n\n\n\n\n\n\n\n\nStatistical inference theory including sufficiency, exponential families, hypothesis testing, asymptotic theory, and decision theory foundations.\n\nTheory Inference Asymptotics\n\n\n\n\n\n\n\n\n\n\n\nStatistical computing and data science using Python. Covers UNIX/bash scripting, version control, data manipulation, text processing, object-oriented programming, parallel processing, databases and big data, computer arithmetic, simulation and Monte Carlo methods, numerical linear algebra, and optimization.\n\nPython UNIX/Bash Parallel Computing Numerical Methods"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ricardo Pérez Castillo",
     "section": "",
-    "text": "Personal Website"
+    "text": "Ricardo Pérez Castillo\n      Data scientist with 4+ years at McKinsey and Deloitte across data engineering, analytics, and applied ML for enterprise clients. Now finishing an M.A. in Statistics at UC Berkeley, building AI agents and ML systems on the side.\n      \n        McKinsey & Deloitte  ·  4+ yrs\n        M.A. Statistics, UC Berkeley\n        Open to Data Science & ML roles\n      \n      \n         LinkedIn\n         GitHub\n         ricardoperez@berkeley.edu"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\nMutationRx: Deciding Which Docking Hits to Believe\n\n\n\nAI Agents\n\nPython\n\nLLMs\n\nComputational Biology\n\n\n\nA resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic…\n\n\n\nJul 13, 2026\n\n\n\n\n\n\n\n\n\n\nVouchNet: A Reputation Service for AI Agents\n\n\n\nAI Agents\n\nPython\n\nAPIs\n\nSoftware Engineering\n\n\n\nA live, public reputation API that lets AI agents rate and vet each other before working together — designed so a blind AI agent can operate the entire service from…\n\n\n\nJul 1, 2026\n\n\n\n\n\n\n\n\n\n\nOtomedi: Multi-Agent Healthcare Automation\n\n\n\nAI Agents\n\nPython\n\nLLMs\n\nHealthcare\n\n\n\nA multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps…\n\n\n\nJun 21, 2026\n\n\n\n\n\n\n\n\n\n\nBayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive\n\n\n\nPython\n\nBayesian Inference\n\nMachine Learning\n\nStatistical Computing\n\n\n\nA Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\nWhen Does Ranking Help? A Sparsity Study of Movie Recommenders\n\n\n\nPython\n\nMachine Learning\n\nDeep Learning\n\nRecommender Systems\n\n\n\nThree recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\nWhat Makes a Headline Work? Lessons from 55,000 A/B Tests\n\n\n\nPython\n\nStatistical Computing\n\nA/B Testing\n\nNLP\n\n\n\nUsing 54,956 headline variants from 11,649 Upworthy A/B tests, I model which linguistic features predict click-through rate and discover that exclamation marks destroy…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\nBerkeley Grocery Tracker\n\n\n\nData Engineering\n\nWeb App\n\nAI-Assisted Development\n\nOpenAI\n\n\n\nA live price tracker for Trader Joe’s, Whole Foods, and Safeway across Berkeley, built end-to-end with OpenAI Codex.\n\n\n\nApr 26, 2026\n\n\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\n\nPython\n\nMachine Learning\n\nStatistical Computing\n\nBayesian Inference\n\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\nEvolutionary Feature Selection: A Genetic Algorithm Package\n\n\n\nPython\n\nStatistical Computing\n\nMachine Learning\n\nSoftware Engineering\n\n\n\nBuilding a production-quality Python package for automated variable selection using evolutionary computation principles.\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\nImpact\n\n\n\nHow our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Ricardo Pérez Castillo",
+    "section": "Featured Projects",
+    "text": "Featured Projects\n\n\n\n\n\nMutationRx: Deciding Which Docking Hits to Believe\n\n\nBuilt with Claude: Life Sciences (Anthropic × Gladstone) · FastAPI · Docking · MCP\n\n\nA resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility — separating real leads from coincidental docking artifacts.\n\n\nView project →\n\n\n\n\n\n\n\n\nOtomedi: Multi-Agent Healthcare Automation\n\n\nUC Berkeley AI Hackathon · Claude API · FastAPI · Next.js\n\n\nA multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions while a healthcare worker keeps final sign-off on everything clinical.\n\n\nView project →\n\n\n\n\n\n\n\n\nVouchNet: A Reputation Service for AI Agents\n\n\nNANDAHack (MIT Media Lab) · FastAPI · PostgreSQL · Live API\n\n\nA deployed public reputation API that lets AI agents rate and vet each other before working together — designed so a blind AI agent can operate the entire service from documentation alone.\n\n\nView project →\n\n\n\n\n\n\n\n\nA/B Testing at Scale: Headline Experiments\n\n\nSTAT 230A · Python · Statistical Computing · NLP\n\n\nRegression analysis of 54,956 Upworthy headline variants reveals that exclamation marks destroy engagement while numeric openings quietly win, with cluster-robust inference to match the nested A/B test structure.\n\n\nView project →\n\n\n\n\n\n\n\n\nWhen Does Ranking Help? A Sparsity Study of Movie Recommenders\n\n\nCS 289A · Python · Machine Learning · Deep Learning\n\n\nThree recommender systems trained across five sparsity levels reveal a counterintuitive result: well-tuned matrix factorization beats neural and two-stage ranking models at every data density.\n\n\nView project →\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\nSTAT 214 · Bayesian Inference · Machine Learning · Python\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\nView project →\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\nMachine Learning · Python · Time Series · LSTM\n\n\nBuilt an ML forecasting system for water demand and dam capacity in Monterrey. Two years later, our predictions came true when 5 million residents faced severe rationing. 2nd place globally at the Atos IT Challenge 2020.\n\n\nView project →\n\n\n\n\n\nSee all projects →"
   },
   {
-    "objectID": "selected-work/stat243.html",
-    "href": "selected-work/stat243.html",
-    "title": "STAT 243 — Statistical Computing",
-    "section": "",
-    "text": "Showcase of projects and assignments from STAT 243."
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Ricardo Pérez Castillo",
+    "section": "Skills",
+    "text": "Skills\n\n  \n    Analytics & ML\n    \n      A/B Testing\n      Experimentation Design\n      Statistical Inference\n      Causal Inference\n      Forecasting\n      Regression\n      Classification\n      Clustering\n      NLP\n      Recommendation Systems\n      Feature Engineering\n    \n  \n  \n    AI Engineering\n    \n      Claude API\n      Multi-Agent Systems\n      FastAPI\n      Bayesian Optimization\n      Supabase\n    \n  \n  \n    Programming & Data\n    \n      Python\n      pandas\n      NumPy\n      scikit-learn\n      statsmodels\n      PyTorch\n      spaCy\n      R\n      SQL\n      Snowflake\n      SQL Server\n      AWS S3\n      ETL\n      Dimensional Modeling\n    \n  \n  \n    BI & Infrastructure\n    \n      Tableau\n      Power BI\n      Azure\n      GCP\n      Git\n      REST APIs\n      SnapLogic"
   },
   {
-    "objectID": "selected-work/stat243.html#highlights",
-    "href": "selected-work/stat243.html#highlights",
-    "title": "STAT 243 — Statistical Computing",
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Ricardo Pérez Castillo",
+    "section": "Education",
+    "text": "Education\n\n\n  \n    \n      University of California, Berkeley\n      Aug 2025 – May 2026\n    \n    M.A. in Statistics  ·  Berkeley, CA\n    View coursework →\n  \n\n  \n    \n      Tecnológico de Monterrey, Campus Monterrey\n      Jan 2015 – Dec 2019\n    \n    B.S. in Chemical Engineering  ·  Monterrey, México"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Ricardo Pérez Castillo",
+    "section": "Experience",
+    "text": "Experience\n\n\n  \n    \n      McKinsey & Company\n      Jul 2022 – Jul 2025\n    \n    Data Engineer / Data Analyst / Consultant  ·  San Pedro Garza García, México\n  \n\n  \n    \n      Deloitte\n      Jan 2021 – Jun 2022\n    \n    Consulting Analyst  ·  Monterrey, México"
+  },
+  {
+    "objectID": "selected-work/stat201.html",
+    "href": "selected-work/stat201.html",
+    "title": "STAT 201A/201B — Advanced Probability and Statistics",
+    "section": "",
+    "text": "Showcase of assignments from STAT 201A/B."
+  },
+  {
+    "objectID": "selected-work/stat201.html#highlights",
+    "href": "selected-work/stat201.html#highlights",
+    "title": "STAT 201A/201B — Advanced Probability and Statistics",
     "section": "Highlights",
     "text": "Highlights\n\nIn progress."
   },
   {
-    "objectID": "selected-work/stat243.html#artifacts",
-    "href": "selected-work/stat243.html#artifacts",
-    "title": "STAT 243 — Statistical Computing",
+    "objectID": "selected-work/stat201.html#artifacts",
+    "href": "selected-work/stat201.html#artifacts",
+    "title": "STAT 201A/201B — Advanced Probability and Statistics",
     "section": "Artifacts",
     "text": "Artifacts\n\nIn progress."
   },
   {
-    "objectID": "posts/digital-water/index.html",
-    "href": "posts/digital-water/index.html",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "objectID": "selected-work/ml-current.html",
+    "href": "selected-work/ml-current.html",
+    "title": "Current ML Courses — Projects",
     "section": "",
-    "text": "NoteThe Story at a Glance\n\n\n\nIn 2020, our team built an AI system to forecast water demand for my hometown of Monterrey, Mexico. We won 2nd place globally at the Atos IT Challenge, the first Mexican team ever to achieve this distinction in the competition’s 10-year history.\nTwo years later, our predictions came true. Monterrey plunged into a severe water crisis, forcing 5 million residents to survive on minimal daily water allocations for nearly two years."
+    "text": "Section in progress."
   },
   {
-    "objectID": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
-    "href": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "What If You Could See a Crisis Coming?",
-    "text": "What If You Could See a Crisis Coming?\nBetween November 2019 and July 2020, my team developed Digital Water, a machine learning platform to forecast water demand and capacity at the city level. Working with real data from Monterrey’s official water utility (SADM), we built LSTM neural networks that could predict daily water consumption and available dam capacity.\nAt the time, we were focused on winning an international competition. We didn’t realize we were documenting the early warning signs of a catastrophe."
+    "objectID": "selected-work/ml-current.html#highlights",
+    "href": "selected-work/ml-current.html#highlights",
+    "title": "Current ML Courses — Projects",
+    "section": "Highlights",
+    "text": "Highlights\n\nIn progress."
   },
   {
-    "objectID": "posts/digital-water/index.html#the-challenge",
-    "href": "posts/digital-water/index.html#the-challenge",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "The Challenge",
-    "text": "The Challenge\nMonterrey is Mexico’s third-largest metro area and a major industrial hub. The city’s water system serves over 5 million people, drawing from a network of dams and underground sources. But water scarcity was becoming more frequent, and utilities were operating reactively, responding to shortages rather than preventing them.\nOur goal: Build a forecasting system that could shift water management from reactive to preventative, giving utilities early warning signals before reaching critical thresholds."
+    "objectID": "selected-work/ml-current.html#artifacts",
+    "href": "selected-work/ml-current.html#artifacts",
+    "title": "Current ML Courses — Projects",
+    "section": "Artifacts",
+    "text": "Artifacts\n\nIn progress."
   },
   {
-    "objectID": "posts/digital-water/index.html#our-solution",
-    "href": "posts/digital-water/index.html#our-solution",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Our Solution",
-    "text": "Our Solution\nWe developed an end-to-end machine learning pipeline:\n\nData Engineering\n\nCollected and cleaned multi-source time-series data from SADM\nAligned daily consumption records with dam capacity measurements\nCreated comprehensive field dictionaries and documentation\n\n\n\nPredictive Models\n\nTrained two LSTM neural networks (one for demand, one for capacity)\nForecasted daily water demand and available capacity\nCalculated “days-to-threshold” estimates for safe operating levels\nImplemented in Python using TensorFlow\n\n\n\nDeployment\n\nBuilt an interactive web dashboard (hosted on Heroku)\nCreated Google Colab notebooks for accessibility and reproducibility\nProduced technical documentation and presentation materials\n\n\n\n\n\n\n\nTipKey Technologies\n\n\n\nPython • TensorFlow • LSTM Networks • Time Series Forecasting • Google Colab • Heroku"
-  },
-  {
-    "objectID": "posts/digital-water/index.html#recognition",
-    "href": "posts/digital-water/index.html#recognition",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Recognition",
-    "text": "Recognition\n\n\n🏆 2nd Place Globally Atos IT Challenge 2020\n\n\n🇲🇽 First Mexican Team In competition’s 10-year history\n\n\n👥 5M People Impacted By predicted crisis\n\n\nWe presented our work to the Atos CEO and Scientific Board, competing against thousands of international teams."
-  },
-  {
-    "objectID": "posts/digital-water/index.html#what-happened-next-the-crisis",
-    "href": "posts/digital-water/index.html#what-happened-next-the-crisis",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "What Happened Next: The Crisis",
-    "text": "What Happened Next: The Crisis\nIn 2022, everything our models predicted came to pass.\nMonterrey experienced a devastating water crisis that lasted nearly two years. The city’s 5 million residents were reduced to minimal daily water allocations. Neighborhoods received water only a few hours per week. Businesses struggled. The crisis validated our forecasting approach—but also showed the human cost of delayed action.\n\n\n\n\n\n\nWarningTimeline\n\n\n\n2019-2020: Built forecasting models with SADM data\nJuly 2020: Won 2nd place at Atos IT Challenge\n2022: Water crisis begins—predictions validated\n2022-2024: Nearly two years of severe rationing for 5M residents\n2024: Crisis subsides\n\n\nThe crisis highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning—and why such systems need to be deployed, not just built."
-  },
-  {
-    "objectID": "posts/digital-water/index.html#technical-details",
-    "href": "posts/digital-water/index.html#technical-details",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Technical Details",
-    "text": "Technical Details\nFor those interested in the implementation:\n\nModels: Two LSTM neural networks (demand + capacity forecasting)\nData: Official records from Agua y Drenaje de Monterrey (SADM)\nFeatures: Multi-variate time series including consumption patterns, dam levels, and seasonal factors\nOutputs: Daily forecasts + “days-to-threshold” risk estimates\nCode: Open-source notebooks in Google Colab\nDocumentation: Complete technical report and research summaries"
-  },
-  {
-    "objectID": "posts/digital-water/index.html#links-resources",
-    "href": "posts/digital-water/index.html#links-resources",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Links & Resources",
-    "text": "Links & Resources\n\nGitHub Repository — Code, notebooks, and documentation\nDemo Video — Platform walkthrough"
-  },
-  {
-    "objectID": "posts/digital-water/index.html#reflection",
-    "href": "posts/digital-water/index.html#reflection",
-    "title": "Digital Water: Predicting a Crisis Before It Happened",
-    "section": "Reflection",
-    "text": "Reflection\nThis project was completed in 2020, and the notebooks remain as-is in the repository. Looking back (5 years later) with more experience in ML, I would redesign the data pipeline, modeling aproach, stability and predictability of the model and scalability. But the core lesson remains: predictive models only create impact when they’re deployed and acted upon.\nThe crisis our system forecasted was preventable. The data was there. The models worked. What was missing was the infrastructure and institutional will to act on early warnings.\n\nBuilt between November 2019 and July 2020 as part of the Atos IT Challenge."
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html",
-    "href": "posts/upworthy-ab-testing/index.html",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "objectID": "posts/vouchnet/index.html",
+    "href": "posts/vouchnet/index.html",
+    "title": "VouchNet: A Reputation Service for AI Agents",
     "section": "",
-    "text": "NoteProject Overview\n\n\n\nA regression analysis of the Upworthy Research Archive: 54,956 headline packages across 11,649 formally controlled A/B tests, asking which headline features predict click-through rate and how to estimate those effects correctly when observations are clustered within the same experiment.\nCourse: STAT 230A: Linear Models · Semester: Spring 2026 · Language: Python\nGitHub Repository"
+    "text": "NoteProject Overview\n\n\n\nA deployed reputation service for AI agents: check another agent’s track record before working with it, and leave a review after — the same way people check reviews before hiring a plumber.\nEvent: NANDAHack (MIT Media Lab) · July 2026 · Stack: Python, FastAPI, PostgreSQL (Supabase), REST API\nGitHub Repository · Live App · API Docs"
   },
   {
-    "objectID": "posts/upworthy-ab-testing/index.html#the-setup",
-    "href": "posts/upworthy-ab-testing/index.html#the-setup",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "The Setup",
-    "text": "The Setup\nBetween 2012 and 2019, Upworthy ran one of the largest natural headline experiments in digital media history. Every article was tested with two to six different headlines shown simultaneously to random audience subsets. The winner went live. The rest were archived.\nThat archive is now public. It contains over 100,000 headline variants across more than a decade of A/B tests, each with an exact impression count and click count. It is, in effect, a massive dataset where the outcome of interest (click-through rate) was measured under controlled conditions.\nThe question I wanted to answer: beyond any one headline being better than another, are there systematic patterns? Do certain structural or linguistic features consistently predict more clicks, regardless of topic?"
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html#the-data",
-    "href": "posts/upworthy-ab-testing/index.html#the-data",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "The Data",
-    "text": "The Data\nThe final analysis dataset covers 54,956 headline packages from 11,649 A/B tests between 2013 and 2015. Three cleaning steps shaped it:\n\nSingle-variant tests were dropped (no competitor means no comparison).\nTests where the image varied across packages (~35% of raw data) were excluded, since image differences confound headline effects.\nA Cloudflare misconfiguration in late 2013 corrupted impression counts for some tests; affected rows were removed.\n\nRaw click-through rate is badly skewed: most headlines receive a 1–3% CTR while a handful go viral and pull the mean up. The outcome variable is log-transformed CTR, which compresses the tail and makes regression coefficients interpretable as proportional changes: a coefficient of 0.06 means roughly +6% more clicks.\n\n\n\nRaw CTR clusters near zero with a long right tail from viral headlines. Log-transforming creates a near-symmetric distribution suitable for linear regression."
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html#fourteen-features",
-    "href": "posts/upworthy-ab-testing/index.html#fourteen-features",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "Fourteen Features",
-    "text": "Fourteen Features\nEach headline was characterized by 14 features covering structure, rhetoric, sentiment, and readability:\n\nRhetorical devices: ends with “?”, has “!”, has “…”, starts with how/why/what, contains “you/your”, contains “we/our”\nNumeric content: starts with a digit, contains any digit, has a superlative word\nSentiment: VADER compound score, ranging from −1 (most negative) to +1 (most positive)\nLength: character count, word count, average word length\n\nThe features are deliberately surface-level — no embeddings, no LLM scoring. The goal was to isolate the predictive value of things an editor can control in seconds: punctuation, framing, and word choice. VADER was chosen for the same reason: it requires no training and produces a reliable sentiment estimate from a lexicon, making results interpretable rather than opaque."
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html#the-estimation-problem",
-    "href": "posts/upworthy-ab-testing/index.html#the-estimation-problem",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "The Estimation Problem",
-    "text": "The Estimation Problem\nA standard OLS regression would understate uncertainty here. Each A/B test contains multiple packages that share the same article, the same publication window, and the same audience pool. Packages within the same test are correlated in ways OLS ignores.\nTo handle this, I built four model variants in sequence:\n\nOLS baseline — establishes the coefficient estimates but produces overconfident standard errors\nHC3 heteroskedasticity-robust SEs — corrects for variance differences across packages; the ratio to OLS SEs is 0.95–1.03, confirming heteroskedasticity is minor\nCluster-robust SEs — allows arbitrary error correlation within each test (11,649 clusters); the ratio to OLS SEs is 1.3–2.2, confirming clustering is the dominant issue\nWLS with cluster-robust SEs — downweights packages with few impressions (where CTR is noisiest); used as a robustness check\n\nAll ten statistically significant features retain their sign and significance across all four specifications. The coefficient estimates are stable; only the confidence intervals change."
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html#what-i-found",
-    "href": "posts/upworthy-ab-testing/index.html#what-i-found",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "What I Found",
-    "text": "What I Found\n\n\n\nCluster-robust OLS coefficients with 95% confidence intervals. Dark blue dots are positive and significant; dark gray are negative and significant; pale dots are not significant at p = 0.05.\n\n\nThe clearest finding is the one the chart title says outright: exclamation marks are the single biggest negative predictor. Headlines with “!” have substantially lower CTR than otherwise equivalent headlines, with the coefficient putting the effect in the range of a 30% relative reduction. Collective framing (“we/our”) is the second-largest suppressor, followed by question marks and curiosity-gap openers (“how/why/what”).\nOn the positive side, numeric content wins. Headlines starting with a digit and headlines containing any number both show reliable positive effects. “Has superlative word” is also positive and significant, though smaller.\nSentiment tells a counterintuitive story. The VADER score has a negative coefficient: more positive sentiment predicts more clicks. Readers, at least in this sample, responded better to emotionally neutral or affirmative frames than to alarming or negative ones. This runs counter to the usual claim that negative news spreads better, though the effect here is associational rather than causal.\n\n\n\n\n\n\n\n\nFeature\nDirection\nApprox. effect on CTR\n\n\n\n\nHas “!”\nNegative\n~30% lower\n\n\nContains “we/our”\nNegative\n~22% lower\n\n\nEnds with “?”\nNegative\n~25% lower\n\n\nVADER sentiment (positive)\nNegative coeff., positive framing wins\n~12% per unit\n\n\nStarts with a digit\nPositive\n~7% higher\n\n\nContains any digit\nPositive\n~6% higher\n\n\nHas superlative word\nPositive\n~3% higher\n\n\n\nThe model explains about 6% of variance in log-CTR (R² = 0.059), which sounds low but is expected: the bulk of what drives any individual headline’s performance is unobserved — the article itself, the image, the audience composition, the news cycle. The linguistic features are real signals; they just share the stage with a lot of noise.\nOne robustness check tested whether the sentiment effect varies by content category — politics, health, science, economics, and others — using zero-shot classification with BART. The interaction model showed no evidence of moderation (F(6) = 1.26, p = 0.27). The negativity bias pattern appears uniform across topics."
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html#the-practical-picture",
-    "href": "posts/upworthy-ab-testing/index.html#the-practical-picture",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "The Practical Picture",
-    "text": "The Practical Picture\nThe results push back on some received wisdom about online headlines. The “clickbait” formula — urgent, emotional, often punctuated with “!” or “?” — appears to have lost its edge with Upworthy’s audience by 2013–2015. CTR also declined by roughly 20% per year across the dataset, suggesting the audience was adapting to the format faster than editors realized.\nWhat worked instead was specificity. A headline that starts with a number signals a concrete, structured argument. “The 5 reasons…” outperforms “Why…” not because of the number per se, but because it makes a credible promise about what follows. The superlative finding fits the same pattern: readers respond to claims that are falsifiable.\nA few important caveats: these results are associational, not causal. Unobserved article quality almost certainly drives both headline choice and performance. The data covers Upworthy 2013–2015 specifically, and platform dynamics have changed substantially since then. The findings are suggestive, not prescriptive."
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html#technologies-tools",
-    "href": "posts/upworthy-ab-testing/index.html#technologies-tools",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nCore stack: Python, pandas, NumPy, statsmodels, VADER (vaderSentiment), matplotlib\nStatistical methods: OLS, HC3-robust SEs, cluster-robust SEs (sandwich estimator, 11,649 clusters), WLS, zero-shot text classification with facebook/bart-large-mnli for content category labeling\nRobustness checks: residual diagnostics, Cook’s distance, correlation matrix across all 14 features (max |r| = 0.35)"
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html#links-resources",
-    "href": "posts/upworthy-ab-testing/index.html#links-resources",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "Links & Resources",
-    "text": "Links & Resources\n\nGitHub Repository: full code, notebooks, and feature engineering pipeline\nFinal Report (PDF): complete write-up with all tables and robustness checks"
-  },
-  {
-    "objectID": "posts/upworthy-ab-testing/index.html#reflection",
-    "href": "posts/upworthy-ab-testing/index.html#reflection",
-    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
-    "section": "Reflection",
-    "text": "Reflection\nThe most interesting methodological moment in this project was building the four-model progression. Adding cluster-robust standard errors inflated the SEs by 1.3 to 2.2 times relative to OLS, enough to flip a few borderline-significant features to not significant. That gap is the difference between publishing a result and not, and it came entirely from acknowledging that rows within the same A/B test are not independent observations. The data structure matters as much as the model.\nThe sentiment finding was the biggest surprise. I expected negativity to win — most of the pop-science writing on clickbait says it does. Finding the opposite, and then finding that the pattern held uniformly across content categories, made me take the result seriously even knowing it is associational. Sometimes the data just says something different than the conventional wisdom, and the job is to report that clearly rather than explain it away.\n\nCompleted May 2026 as a final project for STAT 230A: Linear Models at UC Berkeley."
-  },
-  {
-    "objectID": "posts/otomedi/index.html",
-    "href": "posts/otomedi/index.html",
-    "title": "Otomedi: Multi-Agent Healthcare Automation",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nAn end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026). Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.\nEvent: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase\nGitHub Repository"
-  },
-  {
-    "objectID": "posts/otomedi/index.html#the-problem",
-    "href": "posts/otomedi/index.html#the-problem",
-    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "objectID": "posts/vouchnet/index.html#the-problem",
+    "href": "posts/vouchnet/index.html#the-problem",
+    "title": "VouchNet: A Reputation Service for AI Agents",
     "section": "The Problem",
-    "text": "The Problem\nBy the end of a day at a hospital front desk, tens or hundreds of missed calls have piled up. Listening to every voicemail, writing down what the patient needs, and executing the request is slow — and the majority of those calls are one of just three things: a prescription refill, a schedule change, or a message for the doctor. Each one takes a series of clicks and lookups that lasts longer than the action itself.\nOtomedi turns that voicemail backlog into a dashboard of pre-verified, one-click approvals. Repetitive requests get automated up to the point of human sign-off; edge cases are organized and surfaced for manual review instead of getting lost in an inbox."
+    "text": "The Problem\nAs AI agents start transacting with each other — calling each other’s APIs, delegating work, exchanging results — they have no way to know which counterparts are reliable. Humans solve this with reputation: reviews, ratings, track records. Agents have nothing equivalent.\nVouchNet gives them one: a shared, public reputation record that any agent can check before an interaction and contribute to after."
   },
   {
-    "objectID": "posts/otomedi/index.html#how-it-works",
-    "href": "posts/otomedi/index.html#how-it-works",
-    "title": "Otomedi: Multi-Agent Healthcare Automation",
-    "section": "How It Works",
-    "text": "How It Works\n\n\n\nOtomedi pipeline: from voicemail to one-click approval.\n\n\nA voicemail flows through a pipeline of specialized agents, each with a single job:\n\nIntake Agent — receives the Deepgram speech-to-text transcript and uses Claude to extract structured data: patient identity, insurance plan, and a requests array (a single voicemail can contain multiple workflow items, e.g. a refill and a message relay). Relative dates like “next Tuesday” are resolved to absolute dates at this stage, and missing fields are flagged explicitly.\nTriage Sentinel — scans for emergency signals. Anything urgent bypasses automation entirely and escalates immediately.\nEligibility Agents — verify the request against patient records: insurance acceptance, refill eligibility (visit history, dosage match, conflicting medications), or scheduling constraints, depending on request type.\nScheduling Agent — finds an appointment slot given provider availability and urgency, writing a proposed action rather than a final one.\nHuman approval — a certified healthcare worker reviews the proposed action in the dashboard. Only after they click Approve does the backend execute it.\nConfirmation & Summary Agents — send SMS/email confirmations to the patient and compile a daily digest for the front desk.\n\nThe agents don’t message each other directly. Every agent reads and writes a shared task row in Supabase, which makes the pipeline observable, testable, and easy to resume when a step fails."
+    "objectID": "posts/vouchnet/index.html#the-design",
+    "href": "posts/vouchnet/index.html#the-design",
+    "title": "VouchNet: A Reputation Service for AI Agents",
+    "section": "The Design",
+    "text": "The Design\nThe whole service is three endpoints, with no signup and no API key:\n\nPOST /reviews — leave a star rating (1 to 5) about an agent\nGET /agents/{name} — check an agent’s average rating and past reviews\nGET /leaderboard — see every rated agent, ranked best to worst\n\n\n\n\nThe VouchNet leaderboard: every rated agent, ranked by average score.\n\n\nThe deliberate constraint: the primary user is not a human. The service ships with a machine-readable SKILL.md containing exact request and response examples, so that a “blind” AI agent — one that has never seen the website — can discover, understand, and operate the entire API from documentation alone. Designing for that consumer changes everything: error messages have to be self-explanatory, examples have to be copy-paste executable, and there can be no interactive step (a signup form, a CAPTCHA, an email confirmation) that an agent can’t complete."
   },
   {
-    "objectID": "posts/otomedi/index.html#designed-around-safety",
-    "href": "posts/otomedi/index.html#designed-around-safety",
-    "title": "Otomedi: Multi-Agent Healthcare Automation",
-    "section": "Designed Around Safety",
-    "text": "Designed Around Safety\nThe most important design decisions were about what not to automate:\n\nEmergencies bypass automation entirely. The triage sentinel runs before any workflow logic, and an urgent signal short-circuits the whole pipeline into human escalation.\nNo clinical action executes without human sign-off. Agents can parse, verify, and propose — but the write to prescriptions, appointments, or messages only happens after a healthcare worker approves it.\nRegression tests pinned to specific scenarios. Per our mentor’s guidance, each agent ships with tests for named failure cases (garbled audio, missing fields, conflicting medications), not just happy paths."
+    "objectID": "posts/vouchnet/index.html#shipping-it-for-real",
+    "href": "posts/vouchnet/index.html#shipping-it-for-real",
+    "title": "VouchNet: A Reputation Service for AI Agents",
+    "section": "Shipping It for Real",
+    "text": "Shipping It for Real\nThis wasn’t a localhost demo. During the hackathon the service was deployed publicly (FastAPI on Render, reviews persisted in Supabase Postgres so data survives restarts and redeploys), and validated end-to-end against the rest of the field:\n\nDiagnosed and fixed a live database permissions bug that was silently dropping writes — reviews appeared accepted but never persisted. Catching silent data loss in production, under hackathon time pressure, was the most instructive debugging exercise of the event.\nTested and reviewed 10 other teams’ live agent APIs using VouchNet itself, which both validated the service with real traffic from real agents and seeded the leaderboard with genuine reputation data."
   },
   {
-    "objectID": "posts/otomedi/index.html#technologies-tools",
-    "href": "posts/otomedi/index.html#technologies-tools",
-    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "objectID": "posts/vouchnet/index.html#technologies-tools",
+    "href": "posts/vouchnet/index.html#technologies-tools",
+    "title": "VouchNet: A Reputation Service for AI Agents",
     "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nAgents & backend: Python, FastAPI, Claude API for extraction and verification, Deepgram for speech-to-text\nFrontend: Next.js dashboards — a CHW approval dashboard, a demo EHR, and an audio-upload demo\nData: Supabase (Postgres) as the shared task store and system of record for patients, visits, prescriptions, and schedules"
+    "text": "Technologies & Tools\nAPI: Python, FastAPI, auto-generated OpenAPI docs\nPersistence: Supabase (Postgres), so reputation data survives restarts and redeploys\nDeployment: Render (free tier), public and live\nAgent interface: machine-readable SKILL.md with exact request/response examples for autonomous consumption"
   },
   {
-    "objectID": "posts/otomedi/index.html#reflection",
-    "href": "posts/otomedi/index.html#reflection",
-    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "objectID": "posts/vouchnet/index.html#reflection",
+    "href": "posts/vouchnet/index.html#reflection",
+    "title": "VouchNet: A Reputation Service for AI Agents",
     "section": "Reflection",
-    "text": "Reflection\nThe interesting engineering problem wasn’t getting an LLM to read a voicemail — it was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table.\n\nBuilt at the UC Berkeley AI Hackathon, June 2026."
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html",
-    "href": "posts/genetic-algorithm/index.html",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nA collaborative final project for STAT 243 (Statistical Computing) implementing a genetic algorithm for automated variable selection. Built as a production-ready Python package with comprehensive testing, modular architecture, and support for multiple regression methods.\nTeam: collaborative project with two classmates · Duration: 4 weeks · Language: Python"
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#the-challenge-variable-selection-at-scale",
-    "href": "posts/genetic-algorithm/index.html#the-challenge-variable-selection-at-scale",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "The Challenge: Variable Selection at Scale",
-    "text": "The Challenge: Variable Selection at Scale\nIn predictive modeling, choosing the right set of variables is crucial. Too few predictors and you miss important signals. Too many and you overfit, harming generalization. When facing datasets with dozens or hundreds of potential predictors, exhaustive search becomes computationally infeasible, as exploring all possible combinations grows exponentially.\nThe assignment: build a Python package implementing genetic algorithms for variable selection that balances predictive accuracy against model complexity."
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#what-are-genetic-algorithms",
-    "href": "posts/genetic-algorithm/index.html#what-are-genetic-algorithms",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "What Are Genetic Algorithms?",
-    "text": "What Are Genetic Algorithms?\nGenetic algorithms mimic natural selection to solve optimization problems. Instead of evaluating every possible solution, they:\n\nInitialize a population of random variable combinations (chromosomes)\nEvaluate fitness using cross-validated predictive performance\nSelect the best-performing combinations as parents\nCrossover parent chromosomes to create offspring\nMutate randomly to explore new solutions\nEvolve iteratively across generations toward optimal feature sets\n\nThis evolutionary approach efficiently searches massive solution spaces by learning from successful combinations."
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#our-solution-the-ga-package",
-    "href": "posts/genetic-algorithm/index.html#our-solution-the-ga-package",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "Our Solution: The GA Package",
-    "text": "Our Solution: The GA Package\nWe developed a flexible, well-tested Python package that brings genetic algorithms to practical variable selection tasks.\n\nCore Features\n\n\n\n\n\n\nTipKey Capabilities\n\n\n\nMultiple model types: linear regression, LASSO, decision trees\nFlexible selection: rank-based parent selection and tournament selection\nCrossover methods: single-point and double-point recombination\nPenalized optimization: adjustable sparsity penalty to balance accuracy vs. complexity\n\n\n\n\nArchitecture & Design\nThe package follows software engineering best practices:\nModular design: core select() function as primary interface, with discrete methods for initialization, fitness evaluation, selection, crossover, and mutation\nRobust testing: unit tests for individual genetic operators, integration tests for the full algorithm, and a pytest suite with automated GitHub Actions CI/CD\nPerformance: vectorized operations within generations and parallel cross-validation for fitness evaluation\nDocumentation: comprehensive README with examples and docstrings following Python standards\n\n\nTechnical Implementation\nThe algorithm evaluates fitness using cross-validated \\(R^2\\) with optional complexity penalties:\n\\[\\text{Penalized Fitness} = R^2 - \\lambda \\cdot f\\]\nwhere \\(R^2\\) is the cross-validated coefficient of determination, \\(\\lambda\\) is the penalty parameter controlling sparsity, and \\(f\\) is the fraction of total predictors selected. This formulation prevents overfitting while encouraging parsimonious models."
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#development-process",
-    "href": "posts/genetic-algorithm/index.html#development-process",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "Development Process",
-    "text": "Development Process\n\nCollaborative Workflow\nWorking as a three-person team, we mapped the architecture before writing code, divided responsibilities across initialization, genetic operators, fitness evaluation, and testing, used Git branches and pull requests for code review, and integrated continuously via automated testing on GitHub Actions.\n\n\nTechnical Requirements Met\n\n\n\n\n\n\n\nRequirement\nImplementation\n\n\n\n\nModular architecture\nClean separation of genetic operators into discrete, testable components\n\n\nFormal testing\npytest suite with CI/CD automation via GitHub Actions\n\n\nPerformance\nVectorized operations and parallel cross-validation\n\n\nDocumentation\nComplete README and docstrings"
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#results-applications",
-    "href": "posts/genetic-algorithm/index.html#results-applications",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "Results & Applications",
-    "text": "Results & Applications\nThe package successfully identifies important predictors across various scenarios:\n\nBaseball statistics (original benchmark dataset)\nSimulated data with known true predictors\nReal-world datasets with complex predictor relationships\n\nIt efficiently handles datasets with 20+ potential predictors, balances predictive accuracy with model sparsity, and supports experimentation with different GA parameters."
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#technologies-tools",
-    "href": "posts/genetic-algorithm/index.html#technologies-tools",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nCore stack: Python, scikit-learn, NumPy, pytest\nDevelopment tools: Git/GitHub, GitHub Actions, VSCode"
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#key-takeaways",
-    "href": "posts/genetic-algorithm/index.html#key-takeaways",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\nSoftware Engineering in Statistics\nThis project reinforced the importance of treating statistical code as production software: modularity makes algorithms testable, formal tests catch bugs early, documentation enables others to use the code, and vectorization matters for real-world speed.\n\n\nEvolutionary Computation Insights\nImplementing genetic algorithms from scratch provided concrete understanding of how crossover and mutation balance exploration vs. exploitation, the impact of selection pressure on convergence speed, and the importance of fitness function design for optimization success."
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#links-resources",
-    "href": "posts/genetic-algorithm/index.html#links-resources",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "Links & Resources",
-    "text": "Links & Resources\n\nGitHub Repository — complete source code and documentation\nProject Specification — original assignment requirements"
-  },
-  {
-    "objectID": "posts/genetic-algorithm/index.html#reflection",
-    "href": "posts/genetic-algorithm/index.html#reflection",
-    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
-    "section": "Reflection",
-    "text": "Reflection\nBuilding a production-quality statistical computing package taught me that good statistical software requires more than correct algorithms; it demands thoughtful architecture, comprehensive testing, performance optimization, and clear documentation.\nThe collaborative aspect was equally valuable. Working as a team meant negotiating interfaces, reviewing each other’s code, and maintaining consistency across components. These skills translate directly to professional data science and software engineering.\n\nCompleted December 2025 as the final project for STAT 243: Statistical Computing at UC Berkeley."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html",
-    "href": "posts/mutationrx/index.html",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nA mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor’s driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility — separating believable leads from coincidental docking scores.\nEvent: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP\nLive App · GitHub Repository"
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#the-problem",
-    "href": "posts/mutationrx/index.html#the-problem",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "The Problem",
-    "text": "The Problem\nTargeted cancer drugs fail by resistance: the tumor mutates, the protein changes shape, and the drug no longer binds. Deciding what to try next — or whether some cheap, already-approved drug could be repurposed for the mutant — means slow, expensive cell-based screening. There are always too many candidates and too little bench budget.\nComputational docking can rank candidates cheaply, but it has a fatal flaw for this use: it happily scores drugs that have no real business binding the target. A robust docking score is not a real hit, and a bench researcher usually can’t tell signal from artifact. That gap — not the docking itself — is the actual problem worth solving."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#the-approach",
-    "href": "posts/mutationrx/index.html#the-approach",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "The Approach",
-    "text": "The Approach\n\n\n\nThe MutationRx workspace: a real mutant structure, the wild-type→mutant binding shifts, and Claude’s read of which hit is worth a bench test.\n\n\nThe design thesis is one line:\n\nThe docking finds candidates. Claude decides which to believe.\n\nFor a tumor’s driver mutation, MutationRx docks a panel of 62 approved drugs against both the wild-type and mutant structure, rescores the poses, and runs a Bayesian bootstrap over replicate docking runs to put a 95% credible interval on each wild-type→mutant shift. Every drug lands in one of four buckets: weakened (resistance), robust (safe bet), improved, or non-binder.\nThen Claude reviews each hit for mechanistic plausibility. This is the step a script can’t do: a beta-blocker that “binds” EGFR is almost certainly an artifact, while a drug whose real mechanism fits the target is worth the assay. Remove the reviewer and you are back to an untrustworthy hit list — so Claude is essential to the tool, not decorative."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#why-its-credible",
-    "href": "posts/mutationrx/index.html#why-its-credible",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "Why It’s Credible",
-    "text": "Why It’s Credible\nThe whole brand is honesty, and the tool is built to earn it:\n\nIt reproduces known biology on unseen real data. Run on a genuine, de-identified TCGA lung tumor carrying EGFR L858R+T790M, it recovers the clinic from docking alone: erlotinib and gefitinib fail, and osimertinib holds — on a patient tumor it had never seen.\nIt shows why statistics alone aren’t enough. Screening 300 approved drugs against the resistant mutant, docking plus bootstrap flagged ten as significantly improved binders with tight credible intervals — and every one is a mechanistic artifact (antidepressants, antipsychotics, antibiotics). Only mechanism separates them, which is exactly the judgment Claude adds.\nThe reviewer’s judgment is grounded, not asserted. Each drug carries two orthogonal evidence axes the docking never sees: pathway grounding (is the drug’s real target in the driver’s pathway or enzyme class?) and DepMap dependency (is that target a gene lung adenocarcinoma actually needs, from CRISPR essentiality?). On-target inhibitors corroborate on both; the statin and antidepressant artifacts fail both. That turns the artifact-vs-lead call into an auditable, cited read rather than a black-box assertion.\nIt flags its own blind spots. Docking affinity is a proxy, not efficacy; repurposing hits are hypotheses; and non-covalent docking can’t capture covalent mechanisms (KRAS G12C, osimertinib on C797S) — so those cases are labeled as blind spots, never read as findings."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#the-non-obvious-lead-and-the-overnight-test",
-    "href": "posts/mutationrx/index.html#the-non-obvious-lead-and-the-overnight-test",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "The Non-Obvious Lead, and the Overnight Test",
-    "text": "The Non-Obvious Lead, and the Overnight Test\nTwo moments show the pipeline doing its job. First, the reviewer surfaced a credible, non-obvious lead: imatinib, the leukemia (CML) drug, is predicted to gain binding across every EGFR mutant tested. Pooling the replicate evidence across four mutant structures gives a mean gain that clears both statistical and practical-significance floors — and it survives review where the statin artifacts don’t, because imatinib is a kinase inhibitor and docking it against a kinase is legitimate. Strictly a hypothesis worth an assay, never a finding.\nSecond, to prove the tool outlasts the week, I modeled and docked EGFR C797S — the mutation that defeats osimertinib itself, a genotype the tool had never seen — overnight on Berkeley’s GPU cluster. The tool did two honest things at once: it added a fourth consistent data point to the imatinib hypothesis, and it flagged its own limitation, warning not to read osimertinib as “still working” because C797S removes the cysteine that osimertinib binds covalently. A tool that knows where it fails is more trustworthy than one that always answers."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#technologies-tools",
-    "href": "posts/mutationrx/index.html#technologies-tools",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nTriage engine: Python, DiffDock + gnina for docking and rescoring, NumPy for the Bayesian-bootstrap credible intervals over replicates\nClaude: the Agent SDK and API power the plausibility reviewer; the whole tool was built with Claude Code\nWeb app: FastAPI backend with a staged background-job runner, a single-page workspace, a grounded per-result chat, and a vendored NGL 3D structure viewer (wild-type ↔︎ mutant, offline)\nInterfaces: a hosted web app, a CLI, and an MCP server so Claude Code / Desktop can call the triage tools directly\nData: real de-identified TCGA lung tumors via the open-access cBioPortal API, structures from RCSB PDB, and drug chemistry from PubChem / ChEMBL with RDKit"
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#reflection",
-    "href": "posts/mutationrx/index.html#reflection",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "Reflection",
-    "text": "Reflection\nThe interesting problem wasn’t running a docking pipeline — those exist. It was designing around the fact that docking is an unreliable proxy, and turning that unreliability into the thing the product solves. The scarce, valuable step is the mechanistic judgment about which computational hits to believe, and that maps almost exactly onto what a language model with grounded evidence can do and a script cannot. Building for a named user — a bench researcher, not a computational biologist — forced every result to be honest by construction: uncertainty on every call, hypotheses labeled as hypotheses, and blind spots flagged rather than hidden.\n\nBuilt with Claude for the “Built with Claude: Life Sciences” hackathon (Anthropic × Gladstone Institutes), July 2026."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html",
-    "href": "posts/bayesian-optimization/index.html",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nA from-scratch implementation of Bayesian Optimization using a Gaussian Process surrogate with squared-exponential kernel and Expected Improvement acquisition, applied to three experiments spanning a synthetic benchmark, neural network hyperparameter tuning, and classifier threshold optimization.\nCourse: STAT 238: Bayesian Statistics · Semester: Spring 2026 · Language: Python\nGitHub Repository"
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#the-problem",
-    "href": "posts/bayesian-optimization/index.html#the-problem",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "The Problem",
-    "text": "The Problem\nTuning a machine learning model involves making a sequence of decisions under uncertainty. You pick a learning rate, train for hours, observe validation performance, and then have to decide what to try next. Grid search wastes evaluations on systematically spaced points regardless of what the results say. Random search is better, but it treats each trial independently, ignoring everything learned from previous runs.\nBayesian Optimization (BO) does something smarter: it builds a probabilistic model of the objective function from every evaluation so far, then uses that model to decide where to look next. It is the principled answer to the question of how to optimize an expensive black-box function with a tight budget.\nFor this project, I implemented the full BO pipeline from scratch — no hyperopt, no optuna — and ran it on three problems with very different cost structures."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#the-method",
-    "href": "posts/bayesian-optimization/index.html#the-method",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "The Method",
-    "text": "The Method\nThe implementation has three components, each in its own module.\nGaussian Process surrogate (gp.py). A GP is a distribution over functions. Given observations, it produces a posterior: a mean function \\(\\mu(x)\\) (best guess at each point) and a variance function \\(\\sigma^2(x)\\) (uncertainty). The kernel is squared-exponential with three hyperparameters: output scale \\(\\alpha\\), length scale \\(\\ell\\), and noise variance \\(\\sigma^2_n\\). These are fit by maximizing the log marginal likelihood at each iteration via L-BFGS-B. Cholesky decomposition keeps the linear algebra numerically stable.\nExpected Improvement acquisition (acquisition.py). EI is the expected amount by which the next evaluation will beat the current best:\n\\[\\text{EI}(x) = (\\mu(x) - f^*)\\,\\Phi(Z) + \\sigma(x)\\,\\phi(Z), \\quad Z = \\frac{\\mu(x) - f^*}{\\sigma(x)}\\]\nThe first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence — no manual tuning of an exploration parameter.\nBO loop (bo.py). Inputs are normalized to \\([0,1]^d\\) before each GP fit, and outputs are standardized to zero mean and unit variance. This keeps the kernel hyperparameters in comparable ranges regardless of the original scales. Each iteration fits the GP on all observations so far, maximizes EI over the input space (multi-start L-BFGS-B), evaluates the objective at the new point, and appends to the history."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#three-experiments",
-    "href": "posts/bayesian-optimization/index.html#three-experiments",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Three Experiments",
-    "text": "Three Experiments\n\nBranin Benchmark\nBefore running BO on real problems, I validated it on the Branin function: a classic 2D test with three known global minima at \\(f^* \\approx 0.398\\). A correct BO implementation should converge reliably across random seeds; grid search should fail when the optimum falls between grid lines.\n\n\n\nGP surrogate (top row) and Expected Improvement surface (bottom row) at trials 5, 10, 20, and 40. The posterior concentrates around the three Branin optima as observations accumulate. EI collapses near already-explored regions, forcing the algorithm to search elsewhere.\n\n\n\n\n\nBO converges to within 0.03 of the true optimum across 5 random seeds. Random search plateaus more than 2x worse; grid search never escapes its fixed points.\n\n\n\n\nNCF on MovieLens 1M\nThe first real application was hyperparameter tuning for the Neural Collaborative Filtering model from my CS 289A recommender systems project. Each evaluation required training NCF for 10 epochs on an RTX 2080 Ti, costing about 22 minutes per trial. With a budget of 15 trials total (5 random initialization, 10 BO steps), there was no room to waste evaluations.\nThe search space was 5-dimensional: embedding dimension (4 discrete values), MLP architecture (3 options), learning rate and L2 decay (both log-encoded continuous), and WMF confidence scale (linear continuous).\n\n\n\nAfter 5 random trials, the best NDCG@10 was 0.3745. BO improved this to 0.4056 in 10 more steps, an 8.3% relative gain. The dashed line marks the best random-init result; every BO step from trial 8 onward exceeds it.\n\n\nThe configuration BO converged to was interpretable: largest embedding dimension (256), deepest MLP (four layers), minimal L2 regularization, and the smallest confidence scale. These cluster around a coherent region of parameter space, which suggests the GP genuinely learned the landscape rather than finding a lucky outlier.\n\n\nUpworthy Classifier Thresholds\nThe second real application came from my STAT 230A headline analysis project, where I used a BART zero-shot NLI model to classify 54,956 headlines into topic categories. The classifier outputs a confidence score, and two thresholds control how those scores are used: a minimum confidence to accept a label, and a minimum category size to keep in the analysis.\nThe objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR) — higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.\n\n\n\nBO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO’s advantage here is not just the final value but the path: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.\n\n\nThe BO-optimal confidence threshold was 0.256 — lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#results",
-    "href": "posts/bayesian-optimization/index.html#results",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Results",
-    "text": "Results\n\n\n\n\n\n\n\n\n\n\nExperiment\nBudget\nBO result\nBest baseline\nGain\n\n\n\n\nBranin (2D synthetic)\n40 trials\n-0.43\nRandom: -0.83\n2x better\n\n\nNCF hyperparameters (5D, GPU)\n15 trials\nNDCG = 0.406\nRandom: 0.375\n+8.3%\n\n\nUpworthy thresholds (2D, fast)\n60 trials\nF = 1,569\nRandom: 1,514\n+3.6%\n\n\n\nOne consistent observation across all three: BO’s advantage is largest when the budget is tightest relative to the search space. The Branin result (2x improvement over random) reflects a 40-trial budget over a smooth 2D space where the GP can learn the landscape quickly. The NCF result (+8.3%) came from 15 trials over a 5-dimensional mixed space where each random trial burns 22 minutes. The Upworthy result (+3.6%) is smaller partly because 60 trials over a 2D smooth space is generous enough that random search also converges reasonably well."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#technologies-tools",
-    "href": "posts/bayesian-optimization/index.html#technologies-tools",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nCore stack: Python, NumPy, SciPy (L-BFGS-B, ANOVA), matplotlib\nImplementation: GP with squared-exponential kernel, Cholesky decomposition for posterior inference, log marginal likelihood maximization for kernel hyperparameter fitting, multi-start EI maximization\nExperiments: Branin benchmark (analytic), NCF black-box wrapper (subprocess CLI to PyTorch training script), Upworthy black-box wrapper (pandas + SciPy F-test)"
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#links",
-    "href": "posts/bayesian-optimization/index.html#links",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Links",
-    "text": "Links\n\nGitHub Repository: full implementation, notebooks, and experiment results"
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#reflection",
-    "href": "posts/bayesian-optimization/index.html#reflection",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Reflection",
-    "text": "Reflection\nThe most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch was not just a course exercise — it was a tool that made two other projects better, with quantifiable improvements in both cases.\nThe hardest implementation detail was the input/output normalization. Mapping inputs to \\([0,1]^d\\) and standardizing outputs before each GP fit sounds simple, but getting it wrong causes the kernel hyperparameters to drift into bad regions and the EI surface to behave unexpectedly. The Branin simulation study was essential for catching those bugs before running on experiments that cost hours of GPU time.\n\nCompleted May 2026 as a final project for STAT 238: Bayesian Statistics at UC Berkeley."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html",
-    "href": "posts/berkeley-grocery-tracker/index.html",
-    "title": "Berkeley Grocery Tracker",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nA fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe’s, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.\nLive site"
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#the-problem",
-    "href": "posts/berkeley-grocery-tracker/index.html#the-problem",
-    "title": "Berkeley Grocery Tracker",
-    "section": "The Problem",
-    "text": "The Problem\nLiving in Berkeley, I noticed that grocery prices vary a lot depending on which store you go to and when. A dozen eggs at Trader Joe’s and the same dozen at Whole Foods are rarely the same price, and the gap shifts over time. There was no easy way to see this data in one place, let alone track it over time or figure out which store makes the most sense for your weekly basket. I wanted to build exactly that."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#why-codex",
-    "href": "posts/berkeley-grocery-tracker/index.html#why-codex",
-    "title": "Berkeley Grocery Tracker",
-    "section": "Why Codex",
-    "text": "Why Codex\nOpenAI opened a challenge for developers to build with Codex, offering $100 in API credits and a Pro subscription to participants. I treated it as an opportunity to see how far an AI coding agent could take a real, multi-layer software project. The answer turned out to be: pretty far.\nThe entire stack was designed and built through Codex. I described what I wanted, iterated on the output, reviewed the code, and pushed forward. It was less about avoiding effort and more about compressing weeks of setup into days, without cutting corners on architecture."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#what-it-does",
-    "href": "posts/berkeley-grocery-tracker/index.html#what-it-does",
-    "title": "Berkeley Grocery Tracker",
-    "section": "What It Does",
-    "text": "What It Does\nThe live site shows price data for a curated set of staple items, things like eggs, milk, bananas, chicken breast, olive oil, across multiple Berkeley-area locations. You can:\n\nSee the latest prices for each item across stores\nExplore price trends over time with a time-series view\nBuild a basket and estimate total cost, both at the cheapest individual store per item and at the single best store overall\nCompare against Berkeley meal plan pricing as a reference point"
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#how-it-works",
-    "href": "posts/berkeley-grocery-tracker/index.html#how-it-works",
-    "title": "Berkeley Grocery Tracker",
-    "section": "How It Works",
-    "text": "How It Works\nThe data pipeline runs automatically. Three scrapers, one per grocery chain, pull full product catalogs from each store on a monthly schedule using GitHub Actions. Trader Joe’s exposes an internal GraphQL API; Whole Foods has a structured product feed; Safeway required Playwright to handle anti-bot protections on some runs.\nRaw scraped data lands in a staging table first. From there, a matching pipeline normalizes product names across stores into canonical items, using fuzzy text matching with quantity-awareness, a semantic embedding stage via the OpenAI API for harder cases, and a hand-curated staples bridge for the most important items. The confidence of each match is tracked, so auto-matched, semantically matched, and manually curated prices are all distinguished.\nOnce matched, prices flow into an append-only observations table that gives historical trends for free. The frontend, a Next.js app connected to Supabase Postgres, reads this data at request time and renders it on the dashboard.\nFor Trader Joe’s historical pricing before the scraper launched, I filtered a publicly available third-party price dump through the curated staples allowlist and loaded it into a separate proxy history table, keeping it isolated from live scrape data.\nThe whole infrastructure costs $0 per month. Vercel hosts the frontend, Supabase handles the database on its free tier, and GitHub Actions runs the scrapers."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
-    "href": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
-    "title": "Berkeley Grocery Tracker",
-    "section": "What Codex Actually Did",
-    "text": "What Codex Actually Did\nA lot. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. My role was to define the architecture, make the key design calls, review and validate every piece of output, catch edge cases, and course-correct when things drifted. Codex accelerated the implementation significantly, but the product decisions and data model were mine to own.\nThe most impressive part was how it kept up with schema changes across iterations. As the data model evolved, it updated migrations, scripts, and pipeline logic in sync without losing track of what had changed."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
-    "href": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
-    "title": "Berkeley Grocery Tracker",
-    "section": "What Is Still Being Built",
-    "text": "What Is Still Being Built\nThe matching pipeline is solid for Trader Joe’s and Whole Foods. Safeway is scraped but the matching pass hasn’t run at full scale yet. The next phases are a staples-focused weekly scrape cadence, QA dashboards to monitor scrape quality, and eventually crowdsourced price contributions with receipt upload.\n\nBuilt April 2026 as part of the OpenAI Codex challenge. Stack: Next.js, Supabase, GitHub Actions, Vercel, OpenAI API."
-  },
-  {
-    "objectID": "posts/stat214-lab1/index.html",
-    "href": "posts/stat214-lab1/index.html",
-    "title": "PECARN Traumatic Brain Injury Analysis",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nA full analysis of the PECARN pediatric head trauma dataset, from data cleaning and exploratory analysis to Bayesian inference and classification modeling, centered on the question of when to recommend a CT scan for a child with a head injury.\nCourse: STAT 214: Data Analysis and Machine Learning for Real-World Decision Making · Semester: Spring 2026 · Language: Python"
-  },
-  {
-    "objectID": "posts/stat214-lab1/index.html#background",
-    "href": "posts/stat214-lab1/index.html#background",
-    "title": "PECARN Traumatic Brain Injury Analysis",
-    "section": "Background",
-    "text": "Background\nTraumatic brain injuries (TBI) are a leading cause of death in patients younger than 18. CT scans are the standard diagnostic tool, but radiation exposure in childhood increases cancer incidence, so unnecessary scans carry real risk. The clinical challenge is identifying the small fraction of children (under 1%) with clinically-important TBI (ciTBI) while sparing the rest from unnecessary radiation.\nThe Kuppermann rule (2009) is the standard clinical decision rule used in practice: a short checklist of binary symptoms where any positive flag triggers a CT recommendation. It achieves near-perfect sensitivity but low specificity, meaning it catches almost every true TBI case but recommends CT for a large number of children who don’t need one.\nThis lab investigates: Can we do better?"
-  },
-  {
-    "objectID": "posts/stat214-lab1/index.html#the-data",
-    "href": "posts/stat214-lab1/index.html#the-data",
-    "title": "PECARN Traumatic Brain Injury Analysis",
-    "section": "The Data",
-    "text": "The Data\nThe PECARN dataset comes from a multi-center prospective cohort study conducted across 25 emergency departments between 2004 and 2006. It contains 43,399 patients and 125 clinical features.\n\n\n\n\n\n\nTipDataset Highlights\n\n\n\n43,399 patients enrolled across 25 emergency departments\n125 features spanning injury mechanism, symptoms, GCS scores, neurological signs, and demographics\n0.89% ciTBI prevalence, with only 376 positive cases out of 42,047 after exclusion criteria\nFinal analysis dataset matches the Kuppermann et al. study population\n\n\nData cleaning covered column renaming, type enforcement, missingness quantification, duplicate checks, range validation, and consistency checks. All steps were documented against the original data dictionary."
-  },
-  {
-    "objectID": "posts/stat214-lab1/index.html#key-findings",
-    "href": "posts/stat214-lab1/index.html#key-findings",
-    "title": "PECARN Traumatic Brain Injury Analysis",
-    "section": "Key Findings",
-    "text": "Key Findings\n\nFinding 1: Missed Patients Are Not Asymptomatic\nThe Kuppermann rule achieves 100% sensitivity for children under 2, but misses 32 of 278 TBI cases (11.5%) in children aged 2 and older. These 32 patients have none of the features the rule checks for that age group, but that does not mean they were healthy-looking. Only 3 of the 32 (9.4%) had zero non-Kuppermann clinical features. The rest presented with identifiable symptoms the rule simply ignores for older children:\n\n50% were not acting normally\n46.9% had a scalp hematoma\n37.5% reported headache of any severity\n25% had moderate headache (the rule flags only severe headache)\n\nScalp hematoma and acting abnormally are both used by Kuppermann for children under 2 but dropped for older children. Their prevalence among missed patients suggests these features carry predictive value across age groups, a gap a learned model could exploit.\n\n\n\nNon-Kuppermann features present among the 32 missed TBI patients (aged ≥ 2). Red bars indicate features present in at least 25% of missed patients. Only 3 patients (9.4%) were truly asymptomatic.\n\n\n\n\nFinding 2: Sensitivity-Specificity Tradeoff\nA natural response to Finding 1 is to add those features to the rule. The results illustrate the core limitation of binary OR-rules:\n\nAdding scalp hematoma recovers 13 more TBI cases but flags 6,264 additional non-TBI children\nAdding moderate headache recovers 8 more but flags 2,451 additional\nAdding both recovers 18 more but requires 7,786 additional CT scans, dropping specificity from 55.1% to 30.2%\n\nThe improvement has to come from a model that learns to weight combinations of features, not one that simply ORs more flags together. This motivated the logistic regression and random forest approaches in the modeling section below.\n\n\n\nSensitivity-specificity tradeoff for Kuppermann rule variants (aged ≥ 2). Adding features improves sensitivity but sharply reduces specificity, illustrating the core limitation of binary OR-rules.\n\n\n\n\nFinding 3: Bayesian Symptom Posteriors\nStarting from a prior \\(P(\\text{TBI}) = 0.0089\\) (the 0.89% base rate in the dataset), I computed the posterior probability of TBI given each observed symptom \\(s\\) using Bayes’ theorem:\n\\[P(\\text{TBI} \\mid s) = \\frac{P(s \\mid \\text{TBI}) \\cdot P(\\text{TBI})}{P(s)}\\]\nThe key quantity for comparing symptoms is the Bayes factor, which measures how much observing a symptom shifts the odds of TBI relative to the prior:\n\\[\\text{BF}_s = \\frac{P(s \\mid \\text{TBI})}{P(s \\mid \\text{no TBI})}\\]\nA Bayes factor of 1 means the symptom is uninformative. A value of 20 means the posterior odds are 20 times the prior odds. This is clearest in the log-odds representation, where the update is additive:\n\\[\\underbrace{\\log \\frac{P(\\text{TBI} \\mid s)}{P(\\text{no TBI} \\mid s)}}_{\\text{posterior log-odds}} = \\underbrace{\\log \\frac{P(\\text{TBI})}{P(\\text{no TBI})}}_{\\text{prior log-odds}} + \\underbrace{\\log \\text{BF}_s}_{\\text{evidence}}\\]\nThis framing makes the incremental diagnostic value of each symptom explicit and independent of the base rate, which matters here because the 0.89% prevalence makes all raw posteriors look small.\nThe results reveal a sharp two-tier structure:\n\n\n\n\n\n\n\n\n\n\nSymptom\n\\(P(s \\mid \\text{TBI})\\)\n\\(P(s)\\)\n\\(P(\\text{TBI} \\mid s)\\)\nBayes Factor\n\n\n\n\nPalpable skull fracture\n6.6%\n0.4%\n15.6%\n20.5\n\n\nBasilar skull fracture\n10.9%\n0.7%\n14.3%\n18.5\n\n\nAltered mental status\n59.6%\n13.0%\n4.1%\n4.7\n\n\nSeizure\n4.5%\n1.2%\n3.4%\n3.9\n\n\nLoss of consciousness\n30.9%\n10.5%\n2.6%\n3.0\n\n\nVomiting\n30.9%\n13.2%\n2.1%\n2.4\n\n\nScalp hematoma\n61.2%\n39.8%\n1.4%\n1.5\n\n\nHeadache\n43.4%\n30.2%\n1.3%\n1.4\n\n\nActing normally\n33.2%\n78.1%\n0.38%\n0.4\n\n\n\nThe most striking pattern is that diagnostic power is determined by rarity, not by prevalence among TBI cases. Palpable skull fracture appears in 6.6% of TBI patients but only 0.4% of all patients, yielding a Bayes factor of 20.5. Scalp hematoma appears in 61.2% of TBI cases but has a population base rate of 39.8%, which dilutes its posterior to 1.4% and a Bayes factor of only 1.5. The difference between these two symptoms is almost entirely explained by \\(P(s)\\) in the denominator, not by \\(P(s \\mid \\text{TBI})\\).\nActing normally is the only symptom with a Bayes factor below 1 (BF = 0.4), meaning its presence reduces the posterior probability of TBI. In log-odds terms, observing it subtracts \\(\\log(0.4) \\approx -0.92\\) from the prior log-odds, a moderately protective signal.\nA bootstrap stability check (1,000 resamples of the full dataset) confirmed that the symptom ranking is stable, though rare symptoms carry substantial estimation uncertainty. The 95% CI for palpable skull fracture spans [13.1, 30.2], reflecting the fact that only 0.4% of patients present with it. Common symptoms are estimated precisely: scalp hematoma has a 95% CI of [1.4, 1.7].\nAn important caveat is that this analysis treats symptoms as independent. In practice they are not: among TBI-positive patients, scalp hematoma co-occurs with nearly every other symptom at rates above 60%, and altered mental status co-occurs with loss of consciousness in over a third of cases. These rates far exceed independence assumptions, which means that simply multiplying Bayes factors across symptoms would overcount evidence. Capturing these dependencies is part of what motivates the multivariate models in the next section."
-  },
-  {
-    "objectID": "posts/stat214-lab1/index.html#modeling",
-    "href": "posts/stat214-lab1/index.html#modeling",
-    "title": "PECARN Traumatic Brain Injury Analysis",
-    "section": "Modeling",
-    "text": "Modeling\nThree models were trained on a stratified 70/15/15 train/validation/test split, all evaluated on the same held-out test set (\\(n = 6{,}307\\)). The 112:1 class imbalance was addressed with balanced class weights throughout.\n\nModel Comparison\n\n\n\nMetric\nKuppermann Rule\nLogistic Regression\nRandom Forest\n\n\n\n\nSensitivity\n91.2%\n84.2%\n84.2%\n\n\nSpecificity\n43.9%\n72.7%\n79.0%\n\n\nUnnecessary CTs\n3,506\n1,707\n1,312\n\n\nMissed TBI Cases\n5\n9\n9\n\n\nAUC-ROC\nN/A\n0.857\n0.874\n\n\n\nThe three models trace a clear tradeoff. The Kuppermann rule catches the most TBI cases (91.2% sensitivity) but recommends CT for over half the non-TBI patients. Logistic regression cuts unnecessary scans by 51% relative to Kuppermann, and the random forest reduces them by 63%, with both matching at 84.2% sensitivity.\nLogistic regression feature coefficients confirmed the EDA findings. The top positive predictors were injury severity (\\(\\hat{\\beta} = +0.53\\)), scalp hematoma (\\(\\hat{\\beta} = +0.50\\)), and altered mental status (\\(\\hat{\\beta} = +0.49\\)), with acting normally as the strongest protective feature (\\(\\hat{\\beta} = -0.46\\)). Scalp hematoma receiving the second-highest coefficient despite being excluded from the Kuppermann rule for children aged 2 and older is consistent with Finding 1.\nBootstrap stability analysis (200 resamples) showed that the Kuppermann rule is the most stable, while the random forest has more variance in sensitivity across resamples, reflecting the greater flexibility of tree-based learning from finite training data."
-  },
-  {
-    "objectID": "posts/stat214-lab1/index.html#technologies-tools",
-    "href": "posts/stat214-lab1/index.html#technologies-tools",
-    "title": "PECARN Traumatic Brain Injury Analysis",
-    "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nCore stack: Python, pandas, NumPy, scikit-learn, matplotlib, seaborn\nStatistical methods: Bayesian posterior inference with bootstrap confidence intervals, PCA, stratified train/val/test splitting, threshold optimization on the validation set"
-  },
-  {
-    "objectID": "posts/stat214-lab1/index.html#links-resources",
-    "href": "posts/stat214-lab1/index.html#links-resources",
-    "title": "PECARN Traumatic Brain Injury Analysis",
-    "section": "Links & Resources",
-    "text": "Links & Resources\n\nGitHub Repository — full code, notebooks, and report\nLab Report (PDF) — complete write-up with all figures and tables"
-  },
-  {
-    "objectID": "posts/stat214-lab1/index.html#reflection",
-    "href": "posts/stat214-lab1/index.html#reflection",
-    "title": "PECARN Traumatic Brain Injury Analysis",
-    "section": "Reflection",
-    "text": "Reflection\nThis lab made concrete a tension that is easy to state but hard to internalize: in high-stakes classification, the right model depends on what you are optimizing for. A 91% sensitivity rule that sends 3,500 children to unnecessary CT scans is not obviously better or worse than an 84% sensitivity model that reduces that number to 1,300. That tradeoff depends on how you weigh radiation risk against missed diagnoses, which is a clinical and ethical judgment, not a statistical one.\nThe EDA finding that missed patients are not asymptomatic was the most satisfying result. It meant the 32 children were not random noise beyond any model’s reach, but a structured subset the Kuppermann rule was never designed to catch. That kind of gap, visible only after careful data exploration, is exactly what motivates moving beyond fixed decision rules toward learned models.\n\nCompleted March 2026 as Lab 1 for STAT 214 at UC Berkeley."
+    "text": "Reflection\nThe lesson of VouchNet is that building for AI agents is a distinct discipline from building with them. Every design decision — no auth, three endpoints, exhaustive machine-readable examples — came from asking “can a program with no prior context use this correctly on the first try?” That question is a stricter API design standard than most human-facing services ever face, and it made the service better for humans too.\n\nBuilt at NANDAHack (MIT Media Lab), July 2026."
   },
   {
     "objectID": "posts/cs289-ranking/index.html",
@@ -574,129 +203,493 @@
     "text": "Reflection\nThe most useful thing this project taught me is how easy it is to assume complexity helps. The two-stage ranking pipeline is elegant: retrieval narrows the field, then a dedicated ranker polishes the output. It makes intuitive sense. But sense is not evidence, and on this dataset, with this data density, the evidence pointed the other way.\nRunning all 15 training runs with fixed hyperparameters and a fixed test set made the result hard to explain away. The gap was consistent across every density level, and the partial win the Ranker showed on hit rate came at no improvement in actual ranking quality. That kind of clean, controlled comparison is what makes a result believable, and designing the experiment that way was the most important decision we made.\n\nCompleted May 2026 as a final project for CS 289A: Introduction to Machine Learning at UC Berkeley."
   },
   {
-    "objectID": "posts/vouchnet/index.html",
-    "href": "posts/vouchnet/index.html",
-    "title": "VouchNet: A Reputation Service for AI Agents",
+    "objectID": "posts/stat214-lab1/index.html",
+    "href": "posts/stat214-lab1/index.html",
+    "title": "PECARN Traumatic Brain Injury Analysis",
     "section": "",
-    "text": "NoteProject Overview\n\n\n\nA deployed reputation service for AI agents: check another agent’s track record before working with it, and leave a review after — the same way people check reviews before hiring a plumber.\nEvent: NANDAHack (MIT Media Lab) · July 2026 · Stack: Python, FastAPI, PostgreSQL (Supabase), REST API\nGitHub Repository · Live App · API Docs"
+    "text": "NoteProject Overview\n\n\n\nA full analysis of the PECARN pediatric head trauma dataset, from data cleaning and exploratory analysis to Bayesian inference and classification modeling, centered on the question of when to recommend a CT scan for a child with a head injury.\nCourse: STAT 214: Data Analysis and Machine Learning for Real-World Decision Making · Semester: Spring 2026 · Language: Python"
   },
   {
-    "objectID": "posts/vouchnet/index.html#the-problem",
-    "href": "posts/vouchnet/index.html#the-problem",
-    "title": "VouchNet: A Reputation Service for AI Agents",
-    "section": "The Problem",
-    "text": "The Problem\nAs AI agents start transacting with each other — calling each other’s APIs, delegating work, exchanging results — they have no way to know which counterparts are reliable. Humans solve this with reputation: reviews, ratings, track records. Agents have nothing equivalent.\nVouchNet gives them one: a shared, public reputation record that any agent can check before an interaction and contribute to after."
+    "objectID": "posts/stat214-lab1/index.html#background",
+    "href": "posts/stat214-lab1/index.html#background",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Background",
+    "text": "Background\nTraumatic brain injuries (TBI) are a leading cause of death in patients younger than 18. CT scans are the standard diagnostic tool, but radiation exposure in childhood increases cancer incidence, so unnecessary scans carry real risk. The clinical challenge is identifying the small fraction of children (under 1%) with clinically-important TBI (ciTBI) while sparing the rest from unnecessary radiation.\nThe Kuppermann rule (2009) is the standard clinical decision rule used in practice: a short checklist of binary symptoms where any positive flag triggers a CT recommendation. It achieves near-perfect sensitivity but low specificity, meaning it catches almost every true TBI case but recommends CT for a large number of children who don’t need one.\nThis lab investigates: Can we do better?"
   },
   {
-    "objectID": "posts/vouchnet/index.html#the-design",
-    "href": "posts/vouchnet/index.html#the-design",
-    "title": "VouchNet: A Reputation Service for AI Agents",
-    "section": "The Design",
-    "text": "The Design\nThe whole service is three endpoints, with no signup and no API key:\n\nPOST /reviews — leave a star rating (1 to 5) about an agent\nGET /agents/{name} — check an agent’s average rating and past reviews\nGET /leaderboard — see every rated agent, ranked best to worst\n\n\n\n\nThe VouchNet leaderboard: every rated agent, ranked by average score.\n\n\nThe deliberate constraint: the primary user is not a human. The service ships with a machine-readable SKILL.md containing exact request and response examples, so that a “blind” AI agent — one that has never seen the website — can discover, understand, and operate the entire API from documentation alone. Designing for that consumer changes everything: error messages have to be self-explanatory, examples have to be copy-paste executable, and there can be no interactive step (a signup form, a CAPTCHA, an email confirmation) that an agent can’t complete."
+    "objectID": "posts/stat214-lab1/index.html#the-data",
+    "href": "posts/stat214-lab1/index.html#the-data",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "The Data",
+    "text": "The Data\nThe PECARN dataset comes from a multi-center prospective cohort study conducted across 25 emergency departments between 2004 and 2006. It contains 43,399 patients and 125 clinical features.\n\n\n\n\n\n\nTipDataset Highlights\n\n\n\n43,399 patients enrolled across 25 emergency departments\n125 features spanning injury mechanism, symptoms, GCS scores, neurological signs, and demographics\n0.89% ciTBI prevalence, with only 376 positive cases out of 42,047 after exclusion criteria\nFinal analysis dataset matches the Kuppermann et al. study population\n\n\nData cleaning covered column renaming, type enforcement, missingness quantification, duplicate checks, range validation, and consistency checks. All steps were documented against the original data dictionary."
   },
   {
-    "objectID": "posts/vouchnet/index.html#shipping-it-for-real",
-    "href": "posts/vouchnet/index.html#shipping-it-for-real",
-    "title": "VouchNet: A Reputation Service for AI Agents",
-    "section": "Shipping It for Real",
-    "text": "Shipping It for Real\nThis wasn’t a localhost demo. During the hackathon the service was deployed publicly (FastAPI on Render, reviews persisted in Supabase Postgres so data survives restarts and redeploys), and validated end-to-end against the rest of the field:\n\nDiagnosed and fixed a live database permissions bug that was silently dropping writes — reviews appeared accepted but never persisted. Catching silent data loss in production, under hackathon time pressure, was the most instructive debugging exercise of the event.\nTested and reviewed 10 other teams’ live agent APIs using VouchNet itself, which both validated the service with real traffic from real agents and seeded the leaderboard with genuine reputation data."
+    "objectID": "posts/stat214-lab1/index.html#key-findings",
+    "href": "posts/stat214-lab1/index.html#key-findings",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nFinding 1: Missed Patients Are Not Asymptomatic\nThe Kuppermann rule achieves 100% sensitivity for children under 2, but misses 32 of 278 TBI cases (11.5%) in children aged 2 and older. These 32 patients have none of the features the rule checks for that age group, but that does not mean they were healthy-looking. Only 3 of the 32 (9.4%) had zero non-Kuppermann clinical features. The rest presented with identifiable symptoms the rule simply ignores for older children:\n\n50% were not acting normally\n46.9% had a scalp hematoma\n37.5% reported headache of any severity\n25% had moderate headache (the rule flags only severe headache)\n\nScalp hematoma and acting abnormally are both used by Kuppermann for children under 2 but dropped for older children. Their prevalence among missed patients suggests these features carry predictive value across age groups, a gap a learned model could exploit.\n\n\n\nNon-Kuppermann features present among the 32 missed TBI patients (aged ≥ 2). Red bars indicate features present in at least 25% of missed patients. Only 3 patients (9.4%) were truly asymptomatic.\n\n\n\n\nFinding 2: Sensitivity-Specificity Tradeoff\nA natural response to Finding 1 is to add those features to the rule. The results illustrate the core limitation of binary OR-rules:\n\nAdding scalp hematoma recovers 13 more TBI cases but flags 6,264 additional non-TBI children\nAdding moderate headache recovers 8 more but flags 2,451 additional\nAdding both recovers 18 more but requires 7,786 additional CT scans, dropping specificity from 55.1% to 30.2%\n\nThe improvement has to come from a model that learns to weight combinations of features, not one that simply ORs more flags together. This motivated the logistic regression and random forest approaches in the modeling section below.\n\n\n\nSensitivity-specificity tradeoff for Kuppermann rule variants (aged ≥ 2). Adding features improves sensitivity but sharply reduces specificity, illustrating the core limitation of binary OR-rules.\n\n\n\n\nFinding 3: Bayesian Symptom Posteriors\nStarting from a prior \\(P(\\text{TBI}) = 0.0089\\) (the 0.89% base rate in the dataset), I computed the posterior probability of TBI given each observed symptom \\(s\\) using Bayes’ theorem:\n\\[P(\\text{TBI} \\mid s) = \\frac{P(s \\mid \\text{TBI}) \\cdot P(\\text{TBI})}{P(s)}\\]\nThe key quantity for comparing symptoms is the Bayes factor, which measures how much observing a symptom shifts the odds of TBI relative to the prior:\n\\[\\text{BF}_s = \\frac{P(s \\mid \\text{TBI})}{P(s \\mid \\text{no TBI})}\\]\nA Bayes factor of 1 means the symptom is uninformative. A value of 20 means the posterior odds are 20 times the prior odds. This is clearest in the log-odds representation, where the update is additive:\n\\[\\underbrace{\\log \\frac{P(\\text{TBI} \\mid s)}{P(\\text{no TBI} \\mid s)}}_{\\text{posterior log-odds}} = \\underbrace{\\log \\frac{P(\\text{TBI})}{P(\\text{no TBI})}}_{\\text{prior log-odds}} + \\underbrace{\\log \\text{BF}_s}_{\\text{evidence}}\\]\nThis framing makes the incremental diagnostic value of each symptom explicit and independent of the base rate, which matters here because the 0.89% prevalence makes all raw posteriors look small.\nThe results reveal a sharp two-tier structure:\n\n\n\n\n\n\n\n\n\n\nSymptom\n\\(P(s \\mid \\text{TBI})\\)\n\\(P(s)\\)\n\\(P(\\text{TBI} \\mid s)\\)\nBayes Factor\n\n\n\n\nPalpable skull fracture\n6.6%\n0.4%\n15.6%\n20.5\n\n\nBasilar skull fracture\n10.9%\n0.7%\n14.3%\n18.5\n\n\nAltered mental status\n59.6%\n13.0%\n4.1%\n4.7\n\n\nSeizure\n4.5%\n1.2%\n3.4%\n3.9\n\n\nLoss of consciousness\n30.9%\n10.5%\n2.6%\n3.0\n\n\nVomiting\n30.9%\n13.2%\n2.1%\n2.4\n\n\nScalp hematoma\n61.2%\n39.8%\n1.4%\n1.5\n\n\nHeadache\n43.4%\n30.2%\n1.3%\n1.4\n\n\nActing normally\n33.2%\n78.1%\n0.38%\n0.4\n\n\n\nThe most striking pattern is that diagnostic power is determined by rarity, not by prevalence among TBI cases. Palpable skull fracture appears in 6.6% of TBI patients but only 0.4% of all patients, yielding a Bayes factor of 20.5. Scalp hematoma appears in 61.2% of TBI cases but has a population base rate of 39.8%, which dilutes its posterior to 1.4% and a Bayes factor of only 1.5. The difference between these two symptoms is almost entirely explained by \\(P(s)\\) in the denominator, not by \\(P(s \\mid \\text{TBI})\\).\nActing normally is the only symptom with a Bayes factor below 1 (BF = 0.4), meaning its presence reduces the posterior probability of TBI. In log-odds terms, observing it subtracts \\(\\log(0.4) \\approx -0.92\\) from the prior log-odds, a moderately protective signal.\nA bootstrap stability check (1,000 resamples of the full dataset) confirmed that the symptom ranking is stable, though rare symptoms carry substantial estimation uncertainty. The 95% CI for palpable skull fracture spans [13.1, 30.2], reflecting the fact that only 0.4% of patients present with it. Common symptoms are estimated precisely: scalp hematoma has a 95% CI of [1.4, 1.7].\nAn important caveat is that this analysis treats symptoms as independent. In practice they are not: among TBI-positive patients, scalp hematoma co-occurs with nearly every other symptom at rates above 60%, and altered mental status co-occurs with loss of consciousness in over a third of cases. These rates far exceed independence assumptions, which means that simply multiplying Bayes factors across symptoms would overcount evidence. Capturing these dependencies is part of what motivates the multivariate models in the next section."
   },
   {
-    "objectID": "posts/vouchnet/index.html#technologies-tools",
-    "href": "posts/vouchnet/index.html#technologies-tools",
-    "title": "VouchNet: A Reputation Service for AI Agents",
+    "objectID": "posts/stat214-lab1/index.html#modeling",
+    "href": "posts/stat214-lab1/index.html#modeling",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Modeling",
+    "text": "Modeling\nThree models were trained on a stratified 70/15/15 train/validation/test split, all evaluated on the same held-out test set (\\(n = 6{,}307\\)). The 112:1 class imbalance was addressed with balanced class weights throughout.\n\nModel Comparison\n\n\n\nMetric\nKuppermann Rule\nLogistic Regression\nRandom Forest\n\n\n\n\nSensitivity\n91.2%\n84.2%\n84.2%\n\n\nSpecificity\n43.9%\n72.7%\n79.0%\n\n\nUnnecessary CTs\n3,506\n1,707\n1,312\n\n\nMissed TBI Cases\n5\n9\n9\n\n\nAUC-ROC\nN/A\n0.857\n0.874\n\n\n\nThe three models trace a clear tradeoff. The Kuppermann rule catches the most TBI cases (91.2% sensitivity) but recommends CT for over half the non-TBI patients. Logistic regression cuts unnecessary scans by 51% relative to Kuppermann, and the random forest reduces them by 63%, with both matching at 84.2% sensitivity.\nLogistic regression feature coefficients confirmed the EDA findings. The top positive predictors were injury severity (\\(\\hat{\\beta} = +0.53\\)), scalp hematoma (\\(\\hat{\\beta} = +0.50\\)), and altered mental status (\\(\\hat{\\beta} = +0.49\\)), with acting normally as the strongest protective feature (\\(\\hat{\\beta} = -0.46\\)). Scalp hematoma receiving the second-highest coefficient despite being excluded from the Kuppermann rule for children aged 2 and older is consistent with Finding 1.\nBootstrap stability analysis (200 resamples) showed that the Kuppermann rule is the most stable, while the random forest has more variance in sensitivity across resamples, reflecting the greater flexibility of tree-based learning from finite training data."
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#technologies-tools",
+    "href": "posts/stat214-lab1/index.html#technologies-tools",
+    "title": "PECARN Traumatic Brain Injury Analysis",
     "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nAPI: Python, FastAPI, auto-generated OpenAPI docs\nPersistence: Supabase (Postgres), so reputation data survives restarts and redeploys\nDeployment: Render (free tier), public and live\nAgent interface: machine-readable SKILL.md with exact request/response examples for autonomous consumption"
+    "text": "Technologies & Tools\nCore stack: Python, pandas, NumPy, scikit-learn, matplotlib, seaborn\nStatistical methods: Bayesian posterior inference with bootstrap confidence intervals, PCA, stratified train/val/test splitting, threshold optimization on the validation set"
   },
   {
-    "objectID": "posts/vouchnet/index.html#reflection",
-    "href": "posts/vouchnet/index.html#reflection",
-    "title": "VouchNet: A Reputation Service for AI Agents",
+    "objectID": "posts/stat214-lab1/index.html#links-resources",
+    "href": "posts/stat214-lab1/index.html#links-resources",
+    "title": "PECARN Traumatic Brain Injury Analysis",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — full code, notebooks, and report\nLab Report (PDF) — complete write-up with all figures and tables"
+  },
+  {
+    "objectID": "posts/stat214-lab1/index.html#reflection",
+    "href": "posts/stat214-lab1/index.html#reflection",
+    "title": "PECARN Traumatic Brain Injury Analysis",
     "section": "Reflection",
-    "text": "Reflection\nThe lesson of VouchNet is that building for AI agents is a distinct discipline from building with them. Every design decision — no auth, three endpoints, exhaustive machine-readable examples — came from asking “can a program with no prior context use this correctly on the first try?” That question is a stricter API design standard than most human-facing services ever face, and it made the service better for humans too.\n\nBuilt at NANDAHack (MIT Media Lab), July 2026."
+    "text": "Reflection\nThis lab made concrete a tension that is easy to state but hard to internalize: in high-stakes classification, the right model depends on what you are optimizing for. A 91% sensitivity rule that sends 3,500 children to unnecessary CT scans is not obviously better or worse than an 84% sensitivity model that reduces that number to 1,300. That tradeoff depends on how you weigh radiation risk against missed diagnoses, which is a clinical and ethical judgment, not a statistical one.\nThe EDA finding that missed patients are not asymptomatic was the most satisfying result. It meant the 32 children were not random noise beyond any model’s reach, but a structured subset the Kuppermann rule was never designed to catch. That kind of gap, visible only after careful data exploration, is exactly what motivates moving beyond fixed decision rules toward learned models.\n\nCompleted March 2026 as Lab 1 for STAT 214 at UC Berkeley."
   },
   {
-    "objectID": "selected-work/ml-current.html",
-    "href": "selected-work/ml-current.html",
-    "title": "Current ML Courses — Projects",
+    "objectID": "posts/berkeley-grocery-tracker/index.html",
+    "href": "posts/berkeley-grocery-tracker/index.html",
+    "title": "Berkeley Grocery Tracker",
     "section": "",
-    "text": "Section in progress."
+    "text": "NoteProject Overview\n\n\n\nA fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe’s, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.\nLive site"
   },
   {
-    "objectID": "selected-work/ml-current.html#highlights",
-    "href": "selected-work/ml-current.html#highlights",
-    "title": "Current ML Courses — Projects",
+    "objectID": "posts/berkeley-grocery-tracker/index.html#the-problem",
+    "href": "posts/berkeley-grocery-tracker/index.html#the-problem",
+    "title": "Berkeley Grocery Tracker",
+    "section": "The Problem",
+    "text": "The Problem\nLiving in Berkeley, I noticed that grocery prices vary a lot depending on which store you go to and when. A dozen eggs at Trader Joe’s and the same dozen at Whole Foods are rarely the same price, and the gap shifts over time. There was no easy way to see this data in one place, let alone track it over time or figure out which store makes the most sense for your weekly basket. I wanted to build exactly that."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#why-codex",
+    "href": "posts/berkeley-grocery-tracker/index.html#why-codex",
+    "title": "Berkeley Grocery Tracker",
+    "section": "Why Codex",
+    "text": "Why Codex\nOpenAI opened a challenge for developers to build with Codex, offering $100 in API credits and a Pro subscription to participants. I treated it as an opportunity to see how far an AI coding agent could take a real, multi-layer software project. The answer turned out to be: pretty far.\nThe entire stack was designed and built through Codex. I described what I wanted, iterated on the output, reviewed the code, and pushed forward. It was less about avoiding effort and more about compressing weeks of setup into days, without cutting corners on architecture."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-it-does",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-it-does",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What It Does",
+    "text": "What It Does\nThe live site shows price data for a curated set of staple items, things like eggs, milk, bananas, chicken breast, olive oil, across multiple Berkeley-area locations. You can:\n\nSee the latest prices for each item across stores\nExplore price trends over time with a time-series view\nBuild a basket and estimate total cost, both at the cheapest individual store per item and at the single best store overall\nCompare against Berkeley meal plan pricing as a reference point"
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#how-it-works",
+    "href": "posts/berkeley-grocery-tracker/index.html#how-it-works",
+    "title": "Berkeley Grocery Tracker",
+    "section": "How It Works",
+    "text": "How It Works\nThe data pipeline runs automatically. Three scrapers, one per grocery chain, pull full product catalogs from each store on a monthly schedule using GitHub Actions. Trader Joe’s exposes an internal GraphQL API; Whole Foods has a structured product feed; Safeway required Playwright to handle anti-bot protections on some runs.\nRaw scraped data lands in a staging table first. From there, a matching pipeline normalizes product names across stores into canonical items, using fuzzy text matching with quantity-awareness, a semantic embedding stage via the OpenAI API for harder cases, and a hand-curated staples bridge for the most important items. The confidence of each match is tracked, so auto-matched, semantically matched, and manually curated prices are all distinguished.\nOnce matched, prices flow into an append-only observations table that gives historical trends for free. The frontend, a Next.js app connected to Supabase Postgres, reads this data at request time and renders it on the dashboard.\nFor Trader Joe’s historical pricing before the scraper launched, I filtered a publicly available third-party price dump through the curated staples allowlist and loaded it into a separate proxy history table, keeping it isolated from live scrape data.\nThe whole infrastructure costs $0 per month. Vercel hosts the frontend, Supabase handles the database on its free tier, and GitHub Actions runs the scrapers."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What Codex Actually Did",
+    "text": "What Codex Actually Did\nA lot. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. My role was to define the architecture, make the key design calls, review and validate every piece of output, catch edge cases, and course-correct when things drifted. Codex accelerated the implementation significantly, but the product decisions and data model were mine to own.\nThe most impressive part was how it kept up with schema changes across iterations. As the data model evolved, it updated migrations, scripts, and pipeline logic in sync without losing track of what had changed."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What Is Still Being Built",
+    "text": "What Is Still Being Built\nThe matching pipeline is solid for Trader Joe’s and Whole Foods. Safeway is scraped but the matching pass hasn’t run at full scale yet. The next phases are a staples-focused weekly scrape cadence, QA dashboards to monitor scrape quality, and eventually crowdsourced price contributions with receipt upload.\n\nBuilt April 2026 as part of the OpenAI Codex challenge. Stack: Next.js, Supabase, GitHub Actions, Vercel, OpenAI API."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html",
+    "href": "posts/bayesian-optimization/index.html",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA from-scratch implementation of Bayesian Optimization using a Gaussian Process surrogate with squared-exponential kernel and Expected Improvement acquisition, applied to three experiments spanning a synthetic benchmark, neural network hyperparameter tuning, and classifier threshold optimization.\nCourse: STAT 238: Bayesian Statistics · Semester: Spring 2026 · Language: Python\nGitHub Repository"
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#the-problem",
+    "href": "posts/bayesian-optimization/index.html#the-problem",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "The Problem",
+    "text": "The Problem\nTuning a machine learning model involves making a sequence of decisions under uncertainty. You pick a learning rate, train for hours, observe validation performance, and then have to decide what to try next. Grid search wastes evaluations on systematically spaced points regardless of what the results say. Random search is better, but it treats each trial independently, ignoring everything learned from previous runs.\nBayesian Optimization (BO) does something smarter: it builds a probabilistic model of the objective function from every evaluation so far, then uses that model to decide where to look next. It is the principled answer to the question of how to optimize an expensive black-box function with a tight budget.\nFor this project, I implemented the full BO pipeline from scratch — no hyperopt, no optuna — and ran it on three problems with very different cost structures."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#the-method",
+    "href": "posts/bayesian-optimization/index.html#the-method",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "The Method",
+    "text": "The Method\nThe implementation has three components, each in its own module.\nGaussian Process surrogate (gp.py). A GP is a distribution over functions. Given observations, it produces a posterior: a mean function \\(\\mu(x)\\) (best guess at each point) and a variance function \\(\\sigma^2(x)\\) (uncertainty). The kernel is squared-exponential with three hyperparameters: output scale \\(\\alpha\\), length scale \\(\\ell\\), and noise variance \\(\\sigma^2_n\\). These are fit by maximizing the log marginal likelihood at each iteration via L-BFGS-B. Cholesky decomposition keeps the linear algebra numerically stable.\nExpected Improvement acquisition (acquisition.py). EI is the expected amount by which the next evaluation will beat the current best:\n\\[\\text{EI}(x) = (\\mu(x) - f^*)\\,\\Phi(Z) + \\sigma(x)\\,\\phi(Z), \\quad Z = \\frac{\\mu(x) - f^*}{\\sigma(x)}\\]\nThe first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence — no manual tuning of an exploration parameter.\nBO loop (bo.py). Inputs are normalized to \\([0,1]^d\\) before each GP fit, and outputs are standardized to zero mean and unit variance. This keeps the kernel hyperparameters in comparable ranges regardless of the original scales. Each iteration fits the GP on all observations so far, maximizes EI over the input space (multi-start L-BFGS-B), evaluates the objective at the new point, and appends to the history."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#three-experiments",
+    "href": "posts/bayesian-optimization/index.html#three-experiments",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Three Experiments",
+    "text": "Three Experiments\n\nBranin Benchmark\nBefore running BO on real problems, I validated it on the Branin function: a classic 2D test with three known global minima at \\(f^* \\approx 0.398\\). A correct BO implementation should converge reliably across random seeds; grid search should fail when the optimum falls between grid lines.\n\n\n\nGP surrogate (top row) and Expected Improvement surface (bottom row) at trials 5, 10, 20, and 40. The posterior concentrates around the three Branin optima as observations accumulate. EI collapses near already-explored regions, forcing the algorithm to search elsewhere.\n\n\n\n\n\nBO converges to within 0.03 of the true optimum across 5 random seeds. Random search plateaus more than 2x worse; grid search never escapes its fixed points.\n\n\n\n\nNCF on MovieLens 1M\nThe first real application was hyperparameter tuning for the Neural Collaborative Filtering model from my CS 289A recommender systems project. Each evaluation required training NCF for 10 epochs on an RTX 2080 Ti, costing about 22 minutes per trial. With a budget of 15 trials total (5 random initialization, 10 BO steps), there was no room to waste evaluations.\nThe search space was 5-dimensional: embedding dimension (4 discrete values), MLP architecture (3 options), learning rate and L2 decay (both log-encoded continuous), and WMF confidence scale (linear continuous).\n\n\n\nAfter 5 random trials, the best NDCG@10 was 0.3745. BO improved this to 0.4056 in 10 more steps, an 8.3% relative gain. The dashed line marks the best random-init result; every BO step from trial 8 onward exceeds it.\n\n\nThe configuration BO converged to was interpretable: largest embedding dimension (256), deepest MLP (four layers), minimal L2 regularization, and the smallest confidence scale. These cluster around a coherent region of parameter space, which suggests the GP genuinely learned the landscape rather than finding a lucky outlier.\n\n\nUpworthy Classifier Thresholds\nThe second real application came from my STAT 230A headline analysis project, where I used a BART zero-shot NLI model to classify 54,956 headlines into topic categories. The classifier outputs a confidence score, and two thresholds control how those scores are used: a minimum confidence to accept a label, and a minimum category size to keep in the analysis.\nThe objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR) — higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.\n\n\n\nBO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO’s advantage here is not just the final value but the path: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.\n\n\nThe BO-optimal confidence threshold was 0.256 — lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#results",
+    "href": "posts/bayesian-optimization/index.html#results",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Results",
+    "text": "Results\n\n\n\n\n\n\n\n\n\n\nExperiment\nBudget\nBO result\nBest baseline\nGain\n\n\n\n\nBranin (2D synthetic)\n40 trials\n-0.43\nRandom: -0.83\n2x better\n\n\nNCF hyperparameters (5D, GPU)\n15 trials\nNDCG = 0.406\nRandom: 0.375\n+8.3%\n\n\nUpworthy thresholds (2D, fast)\n60 trials\nF = 1,569\nRandom: 1,514\n+3.6%\n\n\n\nOne consistent observation across all three: BO’s advantage is largest when the budget is tightest relative to the search space. The Branin result (2x improvement over random) reflects a 40-trial budget over a smooth 2D space where the GP can learn the landscape quickly. The NCF result (+8.3%) came from 15 trials over a 5-dimensional mixed space where each random trial burns 22 minutes. The Upworthy result (+3.6%) is smaller partly because 60 trials over a 2D smooth space is generous enough that random search also converges reasonably well."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#technologies-tools",
+    "href": "posts/bayesian-optimization/index.html#technologies-tools",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nCore stack: Python, NumPy, SciPy (L-BFGS-B, ANOVA), matplotlib\nImplementation: GP with squared-exponential kernel, Cholesky decomposition for posterior inference, log marginal likelihood maximization for kernel hyperparameter fitting, multi-start EI maximization\nExperiments: Branin benchmark (analytic), NCF black-box wrapper (subprocess CLI to PyTorch training script), Upworthy black-box wrapper (pandas + SciPy F-test)"
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#links",
+    "href": "posts/bayesian-optimization/index.html#links",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Links",
+    "text": "Links\n\nGitHub Repository: full implementation, notebooks, and experiment results"
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#reflection",
+    "href": "posts/bayesian-optimization/index.html#reflection",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Reflection",
+    "text": "Reflection\nThe most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch was not just a course exercise — it was a tool that made two other projects better, with quantifiable improvements in both cases.\nThe hardest implementation detail was the input/output normalization. Mapping inputs to \\([0,1]^d\\) and standardizing outputs before each GP fit sounds simple, but getting it wrong causes the kernel hyperparameters to drift into bad regions and the EI surface to behave unexpectedly. The Branin simulation study was essential for catching those bugs before running on experiments that cost hours of GPU time.\n\nCompleted May 2026 as a final project for STAT 238: Bayesian Statistics at UC Berkeley."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html",
+    "href": "posts/mutationrx/index.html",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor’s driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility — separating believable leads from coincidental docking scores.\nEvent: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP\nLive App · GitHub Repository"
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#the-problem",
+    "href": "posts/mutationrx/index.html#the-problem",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "The Problem",
+    "text": "The Problem\nTargeted cancer drugs fail by resistance: the tumor mutates, the protein changes shape, and the drug no longer binds. Deciding what to try next — or whether some cheap, already-approved drug could be repurposed for the mutant — means slow, expensive cell-based screening. There are always too many candidates and too little bench budget.\nComputational docking can rank candidates cheaply, but it has a fatal flaw for this use: it happily scores drugs that have no real business binding the target. A robust docking score is not a real hit, and a bench researcher usually can’t tell signal from artifact. That gap — not the docking itself — is the actual problem worth solving."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#the-approach",
+    "href": "posts/mutationrx/index.html#the-approach",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "The Approach",
+    "text": "The Approach\n\n\n\nThe MutationRx workspace: a real mutant structure, the wild-type→mutant binding shifts, and Claude’s read of which hit is worth a bench test.\n\n\nThe design thesis is one line:\n\nThe docking finds candidates. Claude decides which to believe.\n\nFor a tumor’s driver mutation, MutationRx docks a panel of 62 approved drugs against both the wild-type and mutant structure, rescores the poses, and runs a Bayesian bootstrap over replicate docking runs to put a 95% credible interval on each wild-type→mutant shift. Every drug lands in one of four buckets: weakened (resistance), robust (safe bet), improved, or non-binder.\nThen Claude reviews each hit for mechanistic plausibility. This is the step a script can’t do: a beta-blocker that “binds” EGFR is almost certainly an artifact, while a drug whose real mechanism fits the target is worth the assay. Remove the reviewer and you are back to an untrustworthy hit list — so Claude is essential to the tool, not decorative."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#why-its-credible",
+    "href": "posts/mutationrx/index.html#why-its-credible",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "Why It’s Credible",
+    "text": "Why It’s Credible\nThe whole brand is honesty, and the tool is built to earn it:\n\nIt reproduces known biology on unseen real data. Run on a genuine, de-identified TCGA lung tumor carrying EGFR L858R+T790M, it recovers the clinic from docking alone: erlotinib and gefitinib fail, and osimertinib holds — on a patient tumor it had never seen.\nIt shows why statistics alone aren’t enough. Screening 300 approved drugs against the resistant mutant, docking plus bootstrap flagged ten as significantly improved binders with tight credible intervals — and every one is a mechanistic artifact (antidepressants, antipsychotics, antibiotics). Only mechanism separates them, which is exactly the judgment Claude adds.\nThe reviewer’s judgment is grounded, not asserted. Each drug carries two orthogonal evidence axes the docking never sees: pathway grounding (is the drug’s real target in the driver’s pathway or enzyme class?) and DepMap dependency (is that target a gene lung adenocarcinoma actually needs, from CRISPR essentiality?). On-target inhibitors corroborate on both; the statin and antidepressant artifacts fail both. That turns the artifact-vs-lead call into an auditable, cited read rather than a black-box assertion.\nIt flags its own blind spots. Docking affinity is a proxy, not efficacy; repurposing hits are hypotheses; and non-covalent docking can’t capture covalent mechanisms (KRAS G12C, osimertinib on C797S) — so those cases are labeled as blind spots, never read as findings."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#the-non-obvious-lead-and-the-overnight-test",
+    "href": "posts/mutationrx/index.html#the-non-obvious-lead-and-the-overnight-test",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "The Non-Obvious Lead, and the Overnight Test",
+    "text": "The Non-Obvious Lead, and the Overnight Test\nTwo moments show the pipeline doing its job. First, the reviewer surfaced a credible, non-obvious lead: imatinib, the leukemia (CML) drug, is predicted to gain binding across every EGFR mutant tested. Pooling the replicate evidence across four mutant structures gives a mean gain that clears both statistical and practical-significance floors — and it survives review where the statin artifacts don’t, because imatinib is a kinase inhibitor and docking it against a kinase is legitimate. Strictly a hypothesis worth an assay, never a finding.\nSecond, to prove the tool outlasts the week, I modeled and docked EGFR C797S — the mutation that defeats osimertinib itself, a genotype the tool had never seen — overnight on Berkeley’s GPU cluster. The tool did two honest things at once: it added a fourth consistent data point to the imatinib hypothesis, and it flagged its own limitation, warning not to read osimertinib as “still working” because C797S removes the cysteine that osimertinib binds covalently. A tool that knows where it fails is more trustworthy than one that always answers."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#technologies-tools",
+    "href": "posts/mutationrx/index.html#technologies-tools",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nTriage engine: Python, DiffDock + gnina for docking and rescoring, NumPy for the Bayesian-bootstrap credible intervals over replicates\nClaude: the Agent SDK and API power the plausibility reviewer; the whole tool was built with Claude Code\nWeb app: FastAPI backend with a staged background-job runner, a single-page workspace, a grounded per-result chat, and a vendored NGL 3D structure viewer (wild-type ↔︎ mutant, offline)\nInterfaces: a hosted web app, a CLI, and an MCP server so Claude Code / Desktop can call the triage tools directly\nData: real de-identified TCGA lung tumors via the open-access cBioPortal API, structures from RCSB PDB, and drug chemistry from PubChem / ChEMBL with RDKit"
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#reflection",
+    "href": "posts/mutationrx/index.html#reflection",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "Reflection",
+    "text": "Reflection\nThe interesting problem wasn’t running a docking pipeline — those exist. It was designing around the fact that docking is an unreliable proxy, and turning that unreliability into the thing the product solves. The scarce, valuable step is the mechanistic judgment about which computational hits to believe, and that maps almost exactly onto what a language model with grounded evidence can do and a script cannot. Building for a named user — a bench researcher, not a computational biologist — forced every result to be honest by construction: uncertainty on every call, hypotheses labeled as hypotheses, and blind spots flagged rather than hidden.\n\nBuilt with Claude for the “Built with Claude: Life Sciences” hackathon (Anthropic × Gladstone Institutes), July 2026."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html",
+    "href": "posts/genetic-algorithm/index.html",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA collaborative final project for STAT 243 (Statistical Computing) implementing a genetic algorithm for automated variable selection. Built as a production-ready Python package with comprehensive testing, modular architecture, and support for multiple regression methods.\nTeam: collaborative project with two classmates · Duration: 4 weeks · Language: Python"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#the-challenge-variable-selection-at-scale",
+    "href": "posts/genetic-algorithm/index.html#the-challenge-variable-selection-at-scale",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "The Challenge: Variable Selection at Scale",
+    "text": "The Challenge: Variable Selection at Scale\nIn predictive modeling, choosing the right set of variables is crucial. Too few predictors and you miss important signals. Too many and you overfit, harming generalization. When facing datasets with dozens or hundreds of potential predictors, exhaustive search becomes computationally infeasible, as exploring all possible combinations grows exponentially.\nThe assignment: build a Python package implementing genetic algorithms for variable selection that balances predictive accuracy against model complexity."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#what-are-genetic-algorithms",
+    "href": "posts/genetic-algorithm/index.html#what-are-genetic-algorithms",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "What Are Genetic Algorithms?",
+    "text": "What Are Genetic Algorithms?\nGenetic algorithms mimic natural selection to solve optimization problems. Instead of evaluating every possible solution, they:\n\nInitialize a population of random variable combinations (chromosomes)\nEvaluate fitness using cross-validated predictive performance\nSelect the best-performing combinations as parents\nCrossover parent chromosomes to create offspring\nMutate randomly to explore new solutions\nEvolve iteratively across generations toward optimal feature sets\n\nThis evolutionary approach efficiently searches massive solution spaces by learning from successful combinations."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#our-solution-the-ga-package",
+    "href": "posts/genetic-algorithm/index.html#our-solution-the-ga-package",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Our Solution: The GA Package",
+    "text": "Our Solution: The GA Package\nWe developed a flexible, well-tested Python package that brings genetic algorithms to practical variable selection tasks.\n\nCore Features\n\n\n\n\n\n\nTipKey Capabilities\n\n\n\nMultiple model types: linear regression, LASSO, decision trees\nFlexible selection: rank-based parent selection and tournament selection\nCrossover methods: single-point and double-point recombination\nPenalized optimization: adjustable sparsity penalty to balance accuracy vs. complexity\n\n\n\n\nArchitecture & Design\nThe package follows software engineering best practices:\nModular design: core select() function as primary interface, with discrete methods for initialization, fitness evaluation, selection, crossover, and mutation\nRobust testing: unit tests for individual genetic operators, integration tests for the full algorithm, and a pytest suite with automated GitHub Actions CI/CD\nPerformance: vectorized operations within generations and parallel cross-validation for fitness evaluation\nDocumentation: comprehensive README with examples and docstrings following Python standards\n\n\nTechnical Implementation\nThe algorithm evaluates fitness using cross-validated \\(R^2\\) with optional complexity penalties:\n\\[\\text{Penalized Fitness} = R^2 - \\lambda \\cdot f\\]\nwhere \\(R^2\\) is the cross-validated coefficient of determination, \\(\\lambda\\) is the penalty parameter controlling sparsity, and \\(f\\) is the fraction of total predictors selected. This formulation prevents overfitting while encouraging parsimonious models."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#development-process",
+    "href": "posts/genetic-algorithm/index.html#development-process",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Development Process",
+    "text": "Development Process\n\nCollaborative Workflow\nWorking as a three-person team, we mapped the architecture before writing code, divided responsibilities across initialization, genetic operators, fitness evaluation, and testing, used Git branches and pull requests for code review, and integrated continuously via automated testing on GitHub Actions.\n\n\nTechnical Requirements Met\n\n\n\n\n\n\n\nRequirement\nImplementation\n\n\n\n\nModular architecture\nClean separation of genetic operators into discrete, testable components\n\n\nFormal testing\npytest suite with CI/CD automation via GitHub Actions\n\n\nPerformance\nVectorized operations and parallel cross-validation\n\n\nDocumentation\nComplete README and docstrings"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#results-applications",
+    "href": "posts/genetic-algorithm/index.html#results-applications",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Results & Applications",
+    "text": "Results & Applications\nThe package successfully identifies important predictors across various scenarios:\n\nBaseball statistics (original benchmark dataset)\nSimulated data with known true predictors\nReal-world datasets with complex predictor relationships\n\nIt efficiently handles datasets with 20+ potential predictors, balances predictive accuracy with model sparsity, and supports experimentation with different GA parameters."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#technologies-tools",
+    "href": "posts/genetic-algorithm/index.html#technologies-tools",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nCore stack: Python, scikit-learn, NumPy, pytest\nDevelopment tools: Git/GitHub, GitHub Actions, VSCode"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#key-takeaways",
+    "href": "posts/genetic-algorithm/index.html#key-takeaways",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nSoftware Engineering in Statistics\nThis project reinforced the importance of treating statistical code as production software: modularity makes algorithms testable, formal tests catch bugs early, documentation enables others to use the code, and vectorization matters for real-world speed.\n\n\nEvolutionary Computation Insights\nImplementing genetic algorithms from scratch provided concrete understanding of how crossover and mutation balance exploration vs. exploitation, the impact of selection pressure on convergence speed, and the importance of fitness function design for optimization success."
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#links-resources",
+    "href": "posts/genetic-algorithm/index.html#links-resources",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — complete source code and documentation\nProject Specification — original assignment requirements"
+  },
+  {
+    "objectID": "posts/genetic-algorithm/index.html#reflection",
+    "href": "posts/genetic-algorithm/index.html#reflection",
+    "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
+    "section": "Reflection",
+    "text": "Reflection\nBuilding a production-quality statistical computing package taught me that good statistical software requires more than correct algorithms; it demands thoughtful architecture, comprehensive testing, performance optimization, and clear documentation.\nThe collaborative aspect was equally valuable. Working as a team meant negotiating interfaces, reviewing each other’s code, and maintaining consistency across components. These skills translate directly to professional data science and software engineering.\n\nCompleted December 2025 as the final project for STAT 243: Statistical Computing at UC Berkeley."
+  },
+  {
+    "objectID": "posts/otomedi/index.html",
+    "href": "posts/otomedi/index.html",
+    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nAn end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026). Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.\nEvent: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase\nGitHub Repository"
+  },
+  {
+    "objectID": "posts/otomedi/index.html#the-problem",
+    "href": "posts/otomedi/index.html#the-problem",
+    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "section": "The Problem",
+    "text": "The Problem\nBy the end of a day at a hospital front desk, tens or hundreds of missed calls have piled up. Listening to every voicemail, writing down what the patient needs, and executing the request is slow — and the majority of those calls are one of just three things: a prescription refill, a schedule change, or a message for the doctor. Each one takes a series of clicks and lookups that lasts longer than the action itself.\nOtomedi turns that voicemail backlog into a dashboard of pre-verified, one-click approvals. Repetitive requests get automated up to the point of human sign-off; edge cases are organized and surfaced for manual review instead of getting lost in an inbox."
+  },
+  {
+    "objectID": "posts/otomedi/index.html#how-it-works",
+    "href": "posts/otomedi/index.html#how-it-works",
+    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "section": "How It Works",
+    "text": "How It Works\n\n\n\nOtomedi pipeline: from voicemail to one-click approval.\n\n\nA voicemail flows through a pipeline of specialized agents, each with a single job:\n\nIntake Agent — receives the Deepgram speech-to-text transcript and uses Claude to extract structured data: patient identity, insurance plan, and a requests array (a single voicemail can contain multiple workflow items, e.g. a refill and a message relay). Relative dates like “next Tuesday” are resolved to absolute dates at this stage, and missing fields are flagged explicitly.\nTriage Sentinel — scans for emergency signals. Anything urgent bypasses automation entirely and escalates immediately.\nEligibility Agents — verify the request against patient records: insurance acceptance, refill eligibility (visit history, dosage match, conflicting medications), or scheduling constraints, depending on request type.\nScheduling Agent — finds an appointment slot given provider availability and urgency, writing a proposed action rather than a final one.\nHuman approval — a certified healthcare worker reviews the proposed action in the dashboard. Only after they click Approve does the backend execute it.\nConfirmation & Summary Agents — send SMS/email confirmations to the patient and compile a daily digest for the front desk.\n\nThe agents don’t message each other directly. Every agent reads and writes a shared task row in Supabase, which makes the pipeline observable, testable, and easy to resume when a step fails."
+  },
+  {
+    "objectID": "posts/otomedi/index.html#designed-around-safety",
+    "href": "posts/otomedi/index.html#designed-around-safety",
+    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "section": "Designed Around Safety",
+    "text": "Designed Around Safety\nThe most important design decisions were about what not to automate:\n\nEmergencies bypass automation entirely. The triage sentinel runs before any workflow logic, and an urgent signal short-circuits the whole pipeline into human escalation.\nNo clinical action executes without human sign-off. Agents can parse, verify, and propose — but the write to prescriptions, appointments, or messages only happens after a healthcare worker approves it.\nRegression tests pinned to specific scenarios. Per our mentor’s guidance, each agent ships with tests for named failure cases (garbled audio, missing fields, conflicting medications), not just happy paths."
+  },
+  {
+    "objectID": "posts/otomedi/index.html#technologies-tools",
+    "href": "posts/otomedi/index.html#technologies-tools",
+    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nAgents & backend: Python, FastAPI, Claude API for extraction and verification, Deepgram for speech-to-text\nFrontend: Next.js dashboards — a CHW approval dashboard, a demo EHR, and an audio-upload demo\nData: Supabase (Postgres) as the shared task store and system of record for patients, visits, prescriptions, and schedules"
+  },
+  {
+    "objectID": "posts/otomedi/index.html#reflection",
+    "href": "posts/otomedi/index.html#reflection",
+    "title": "Otomedi: Multi-Agent Healthcare Automation",
+    "section": "Reflection",
+    "text": "Reflection\nThe interesting engineering problem wasn’t getting an LLM to read a voicemail — it was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table.\n\nBuilt at the UC Berkeley AI Hackathon, June 2026."
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html",
+    "href": "posts/upworthy-ab-testing/index.html",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA regression analysis of the Upworthy Research Archive: 54,956 headline packages across 11,649 formally controlled A/B tests, asking which headline features predict click-through rate and how to estimate those effects correctly when observations are clustered within the same experiment.\nCourse: STAT 230A: Linear Models · Semester: Spring 2026 · Language: Python\nGitHub Repository"
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#the-setup",
+    "href": "posts/upworthy-ab-testing/index.html#the-setup",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "The Setup",
+    "text": "The Setup\nBetween 2012 and 2019, Upworthy ran one of the largest natural headline experiments in digital media history. Every article was tested with two to six different headlines shown simultaneously to random audience subsets. The winner went live. The rest were archived.\nThat archive is now public. It contains over 100,000 headline variants across more than a decade of A/B tests, each with an exact impression count and click count. It is, in effect, a massive dataset where the outcome of interest (click-through rate) was measured under controlled conditions.\nThe question I wanted to answer: beyond any one headline being better than another, are there systematic patterns? Do certain structural or linguistic features consistently predict more clicks, regardless of topic?"
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#the-data",
+    "href": "posts/upworthy-ab-testing/index.html#the-data",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "The Data",
+    "text": "The Data\nThe final analysis dataset covers 54,956 headline packages from 11,649 A/B tests between 2013 and 2015. Three cleaning steps shaped it:\n\nSingle-variant tests were dropped (no competitor means no comparison).\nTests where the image varied across packages (~35% of raw data) were excluded, since image differences confound headline effects.\nA Cloudflare misconfiguration in late 2013 corrupted impression counts for some tests; affected rows were removed.\n\nRaw click-through rate is badly skewed: most headlines receive a 1–3% CTR while a handful go viral and pull the mean up. The outcome variable is log-transformed CTR, which compresses the tail and makes regression coefficients interpretable as proportional changes: a coefficient of 0.06 means roughly +6% more clicks.\n\n\n\nRaw CTR clusters near zero with a long right tail from viral headlines. Log-transforming creates a near-symmetric distribution suitable for linear regression."
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#fourteen-features",
+    "href": "posts/upworthy-ab-testing/index.html#fourteen-features",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "Fourteen Features",
+    "text": "Fourteen Features\nEach headline was characterized by 14 features covering structure, rhetoric, sentiment, and readability:\n\nRhetorical devices: ends with “?”, has “!”, has “…”, starts with how/why/what, contains “you/your”, contains “we/our”\nNumeric content: starts with a digit, contains any digit, has a superlative word\nSentiment: VADER compound score, ranging from −1 (most negative) to +1 (most positive)\nLength: character count, word count, average word length\n\nThe features are deliberately surface-level — no embeddings, no LLM scoring. The goal was to isolate the predictive value of things an editor can control in seconds: punctuation, framing, and word choice. VADER was chosen for the same reason: it requires no training and produces a reliable sentiment estimate from a lexicon, making results interpretable rather than opaque."
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#the-estimation-problem",
+    "href": "posts/upworthy-ab-testing/index.html#the-estimation-problem",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "The Estimation Problem",
+    "text": "The Estimation Problem\nA standard OLS regression would understate uncertainty here. Each A/B test contains multiple packages that share the same article, the same publication window, and the same audience pool. Packages within the same test are correlated in ways OLS ignores.\nTo handle this, I built four model variants in sequence:\n\nOLS baseline — establishes the coefficient estimates but produces overconfident standard errors\nHC3 heteroskedasticity-robust SEs — corrects for variance differences across packages; the ratio to OLS SEs is 0.95–1.03, confirming heteroskedasticity is minor\nCluster-robust SEs — allows arbitrary error correlation within each test (11,649 clusters); the ratio to OLS SEs is 1.3–2.2, confirming clustering is the dominant issue\nWLS with cluster-robust SEs — downweights packages with few impressions (where CTR is noisiest); used as a robustness check\n\nAll ten statistically significant features retain their sign and significance across all four specifications. The coefficient estimates are stable; only the confidence intervals change."
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#what-i-found",
+    "href": "posts/upworthy-ab-testing/index.html#what-i-found",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "What I Found",
+    "text": "What I Found\n\n\n\nCluster-robust OLS coefficients with 95% confidence intervals. Dark blue dots are positive and significant; dark gray are negative and significant; pale dots are not significant at p = 0.05.\n\n\nThe clearest finding is the one the chart title says outright: exclamation marks are the single biggest negative predictor. Headlines with “!” have substantially lower CTR than otherwise equivalent headlines, with the coefficient putting the effect in the range of a 30% relative reduction. Collective framing (“we/our”) is the second-largest suppressor, followed by question marks and curiosity-gap openers (“how/why/what”).\nOn the positive side, numeric content wins. Headlines starting with a digit and headlines containing any number both show reliable positive effects. “Has superlative word” is also positive and significant, though smaller.\nSentiment tells a counterintuitive story. The VADER score has a negative coefficient: more positive sentiment predicts more clicks. Readers, at least in this sample, responded better to emotionally neutral or affirmative frames than to alarming or negative ones. This runs counter to the usual claim that negative news spreads better, though the effect here is associational rather than causal.\n\n\n\n\n\n\n\n\nFeature\nDirection\nApprox. effect on CTR\n\n\n\n\nHas “!”\nNegative\n~30% lower\n\n\nContains “we/our”\nNegative\n~22% lower\n\n\nEnds with “?”\nNegative\n~25% lower\n\n\nVADER sentiment (positive)\nNegative coeff., positive framing wins\n~12% per unit\n\n\nStarts with a digit\nPositive\n~7% higher\n\n\nContains any digit\nPositive\n~6% higher\n\n\nHas superlative word\nPositive\n~3% higher\n\n\n\nThe model explains about 6% of variance in log-CTR (R² = 0.059), which sounds low but is expected: the bulk of what drives any individual headline’s performance is unobserved — the article itself, the image, the audience composition, the news cycle. The linguistic features are real signals; they just share the stage with a lot of noise.\nOne robustness check tested whether the sentiment effect varies by content category — politics, health, science, economics, and others — using zero-shot classification with BART. The interaction model showed no evidence of moderation (F(6) = 1.26, p = 0.27). The negativity bias pattern appears uniform across topics."
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#the-practical-picture",
+    "href": "posts/upworthy-ab-testing/index.html#the-practical-picture",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "The Practical Picture",
+    "text": "The Practical Picture\nThe results push back on some received wisdom about online headlines. The “clickbait” formula — urgent, emotional, often punctuated with “!” or “?” — appears to have lost its edge with Upworthy’s audience by 2013–2015. CTR also declined by roughly 20% per year across the dataset, suggesting the audience was adapting to the format faster than editors realized.\nWhat worked instead was specificity. A headline that starts with a number signals a concrete, structured argument. “The 5 reasons…” outperforms “Why…” not because of the number per se, but because it makes a credible promise about what follows. The superlative finding fits the same pattern: readers respond to claims that are falsifiable.\nA few important caveats: these results are associational, not causal. Unobserved article quality almost certainly drives both headline choice and performance. The data covers Upworthy 2013–2015 specifically, and platform dynamics have changed substantially since then. The findings are suggestive, not prescriptive."
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#technologies-tools",
+    "href": "posts/upworthy-ab-testing/index.html#technologies-tools",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nCore stack: Python, pandas, NumPy, statsmodels, VADER (vaderSentiment), matplotlib\nStatistical methods: OLS, HC3-robust SEs, cluster-robust SEs (sandwich estimator, 11,649 clusters), WLS, zero-shot text classification with facebook/bart-large-mnli for content category labeling\nRobustness checks: residual diagnostics, Cook’s distance, correlation matrix across all 14 features (max |r| = 0.35)"
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#links-resources",
+    "href": "posts/upworthy-ab-testing/index.html#links-resources",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository: full code, notebooks, and feature engineering pipeline\nFinal Report (PDF): complete write-up with all tables and robustness checks"
+  },
+  {
+    "objectID": "posts/upworthy-ab-testing/index.html#reflection",
+    "href": "posts/upworthy-ab-testing/index.html#reflection",
+    "title": "What Makes a Headline Work? Lessons from 55,000 A/B Tests",
+    "section": "Reflection",
+    "text": "Reflection\nThe most interesting methodological moment in this project was building the four-model progression. Adding cluster-robust standard errors inflated the SEs by 1.3 to 2.2 times relative to OLS, enough to flip a few borderline-significant features to not significant. That gap is the difference between publishing a result and not, and it came entirely from acknowledging that rows within the same A/B test are not independent observations. The data structure matters as much as the model.\nThe sentiment finding was the biggest surprise. I expected negativity to win — most of the pop-science writing on clickbait says it does. Finding the opposite, and then finding that the pattern held uniformly across content categories, made me take the result seriously even knowing it is associational. Sometimes the data just says something different than the conventional wisdom, and the job is to report that clearly rather than explain it away.\n\nCompleted May 2026 as a final project for STAT 230A: Linear Models at UC Berkeley."
+  },
+  {
+    "objectID": "posts/digital-water/index.html",
+    "href": "posts/digital-water/index.html",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "",
+    "text": "NoteThe Story at a Glance\n\n\n\nIn 2020, our team built an AI system to forecast water demand for my hometown of Monterrey, Mexico. We won 2nd place globally at the Atos IT Challenge, the first Mexican team ever to achieve this distinction in the competition’s 10-year history.\nTwo years later, our predictions came true. Monterrey plunged into a severe water crisis, forcing 5 million residents to survive on minimal daily water allocations for nearly two years."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
+    "href": "posts/digital-water/index.html#what-if-you-could-see-a-crisis-coming",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "What If You Could See a Crisis Coming?",
+    "text": "What If You Could See a Crisis Coming?\nBetween November 2019 and July 2020, my team developed Digital Water, a machine learning platform to forecast water demand and capacity at the city level. Working with real data from Monterrey’s official water utility (SADM), we built LSTM neural networks that could predict daily water consumption and available dam capacity.\nAt the time, we were focused on winning an international competition. We didn’t realize we were documenting the early warning signs of a catastrophe."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#the-challenge",
+    "href": "posts/digital-water/index.html#the-challenge",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "The Challenge",
+    "text": "The Challenge\nMonterrey is Mexico’s third-largest metro area and a major industrial hub. The city’s water system serves over 5 million people, drawing from a network of dams and underground sources. But water scarcity was becoming more frequent, and utilities were operating reactively, responding to shortages rather than preventing them.\nOur goal: Build a forecasting system that could shift water management from reactive to preventative, giving utilities early warning signals before reaching critical thresholds."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#our-solution",
+    "href": "posts/digital-water/index.html#our-solution",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Our Solution",
+    "text": "Our Solution\nWe developed an end-to-end machine learning pipeline:\n\nData Engineering\n\nCollected and cleaned multi-source time-series data from SADM\nAligned daily consumption records with dam capacity measurements\nCreated comprehensive field dictionaries and documentation\n\n\n\nPredictive Models\n\nTrained two LSTM neural networks (one for demand, one for capacity)\nForecasted daily water demand and available capacity\nCalculated “days-to-threshold” estimates for safe operating levels\nImplemented in Python using TensorFlow\n\n\n\nDeployment\n\nBuilt an interactive web dashboard (hosted on Heroku)\nCreated Google Colab notebooks for accessibility and reproducibility\nProduced technical documentation and presentation materials\n\n\n\n\n\n\n\nTipKey Technologies\n\n\n\nPython • TensorFlow • LSTM Networks • Time Series Forecasting • Google Colab • Heroku"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#recognition",
+    "href": "posts/digital-water/index.html#recognition",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Recognition",
+    "text": "Recognition\n\n\n🏆 2nd Place Globally Atos IT Challenge 2020\n\n\n🇲🇽 First Mexican Team In competition’s 10-year history\n\n\n👥 5M People Impacted By predicted crisis\n\n\nWe presented our work to the Atos CEO and Scientific Board, competing against thousands of international teams."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#what-happened-next-the-crisis",
+    "href": "posts/digital-water/index.html#what-happened-next-the-crisis",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "What Happened Next: The Crisis",
+    "text": "What Happened Next: The Crisis\nIn 2022, everything our models predicted came to pass.\nMonterrey experienced a devastating water crisis that lasted nearly two years. The city’s 5 million residents were reduced to minimal daily water allocations. Neighborhoods received water only a few hours per week. Businesses struggled. The crisis validated our forecasting approach—but also showed the human cost of delayed action.\n\n\n\n\n\n\nWarningTimeline\n\n\n\n2019-2020: Built forecasting models with SADM data\nJuly 2020: Won 2nd place at Atos IT Challenge\n2022: Water crisis begins—predictions validated\n2022-2024: Nearly two years of severe rationing for 5M residents\n2024: Crisis subsides\n\n\nThe crisis highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning—and why such systems need to be deployed, not just built."
+  },
+  {
+    "objectID": "posts/digital-water/index.html#technical-details",
+    "href": "posts/digital-water/index.html#technical-details",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Technical Details",
+    "text": "Technical Details\nFor those interested in the implementation:\n\nModels: Two LSTM neural networks (demand + capacity forecasting)\nData: Official records from Agua y Drenaje de Monterrey (SADM)\nFeatures: Multi-variate time series including consumption patterns, dam levels, and seasonal factors\nOutputs: Daily forecasts + “days-to-threshold” risk estimates\nCode: Open-source notebooks in Google Colab\nDocumentation: Complete technical report and research summaries"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#links-resources",
+    "href": "posts/digital-water/index.html#links-resources",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nGitHub Repository — Code, notebooks, and documentation\nDemo Video — Platform walkthrough"
+  },
+  {
+    "objectID": "posts/digital-water/index.html#reflection",
+    "href": "posts/digital-water/index.html#reflection",
+    "title": "Digital Water: Predicting a Crisis Before It Happened",
+    "section": "Reflection",
+    "text": "Reflection\nThis project was completed in 2020, and the notebooks remain as-is in the repository. Looking back (5 years later) with more experience in ML, I would redesign the data pipeline, modeling aproach, stability and predictability of the model and scalability. But the core lesson remains: predictive models only create impact when they’re deployed and acted upon.\nThe crisis our system forecasted was preventable. The data was there. The models worked. What was missing was the infrastructure and institutional will to act on early warnings.\n\nBuilt between November 2019 and July 2020 as part of the Atos IT Challenge."
+  },
+  {
+    "objectID": "selected-work/stat243.html",
+    "href": "selected-work/stat243.html",
+    "title": "STAT 243 — Statistical Computing",
+    "section": "",
+    "text": "Showcase of projects and assignments from STAT 243."
+  },
+  {
+    "objectID": "selected-work/stat243.html#highlights",
+    "href": "selected-work/stat243.html#highlights",
+    "title": "STAT 243 — Statistical Computing",
     "section": "Highlights",
     "text": "Highlights\n\nIn progress."
   },
   {
-    "objectID": "selected-work/ml-current.html#artifacts",
-    "href": "selected-work/ml-current.html#artifacts",
-    "title": "Current ML Courses — Projects",
+    "objectID": "selected-work/stat243.html#artifacts",
+    "href": "selected-work/stat243.html#artifacts",
+    "title": "STAT 243 — Statistical Computing",
     "section": "Artifacts",
     "text": "Artifacts\n\nIn progress."
   },
   {
-    "objectID": "selected-work/stat201.html",
-    "href": "selected-work/stat201.html",
-    "title": "STAT 201A/201B — Advanced Probability and Statistics",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "Showcase of assignments from STAT 201A/B."
+    "text": "Here are some personal projects exploring data science, data engineering, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\nMutationRx: Deciding Which Docking Hits to Believe\n\n\n\nAI Agents\n\nPython\n\nLLMs\n\nComputational Biology\n\n\n\nA resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic…\n\n\n\nJul 13, 2026\n\n\n\n\n\n\n\n\n\n\nVouchNet: A Reputation Service for AI Agents\n\n\n\nAI Agents\n\nPython\n\nAPIs\n\nSoftware Engineering\n\n\n\nA live, public reputation API that lets AI agents rate and vet each other before working together — designed so a blind AI agent can operate the entire service from…\n\n\n\nJul 1, 2026\n\n\n\n\n\n\n\n\n\n\nOtomedi: Multi-Agent Healthcare Automation\n\n\n\nAI Agents\n\nPython\n\nLLMs\n\nHealthcare\n\n\n\nA multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps…\n\n\n\nJun 21, 2026\n\n\n\n\n\n\n\n\n\n\nBayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive\n\n\n\nPython\n\nBayesian Inference\n\nMachine Learning\n\nStatistical Computing\n\n\n\nA Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\nWhen Does Ranking Help? A Sparsity Study of Movie Recommenders\n\n\n\nPython\n\nMachine Learning\n\nDeep Learning\n\nRecommender Systems\n\n\n\nThree recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\nWhat Makes a Headline Work? Lessons from 55,000 A/B Tests\n\n\n\nPython\n\nStatistical Computing\n\nA/B Testing\n\nNLP\n\n\n\nUsing 54,956 headline variants from 11,649 Upworthy A/B tests, I model which linguistic features predict click-through rate and discover that exclamation marks destroy…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\nBerkeley Grocery Tracker\n\n\n\nData Engineering\n\nWeb App\n\nAI-Assisted Development\n\nOpenAI\n\n\n\nA live price tracker for Trader Joe’s, Whole Foods, and Safeway across Berkeley, built end-to-end with OpenAI Codex.\n\n\n\nApr 26, 2026\n\n\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\n\nPython\n\nMachine Learning\n\nStatistical Computing\n\nBayesian Inference\n\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\nEvolutionary Feature Selection: A Genetic Algorithm Package\n\n\n\nPython\n\nStatistical Computing\n\nMachine Learning\n\nSoftware Engineering\n\n\n\nBuilding a production-quality Python package for automated variable selection using evolutionary computation principles.\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\n\nMachine Learning\n\nPython\n\nTime Series\n\nImpact\n\n\n\nHow our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "selected-work/stat201.html#highlights",
-    "href": "selected-work/stat201.html#highlights",
-    "title": "STAT 201A/201B — Advanced Probability and Statistics",
-    "section": "Highlights",
-    "text": "Highlights\n\nIn progress."
-  },
-  {
-    "objectID": "selected-work/stat201.html#artifacts",
-    "href": "selected-work/stat201.html#artifacts",
-    "title": "STAT 201A/201B — Advanced Probability and Statistics",
-    "section": "Artifacts",
-    "text": "Artifacts\n\nIn progress."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ricardo Pérez Castillo",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Ricardo Pérez Castillo\n      Data scientist with 4+ years at McKinsey and Deloitte across data engineering, analytics, and applied ML for enterprise clients. Now finishing an M.A. in Statistics at UC Berkeley, building AI agents and ML systems on the side.\n      \n        McKinsey & Deloitte  ·  4+ yrs\n        M.A. Statistics, UC Berkeley\n        Open to Data Science & ML roles\n      \n      \n         LinkedIn\n         GitHub\n         ricardoperez@berkeley.edu\n         CV"
-  },
-  {
-    "objectID": "index.html#featured-projects",
-    "href": "index.html#featured-projects",
-    "title": "Ricardo Pérez Castillo",
-    "section": "Featured Projects",
-    "text": "Featured Projects\n\n\n\n\n\nMutationRx: Deciding Which Docking Hits to Believe\n\n\nBuilt with Claude: Life Sciences (Anthropic × Gladstone) · FastAPI · Docking · MCP\n\n\nA resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility — separating real leads from coincidental docking artifacts.\n\n\nView project →\n\n\n\n\n\n\n\n\nOtomedi: Multi-Agent Healthcare Automation\n\n\nUC Berkeley AI Hackathon · Claude API · FastAPI · Next.js\n\n\nA multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions while a healthcare worker keeps final sign-off on everything clinical.\n\n\nView project →\n\n\n\n\n\n\n\n\nVouchNet: A Reputation Service for AI Agents\n\n\nNANDAHack (MIT Media Lab) · FastAPI · PostgreSQL · Live API\n\n\nA deployed public reputation API that lets AI agents rate and vet each other before working together — designed so a blind AI agent can operate the entire service from documentation alone.\n\n\nView project →\n\n\n\n\n\n\n\n\nA/B Testing at Scale: Headline Experiments\n\n\nSTAT 230A · Python · Statistical Computing · NLP\n\n\nRegression analysis of 54,956 Upworthy headline variants reveals that exclamation marks destroy engagement while numeric openings quietly win, with cluster-robust inference to match the nested A/B test structure.\n\n\nView project →\n\n\n\n\n\n\n\n\nWhen Does Ranking Help? A Sparsity Study of Movie Recommenders\n\n\nCS 289A · Python · Machine Learning · Deep Learning\n\n\nThree recommender systems trained across five sparsity levels reveal a counterintuitive result: well-tuned matrix factorization beats neural and two-stage ranking models at every data density.\n\n\nView project →\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\nSTAT 214 · Bayesian Inference · Machine Learning · Python\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\nView project →\n\n\n\n\n\n\n\n\nDigital Water: Predicting a Crisis Before It Happened\n\n\nMachine Learning · Python · Time Series · LSTM\n\n\nBuilt an ML forecasting system for water demand and dam capacity in Monterrey. Two years later, our predictions came true when 5 million residents faced severe rationing. 2nd place globally at the Atos IT Challenge 2020.\n\n\nView project →\n\n\n\n\n\nSee all projects →"
-  },
-  {
-    "objectID": "index.html#skills",
-    "href": "index.html#skills",
-    "title": "Ricardo Pérez Castillo",
-    "section": "Skills",
-    "text": "Skills\n\n  \n    Analytics & ML\n    \n      A/B Testing\n      Experimentation Design\n      Statistical Inference\n      Causal Inference\n      Forecasting\n      Regression\n      Classification\n      Clustering\n      NLP\n      Recommendation Systems\n      Feature Engineering\n    \n  \n  \n    AI Engineering\n    \n      Claude API\n      Multi-Agent Systems\n      FastAPI\n      Bayesian Optimization\n      Supabase\n    \n  \n  \n    Programming & Data\n    \n      Python\n      pandas\n      NumPy\n      scikit-learn\n      statsmodels\n      PyTorch\n      spaCy\n      R\n      SQL\n      Snowflake\n      SQL Server\n      AWS S3\n      ETL\n      Dimensional Modeling\n    \n  \n  \n    BI & Infrastructure\n    \n      Tableau\n      Power BI\n      Azure\n      GCP\n      Git\n      REST APIs\n      SnapLogic"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Ricardo Pérez Castillo",
-    "section": "Education",
-    "text": "Education\n\n\n  \n    \n      University of California, Berkeley\n      Aug 2025 – May 2026\n    \n    M.A. in Statistics  ·  Berkeley, CA\n    View coursework →\n  \n\n  \n    \n      Tecnológico de Monterrey, Campus Monterrey\n      Jan 2015 – Dec 2019\n    \n    B.S. in Chemical Engineering  ·  Monterrey, México"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Ricardo Pérez Castillo",
-    "section": "Experience",
-    "text": "Experience\n\n\n  \n    \n      McKinsey & Company\n      Jul 2022 – Jul 2025\n    \n    Data Engineer / Data Analyst / Consultant  ·  San Pedro Garza García, México\n  \n\n  \n    \n      Deloitte\n      Jan 2021 – Jun 2022\n    \n    Consulting Analyst  ·  Monterrey, México"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
-    "section": "",
-    "text": "Download the PDF: RicardoPerezCastillo_resume.pdf"
+    "text": "Personal Website"
   }
 ]
