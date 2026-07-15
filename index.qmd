@@ -37,6 +37,17 @@ title-block-banner: false
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 <div class="card h-100 rpc-card">
 <div class="card-body">
+<h5 class="card-title">MutationRx: Deciding Which Docking Hits to Believe</h5>
+<p class="card-text text-muted small">Built with Claude: Life Sciences (Anthropic × Gladstone) · FastAPI · Docking · MCP</p>
+<p class="card-text">A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor's wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility — separating real leads from coincidental docking artifacts.</p>
+<p><a href="posts/mutationrx/index.html" class="rpc-card-link">View project →</a></p>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+<div class="card h-100 rpc-card">
+<div class="card-body">
 <h5 class="card-title">Otomedi: Multi-Agent Healthcare Automation</h5>
 <p class="card-text text-muted small">UC Berkeley AI Hackathon · Claude API · FastAPI · Next.js</p>
 <p class="card-text">A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions while a healthcare worker keeps final sign-off on everything clinical.</p>
