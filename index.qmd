@@ -38,7 +38,7 @@ title-block-banner: false
 <div class="card-body">
 <h5 class="card-title">MutationRx: Deciding Which Docking Hits to Believe</h5>
 <p class="card-text text-muted small">Built with Claude: Life Sciences (Anthropic × Gladstone) · FastAPI · Docking · MCP</p>
-<p class="card-text">A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor's wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility — separating real leads from coincidental docking artifacts.</p>
+<p class="card-text">A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor's wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.</p>
 <p><a href="posts/mutationrx/index.html" class="rpc-card-link">View project →</a></p>
 </div>
 </div>
@@ -58,9 +58,9 @@ title-block-banner: false
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 <div class="card h-100 rpc-card">
 <div class="card-body">
-<h5 class="card-title">VouchNet: A Reputation Service for AI Agents</h5>
-<p class="card-text text-muted small">NANDAHack (MIT Media Lab) · FastAPI · PostgreSQL · Live API</p>
-<p class="card-text">A deployed public reputation API that lets AI agents rate and vet each other before working together — designed so a blind AI agent can operate the entire service from documentation alone.</p>
+<h5 class="card-title">VouchNet: A Trust Layer for AI Agents</h5>
+<p class="card-text text-muted small">NANDAHack (MIT Media Lab) · Bayesian Inference · TrustRank · FastAPI</p>
+<p class="card-text">A reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet's trust score by six hundredths of one.</p>
 <p><a href="posts/vouchnet/index.html" class="rpc-card-link">View project →</a></p>
 </div>
 </div>

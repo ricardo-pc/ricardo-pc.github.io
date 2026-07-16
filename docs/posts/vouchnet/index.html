@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ricardo Pérez Castillo">
-<meta name="dcterms.date" content="2026-07-01">
-<meta name="description" content="A live, public reputation API that lets AI agents rate and vet each other before working together — designed so a blind AI agent can operate the entire service from documentation alone.">
+<meta name="dcterms.date" content="2026-07-15">
+<meta name="description" content="A reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet’s trust score by six hundredths of one.">
 
-<title>VouchNet: A Reputation Service for AI Agents – Ricardo Pérez Castillo</title>
+<title>VouchNet: A Trust Layer for AI Agents – Ricardo Pérez Castillo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,10 +135,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-problem" id="toc-the-problem" class="nav-link active" data-scroll-target="#the-problem">The Problem</a></li>
-  <li><a href="#the-design" id="toc-the-design" class="nav-link" data-scroll-target="#the-design">The Design</a></li>
-  <li><a href="#shipping-it-for-real" id="toc-shipping-it-for-real" class="nav-link" data-scroll-target="#shipping-it-for-real">Shipping It for Real</a></li>
+  <li><a href="#the-short-version" id="toc-the-short-version" class="nav-link active" data-scroll-target="#the-short-version">The Short Version</a></li>
+  <li><a href="#why-it-works-whose-evidence-not-how-much" id="toc-why-it-works-whose-evidence-not-how-much" class="nav-link" data-scroll-target="#why-it-works-whose-evidence-not-how-much">Why It Works: Whose Evidence, Not How Much</a></li>
+  <li><a href="#the-most-useful-result-was-the-one-that-failed" id="toc-the-most-useful-result-was-the-one-that-failed" class="nav-link" data-scroll-target="#the-most-useful-result-was-the-one-that-failed">The Most Useful Result Was the One That Failed</a></li>
+  <li><a href="#ranking-by-the-lower-bound" id="toc-ranking-by-the-lower-bound" class="nav-link" data-scroll-target="#ranking-by-the-lower-bound">Ranking by the Lower Bound</a></li>
+  <li><a href="#where-the-reviews-come-from" id="toc-where-the-reviews-come-from" class="nav-link" data-scroll-target="#where-the-reviews-come-from">Where the Reviews Come From</a></li>
+  <li><a href="#two-data-planes-kept-apart" id="toc-two-data-planes-kept-apart" class="nav-link" data-scroll-target="#two-data-planes-kept-apart">Two Data Planes, Kept Apart</a></li>
   <li><a href="#technologies-tools" id="toc-technologies-tools" class="nav-link" data-scroll-target="#technologies-tools">Technologies &amp; Tools</a></li>
+  <li><a href="#the-limits-worth-naming" id="toc-the-limits-worth-naming" class="nav-link" data-scroll-target="#the-limits-worth-naming">The Limits Worth Naming</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
   </ul>
 </nav>
@@ -148,18 +152,18 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">VouchNet: A Reputation Service for AI Agents</h1>
+<h1 class="title">VouchNet: A Trust Layer for AI Agents</h1>
   <div class="quarto-categories">
     <div class="quarto-category">AI Agents</div>
     <div class="quarto-category">Python</div>
-    <div class="quarto-category">APIs</div>
+    <div class="quarto-category">Bayesian Inference</div>
     <div class="quarto-category">Software Engineering</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A live, public reputation API that lets AI agents rate and vet each other before working together — designed so a blind AI agent can operate the entire service from documentation alone.
+    A reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet’s trust score by six hundredths of one.
   </div>
 </div>
 
@@ -176,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 1, 2026</p>
+      <p class="date">July 15, 2026</p>
     </div>
   </div>
   
@@ -198,52 +202,107 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A deployed reputation service for AI agents: check another agent’s track record before working with it, and leave a review after — the same way people check reviews before hiring a plumber.</p>
-<p>Event: NANDAHack (MIT Media Lab) · July 2026 · Stack: Python, FastAPI, PostgreSQL (Supabase), REST API</p>
+<p>A public reputation service for AI agents, built so that the obvious attack fails. Every review is folded into a Bayesian posterior and weighted by the reviewer’s own standing, so credibility has to be earned from someone who already has it.</p>
+<p>Event: NANDAHack (MIT Media Lab), July 2026, then rebuilt properly · Stack: Python, FastAPI, Postgres (Supabase), no numpy and no scipy</p>
 <p><a href="https://vouchnet.onrender.com">Live App</a></p>
 </div>
 </div>
-<section id="the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
-<p>As AI agents start transacting with each other — calling each other’s APIs, delegating work, exchanging results — they have no way to know which counterparts are reliable. Humans solve this with reputation: reviews, ratings, track records. Agents have nothing equivalent.</p>
-<p>VouchNet gives them one: a shared, public reputation record that any agent can check before an interaction and contribute to after.</p>
-</section>
-<section id="the-design" class="level2">
-<h2 class="anchored" data-anchor-id="the-design">The Design</h2>
-<p>The whole service is three endpoints, with no signup and no API key:</p>
-<ul>
-<li><code>POST /reviews</code> — leave a star rating (1 to 5) about an agent</li>
-<li><code>GET /agents/{name}</code> — check an agent’s average rating and past reviews</li>
-<li><code>GET /leaderboard</code> — see every rated agent, ranked best to worst</li>
-</ul>
+<section id="the-short-version" class="level2">
+<h2 class="anchored" data-anchor-id="the-short-version">The Short Version</h2>
+<p>AI agents are starting to hire each other, and none of them can check references. The obvious fix is to let agents leave star ratings. That fix dies on contact with a single adversary: spin up ten accounts, praise yourself, and you top the leaderboard by lunchtime.</p>
+<p>VouchNet is a reputation service where that attack does not work. Here is the entire project in three numbers, measured against a simulated network in which every agent’s true quality is known in advance:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>A 10-account attack shifts the target by</th>
+<th>plain star average</th>
+<th>VouchNet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>collusion ring</td>
+<td>+1.15</td>
+<td><strong>+0.08</strong></td>
+</tr>
+<tr class="even">
+<td>sybil boost</td>
+<td>+1.15</td>
+<td><strong>+0.09</strong></td>
+</tr>
+<tr class="odd">
+<td>review bomb</td>
+<td>−1.35</td>
+<td><strong>−0.13</strong></td>
+</tr>
+</tbody>
+</table>
+<p>An attack that swings a star average by more than a full star moves VouchNet’s score by less than a tenth of one. It flags every attacker in the test set, precision and recall both 1.00, and it gives up essentially nothing in accuracy on an honest network.</p>
+<p>You can run the attack yourself. The sandbox on the live site lets you launch a collusion ring and watch both models react side by side.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="vouchnet_leaderboard.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>The VouchNet leaderboard: every rated agent, ranked by average score.</figcaption>
+<p><img src="vouchnet_attack.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Ten accounts praise each other, then swarm one target. The raw average jumps a full star. The trust score does not move, because nobody credible ever vouched for the attackers, so their reviews carry 15% of normal weight.</figcaption>
 </figure>
 </div>
-<p>The deliberate constraint: <strong>the primary user is not a human.</strong> The service ships with a machine-readable <code>SKILL.md</code> containing exact request and response examples, so that a “blind” AI agent — one that has never seen the website — can discover, understand, and operate the entire API from documentation alone. Designing for that consumer changes everything: error messages have to be self-explanatory, examples have to be copy-paste executable, and there can be no interactive step (a signup form, a CAPTCHA, an email confirmation) that an agent can’t complete.</p>
 </section>
-<section id="shipping-it-for-real" class="level2">
-<h2 class="anchored" data-anchor-id="shipping-it-for-real">Shipping It for Real</h2>
-<p>This wasn’t a localhost demo. During the hackathon the service was deployed publicly (FastAPI on Render, reviews persisted in Supabase Postgres so data survives restarts and redeploys), and validated end-to-end against the rest of the field:</p>
+<section id="why-it-works-whose-evidence-not-how-much" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-works-whose-evidence-not-how-much">Why It Works: Whose Evidence, Not How Much</h2>
+<p>The score rests on two ideas, and only one of them is the defense.</p>
+<p><strong>Bayesian shrinkage</strong> treats an agent’s quality as an unknown that each review updates, starting from a prior fitted to the population. Sparse evidence stays near the prior, so a single five-star review cannot outrank fifty at 4.8. Every score ships with a credible interval saying how firm it is.</p>
+<p><strong>TrustRank</strong> is personalized PageRank over the review graph, seeded on a small set of verified agents. Trust is injected only at the seeds and flows outward along endorsements. This is the whole defense. A ring with no path from a seed holds zero trust mass no matter how loudly it praises itself, so its reviews get down-weighted to 15% of normal.</p>
+<p>The distinction is worth sitting with, because it is the point of the project. Shrinkage asks <em>how much</em> evidence there is. TrustRank asks <em>whose</em> evidence it is. Only the second question stops an attack.</p>
+</section>
+<section id="the-most-useful-result-was-the-one-that-failed" class="level2">
+<h2 class="anchored" data-anchor-id="the-most-useful-result-was-the-one-that-failed">The Most Useful Result Was the One That Failed</h2>
+<p>The eval measures three models, and the middle one is the interesting row. Bayesian shrinkage on its own turns out to be nearly useless against manipulation: against a review bomb it scored −1.37 where a plain average scored −1.35. It barely helped at all.</p>
+<p>The reason is worth stating plainly. Ten hostile reviews are ten real observations. A Bayesian update has no way to know they were bought, so it absorbs them almost fully, exactly as the math says it should. Shrinkage was never the wrong tool. It was answering a different question.</p>
+<p>That row is why the eval exists. Both halves of the score sound reasonable in a design doc, and only the measurement shows which one is actually carrying the weight.</p>
+</section>
+<section id="ranking-by-the-lower-bound" class="level2">
+<h2 class="anchored" data-anchor-id="ranking-by-the-lower-bound">Ranking by the Lower Bound</h2>
+<p>One small decision does a surprising amount of work: the leaderboard sorts on the bottom edge of the credible interval rather than the score itself.</p>
+<p>Sorting by the estimate rewards being unproven. Sorting by the lower bound rewards being proven. In the sandbox, the ring members hold a flawless 5.00 raw average and still land at #12 and below, underneath honest agents averaging 4.13, because the ring’s interval is wide and the honest agents’ is narrow. Ten fake reviews buy you a perfect average and a terrible rank.</p>
+</section>
+<section id="where-the-reviews-come-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-reviews-come-from">Where the Reviews Come From</h2>
+<p>The reviews on the live ledger are not seeded or invented. They come from the Auditor, an agent that finds a service’s <code>SKILL.md</code>, reads it, calls its real endpoints, and files a review under a stable identity.</p>
+<p>Building it surfaced the most transferable lesson in the project: <strong>measure what can be measured, judge only what needs judgement.</strong> The agent decides what exists and what each endpoint ought to return, which is judgement. A plain harness then replays that plan a fixed number of times and computes the score, which is measurement. That split is not tidiness. Before it, auditing the same service twice returned a reliability of 3 and then 5, because one run happened to try nine endpoints and the next tried seven. The denominator was the agent’s mood.</p>
+<p>Two more decisions earned their keep:</p>
 <ul>
-<li><strong>Diagnosed and fixed a live database permissions bug</strong> that was silently dropping writes — reviews appeared accepted but never persisted. Catching silent data loss in production, under hackathon time pressure, was the most instructive debugging exercise of the event.</li>
-<li><strong>Tested and reviewed 10 other teams’ live agent APIs</strong> using VouchNet itself, which both validated the service with real traffic from real agents and seeded the leaderboard with genuine reputation data.</li>
+<li><strong>Guardrails live in code, not in the prompt.</strong> Host lock, call cap, timeouts, safe methods only, and a read-only mode. A prompt-injected <code>SKILL.md</code> can argue with an instruction. It cannot argue with a call cap.</li>
+<li><strong>Unrated is not zero.</strong> The Auditor cannot verify correctness from outside, so accuracy stays unrated instead of guessed.</li>
 </ul>
+<p>The best part was pointing it at real third-party services, where every fairness bug it found turned out to be the same bug wearing different clothes: a number that looked like a measurement was quietly scoring the auditor’s own behaviour. It docked one service for 404s on paths it had invented itself. It docked another for returning a correct, well-documented 401. It docked a third for using 201 Created instead of 200.</p>
+</section>
+<section id="two-data-planes-kept-apart" class="level2">
+<h2 class="anchored" data-anchor-id="two-data-planes-kept-apart">Two Data Planes, Kept Apart</h2>
+<p>The ledger is real: reviews agents actually left, in Postgres. The sandbox is synthetic and stateless, and deterministic in its seed and attack list, so the world a visitor clicks is the exact world the eval harness measured.</p>
+<p>Nothing from the sandbox is ever written to the ledger. A reputation system that seeds itself with invented reviews is worth nothing, even when the invented reviews are only there for the demo.</p>
 </section>
 <section id="technologies-tools" class="level2">
 <h2 class="anchored" data-anchor-id="technologies-tools">Technologies &amp; Tools</h2>
-<p>API: Python, FastAPI, auto-generated OpenAPI docs</p>
-<p>Persistence: Supabase (Postgres), so reputation data survives restarts and redeploys</p>
-<p>Deployment: Render (free tier), public and live</p>
-<p>Agent interface: machine-readable <code>SKILL.md</code> with exact request/response examples for autonomous consumption</p>
+<p>Scoring: Python, with the incomplete beta function, power iteration, and Tarjan’s algorithm written out longhand. At roughly 60 nodes and 300 reviews, numpy and scipy would cost more in cold-start latency on a free container than they save in code.</p>
+<p>Service: FastAPI, Postgres via Supabase with an in-memory fallback, deployed on Render with no credentials needed to run it locally.</p>
+<p>Interface: a trust-graph UI on canvas with a hand-rolled force layout, plus a machine-readable <code>SKILL.md</code> served live so an agent can use the service without ever seeing the website.</p>
+<p>Testing: 114 tests, no network required, and an eval harness that regenerates every number quoted here.</p>
+</section>
+<section id="the-limits-worth-naming" class="level2">
+<h2 class="anchored" data-anchor-id="the-limits-worth-naming">The Limits Worth Naming</h2>
+<p>The seed set is the root of trust. Anything reachable from it inherits credibility, which makes choosing it a policy decision rather than a technical one. With no seeds, TrustRank degrades to ordinary PageRank and whoever creates the most accounts wins. That is the honest cold-start behaviour, not a solved problem.</p>
+<p>The eval is also only as good as its simulator. It measures the attacks I thought to write. An adversary who buys a genuine endorsement from a trusted agent gets real weight, as they should, which is precisely why the interesting attack surface is the seed set rather than the arithmetic.</p>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>The lesson of VouchNet is that building <em>for</em> AI agents is a distinct discipline from building <em>with</em> them. Every design decision — no auth, three endpoints, exhaustive machine-readable examples — came from asking “can a program with no prior context use this correctly on the first try?” That question is a stricter API design standard than most human-facing services ever face, and it made the service better for humans too.</p>
+<p>The first version of VouchNet was a three-endpoint API with a star average, and it would have been trivially easy to game. Rebuilding it around a single adversarial question, <em>what happens when someone lies</em>, changed every layer of the design, from the ranking rule to where the guardrails live to what the demo is allowed to touch.</p>
+<p>What stuck with me is that the hard part was never the math. It was noticing which number was quietly measuring the wrong thing: an average that measured popularity instead of quality, a reliability score that measured the auditor’s mood instead of the service. The measurement being wrong is a much quieter failure than the code being wrong, and nothing but a real adversary or a real eval will tell you.</p>
 <hr>
-<p><em>Built at NANDAHack (MIT Media Lab), July 2026.</em></p>
+<p><em>Built at NANDAHack (MIT Media Lab), July 2026, then rebuilt properly.</em></p>
 
 
 </section>
