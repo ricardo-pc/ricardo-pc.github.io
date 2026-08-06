@@ -3,7 +3,7 @@ title: "Berkeley Grocery Tracker"
 description: "A live price tracker for Trader Joe's, Whole Foods, and Safeway across Berkeley, built end-to-end with OpenAI Codex."
 author: "Ricardo Pérez Castillo"
 date: "2026-04-26"
-categories: [Data Engineering, Web App, AI-Assisted Development, OpenAI]
+categories: [Data Engineering, Software Engineering]
 ---
 
 ::: {.callout-note appearance="simple" icon=false}

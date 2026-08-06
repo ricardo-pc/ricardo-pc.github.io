@@ -1,25 +1,40 @@
 ---
-title: ""
+title: "Ricardo Pérez Castillo"
+description: "Data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. Projects in AI agents, machine learning, and applied statistics."
+image: og-card.png
 page-layout: full
 toc: false
 title-block-banner: false
+include-in-header:
+  # The real <h1> lives in Quarto's title block for SEO and screen readers.
+  # It is visually hidden here because the hero below presents the name;
+  # clip rather than display:none so it stays in the accessibility tree.
+  text: |
+    <style>
+      #title-block-header {
+        position: absolute; width: 1px; height: 1px;
+        margin: -1px; padding: 0; overflow: hidden;
+        clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+      }
+    </style>
 ---
 
 ```{=html}
 <div class="rpc-hero-section">
   <div class="rpc-hero-inner">
-    <img src="RJ1_5539.jpg" alt="Ricardo Pérez Castillo" class="rpc-hero-photo">
+    <img src="RJ1_5539.jpg" alt="Ricardo Pérez Castillo" class="rpc-hero-photo" width="180" height="180">
     <div>
-      <div class="rpc-hero-name">Ricardo Pérez Castillo</div>
-      <p class="rpc-hero-blurb">Data scientist with 4+ years at McKinsey and Deloitte across data engineering, analytics, and applied ML for enterprise clients. Now finishing an M.A. in Statistics at UC Berkeley, building AI agents and ML systems on the side.</p>
+      <div class="rpc-hero-name" aria-hidden="true">Ricardo Pérez Castillo</div>
+      <p class="rpc-hero-blurb">Data scientist with 4+ years at McKinsey and Deloitte across data engineering, analytics, and applied ML for enterprise clients. Recently completed an M.A. in Statistics at UC Berkeley, where I built AI agents and ML systems that ship.</p>
       <div class="rpc-hero-badges">
         <span class="rpc-badge">McKinsey &amp; Deloitte &nbsp;·&nbsp; 4+ yrs</span>
-        <span class="rpc-badge">M.A. Statistics, UC Berkeley</span>
+        <span class="rpc-badge">M.A. Statistics, UC Berkeley &nbsp;·&nbsp; 2026</span>
         <span class="rpc-badge rpc-badge-accent">Open to Data Science &amp; ML roles</span>
       </div>
       <div class="rpc-hero-links">
-        <a href="https://www.linkedin.com/in/ricardoperezcastillo/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/ricardo-pc" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+        <a class="rpc-hero-cta" href="projects.html">View projects</a>
+        <a href="https://www.linkedin.com/in/ricardoperezcastillo/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/ricardo-pc" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
         <a href="mailto:ricardoperez@berkeley.edu"><i class="bi bi-envelope"></i> ricardoperez@berkeley.edu</a>
       </div>
     </div>
@@ -36,7 +51,7 @@ title-block-banner: false
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 <div class="card h-100 rpc-card">
 <div class="card-body">
-<h5 class="card-title">MutationRx: Deciding Which Docking Hits to Believe</h5>
+<h3 class="card-title">MutationRx: Deciding Which Docking Hits to Believe</h3>
 <p class="card-text text-muted small">Built with Claude: Life Sciences (Anthropic × Gladstone) · FastAPI · Docking · MCP</p>
 <p class="card-text">A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor's wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.</p>
 <p><a href="posts/mutationrx/index.html" class="rpc-card-link">View project →</a></p>
@@ -47,18 +62,7 @@ title-block-banner: false
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 <div class="card h-100 rpc-card">
 <div class="card-body">
-<h5 class="card-title">Otomedi: Multi-Agent Healthcare Automation</h5>
-<p class="card-text text-muted small">UC Berkeley AI Hackathon · Claude API · FastAPI · Next.js</p>
-<p class="card-text">A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions while a healthcare worker keeps final sign-off on everything clinical.</p>
-<p><a href="posts/otomedi/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h5 class="card-title">VouchNet: A Trust Layer for AI Agents</h5>
+<h3 class="card-title">VouchNet: A Trust Layer for AI Agents</h3>
 <p class="card-text text-muted small">NANDAHack (MIT Media Lab) · Bayesian Inference · TrustRank · FastAPI</p>
 <p class="card-text">A reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet's trust score by six hundredths of one.</p>
 <p><a href="posts/vouchnet/index.html" class="rpc-card-link">View project →</a></p>
@@ -69,7 +73,29 @@ title-block-banner: false
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 <div class="card h-100 rpc-card">
 <div class="card-body">
-<h5 class="card-title">A/B Testing at Scale: Headline Experiments</h5>
+<h3 class="card-title">Otomedi: Multi-Agent Healthcare Automation</h3>
+<p class="card-text text-muted small">UC Berkeley AI Hackathon · Claude API · FastAPI · Next.js</p>
+<p class="card-text">A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions while a healthcare worker keeps final sign-off on everything clinical.</p>
+<p><a href="posts/otomedi/index.html" class="rpc-card-link">View project →</a></p>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+<div class="card h-100 rpc-card">
+<div class="card-body">
+<h3 class="card-title">Bayesian Optimization from Scratch</h3>
+<p class="card-text text-muted small">STAT 238 · Gaussian Processes · Python · Machine Learning</p>
+<p class="card-text">A Gaussian Process surrogate and Expected Improvement acquisition built without hyperopt or optuna, then used to tune two other projects on this site: +8.3% NDCG on a recommender and +3.6% on a classifier threshold.</p>
+<p><a href="posts/bayesian-optimization/index.html" class="rpc-card-link">View project →</a></p>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+<div class="card h-100 rpc-card">
+<div class="card-body">
+<h3 class="card-title">What Makes a Headline Work? Lessons from 55,000 Tested Headlines</h3>
 <p class="card-text text-muted small">STAT 230A · Python · Statistical Computing · NLP</p>
 <p class="card-text">Regression analysis of 54,956 Upworthy headline variants reveals that exclamation marks destroy engagement while numeric openings quietly win, with cluster-robust inference to match the nested A/B test structure.</p>
 <p><a href="posts/upworthy-ab-testing/index.html" class="rpc-card-link">View project →</a></p>
@@ -80,32 +106,10 @@ title-block-banner: false
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 <div class="card h-100 rpc-card">
 <div class="card-body">
-<h5 class="card-title">When Does Ranking Help? A Sparsity Study of Movie Recommenders</h5>
-<p class="card-text text-muted small">CS 289A · Python · Machine Learning · Deep Learning</p>
-<p class="card-text">Three recommender systems trained across five sparsity levels reveal a counterintuitive result: well-tuned matrix factorization beats neural and two-stage ranking models at every data density.</p>
-<p><a href="posts/cs289-ranking/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h5 class="card-title">PECARN Traumatic Brain Injury Analysis</h5>
+<h3 class="card-title">PECARN Traumatic Brain Injury Analysis</h3>
 <p class="card-text text-muted small">STAT 214 · Bayesian Inference · Machine Learning · Python</p>
-<p class="card-text">EDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.</p>
+<p class="card-text">On 43,399 pediatric head trauma patients, a random forest cuts unnecessary CT scans by 63% against the standard Kuppermann clinical rule while holding the same 84.2% sensitivity.</p>
 <p><a href="posts/stat214-lab1/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h5 class="card-title">Digital Water: Predicting a Crisis Before It Happened</h5>
-<p class="card-text text-muted small">Machine Learning · Python · Time Series · LSTM</p>
-<p class="card-text">Built an ML forecasting system for water demand and dam capacity in Monterrey. Two years later, our predictions came true when 5 million residents faced severe rationing. 2nd place globally at the Atos IT Challenge 2020.</p>
-<p><a href="posts/digital-water/index.html" class="rpc-card-link">View project →</a></p>
 </div>
 </div>
 :::
@@ -143,6 +147,7 @@ title-block-banner: false
     <div class="rpc-skill-pills">
       <span class="rpc-pill">Claude API</span>
       <span class="rpc-pill">Multi-Agent Systems</span>
+      <span class="rpc-pill">MCP</span>
       <span class="rpc-pill">FastAPI</span>
       <span class="rpc-pill">Bayesian Optimization</span>
       <span class="rpc-pill">Supabase</span>

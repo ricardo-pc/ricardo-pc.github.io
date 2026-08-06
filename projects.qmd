@@ -1,11 +1,16 @@
 ---
 title: "Projects"
+description: "Ten projects across AI agent systems, machine learning, and applied statistics. Each write-up covers what it does, what the numbers were, and where it falls short."
 listing:
   contents: posts
   sort: "date desc"
   type: grid
-  fields: [title, description, date, categories]
+  fields: [image, title, description, date, categories]
   grid-columns: 2
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  image-height: 200px
 ---
 
-Here are some personal projects exploring data science, data engineering, and machine learning.
+Some came out of graduate coursework at UC Berkeley, some out of hackathons, and some out of wanting to know whether an idea would hold up.

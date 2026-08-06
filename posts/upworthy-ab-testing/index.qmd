@@ -3,7 +3,8 @@ title: "What Makes a Headline Work? Lessons from 55,000 Tested Headlines"
 description: "Using 54,956 headline variants from 11,649 Upworthy A/B tests, I model which linguistic features predict click-through rate and discover that exclamation marks destroy engagement, negativity wins everywhere, and numbers quietly deliver."
 author: "Ricardo Pérez Castillo"
 date: "2026-05-27"
-categories: [Python, Statistical Computing, A/B Testing, NLP]
+categories: [Experimentation, NLP, Statistical Computing]
+image: coefficients.png
 ---
 
 ::: {.callout-note appearance="simple" icon=false}
@@ -13,12 +14,12 @@ A regression analysis of the Upworthy Research Archive: 54,956 headline packages
 
 Course: STAT 230A: Linear Models · Semester: Spring 2026 · Language: Python
 
-**[▶ Explore the interactive version](https://ricardo-pc.github.io/A-B-testing-analysis-upworthy/)** — play the headline guessing game with real A/B pairs, toggle the standard-error specifications, and score your own headline with the fitted model.
+**[▶ Explore the interactive version](https://ricardo-pc.github.io/A-B-testing-analysis-upworthy/)**: play the headline guessing game with real A/B pairs, toggle the standard-error specifications, and score your own headline with the fitted model.
 :::
 
 ## The Setup
 
-Between 2013 and 2015, Upworthy ran one of the largest natural headline experiments in digital media history. Every article was tested with several competing headlines — 4.7 on average — shown simultaneously to random audience subsets. The winner went live. The rest were archived.
+Between 2013 and 2015, Upworthy ran one of the largest natural headline experiments in digital media history. Every article was tested with several competing headlines, 4.7 on average, shown simultaneously to random audience subsets. The winner went live. The rest were archived.
 
 That archive is now public. It contains over 100,000 headline variants from two and a half years of continuous A/B testing, each with an exact impression count and click count. It is, in effect, a massive dataset where the outcome of interest (click-through rate) was measured under controlled conditions.
 
@@ -45,7 +46,7 @@ Each headline was characterized by 14 features covering structure, rhetoric, sen
 - **Sentiment:** VADER compound score, ranging from −1 (most negative) to +1 (most positive)
 - **Length:** character count, word count, average word length
 
-The features are deliberately surface-level — no embeddings, no LLM scoring. The goal was to isolate the predictive value of things an editor can control in seconds: punctuation, framing, and word choice. VADER was chosen for the same reason: it requires no training and produces a reliable sentiment estimate from a lexicon, making results interpretable rather than opaque.
+The features are deliberately surface-level: no embeddings, no LLM scoring. The goal was to isolate the predictive value of things an editor can control in seconds: punctuation, framing, and word choice. VADER was chosen for the same reason: it requires no training and produces a reliable sentiment estimate from a lexicon, making results interpretable rather than opaque.
 
 ## The Estimation Problem
 
@@ -53,22 +54,22 @@ A standard OLS regression would understate uncertainty here. Each A/B test conta
 
 To handle this, I built four model variants in sequence:
 
-1. **OLS baseline** — establishes the coefficient estimates but produces overconfident standard errors
-2. **HC3 heteroskedasticity-robust SEs** — corrects for variance differences across packages; the ratio to OLS SEs is 0.95–1.03, confirming heteroskedasticity is minor
-3. **Cluster-robust SEs** — allows arbitrary error correlation within each test (11,649 clusters); the ratio to OLS SEs is 1.3–2.2, confirming clustering is the dominant issue
-4. **WLS with cluster-robust SEs** — downweights packages with few impressions (where CTR is noisiest); used as a robustness check
+1. **OLS baseline**: establishes the coefficient estimates but produces overconfident standard errors
+2. **HC3 heteroskedasticity-robust SEs**: corrects for variance differences across packages; the ratio to OLS SEs is 0.95–1.03, confirming heteroskedasticity is minor
+3. **Cluster-robust SEs**: allows arbitrary error correlation within each test (11,649 clusters); the ratio to OLS SEs is 1.3–2.2, confirming clustering is the dominant issue
+4. **WLS with cluster-robust SEs**: downweights packages with few impressions (where CTR is noisiest); used as a robustness check
 
-All ten statistically significant features retain their sign and significance across all four specifications. The coefficient estimates are stable; only the confidence intervals change. The progression also caught one false positive: a negation-words flag ("not", "never", "no") that looks significant under naive OLS but dissolves once errors are clustered by test — exactly the kind of finding that would have shipped if the boring step had been skipped.
+All ten statistically significant features retain their sign and significance across all four specifications. The coefficient estimates are stable; only the confidence intervals change. The progression also caught one false positive: a negation-words flag ("not", "never", "no") that looks significant under naive OLS but dissolves once errors are clustered by test. That is exactly the kind of finding that would have shipped if the boring step had been skipped.
 
 ## What I Found
 
 ![Cluster-robust OLS coefficients with 95% confidence intervals. Dark blue dots are positive and significant; dark gray are negative and significant; pale dots are not significant at p = 0.05.](coefficients.png){width=100%}
 
-The clearest finding is the one the chart title says outright: exclamation marks are the single biggest negative predictor. Headlines with "!" have substantially lower CTR than otherwise equivalent headlines — about a 25% relative reduction. Collective framing ("we/our") is the second-largest suppressor, followed by question marks and curiosity-gap openers ("how/why/what").
+The clearest finding is the one the chart title says outright: exclamation marks are the single biggest negative predictor. Headlines with "!" have substantially lower CTR than otherwise equivalent headlines, about a 25% relative reduction. Collective framing ("we/our") is the second-largest suppressor, followed by question marks and curiosity-gap openers ("how/why/what").
 
 On the positive side, numeric content wins. Headlines starting with a digit and headlines containing any number both show reliable positive effects. "Has superlative word" is also positive and significant, though smaller.
 
-Sentiment tells the story most people don't expect from Upworthy, the internet's most famously optimistic publisher. The VADER score has a negative coefficient: moving a headline from neutral to fully positive sentiment predicts roughly 12% *fewer* clicks. Negativity wins. The audience of a site built on uplift still clicked the darker framing — consistent with the negativity-bias literature on news engagement, though the effect here is associational rather than causal.
+Sentiment tells the story most people don't expect from Upworthy, the internet's most famously optimistic publisher. The VADER score has a negative coefficient: moving a headline from neutral to fully positive sentiment predicts roughly 12% *fewer* clicks. Negativity wins. The audience of a site built on uplift still clicked the darker framing. The effect is associational rather than causal: sentiment was measured on the headlines editors happened to write, not assigned at random.
 
 | Feature | Direction | Approx. effect on CTR |
 |----|:--:|:--:|
@@ -83,13 +84,13 @@ Sentiment tells the story most people don't expect from Upworthy, the internet's
 | Contains any digit | Positive | ~6% higher |
 | Has superlative word | Positive | ~3% higher |
 
-The model explains about 6% of variance in log-CTR (R² = 0.059), which sounds low but is expected: the bulk of what drives any individual headline's performance is unobserved — the article itself, the image, the audience composition, the news cycle. The linguistic features are real signals; they just share the stage with a lot of noise.
+The model explains about 6% of variance in log-CTR (R² = 0.059), which sounds low but is expected: the bulk of what drives any individual headline's performance is unobserved: the article itself, the image, the audience composition, the news cycle. The linguistic features are real signals; they just share the stage with a lot of noise.
 
-One robustness check tested whether the sentiment effect varies by content category — politics, health, science, economics, and others — using zero-shot classification with BART to label every headline. Topic itself matters: adding category fixed effects lifts R² from 5.9% to 9.2%. But the sentiment × topic interaction shows no evidence of moderation (F(6) = 1.26, p = 0.27) — the negativity bias is uniform across content types. It is not a politics phenomenon; it shows up in lifestyle and science headlines at statistically indistinguishable rates.
+One robustness check tested whether the sentiment effect varies by content category (politics, health, science, economics, and others) using zero-shot classification with BART to label every headline. Topic itself matters: adding category fixed effects lifts R² from 5.9% to 9.2%. But the sentiment × topic interaction shows no evidence of moderation (F(6) = 1.26, p = 0.27). The negativity bias is uniform across content types. It is not a politics phenomenon; it shows up in lifestyle and science headlines at statistically indistinguishable rates.
 
 ## The Practical Picture
 
-The results push back on some received wisdom about online headlines. The "clickbait" formula — urgent, emotional, often punctuated with "!" or "?" — appears to have lost its edge with Upworthy's audience by 2013–2015. CTR also declined by roughly 20% per year across the dataset, suggesting the audience was adapting to the format faster than editors realized.
+The results push back on some received wisdom about online headlines. The "clickbait" formula (urgent, emotional, often punctuated with "!" or "?") appears to have lost its edge with Upworthy's audience by 2013–2015. CTR also declined by roughly 20% per year across the dataset, suggesting the audience was adapting to the format faster than editors realized.
 
 What worked instead was specificity. A headline that starts with a number signals a concrete, structured argument. "The 5 reasons..." outperforms "Why..." not because of the number per se, but because it makes a credible promise about what follows. The superlative finding fits the same pattern: readers respond to claims that are falsifiable.
 
@@ -105,14 +106,14 @@ Robustness checks: residual diagnostics, Cook's distance, correlation matrix acr
 
 ## Links & Resources
 
-- [Interactive walkthrough](https://ricardo-pc.github.io/A-B-testing-analysis-upworthy/): the full analysis as a scrollytelling site — guess real A/B winners, watch findings survive (or dissolve under) different standard-error specifications, and score your own headline with the fitted coefficients
+- [Interactive walkthrough](https://ricardo-pc.github.io/A-B-testing-analysis-upworthy/): the full analysis as a scrollytelling site: guess real A/B winners, watch findings survive (or dissolve under) different standard-error specifications, and score your own headline with the fitted coefficients
 - [Final Report (PDF)](STAT230_Report.pdf): complete write-up with all tables and robustness checks
 
 ## Reflection
 
 The most interesting methodological moment in this project was building the four-model progression. Adding cluster-robust standard errors inflated the SEs by 1.3 to 2.2 times relative to OLS, enough to flip a few borderline-significant features to not significant. That gap is the difference between publishing a result and not, and it came entirely from acknowledging that rows within the same A/B test are not independent observations. The data structure matters as much as the model.
 
-The sentiment finding was the one I kept interrogating. Upworthy's entire editorial identity was optimism, so I half-expected its self-selected audience to reward positive framing — yet the negativity bias shows up clearly, and testing it against content categories showed it holds uniformly: not a politics story, not a lifestyle story, but a general pattern in how readers click. When a result survives that many attempts to make it go away — robust errors, clustering, impression weighting, topic interactions — the job is to report it plainly rather than explain it away.
+The sentiment finding was the one I kept interrogating. Upworthy's entire editorial identity was optimism, so I half-expected its self-selected audience to reward positive framing. Instead the negativity bias shows up clearly, and testing it against content categories showed it holds uniformly: not a politics story, not a lifestyle story, but a general pattern in how readers click. When a result survives that many attempts to make it go away (robust errors, clustering, impression weighting, topic interactions), the job is to report it plainly rather than explain it away.
 
 ---
 

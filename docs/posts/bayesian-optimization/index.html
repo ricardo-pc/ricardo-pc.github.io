@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,6 +72,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -103,6 +107,18 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive – Ricardo Pérez Castillo">
+<meta property="og:description" content="A Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems where evaluations cost minutes to hours of GPU time.">
+<meta property="og:image" content="https://ricardo-pc.github.io/posts/bayesian-optimization/branin_bo_snapshots.png">
+<meta property="og:site_name" content="Ricardo Pérez Castillo">
+<meta property="og:image:height" content="983">
+<meta property="og:image:width" content="1664">
+<meta name="twitter:title" content="Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive – Ricardo Pérez Castillo">
+<meta name="twitter:description" content="A Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems where evaluations cost minutes to hours of GPU time.">
+<meta name="twitter:image" content="https://ricardo-pc.github.io/posts/bayesian-optimization/branin_bo_snapshots.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="983">
+<meta name="twitter:image-width" content="1664">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -139,12 +155,12 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -186,9 +202,8 @@ window.Quarto = {
 <div class="quarto-title">
 <h1 class="title">Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Python</div>
-    <div class="quarto-category">Bayesian Inference</div>
     <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Bayesian Inference</div>
     <div class="quarto-category">Statistical Computing</div>
   </div>
   </div>
@@ -236,14 +251,14 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p>A from-scratch implementation of Bayesian Optimization using a Gaussian Process surrogate with squared-exponential kernel and Expected Improvement acquisition, applied to three experiments spanning a synthetic benchmark, neural network hyperparameter tuning, and classifier threshold optimization.</p>
 <p>Course: STAT 238: Bayesian Statistics · Semester: Spring 2026 · Language: Python</p>
-<p><a href="https://github.com/ricardo-pc/bayesian-optimization-ml">GitHub Repository</a></p>
+<p><a href="https://github.com/ricardo-pc/Bayesian-Optimization-for-ML">GitHub Repository</a></p>
 </div>
 </div>
 <section id="the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
 <p>Tuning a machine learning model involves making a sequence of decisions under uncertainty. You pick a learning rate, train for hours, observe validation performance, and then have to decide what to try next. Grid search wastes evaluations on systematically spaced points regardless of what the results say. Random search is better, but it treats each trial independently, ignoring everything learned from previous runs.</p>
 <p>Bayesian Optimization (BO) does something smarter: it builds a probabilistic model of the objective function from every evaluation so far, then uses that model to decide where to look next. It is the principled answer to the question of how to optimize an expensive black-box function with a tight budget.</p>
-<p>For this project, I implemented the full BO pipeline from scratch — no hyperopt, no optuna — and ran it on three problems with very different cost structures.</p>
+<p>For this project, I implemented the full BO pipeline from scratch, with no hyperopt and no optuna, and ran it on three problems with very different cost structures.</p>
 </section>
 <section id="the-method" class="level2">
 <h2 class="anchored" data-anchor-id="the-method">The Method</h2>
@@ -251,7 +266,7 @@ window.Quarto = {
 <p><strong>Gaussian Process surrogate (<code>gp.py</code>).</strong> A GP is a distribution over functions. Given observations, it produces a posterior: a mean function <span class="math inline">\(\mu(x)\)</span> (best guess at each point) and a variance function <span class="math inline">\(\sigma^2(x)\)</span> (uncertainty). The kernel is squared-exponential with three hyperparameters: output scale <span class="math inline">\(\alpha\)</span>, length scale <span class="math inline">\(\ell\)</span>, and noise variance <span class="math inline">\(\sigma^2_n\)</span>. These are fit by maximizing the log marginal likelihood at each iteration via L-BFGS-B. Cholesky decomposition keeps the linear algebra numerically stable.</p>
 <p><strong>Expected Improvement acquisition (<code>acquisition.py</code>).</strong> EI is the expected amount by which the next evaluation will beat the current best:</p>
 <p><span class="math display">\[\text{EI}(x) = (\mu(x) - f^*)\,\Phi(Z) + \sigma(x)\,\phi(Z), \quad Z = \frac{\mu(x) - f^*}{\sigma(x)}\]</span></p>
-<p>The first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence — no manual tuning of an exploration parameter.</p>
+<p>The first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence, with no manual tuning of an exploration parameter.</p>
 <p><strong>BO loop (<code>bo.py</code>).</strong> Inputs are normalized to <span class="math inline">\([0,1]^d\)</span> before each GP fit, and outputs are standardized to zero mean and unit variance. This keeps the kernel hyperparameters in comparable ranges regardless of the original scales. Each iteration fits the GP on all observations so far, maximizes EI over the input space (multi-start L-BFGS-B), evaluates the objective at the new point, and appends to the history.</p>
 </section>
 <section id="three-experiments" class="level2">
@@ -287,14 +302,14 @@ window.Quarto = {
 <section id="upworthy-classifier-thresholds" class="level3">
 <h3 class="anchored" data-anchor-id="upworthy-classifier-thresholds">Upworthy Classifier Thresholds</h3>
 <p>The second real application came from my <a href="../../posts/upworthy-ab-testing/index.html">STAT 230A headline analysis project</a>, where I used a BART zero-shot NLI model to classify 54,956 headlines into topic categories. The classifier outputs a confidence score, and two thresholds control how those scores are used: a minimum confidence to accept a label, and a minimum category size to keep in the analysis.</p>
-<p>The objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR) — higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.</p>
+<p>The objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR), where higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="upworthy_convergence.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>BO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO’s advantage here is not just the final value but the path: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.</figcaption>
+<figcaption>BO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO’s advantage here shows up in the path as much as the final value: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.</figcaption>
 </figure>
 </div>
-<p>The BO-optimal confidence threshold was 0.256 — lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone.</p>
+<p>The BO-optimal confidence threshold was 0.256, lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone.</p>
 </section>
 </section>
 <section id="results" class="level2">
@@ -351,12 +366,12 @@ window.Quarto = {
 <section id="links" class="level2">
 <h2 class="anchored" data-anchor-id="links">Links</h2>
 <ul>
-<li><a href="https://github.com/ricardo-pc/bayesian-optimization-ml">GitHub Repository</a>: full implementation, notebooks, and experiment results</li>
+<li><a href="https://github.com/ricardo-pc/Bayesian-Optimization-for-ML">GitHub Repository</a>: full implementation, notebooks, and experiment results</li>
 </ul>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>The most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch was not just a course exercise — it was a tool that made two other projects better, with quantifiable improvements in both cases.</p>
+<p>The most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch stopped being a course exercise and became a tool that made two other projects better, with quantifiable improvements in both cases.</p>
 <p>The hardest implementation detail was the input/output normalization. Mapping inputs to <span class="math inline">\([0,1]^d\)</span> and standardizing outputs before each GP fit sounds simple, but getting it wrong causes the kernel hyperparameters to drift into bad regions and the EI surface to behave unexpectedly. The Branin simulation study was essential for catching those bugs before running on experiments that cost hours of GPU time.</p>
 <hr>
 <p><em>Completed May 2026 as a final project for STAT 238: Bayesian Statistics at UC Berkeley.</em></p>
@@ -437,7 +452,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ricardo-pc\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -765,6 +780,38 @@ window.Quarto = {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Ricardo Pérez Castillo</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:ricardoperez@berkeley.edu">
+      <i class="bi bi-envelope" role="img" aria-label="Email">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ricardo-pc">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

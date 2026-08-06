@@ -1,7 +1,6 @@
-/* ── Google Fonts ─────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
 /* ── Design tokens ────────────────────────────────────── */
+/* Inter is loaded via <link rel="preconnect"> in _quarto.yml so it does not
+   block rendering the way an @import inside this file would. */
 :root {
   --rpc-accent:        #2563eb;
   --rpc-accent-light:  #93c5fd;
@@ -9,13 +8,13 @@
 
   --rpc-hero-bg:       #0f172a;
   --rpc-hero-text:     #f1f5f9;
-  --rpc-hero-muted:    #94a3b8;
+  --rpc-hero-muted:    #94a3b8;   /* only ever on the dark hero: 6.96:1 */
 
   --rpc-bg:            #f8fafc;
   --rpc-card-bg:       #ffffff;
   --rpc-text:          #18181b;
   --rpc-text-2:        #475569;
-  --rpc-text-3:        #94a3b8;
+  --rpc-text-3:        #64748b;   /* 4.76:1 on --rpc-bg, passes WCAG AA */
   --rpc-border:        #e2e8f0;
 }
 
@@ -126,6 +125,7 @@ body {
 .rpc-hero-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1.4rem;
   font-size: 0.875rem;
 }
@@ -138,6 +138,22 @@ body {
 
 .rpc-hero-links a:hover {
   color: var(--rpc-hero-text);
+}
+
+/* Primary call to action, sits inline with the hero links */
+.rpc-hero-links a.rpc-hero-cta {
+  background: var(--rpc-accent);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5rem 1.15rem;
+  border-radius: 6px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.rpc-hero-links a.rpc-hero-cta:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 /* ── Section headings ────────────────────────────────── */
@@ -174,6 +190,7 @@ body {
   color: var(--rpc-text);
   line-height: 1.4;
   margin-bottom: 0.35rem;
+  margin-top: 0;
 }
 
 .rpc-card .card-text.text-muted {
@@ -228,6 +245,7 @@ body {
   border: 1px solid var(--rpc-border) !important;
   border-radius: 10px !important;
   box-shadow: none !important;
+  overflow: hidden;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -235,6 +253,33 @@ body {
   border-color: var(--rpc-accent-light) !important;
   box-shadow: 0 4px 22px rgba(37, 99, 235, 0.09) !important;
   transform: translateY(-2px);
+}
+
+.quarto-grid-item .card-img-top {
+  object-fit: cover;
+  object-position: center top;
+  border-bottom: 1px solid var(--rpc-border);
+  background: var(--rpc-bg);
+}
+
+.quarto-grid-item .listing-categories .listing-category {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--rpc-text-3);
+  border: 1px solid var(--rpc-border);
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+}
+
+/* Category filter rail */
+.quarto-listing-category .category {
+  color: var(--rpc-text-2);
+}
+
+.quarto-listing-category .category.active {
+  color: var(--rpc-accent);
+  font-weight: 600;
 }
 
 /* ── Skills ──────────────────────────────────────────── */
@@ -320,6 +365,84 @@ body {
   color: var(--rpc-accent);
 }
 
+/* ── Coursework ──────────────────────────────────────── */
+.rpc-term-heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--rpc-text-2);
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--rpc-accent);
+  margin: 2.75rem 0 1.25rem 0;
+}
+
+.rpc-course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.rpc-course {
+  display: flex;
+  flex-direction: column;
+  background: var(--rpc-card-bg);
+  border: 1px solid var(--rpc-border);
+  border-left: 3px solid var(--rpc-accent);
+  border-radius: 10px;
+  padding: 1.25rem 1.35rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.rpc-course:hover {
+  border-color: var(--rpc-accent-light);
+  border-left-color: var(--rpc-accent);
+  box-shadow: 0 4px 22px rgba(37, 99, 235, 0.09);
+  transform: translateY(-2px);
+}
+
+.rpc-course-code {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rpc-accent);
+}
+
+.rpc-course-name {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--rpc-text);
+  line-height: 1.35;
+  margin-top: 0.15rem;
+}
+
+.rpc-course-desc {
+  font-size: 0.86rem;
+  color: var(--rpc-text-2);
+  line-height: 1.6;
+  margin: 0.6rem 0 0.9rem 0;
+}
+
+/* pin the project link to the bottom so cards in a row align */
+.rpc-course .rpc-skill-pills {
+  margin-top: auto;
+}
+
+.rpc-course-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rpc-accent);
+  text-decoration: none;
+  margin-top: 0.9rem;
+  transition: letter-spacing 0.15s ease;
+}
+
+.rpc-course-link:hover {
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
 /* ── Post page refinements ───────────────────────────── */
 .quarto-title-meta {
   font-size: 0.85rem;
@@ -336,9 +459,22 @@ hr {
   opacity: 1;
 }
 
-/* ── Coursework cards ────────────────────────────────── */
-.card.h-100.border-success {
-  border-radius: 10px !important;
+/* ── Footer ──────────────────────────────────────────── */
+.nav-footer {
+  border-top: 1px solid var(--rpc-border);
+  background: var(--rpc-card-bg);
+  font-size: 0.85rem;
+  color: var(--rpc-text-3);
+  margin-top: 3rem;
+}
+
+.nav-footer a {
+  color: var(--rpc-text-3);
+  transition: color 0.15s;
+}
+
+.nav-footer a:hover {
+  color: var(--rpc-accent);
 }
 
 /* ── Responsive ──────────────────────────────────────── */
@@ -364,6 +500,10 @@ hr {
     height: 130px;
   }
 
+  .rpc-hero-links {
+    gap: 1rem;
+  }
+
   .rpc-skill-group {
     flex-direction: column;
     gap: 0.4rem;
@@ -375,5 +515,9 @@ hr {
 
   .rpc-see-all {
     text-align: left;
+  }
+
+  .rpc-course-grid {
+    grid-template-columns: 1fr;
   }
 }

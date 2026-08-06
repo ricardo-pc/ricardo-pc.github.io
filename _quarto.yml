@@ -1,9 +1,22 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - robots.txt
+    - favicon.svg
+    - og-card.png
 
 website:
   title: "Ricardo Pérez Castillo"
+  description: "Data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. Projects in AI agents, machine learning, and applied statistics."
+  site-url: https://ricardo-pc.github.io
+  favicon: favicon.svg
+  # Root-relative: a bare filename would be resolved against each post's own
+  # directory, producing a 404 og:image on posts that set no image of their own.
+  image: /og-card.png
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
   navbar:
     left:
       - href: index.qmd
@@ -15,11 +28,30 @@ website:
     right:
       - icon: github
         href: https://github.com/ricardo-pc
+        aria-label: GitHub
       - icon: linkedin
         href: https://www.linkedin.com/in/ricardoperezcastillo/
+        aria-label: LinkedIn
+  page-footer:
+    left: "© 2026 Ricardo Pérez Castillo"
+    right:
+      - icon: envelope
+        href: mailto:ricardoperez@berkeley.edu
+        aria-label: Email
+      - icon: github
+        href: https://github.com/ricardo-pc
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ricardoperezcastillo/
+        aria-label: LinkedIn
 
 format:
   html:
-    theme: cosmo  # "cosmo" or "flatly" are clean and professional
+    theme: cosmo
     toc: true
     css: styles.css
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">

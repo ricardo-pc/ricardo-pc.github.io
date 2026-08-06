@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Ten projects across AI agent systems, machine learning, and applied statistics. Each write-up covers what it does, what the numbers were, and where it falls short.">
 
 <title>Projects – Ricardo Pérez Castillo</title>
 <style>
@@ -30,6 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -80,9 +82,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -99,6 +101,9 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -131,6 +136,18 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Projects – Ricardo Pérez Castillo">
+<meta property="og:description" content="Ten projects across AI agent systems, machine learning, and applied statistics. Each write-up covers what it does, what the numbers were, and where it falls short.">
+<meta property="og:image" content="https://ricardo-pc.github.io/posts/vouchnet/vouchnet_attack.png">
+<meta property="og:site_name" content="Ricardo Pérez Castillo">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="Projects – Ricardo Pérez Castillo">
+<meta name="twitter:description" content="Ten projects across AI agent systems, machine learning, and applied statistics. Each write-up covers what it does, what the numbers were, and where it falls short.">
+<meta name="twitter:image" content="https://ricardo-pc.github.io/posts/vouchnet/vouchnet_attack.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="900">
+<meta name="twitter:image-width" content="1600">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -167,12 +184,12 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -187,9 +204,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="QUklMjBBZ2VudHM=">AI Agents <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QmF5ZXNpYW4lMjBJbmZlcmVuY2U=">Bayesian Inference <span class="quarto-category-count">(4)</span></div><div class="category" data-category="RGF0YSUyMEVuZ2luZWVyaW5n">Data Engineering <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGVlcCUyMExlYXJuaW5n">Deep Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RXhwZXJpbWVudGF0aW9u">Experimentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGlmZSUyMFNjaWVuY2Vz">Life Sciences <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(5)</span></div><div class="category" data-category="TkxQ">NLP <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVjb21tZW5kZXIlMjBTeXN0ZW1z">Recommender Systems <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29mdHdhcmUlMjBFbmdpbmVlcmluZw==">Software Engineering <span class="quarto-category-count">(4)</span></div><div class="category" data-category="U3RhdGlzdGljYWwlMjBDb21wdXRpbmc=">Statistical Computing <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -198,6 +215,11 @@ window.Quarto = {
 <h1 class="title">Projects</h1>
 </div>
 
+<div>
+  <div class="description">
+    Ten projects across AI agent systems, machine learning, and applied statistics. Each write-up covers what it does, what the numbers were, and where it falls short.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -212,16 +234,25 @@ window.Quarto = {
 </header>
 
 
-<p>Here are some personal projects exploring data science, data engineering, and machine learning.</p>
+<p>Some came out of graduate coursework at UC Berkeley, some out of hackathons, and some out of wanting to know whether an idea would hold up.</p>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="QUklMjBBZ2VudHMlMkNQeXRob24lMkNCYXllc2lhbiUyMEluZmVyZW5jZSUyQ1NvZnR3YXJlJTIwRW5naW5lZXJpbmc=" data-listing-date-sort="1784095200000" data-listing-file-modified-sort="1784168455961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1354">
+<div class="g-col-1" data-index="0" data-categories="QUklMjBBZ2VudHMlMkNCYXllc2lhbiUyMEluZmVyZW5jZSUyQ1NvZnR3YXJlJTIwRW5naW5lZXJpbmc=" data-listing-date-sort="1784095200000" data-listing-file-modified-sort="1786054870182" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1354">
 <a href="./posts/vouchnet/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/vouchnet/vouchnet_attack.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 VouchNet: A Trust Layer for AI Agents
@@ -229,8 +260,6 @@ VouchNet: A Trust Layer for AI Agents
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('QUklMjBBZ2VudHM='); return false;">AI Agents</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4lMjBJbmZlcmVuY2U='); return false;">Bayesian Inference</div>
 
@@ -248,9 +277,12 @@ Jul 15, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="QUklMjBBZ2VudHMlMkNQeXRob24lMkNMTE1zJTJDQ29tcHV0YXRpb25hbCUyMEJpb2xvZ3k=" data-listing-date-sort="1783922400000" data-listing-file-modified-sort="1784137029983" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="983">
+<div class="g-col-1" data-index="1" data-categories="QUklMjBBZ2VudHMlMkNCYXllc2lhbiUyMEluZmVyZW5jZSUyQ0xpZmUlMjBTY2llbmNlcw==" data-listing-date-sort="1783922400000" data-listing-file-modified-sort="1786054870171" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="968">
 <a href="./posts/mutationrx/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/mutationrx/mutationrx_app.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 MutationRx: Deciding Which Docking Hits to Believe
@@ -259,11 +291,9 @@ MutationRx: Deciding Which Docking Hits to Believe
 
 <div class="listing-category" onclick="window.quartoListingCategory('QUklMjBBZ2VudHM='); return false;">AI Agents</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4lMjBJbmZlcmVuY2U='); return false;">Bayesian Inference</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29tcHV0YXRpb25hbCUyMEJpb2xvZ3k='); return false;">Computational Biology</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TGlmZSUyMFNjaWVuY2Vz'); return false;">Life Sciences</div>
 
 </div>
 <div class="card-text listing-description delink">
@@ -277,9 +307,12 @@ Jul 13, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="QUklMjBBZ2VudHMlMkNQeXRob24lMkNMTE1zJTJDSGVhbHRoY2FyZQ==" data-listing-date-sort="1782021600000" data-listing-file-modified-sort="1783315554901" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="624">
+<div class="g-col-1" data-index="2" data-categories="QUklMjBBZ2VudHMlMkNTb2Z0d2FyZSUyMEVuZ2luZWVyaW5nJTJDTGlmZSUyMFNjaWVuY2Vz" data-listing-date-sort="1782021600000" data-listing-file-modified-sort="1786054870171" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="614">
 <a href="./posts/otomedi/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/otomedi/otomedic_graphic.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Otomedi: Multi-Agent Healthcare Automation
@@ -288,11 +321,9 @@ Otomedi: Multi-Agent Healthcare Automation
 
 <div class="listing-category" onclick="window.quartoListingCategory('QUklMjBBZ2VudHM='); return false;">AI Agents</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBFbmdpbmVlcmluZw=='); return false;">Software Engineering</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRoY2FyZQ=='); return false;">Healthcare</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TGlmZSUyMFNjaWVuY2Vz'); return false;">Life Sciences</div>
 
 </div>
 <div class="card-text listing-description delink">
@@ -306,20 +337,21 @@ Jun 21, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="UHl0aG9uJTJDQmF5ZXNpYW4lMjBJbmZlcmVuY2UlMkNNYWNoaW5lJTIwTGVhcm5pbmclMkNTdGF0aXN0aWNhbCUyMENvbXB1dGluZw==" data-listing-date-sort="1779861600000" data-listing-file-modified-sort="1783315513675" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1250">
+<div class="g-col-1" data-index="3" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDQmF5ZXNpYW4lMjBJbmZlcmVuY2UlMkNTdGF0aXN0aWNhbCUyMENvbXB1dGluZw==" data-listing-date-sort="1779861600000" data-listing-file-modified-sort="1786054870164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1249">
 <a href="./posts/bayesian-optimization/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/bayesian-optimization/branin_bo_snapshots.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4lMjBJbmZlcmVuY2U='); return false;">Bayesian Inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBDb21wdXRpbmc='); return false;">Statistical Computing</div>
 
@@ -335,16 +367,17 @@ May 27, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDRGVlcCUyMExlYXJuaW5nJTJDUmVjb21tZW5kZXIlMjBTeXN0ZW1z" data-listing-date-sort="1779861600000" data-listing-file-modified-sort="1783315479618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1382">
+<div class="g-col-1" data-index="4" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDRGVlcCUyMExlYXJuaW5nJTJDUmVjb21tZW5kZXIlMjBTeXN0ZW1z" data-listing-date-sort="1779861600000" data-listing-file-modified-sort="1786054870167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1382">
 <a href="./posts/cs289-ranking/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/cs289-ranking/sparsity_results.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 When Does Ranking Help? A Sparsity Study of Movie Recommenders
 </h5>
 <div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
@@ -364,22 +397,23 @@ May 27, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="UHl0aG9uJTJDU3RhdGlzdGljYWwlMjBDb21wdXRpbmclMkNBJTJGQiUyMFRlc3RpbmclMkNOTFA=" data-listing-date-sort="1779861600000" data-listing-file-modified-sort="1786053380214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1511">
+<div class="g-col-1" data-index="5" data-categories="RXhwZXJpbWVudGF0aW9uJTJDTkxQJTJDU3RhdGlzdGljYWwlMjBDb21wdXRpbmc=" data-listing-date-sort="1779861600000" data-listing-file-modified-sort="1786054870177" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1496">
 <a href="./posts/upworthy-ab-testing/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/upworthy-ab-testing/coefficients.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 What Makes a Headline Work? Lessons from 55,000 Tested Headlines
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBDb21wdXRpbmc='); return false;">Statistical Computing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QSUyRkIlMjBUZXN0aW5n'); return false;">A/B Testing</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RXhwZXJpbWVudGF0aW9u'); return false;">Experimentation</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('TkxQ'); return false;">NLP</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBDb21wdXRpbmc='); return false;">Statistical Computing</div>
 
 </div>
 <div class="card-text listing-description delink">
@@ -393,9 +427,10 @@ May 27, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="RGF0YSUyMEVuZ2luZWVyaW5nJTJDV2ViJTIwQXBwJTJDQUktQXNzaXN0ZWQlMjBEZXZlbG9wbWVudCUyQ09wZW5BSQ==" data-listing-date-sort="1777183200000" data-listing-file-modified-sort="1777412191313" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="710">
+<div class="g-col-1" data-index="6" data-categories="RGF0YSUyMEVuZ2luZWVyaW5nJTJDU29mdHdhcmUlMjBFbmdpbmVlcmluZw==" data-listing-date-sort="1777183200000" data-listing-file-modified-sort="1786054870166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="710">
 <a href="./posts/berkeley-grocery-tracker/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 200px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Berkeley Grocery Tracker
@@ -404,11 +439,7 @@ Berkeley Grocery Tracker
 
 <div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMEVuZ2luZWVyaW5n'); return false;">Data Engineering</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('V2ViJTIwQXBw'); return false;">Web App</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUktQXNzaXN0ZWQlMjBEZXZlbG9wbWVudA=='); return false;">AI-Assisted Development</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3BlbkFJ'); return false;">OpenAI</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBFbmdpbmVlcmluZw=='); return false;">Software Engineering</div>
 
 </div>
 <div class="card-text listing-description delink">
@@ -422,22 +453,23 @@ Apr 26, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDU3RhdGlzdGljYWwlMjBDb21wdXRpbmclMkNCYXllc2lhbiUyMEluZmVyZW5jZQ==" data-listing-date-sort="1772344800000" data-listing-file-modified-sort="1774990203083" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1551">
+<div class="g-col-1" data-index="7" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDQmF5ZXNpYW4lMjBJbmZlcmVuY2UlMkNMaWZlJTIwU2NpZW5jZXM=" data-listing-date-sort="1772344800000" data-listing-file-modified-sort="1786055043853" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1566">
 <a href="./posts/stat214-lab1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/stat214-lab1/finding2_tradeoff.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 PECARN Traumatic Brain Injury Analysis
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
 <div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBDb21wdXRpbmc='); return false;">Statistical Computing</div>
-
 <div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4lMjBJbmZlcmVuY2U='); return false;">Bayesian Inference</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGlmZSUyMFNjaWVuY2Vz'); return false;">Life Sciences</div>
 
 </div>
 <div class="card-text listing-description delink">
@@ -451,20 +483,19 @@ Mar 1, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="UHl0aG9uJTJDU3RhdGlzdGljYWwlMjBDb21wdXRpbmclMkNNYWNoaW5lJTIwTGVhcm5pbmclMkNTb2Z0d2FyZSUyMEVuZ2luZWVyaW5n" data-listing-date-sort="1765778400000" data-listing-file-modified-sort="1774998820097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="681">
+<div class="g-col-1" data-index="8" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDU3RhdGlzdGljYWwlMjBDb21wdXRpbmclMkNTb2Z0d2FyZSUyMEVuZ2luZWVyaW5n" data-listing-date-sort="1765778400000" data-listing-file-modified-sort="1786054870170" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="680">
 <a href="./posts/genetic-algorithm/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 200px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Evolutionary Feature Selection: A Genetic Algorithm Package
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBDb21wdXRpbmc='); return false;">Statistical Computing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBFbmdpbmVlcmluZw=='); return false;">Software Engineering</div>
 
@@ -480,26 +511,25 @@ Dec 15, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHl0aG9uJTJDVGltZSUyMFNlcmllcyUyQ0ltcGFjdA==" data-listing-date-sort="1596258000000" data-listing-file-modified-sort="1769927770996" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="701">
+<div class="g-col-1" data-index="9" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDRGVlcCUyMExlYXJuaW5nJTJDRGF0YSUyMEVuZ2luZWVyaW5n" data-listing-date-sort="1596258000000" data-listing-file-modified-sort="1786054870169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="810">
 <a href="./posts/digital-water/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 200px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Digital Water: Predicting a Crisis Before It Happened
+Digital Water: Forecasting the Water Supply That Later Ran Out
 </h5>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGVlcCUyMExlYXJuaW5n'); return false;">Deep Learning</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('VGltZSUyMFNlcmllcw=='); return false;">Time Series</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW1wYWN0'); return false;">Impact</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMEVuZ2luZWVyaW5n'); return false;">Data Engineering</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>How our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.</p>
+<p>An LSTM forecasting platform for Monterrey’s water demand and dam capacity, built in 2020. It took 2nd place globally at the Atos IT Challenge, and the shortfall scenario it…</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
@@ -584,7 +614,7 @@ Aug 1, 2020
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ricardo-pc\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -912,6 +942,38 @@ Aug 1, 2020
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Ricardo Pérez Castillo</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:ricardoperez@berkeley.edu">
+      <i class="bi bi-envelope" role="img" aria-label="Email">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ricardo-pc">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

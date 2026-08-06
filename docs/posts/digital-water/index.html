@@ -8,9 +8,9 @@
 
 <meta name="author" content="Ricardo Pérez Castillo">
 <meta name="dcterms.date" content="2020-08-01">
-<meta name="description" content="How our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.">
+<meta name="description" content="An LSTM forecasting platform for Monterrey’s water demand and dam capacity, built in 2020. It took 2nd place globally at the Atos IT Challenge, and the shortfall scenario it was designed to flag arrived in 2022.">
 
-<title>Digital Water: Predicting a Crisis Before It Happened – Ricardo Pérez Castillo</title>
+<title>Digital Water: Forecasting the Water Supply That Later Ran Out – Ricardo Pérez Castillo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,9 +72,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Digital Water: Forecasting the Water Supply That Later Ran Out – Ricardo Pérez Castillo">
+<meta property="og:description" content="An LSTM forecasting platform for Monterrey’s water demand and dam capacity, built in 2020. It took 2nd place globally at the Atos IT Challenge, and the shortfall scenario it was designed to flag arrived in 2022.">
+<meta property="og:image" content="https://ricardo-pc.github.io/og-card.png">
+<meta property="og:site_name" content="Ricardo Pérez Castillo">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Digital Water: Forecasting the Water Supply That Later Ran Out – Ricardo Pérez Castillo">
+<meta name="twitter:description" content="An LSTM forecasting platform for Monterrey’s water demand and dam capacity, built in 2020. It took 2nd place globally at the Atos IT Challenge, and the shortfall scenario it was designed to flag arrived in 2022.">
+<meta name="twitter:image" content="https://ricardo-pc.github.io/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -110,12 +126,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -135,18 +151,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-if-you-could-see-a-crisis-coming" id="toc-what-if-you-could-see-a-crisis-coming" class="nav-link active" data-scroll-target="#what-if-you-could-see-a-crisis-coming">What If You Could See a Crisis Coming?</a></li>
-  <li><a href="#the-challenge" id="toc-the-challenge" class="nav-link" data-scroll-target="#the-challenge">The Challenge</a></li>
-  <li><a href="#our-solution" id="toc-our-solution" class="nav-link" data-scroll-target="#our-solution">Our Solution</a>
-  <ul class="collapse">
-  <li><a href="#data-engineering" id="toc-data-engineering" class="nav-link" data-scroll-target="#data-engineering">Data Engineering</a></li>
-  <li><a href="#predictive-models" id="toc-predictive-models" class="nav-link" data-scroll-target="#predictive-models">Predictive Models</a></li>
-  <li><a href="#deployment" id="toc-deployment" class="nav-link" data-scroll-target="#deployment">Deployment</a></li>
-  </ul></li>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link active" data-scroll-target="#the-problem">The Problem</a></li>
+  <li><a href="#what-we-built" id="toc-what-we-built" class="nav-link" data-scroll-target="#what-we-built">What We Built</a></li>
+  <li><a href="#what-the-models-did-and-did-not-do" id="toc-what-the-models-did-and-did-not-do" class="nav-link" data-scroll-target="#what-the-models-did-and-did-not-do">What the Models Did and Did Not Do</a></li>
+  <li><a href="#what-happened-in-2022" id="toc-what-happened-in-2022" class="nav-link" data-scroll-target="#what-happened-in-2022">What Happened in 2022</a></li>
   <li><a href="#recognition" id="toc-recognition" class="nav-link" data-scroll-target="#recognition">Recognition</a></li>
-  <li><a href="#what-happened-next-the-crisis" id="toc-what-happened-next-the-crisis" class="nav-link" data-scroll-target="#what-happened-next-the-crisis">What Happened Next: The Crisis</a></li>
-  <li><a href="#technical-details" id="toc-technical-details" class="nav-link" data-scroll-target="#technical-details">Technical Details</a></li>
-  <li><a href="#links-resources" id="toc-links-resources" class="nav-link" data-scroll-target="#links-resources">Links &amp; Resources</a></li>
+  <li><a href="#technologies-tools" id="toc-technologies-tools" class="nav-link" data-scroll-target="#technologies-tools">Technologies &amp; Tools</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
   </ul>
 </nav>
@@ -156,18 +166,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Digital Water: Predicting a Crisis Before It Happened</h1>
+<h1 class="title">Digital Water: Forecasting the Water Supply That Later Ran Out</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Machine Learning</div>
-    <div class="quarto-category">Python</div>
-    <div class="quarto-category">Time Series</div>
-    <div class="quarto-category">Impact</div>
+    <div class="quarto-category">Deep Learning</div>
+    <div class="quarto-category">Data Engineering</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    How our ML forecasting system predicted Monterrey’s water crisis two years before 5 million people faced severe rationing.
+    An LSTM forecasting platform for Monterrey’s water demand and dam capacity, built in 2020. It took 2nd place globally at the Atos IT Challenge, and the shortfall scenario it was designed to flag arrived in 2022.
   </div>
 </div>
 
@@ -202,129 +211,78 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>The Story at a Glance
+<span class="screen-reader-only">Note</span>Project Overview
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In 2020, our team built an AI system to forecast water demand for my hometown of Monterrey, Mexico. We won <strong>2nd place globally</strong> at the Atos IT Challenge, the first Mexican team ever to achieve this distinction in the competition’s 10-year history.</p>
-<p>Two years later, our predictions came true. Monterrey plunged into a severe water crisis, forcing 5 million residents to survive on minimal daily water allocations for nearly two years.</p>
+<p>A forecasting platform for water demand and dam capacity in Monterrey, Mexico, built on LSTM networks trained on records from the city’s water utility. It won <strong>2nd place globally</strong> at the Atos IT Challenge 2020, the first Mexican team to place in the competition’s ten-year history.</p>
+<p>Two years later the city ran out of water. The system had been built for exactly that scenario and was never deployed.</p>
+<p>Team project · Nov 2019 to Jul 2020 · Stack: Python, TensorFlow, LSTM, Heroku</p>
+<p><a href="https://github.com/ricardo-pc/DigitalWater">GitHub Repository</a> · <a href="https://youtu.be/AiQcQ7dyW38">Demo Video</a></p>
 </div>
 </div>
-<section id="what-if-you-could-see-a-crisis-coming" class="level2">
-<h2 class="anchored" data-anchor-id="what-if-you-could-see-a-crisis-coming">What If You Could See a Crisis Coming?</h2>
-<p>Between November 2019 and July 2020, my team developed Digital Water, a machine learning platform to forecast water demand and capacity at the city level. Working with real data from Monterrey’s official water utility (SADM), we built LSTM neural networks that could predict daily water consumption and available dam capacity.</p>
-<p>At the time, we were focused on winning an international competition. We didn’t realize we were documenting the early warning signs of a catastrophe.</p>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>Monterrey is Mexico’s third-largest metro area and a major industrial hub. Its water system serves more than 5 million people from a network of dams and underground sources. In 2019 that system was managed reactively: utilities responded to shortages once they arrived rather than seeing them coming.</p>
+<p>The goal was to give operators a lead time they did not have. If you can forecast daily demand and dam capacity a few weeks out, you can estimate how many days remain before storage crosses a critical threshold, and you can act while options are still cheap.</p>
 </section>
-<section id="the-challenge" class="level2">
-<h2 class="anchored" data-anchor-id="the-challenge">The Challenge</h2>
-<p>Monterrey is Mexico’s third-largest metro area and a major industrial hub. The city’s water system serves over 5 million people, drawing from a network of dams and underground sources. But water scarcity was becoming more frequent, and utilities were operating reactively, responding to shortages rather than preventing them.</p>
-<p>Our goal: Build a forecasting system that could shift water management from reactive to preventative, giving utilities early warning signals before reaching critical thresholds.</p>
+<section id="what-we-built" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-built">What We Built</h2>
+<p>An end-to-end pipeline, developed between November 2019 and July 2020 with data from Servicios de Agua y Drenaje de Monterrey (SADM).</p>
+<p><strong>Data engineering.</strong> Multi-source time series from SADM, cleaned and aligned so that daily consumption records lined up with dam capacity measurements, with field dictionaries documenting each source.</p>
+<p><strong>Models.</strong> Two LSTM networks in TensorFlow, one forecasting daily municipal demand and one forecasting available dam capacity. Their outputs fed a “days-to-threshold” estimate: given current trajectory, how long until storage crosses a safe operating floor.</p>
+<p><strong>Delivery.</strong> An interactive dashboard on Heroku, plus Colab notebooks so the utility could rerun and inspect the models rather than take the numbers on trust.</p>
 </section>
-<section id="our-solution" class="level2">
-<h2 class="anchored" data-anchor-id="our-solution">Our Solution</h2>
-<p>We developed an end-to-end machine learning pipeline:</p>
-<section id="data-engineering" class="level3">
-<h3 class="anchored" data-anchor-id="data-engineering">Data Engineering</h3>
-<ul>
-<li>Collected and cleaned multi-source time-series data from SADM</li>
-<li>Aligned daily consumption records with dam capacity measurements</li>
-<li>Created comprehensive field dictionaries and documentation</li>
-</ul>
+<section id="what-the-models-did-and-did-not-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-models-did-and-did-not-do">What the Models Did and Did Not Do</h2>
+<p>This is worth stating precisely, because the story invites overclaiming.</p>
+<p>The models forecast <strong>daily</strong> demand and capacity on a short horizon. They did not forecast a multi-year meteorological drought, and no daily-horizon LSTM could. What the system produced was a running estimate of how close the network was to its operating floor, and how fast it was closing.</p>
+<p>That distinction matters for what came next. The system did not call the 2022 crisis by date. It was built to make exactly that class of shortfall visible early, and the shortfall arrived.</p>
 </section>
-<section id="predictive-models" class="level3">
-<h3 class="anchored" data-anchor-id="predictive-models">Predictive Models</h3>
-<ul>
-<li>Trained two LSTM neural networks (one for demand, one for capacity)</li>
-<li>Forecasted daily water demand and available capacity</li>
-<li>Calculated “days-to-threshold” estimates for safe operating levels</li>
-<li>Implemented in Python using TensorFlow</li>
-</ul>
-</section>
-<section id="deployment" class="level3">
-<h3 class="anchored" data-anchor-id="deployment">Deployment</h3>
-<ul>
-<li>Built an interactive web dashboard (hosted on Heroku)</li>
-<li>Created Google Colab notebooks for accessibility and reproducibility</li>
-<li>Produced technical documentation and presentation materials</li>
-</ul>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<section id="what-happened-in-2022" class="level2">
+<h2 class="anchored" data-anchor-id="what-happened-in-2022">What Happened in 2022</h2>
+<p>Monterrey ran out of water.</p>
+<p>Nuevo León declared a drought emergency on 2 February 2022. Rationing under the <em>Agua para Todos</em> plan began that March, with La Boca dam at 13% and Cerro Prieto at 7%. By June much of the metro area received water roughly six hours a day, and some neighborhoods received none. In mid-July, Cerro Prieto fell below 1% and stopped supplying the city for the first time since it opened in 1984. Heavy rains in late August and early September refilled the dams, and the state’s emergency coordination wound down that September.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Key Technologies
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Python</strong> • <strong>TensorFlow</strong> • <strong>LSTM Networks</strong> • <strong>Time Series Forecasting</strong> • <strong>Google Colab</strong> • <strong>Heroku</strong></p>
-</div>
-</div>
-</section>
-</section>
-<section id="recognition" class="level2">
-<h2 class="anchored" data-anchor-id="recognition">Recognition</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 8px; text-align: center; color: white;">
-<p><strong>🏆 2nd Place Globally</strong> Atos IT Challenge 2020</p>
-</div>
-<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 1.5rem; border-radius: 8px; text-align: center; color: white;">
-<p><strong>🇲🇽 First Mexican Team</strong> In competition’s 10-year history</p>
-</div>
-<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 1.5rem; border-radius: 8px; text-align: center; color: white;">
-<p><strong>👥 5M People Impacted</strong> By predicted crisis</p>
-</div>
-</div>
-<p>We presented our work to the Atos CEO and Scientific Board, competing against thousands of international teams.</p>
-</section>
-<section id="what-happened-next-the-crisis" class="level2">
-<h2 class="anchored" data-anchor-id="what-happened-next-the-crisis">What Happened Next: The Crisis</h2>
-<p>In 2022, everything our models predicted came to pass.</p>
-<p>Monterrey experienced a devastating water crisis that lasted nearly two years. The city’s 5 million residents were reduced to minimal daily water allocations. Neighborhoods received water only a few hours per week. Businesses struggled. The crisis validated our forecasting approach—but also showed the human cost of delayed action.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Warning</span>Timeline
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>2019-2020:</strong> Built forecasting models with SADM data</p>
-<p><strong>July 2020:</strong> Won 2nd place at Atos IT Challenge</p>
-<p><strong>2022:</strong> Water crisis begins—predictions validated</p>
-<p><strong>2022-2024:</strong> Nearly two years of severe rationing for 5M residents</p>
-<p><strong>2024:</strong> Crisis subsides</p>
+<p><strong>Nov 2019 to Jul 2020:</strong> Digital Water built and trained on SADM records</p>
+<p><strong>Jul 2020:</strong> 2nd place globally, Atos IT Challenge</p>
+<p><strong>Feb 2022:</strong> Nuevo León declares a drought emergency</p>
+<p><strong>Mar 2022:</strong> Rationing begins across the metro area</p>
+<p><strong>Jul 2022:</strong> Cerro Prieto dam drops below 1% and stops supplying the city</p>
+<p><strong>Sep 2022:</strong> Rains refill the dams and the emergency winds down</p>
 </div>
 </div>
-<p>The crisis highlighted how proactive forecasting can shift utilities from reactive operations to preventative planning—and why such systems need to be deployed, not just built.</p>
+<p>The honest summary is that the risk this system was built to surface is the risk that materialized, and nobody was using the system when it did.</p>
 </section>
-<section id="technical-details" class="level2">
-<h2 class="anchored" data-anchor-id="technical-details">Technical Details</h2>
-<p>For those interested in the implementation:</p>
+<section id="recognition" class="level2">
+<h2 class="anchored" data-anchor-id="recognition">Recognition</h2>
 <ul>
-<li><strong>Models:</strong> Two LSTM neural networks (demand + capacity forecasting)</li>
-<li><strong>Data:</strong> Official records from Agua y Drenaje de Monterrey (SADM)</li>
-<li><strong>Features:</strong> Multi-variate time series including consumption patterns, dam levels, and seasonal factors</li>
-<li><strong>Outputs:</strong> Daily forecasts + “days-to-threshold” risk estimates</li>
-<li><strong>Code:</strong> Open-source notebooks in Google Colab</li>
-<li><strong>Documentation:</strong> Complete technical report and research summaries</li>
+<li><strong>2nd place globally</strong>, Atos IT Challenge 2020, presented to the Atos CEO and Scientific Board</li>
+<li><strong>First Mexican team</strong> to place in the competition’s ten-year history</li>
+<li>Competed against a field of international university teams</li>
 </ul>
 </section>
-<section id="links-resources" class="level2">
-<h2 class="anchored" data-anchor-id="links-resources">Links &amp; Resources</h2>
-<ul>
-<li><strong><a href="https://github.com/ricardo-pc/DigitalWater">GitHub Repository</a></strong> — Code, notebooks, and documentation</li>
-<li><strong><a href="https://youtu.be/AiQcQ7dyW38">Demo Video</a></strong> — Platform walkthrough</li>
-</ul>
+<section id="technologies-tools" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-tools">Technologies &amp; Tools</h2>
+<p>Models: Python, TensorFlow, two LSTM networks for demand and capacity forecasting</p>
+<p>Data: official records from Servicios de Agua y Drenaje de Monterrey, covering consumption patterns, dam levels, and seasonal factors</p>
+<p>Delivery: Heroku dashboard, Google Colab notebooks, technical documentation</p>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>This project was completed in 2020, and the notebooks remain as-is in the repository. <strong>Looking back (5 years later) with more experience in ML, I would redesign the data pipeline, modeling aproach, stability and predictability of the model and scalability.</strong> But the core lesson remains: predictive models only create impact when they’re deployed and acted upon.</p>
-<p>The crisis our system forecasted was preventable. The data was there. The models worked. What was missing was the infrastructure and institutional will to act on early warnings.</p>
+<p>The lesson I took from this is not about the modeling. It is that a forecast nobody is looking at has no value, and the gap between a working model and a deployed one is mostly organizational rather than technical. We optimized for a competition deliverable, which is a demo, and a demo is not an operations tool. Getting from one to the other means somebody at the utility owns the number, checks it on a schedule, and has the authority to act on it. We never built that path, and the model sat in a repository while the dams emptied.</p>
+<p>The technical work has aged, too. Looking at it five years on, I would redesign the data pipeline, revisit the modeling approach, and take model stability and scalability far more seriously than we did. The notebooks remain in the repository as they were in 2020.</p>
 <hr>
-<p><em>Built between November 2019 and July 2020 as part of the Atos IT Challenge.</em></p>
+<p><em>Built between November 2019 and July 2020 as part of the Atos IT Challenge. Crisis timeline drawn from contemporaneous reporting on the 2022 Nuevo León drought emergency.</em></p>
 
 
 </section>
@@ -402,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ricardo-pc\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -730,6 +688,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Ricardo Pérez Castillo</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:ricardoperez@berkeley.edu">
+      <i class="bi bi-envelope" role="img" aria-label="Email">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ricardo-pc">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

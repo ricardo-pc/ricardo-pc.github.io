@@ -3,7 +3,8 @@ title: "When Does Ranking Help? A Sparsity Study of Movie Recommenders"
 description: "Three recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking models at every data density."
 author: "Ricardo Pérez Castillo"
 date: "2026-05-27"
-categories: [Python, Machine Learning, Deep Learning, Recommender Systems]
+categories: [Machine Learning, Deep Learning, Recommender Systems]
+image: sparsity_results.png
 ---
 
 ::: {.callout-note appearance="simple" icon=false}

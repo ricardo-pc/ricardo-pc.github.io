@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,9 +72,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Otomedi: Multi-Agent Healthcare Automation – Ricardo Pérez Castillo">
+<meta property="og:description" content="A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical.">
+<meta property="og:image" content="https://ricardo-pc.github.io/posts/otomedi/otomedic_graphic.png">
+<meta property="og:site_name" content="Ricardo Pérez Castillo">
+<meta property="og:image:height" content="1100">
+<meta property="og:image:width" content="1800">
+<meta name="twitter:title" content="Otomedi: Multi-Agent Healthcare Automation – Ricardo Pérez Castillo">
+<meta name="twitter:description" content="A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical.">
+<meta name="twitter:image" content="https://ricardo-pc.github.io/posts/otomedi/otomedic_graphic.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="1100">
+<meta name="twitter:image-width" content="1800">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -110,12 +126,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -151,9 +167,8 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Otomedi: Multi-Agent Healthcare Automation</h1>
   <div class="quarto-categories">
     <div class="quarto-category">AI Agents</div>
-    <div class="quarto-category">Python</div>
-    <div class="quarto-category">LLMs</div>
-    <div class="quarto-category">Healthcare</div>
+    <div class="quarto-category">Software Engineering</div>
+    <div class="quarto-category">Life Sciences</div>
   </div>
   </div>
 
@@ -205,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
-<p>By the end of a day at a hospital front desk, tens or hundreds of missed calls have piled up. Listening to every voicemail, writing down what the patient needs, and executing the request is slow — and the majority of those calls are one of just three things: a prescription refill, a schedule change, or a message for the doctor. Each one takes a series of clicks and lookups that lasts longer than the action itself.</p>
+<p>By the end of a day at a hospital front desk, tens or hundreds of missed calls have piled up. Listening to every voicemail, writing down what the patient needs, and executing the request is slow, and the majority of those calls are one of just three things: a prescription refill, a schedule change, or a message for the doctor. Each one takes a series of clicks and lookups that lasts longer than the action itself.</p>
 <p>Otomedi turns that voicemail backlog into a dashboard of pre-verified, one-click approvals. Repetitive requests get automated up to the point of human sign-off; edge cases are organized and surfaced for manual review instead of getting lost in an inbox.</p>
 </section>
 <section id="how-it-works" class="level2">
@@ -218,12 +233,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>A voicemail flows through a pipeline of specialized agents, each with a single job:</p>
 <ol type="1">
-<li><strong>Intake Agent</strong> — receives the Deepgram speech-to-text transcript and uses Claude to extract structured data: patient identity, insurance plan, and a <code>requests</code> array (a single voicemail can contain multiple workflow items, e.g.&nbsp;a refill <em>and</em> a message relay). Relative dates like “next Tuesday” are resolved to absolute dates at this stage, and missing fields are flagged explicitly.</li>
-<li><strong>Triage Sentinel</strong> — scans for emergency signals. Anything urgent bypasses automation entirely and escalates immediately.</li>
-<li><strong>Eligibility Agents</strong> — verify the request against patient records: insurance acceptance, refill eligibility (visit history, dosage match, conflicting medications), or scheduling constraints, depending on request type.</li>
-<li><strong>Scheduling Agent</strong> — finds an appointment slot given provider availability and urgency, writing a proposed action rather than a final one.</li>
-<li><strong>Human approval</strong> — a certified healthcare worker reviews the proposed action in the dashboard. Only after they click Approve does the backend execute it.</li>
-<li><strong>Confirmation &amp; Summary Agents</strong> — send SMS/email confirmations to the patient and compile a daily digest for the front desk.</li>
+<li><strong>Intake Agent</strong>: receives the Deepgram speech-to-text transcript and uses Claude to extract structured data: patient identity, insurance plan, and a <code>requests</code> array (a single voicemail can contain multiple workflow items, e.g.&nbsp;a refill <em>and</em> a message relay). Relative dates like “next Tuesday” are resolved to absolute dates at this stage, and missing fields are flagged explicitly.</li>
+<li><strong>Triage Sentinel</strong>: scans for emergency signals. Anything urgent bypasses automation entirely and escalates immediately.</li>
+<li><strong>Eligibility Agents</strong>: verify the request against patient records: insurance acceptance, refill eligibility (visit history, dosage match, conflicting medications), or scheduling constraints, depending on request type.</li>
+<li><strong>Scheduling Agent</strong>: finds an appointment slot given provider availability and urgency, writing a proposed action rather than a final one.</li>
+<li><strong>Human approval</strong>: a certified healthcare worker reviews the proposed action in the dashboard. Only after they click Approve does the backend execute it.</li>
+<li><strong>Confirmation &amp; Summary Agents</strong>: send SMS/email confirmations to the patient and compile a daily digest for the front desk.</li>
 </ol>
 <p>The agents don’t message each other directly. Every agent reads and writes a shared task row in Supabase, which makes the pipeline observable, testable, and easy to resume when a step fails.</p>
 </section>
@@ -232,19 +247,19 @@ ul.task-list li input[type="checkbox"] {
 <p>The most important design decisions were about what <em>not</em> to automate:</p>
 <ul>
 <li><strong>Emergencies bypass automation entirely.</strong> The triage sentinel runs before any workflow logic, and an urgent signal short-circuits the whole pipeline into human escalation.</li>
-<li><strong>No clinical action executes without human sign-off.</strong> Agents can parse, verify, and propose — but the write to prescriptions, appointments, or messages only happens after a healthcare worker approves it.</li>
+<li><strong>No clinical action executes without human sign-off.</strong> Agents can parse, verify, and propose, but the write to prescriptions, appointments, or messages only happens after a healthcare worker approves it.</li>
 <li><strong>Regression tests pinned to specific scenarios.</strong> Per our mentor’s guidance, each agent ships with tests for named failure cases (garbled audio, missing fields, conflicting medications), not just happy paths.</li>
 </ul>
 </section>
 <section id="technologies-tools" class="level2">
 <h2 class="anchored" data-anchor-id="technologies-tools">Technologies &amp; Tools</h2>
 <p>Agents &amp; backend: Python, FastAPI, Claude API for extraction and verification, Deepgram for speech-to-text</p>
-<p>Frontend: Next.js dashboards — a CHW approval dashboard, a demo EHR, and an audio-upload demo</p>
+<p>Frontend: Next.js dashboards: a CHW approval dashboard, a demo EHR, and an audio-upload demo</p>
 <p>Data: Supabase (Postgres) as the shared task store and system of record for patients, visits, prescriptions, and schedules</p>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>The interesting engineering problem wasn’t getting an LLM to read a voicemail — it was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table.</p>
+<p>The interesting engineering problem wasn’t getting an LLM to read a voicemail. It was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table.</p>
 <hr>
 <p><em>Built at the UC Berkeley AI Hackathon, June 2026.</em></p>
 
@@ -324,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ricardo-pc\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -652,6 +667,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Ricardo Pérez Castillo</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:ricardoperez@berkeley.edu">
+      <i class="bi bi-envelope" role="img" aria-label="Email">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ricardo-pc">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

@@ -3,15 +3,18 @@ title: "PECARN Traumatic Brain Injury Analysis"
 description: "EDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage."
 author: "Ricardo Pérez Castillo"
 date: "2026-03-01"
-categories: [Python, Machine Learning, Statistical Computing, Bayesian Inference]
+categories: [Machine Learning, Bayesian Inference, Life Sciences]
+image: finding2_tradeoff.png
 ---
 
 ::: {.callout-note appearance="simple" icon=false}
 ## Project Overview
 
-A full analysis of the PECARN pediatric head trauma dataset, from data cleaning and exploratory analysis to Bayesian inference and classification modeling, centered on the question of when to recommend a CT scan for a child with a head injury.
+On 43,399 pediatric head trauma patients, a random forest cuts unnecessary CT scans by 63% against the standard Kuppermann clinical rule while holding the same 84.2% sensitivity. Getting there took a full analysis of the PECARN dataset, from cleaning and exploratory analysis through Bayesian symptom posteriors to classification modeling, all aimed at one question: when should a child with a head injury get a CT scan?
 
 Course: STAT 214: Data Analysis and Machine Learning for Real-World Decision Making · Semester: Spring 2026 · Language: Python
+
+[GitHub Repository](https://github.com/ricardo-pc/stat-214/tree/main/lab1)
 :::
 
 ## Background
@@ -133,8 +136,7 @@ Statistical methods: Bayesian posterior inference with bootstrap confidence inte
 
 ## Links & Resources
 
-- [GitHub Repository](https://github.com/berkeley-stat214/stat-214/tree/main/lab1) — full code, notebooks, and report
-- [Lab Report (PDF)](report.pdf) — complete write-up with all figures and tables
+- [GitHub Repository](https://github.com/ricardo-pc/stat-214/tree/main/lab1): full code, notebooks, and report
 
 ## Reflection
 

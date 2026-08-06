@@ -3,7 +3,8 @@ title: "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expen
 description: "A Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems where evaluations cost minutes to hours of GPU time."
 author: "Ricardo Pérez Castillo"
 date: "2026-05-27"
-categories: [Python, Bayesian Inference, Machine Learning, Statistical Computing]
+categories: [Machine Learning, Bayesian Inference, Statistical Computing]
+image: branin_bo_snapshots.png
 ---
 
 ::: {.callout-note appearance="simple" icon=false}
@@ -13,7 +14,7 @@ A from-scratch implementation of Bayesian Optimization using a Gaussian Process 
 
 Course: STAT 238: Bayesian Statistics · Semester: Spring 2026 · Language: Python
 
-[GitHub Repository](https://github.com/ricardo-pc/bayesian-optimization-ml)
+[GitHub Repository](https://github.com/ricardo-pc/Bayesian-Optimization-for-ML)
 :::
 
 ## The Problem
@@ -22,7 +23,7 @@ Tuning a machine learning model involves making a sequence of decisions under un
 
 Bayesian Optimization (BO) does something smarter: it builds a probabilistic model of the objective function from every evaluation so far, then uses that model to decide where to look next. It is the principled answer to the question of how to optimize an expensive black-box function with a tight budget.
 
-For this project, I implemented the full BO pipeline from scratch — no hyperopt, no optuna — and ran it on three problems with very different cost structures.
+For this project, I implemented the full BO pipeline from scratch, with no hyperopt and no optuna, and ran it on three problems with very different cost structures.
 
 ## The Method
 
@@ -34,7 +35,7 @@ The implementation has three components, each in its own module.
 
 $$\text{EI}(x) = (\mu(x) - f^*)\,\Phi(Z) + \sigma(x)\,\phi(Z), \quad Z = \frac{\mu(x) - f^*}{\sigma(x)}$$
 
-The first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence — no manual tuning of an exploration parameter.
+The first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence, with no manual tuning of an exploration parameter.
 
 **BO loop (`bo.py`).** Inputs are normalized to $[0,1]^d$ before each GP fit, and outputs are standardized to zero mean and unit variance. This keeps the kernel hyperparameters in comparable ranges regardless of the original scales. Each iteration fits the GP on all observations so far, maximizes EI over the input space (multi-start L-BFGS-B), evaluates the objective at the new point, and appends to the history.
 
@@ -62,11 +63,11 @@ The configuration BO converged to was interpretable: largest embedding dimension
 
 The second real application came from my [STAT 230A headline analysis project](../upworthy-ab-testing/index.qmd), where I used a BART zero-shot NLI model to classify 54,956 headlines into topic categories. The classifier outputs a confidence score, and two thresholds control how those scores are used: a minimum confidence to accept a label, and a minimum category size to keep in the analysis.
 
-The objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR) — higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.
+The objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR), where higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.
 
-![BO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO's advantage here is not just the final value but the path: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.](upworthy_convergence.png){width=90%}
+![BO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO's advantage here shows up in the path as much as the final value: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.](upworthy_convergence.png){width=90%}
 
-The BO-optimal confidence threshold was 0.256 — lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone.
+The BO-optimal confidence threshold was 0.256, lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone.
 
 ## Results
 
@@ -88,11 +89,11 @@ Experiments: Branin benchmark (analytic), NCF black-box wrapper (subprocess CLI 
 
 ## Links
 
-- [GitHub Repository](https://github.com/ricardo-pc/bayesian-optimization-ml): full implementation, notebooks, and experiment results
+- [GitHub Repository](https://github.com/ricardo-pc/Bayesian-Optimization-for-ML): full implementation, notebooks, and experiment results
 
 ## Reflection
 
-The most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch was not just a course exercise — it was a tool that made two other projects better, with quantifiable improvements in both cases.
+The most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch stopped being a course exercise and became a tool that made two other projects better, with quantifiable improvements in both cases.
 
 The hardest implementation detail was the input/output normalization. Mapping inputs to $[0,1]^d$ and standardizing outputs before each GP fit sounds simple, but getting it wrong causes the kernel hyperparameters to drift into bad regions and the EI surface to behave unexpectedly. The Branin simulation study was essential for catching those bugs before running on experiments that cost hours of GPU time.
 

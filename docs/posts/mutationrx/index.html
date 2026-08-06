@@ -8,7 +8,7 @@
 
 <meta name="author" content="Ricardo Pérez Castillo">
 <meta name="dcterms.date" content="2026-07-13">
-<meta name="description" content="A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility — separating real leads from coincidental docking artifacts.">
+<meta name="description" content="A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.">
 
 <title>MutationRx: Deciding Which Docking Hits to Believe – Ricardo Pérez Castillo</title>
 <style>
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,9 +72,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="MutationRx: Deciding Which Docking Hits to Believe – Ricardo Pérez Castillo">
+<meta property="og:description" content="A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.">
+<meta property="og:image" content="https://ricardo-pc.github.io/posts/mutationrx/mutationrx_app.png">
+<meta property="og:site_name" content="Ricardo Pérez Castillo">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="MutationRx: Deciding Which Docking Hits to Believe – Ricardo Pérez Castillo">
+<meta name="twitter:description" content="A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.">
+<meta name="twitter:image" content="https://ricardo-pc.github.io/posts/mutationrx/mutationrx_app.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="900">
+<meta name="twitter:image-width" content="1600">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -110,12 +126,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ricardo-pc"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -152,15 +168,14 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">MutationRx: Deciding Which Docking Hits to Believe</h1>
   <div class="quarto-categories">
     <div class="quarto-category">AI Agents</div>
-    <div class="quarto-category">Python</div>
-    <div class="quarto-category">LLMs</div>
-    <div class="quarto-category">Computational Biology</div>
+    <div class="quarto-category">Bayesian Inference</div>
+    <div class="quarto-category">Life Sciences</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility — separating real leads from coincidental docking artifacts.
+    A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.
   </div>
 </div>
 
@@ -199,15 +214,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor’s driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility — separating believable leads from coincidental docking scores.</p>
+<p>A mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor’s driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility, separating believable leads from coincidental docking scores.</p>
 <p>Event: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP</p>
 <p><a href="https://mutationrx.onrender.com">Live App</a></p>
 </div>
 </div>
 <section id="the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
-<p>Targeted cancer drugs fail by resistance: the tumor mutates, the protein changes shape, and the drug no longer binds. Deciding what to try next — or whether some cheap, already-approved drug could be repurposed for the mutant — means slow, expensive cell-based screening. There are always too many candidates and too little bench budget.</p>
-<p>Computational docking can rank candidates cheaply, but it has a fatal flaw for this use: it happily scores drugs that have no real business binding the target. A robust docking score is not a real hit, and a bench researcher usually can’t tell signal from artifact. That gap — not the docking itself — is the actual problem worth solving.</p>
+<p>Targeted cancer drugs fail by resistance: the tumor mutates, the protein changes shape, and the drug no longer binds. Deciding what to try next, or whether some cheap already-approved drug could be repurposed for the mutant, means slow, expensive cell-based screening. There are always too many candidates and too little bench budget.</p>
+<p>Computational docking can rank candidates cheaply, but it has a fatal flaw for this use: it happily scores drugs that have no real business binding the target. A robust docking score is not a real hit, and a bench researcher usually can’t tell signal from artifact. That gap, not the docking itself, is the actual problem worth solving.</p>
 </section>
 <section id="the-approach" class="level2">
 <h2 class="anchored" data-anchor-id="the-approach">The Approach</h2>
@@ -222,22 +237,22 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>The docking finds candidates. Claude decides which to believe.</strong></p>
 </blockquote>
 <p>For a tumor’s driver mutation, MutationRx docks a panel of 62 approved drugs against both the <strong>wild-type and mutant</strong> structure, rescores the poses, and runs a <strong>Bayesian bootstrap over replicate docking runs</strong> to put a 95% credible interval on each wild-type→mutant shift. Every drug lands in one of four buckets: <em>weakened</em> (resistance), <em>robust</em> (safe bet), <em>improved</em>, or <em>non-binder</em>.</p>
-<p>Then <strong>Claude reviews each hit for mechanistic plausibility</strong>. This is the step a script can’t do: a beta-blocker that “binds” EGFR is almost certainly an artifact, while a drug whose real mechanism fits the target is worth the assay. Remove the reviewer and you are back to an untrustworthy hit list — so Claude is essential to the tool, not decorative.</p>
+<p>Then <strong>Claude reviews each hit for mechanistic plausibility</strong>. This is the step a script can’t do: a beta-blocker that “binds” EGFR is almost certainly an artifact, while a drug whose real mechanism fits the target is worth the assay. Remove the reviewer and you are back to an untrustworthy hit list, so the reviewer is load-bearing rather than decorative.</p>
 </section>
 <section id="why-its-credible" class="level2">
 <h2 class="anchored" data-anchor-id="why-its-credible">Why It’s Credible</h2>
-<p>The whole brand is honesty, and the tool is built to earn it:</p>
+<p>Every claim the tool makes is built to be checkable:</p>
 <ul>
-<li><strong>It reproduces known biology on unseen real data.</strong> Run on a genuine, de-identified TCGA lung tumor carrying EGFR L858R+T790M, it recovers the clinic from docking alone: erlotinib and gefitinib fail, and <strong>osimertinib holds</strong> — on a patient tumor it had never seen.</li>
-<li><strong>It shows why statistics alone aren’t enough.</strong> Screening 300 approved drugs against the resistant mutant, docking plus bootstrap flagged ten as significantly <em>improved</em> binders with tight credible intervals — and every one is a mechanistic artifact (antidepressants, antipsychotics, antibiotics). Only mechanism separates them, which is exactly the judgment Claude adds.</li>
+<li><strong>It reproduces known biology on unseen real data.</strong> Run on a genuine, de-identified TCGA lung tumor carrying EGFR L858R+T790M, it recovers the clinic from docking alone: erlotinib and gefitinib fail, and <strong>osimertinib holds</strong>, on a single patient tumor it had never seen.</li>
+<li><strong>It shows why statistics alone aren’t enough.</strong> Screening 300 approved drugs against the resistant mutant, docking plus bootstrap flagged ten as significantly <em>improved</em> binders with tight credible intervals, and every one is a mechanistic artifact (antidepressants, antipsychotics, antibiotics). Only mechanism separates them, which is exactly the judgment Claude adds.</li>
 <li><strong>The reviewer’s judgment is grounded, not asserted.</strong> Each drug carries two orthogonal evidence axes the docking never sees: <strong>pathway grounding</strong> (is the drug’s real target in the driver’s pathway or enzyme class?) and <strong>DepMap dependency</strong> (is that target a gene lung adenocarcinoma actually needs, from CRISPR essentiality?). On-target inhibitors corroborate on both; the statin and antidepressant artifacts fail both. That turns the artifact-vs-lead call into an auditable, cited read rather than a black-box assertion.</li>
-<li><strong>It flags its own blind spots.</strong> Docking affinity is a proxy, not efficacy; repurposing hits are hypotheses; and non-covalent docking can’t capture covalent mechanisms (KRAS G12C, osimertinib on C797S) — so those cases are labeled as blind spots, never read as findings.</li>
+<li><strong>It flags its own blind spots.</strong> Docking affinity is a proxy, not efficacy; repurposing hits are hypotheses; and non-covalent docking can’t capture covalent mechanisms (KRAS G12C, osimertinib on C797S), so those cases are labeled as blind spots, never read as findings.</li>
 </ul>
 </section>
 <section id="the-non-obvious-lead-and-the-overnight-test" class="level2">
 <h2 class="anchored" data-anchor-id="the-non-obvious-lead-and-the-overnight-test">The Non-Obvious Lead, and the Overnight Test</h2>
-<p>Two moments show the pipeline doing its job. First, the reviewer surfaced a credible, non-obvious lead: <strong>imatinib</strong>, the leukemia (CML) drug, is predicted to <em>gain</em> binding across every EGFR mutant tested. Pooling the replicate evidence across four mutant structures gives a mean gain that clears both statistical and practical-significance floors — and it survives review where the statin artifacts don’t, because imatinib is a kinase inhibitor and docking it against a kinase is legitimate. Strictly a hypothesis worth an assay, never a finding.</p>
-<p>Second, to prove the tool outlasts the week, I modeled and docked <strong>EGFR C797S</strong> — the mutation that defeats osimertinib itself, a genotype the tool had never seen — overnight on Berkeley’s GPU cluster. The tool did two honest things at once: it added a fourth consistent data point to the imatinib hypothesis, and it flagged its own limitation, warning not to read osimertinib as “still working” because C797S removes the cysteine that osimertinib binds covalently. A tool that knows where it fails is more trustworthy than one that always answers.</p>
+<p>Two moments show the pipeline doing its job. First, the reviewer surfaced a credible, non-obvious lead: <strong>imatinib</strong>, the leukemia (CML) drug, is predicted to <em>gain</em> binding across every EGFR mutant tested. Pooling the replicate evidence across four mutant structures gives a mean gain that clears both statistical and practical-significance floors, and it survives review where the statin artifacts don’t, because imatinib is a kinase inhibitor and docking it against a kinase is legitimate. Strictly a hypothesis worth an assay, never a finding.</p>
+<p>Second, to prove the tool outlasts the week, I modeled and docked <strong>EGFR C797S</strong>, the mutation that defeats osimertinib itself and a genotype the tool had never seen, overnight on Berkeley’s GPU cluster. The tool did two honest things at once: it added a fourth consistent data point to the imatinib hypothesis, and it flagged its own limitation, warning not to read osimertinib as “still working” because C797S removes the cysteine that osimertinib binds covalently. A tool that knows where it fails is more trustworthy than one that always answers.</p>
 </section>
 <section id="technologies-tools" class="level2">
 <h2 class="anchored" data-anchor-id="technologies-tools">Technologies &amp; Tools</h2>
@@ -249,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>The interesting problem wasn’t running a docking pipeline — those exist. It was designing around the fact that docking is an unreliable proxy, and turning that unreliability into the thing the product solves. The scarce, valuable step is the mechanistic judgment about which computational hits to believe, and that maps almost exactly onto what a language model with grounded evidence can do and a script cannot. Building for a named user — a bench researcher, not a computational biologist — forced every result to be honest by construction: uncertainty on every call, hypotheses labeled as hypotheses, and blind spots flagged rather than hidden.</p>
+<p>The interesting problem wasn’t running a docking pipeline, since those exist. It was designing around the fact that docking is an unreliable proxy, and turning that unreliability into the thing the product solves. The scarce, valuable step is the mechanistic judgment about which computational hits to believe, and that maps almost exactly onto what a language model with grounded evidence can do and a script cannot. Building for a named user, a bench researcher rather than a computational biologist, forced every result to be honest by construction: uncertainty on every call, hypotheses labeled as hypotheses, and blind spots flagged rather than hidden.</p>
 <hr>
 <p><em>Built with Claude for the “Built with Claude: Life Sciences” hackathon (Anthropic × Gladstone Institutes), July 2026.</em></p>
 
@@ -329,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ricardo-pc\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -657,6 +672,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Ricardo Pérez Castillo</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:ricardoperez@berkeley.edu">
+      <i class="bi bi-envelope" role="img" aria-label="Email">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ricardo-pc">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ricardoperezcastillo/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

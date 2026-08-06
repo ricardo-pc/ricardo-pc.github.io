@@ -3,7 +3,7 @@ title: "Evolutionary Feature Selection: A Genetic Algorithm Package"
 description: "Building a production-quality Python package for automated variable selection using evolutionary computation principles."
 author: "Ricardo Pérez Castillo"
 date: "2025-12-15"
-categories: [Python, Statistical Computing, Machine Learning, Software Engineering]
+categories: [Machine Learning, Statistical Computing, Software Engineering]
 ---
 
 ::: {.callout-note appearance="simple" icon=false}
@@ -114,8 +114,8 @@ Implementing genetic algorithms from scratch provided concrete understanding of 
 
 ## Links & Resources
 
-- [GitHub Repository](https://github.com/ricardo-pc/GA-dev) — complete source code and documentation
-- [Project Specification](project.pdf) — original assignment requirements
+- [GitHub Repository](https://github.com/ricardo-pc/GA-dev): complete source code and documentation
+- [Project Specification](project.pdf): the original assignment requirements
 
 ## Reflection
 
