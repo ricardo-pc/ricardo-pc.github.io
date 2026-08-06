@@ -1,6 +1,6 @@
 ---
-title: "What Makes a Headline Work? Lessons from 55,000 A/B Tests"
-description: "Using 54,956 headline variants from 11,649 Upworthy A/B tests, I model which linguistic features predict click-through rate and discover that exclamation marks destroy engagement while numbers quietly win."
+title: "What Makes a Headline Work? Lessons from 55,000 Tested Headlines"
+description: "Using 54,956 headline variants from 11,649 Upworthy A/B tests, I model which linguistic features predict click-through rate and discover that exclamation marks destroy engagement, negativity wins everywhere, and numbers quietly deliver."
 author: "Ricardo Pérez Castillo"
 date: "2026-05-27"
 categories: [Python, Statistical Computing, A/B Testing, NLP]
@@ -13,14 +13,14 @@ A regression analysis of the Upworthy Research Archive: 54,956 headline packages
 
 Course: STAT 230A: Linear Models · Semester: Spring 2026 · Language: Python
 
-[GitHub Repository](https://github.com/ricardo-pc/upworthy-ab-testing)
+**[▶ Explore the interactive version](https://ricardo-pc.github.io/A-B-testing-analysis-upworthy/)** — play the headline guessing game with real A/B pairs, toggle the standard-error specifications, and score your own headline with the fitted model.
 :::
 
 ## The Setup
 
-Between 2012 and 2019, Upworthy ran one of the largest natural headline experiments in digital media history. Every article was tested with two to six different headlines shown simultaneously to random audience subsets. The winner went live. The rest were archived.
+Between 2013 and 2015, Upworthy ran one of the largest natural headline experiments in digital media history. Every article was tested with several competing headlines — 4.7 on average — shown simultaneously to random audience subsets. The winner went live. The rest were archived.
 
-That archive is now public. It contains over 100,000 headline variants across more than a decade of A/B tests, each with an exact impression count and click count. It is, in effect, a massive dataset where the outcome of interest (click-through rate) was measured under controlled conditions.
+That archive is now public. It contains over 100,000 headline variants from two and a half years of continuous A/B testing, each with an exact impression count and click count. It is, in effect, a massive dataset where the outcome of interest (click-through rate) was measured under controlled conditions.
 
 The question I wanted to answer: beyond any one headline being better than another, are there systematic patterns? Do certain structural or linguistic features consistently predict more clicks, regardless of topic?
 
@@ -30,7 +30,7 @@ The final analysis dataset covers 54,956 headline packages from 11,649 A/B tests
 
 - Single-variant tests were dropped (no competitor means no comparison).
 - Tests where the image varied across packages (~35% of raw data) were excluded, since image differences confound headline effects.
-- A Cloudflare misconfiguration in late 2013 corrupted impression counts for some tests; affected rows were removed.
+- A Cloudflare caching bug broke random assignment for several weeks spanning mid-2013 to early 2014; since randomization is the entire causal foundation, all 12,550 affected rows were removed.
 
 Raw click-through rate is badly skewed: most headlines receive a 1–3% CTR while a handful go viral and pull the mean up. The outcome variable is log-transformed CTR, which compresses the tail and makes regression coefficients interpretable as proportional changes: a coefficient of 0.06 means roughly +6% more clicks.
 
@@ -58,31 +58,34 @@ To handle this, I built four model variants in sequence:
 3. **Cluster-robust SEs** — allows arbitrary error correlation within each test (11,649 clusters); the ratio to OLS SEs is 1.3–2.2, confirming clustering is the dominant issue
 4. **WLS with cluster-robust SEs** — downweights packages with few impressions (where CTR is noisiest); used as a robustness check
 
-All ten statistically significant features retain their sign and significance across all four specifications. The coefficient estimates are stable; only the confidence intervals change.
+All ten statistically significant features retain their sign and significance across all four specifications. The coefficient estimates are stable; only the confidence intervals change. The progression also caught one false positive: a negation-words flag ("not", "never", "no") that looks significant under naive OLS but dissolves once errors are clustered by test — exactly the kind of finding that would have shipped if the boring step had been skipped.
 
 ## What I Found
 
 ![Cluster-robust OLS coefficients with 95% confidence intervals. Dark blue dots are positive and significant; dark gray are negative and significant; pale dots are not significant at p = 0.05.](coefficients.png){width=100%}
 
-The clearest finding is the one the chart title says outright: exclamation marks are the single biggest negative predictor. Headlines with "!" have substantially lower CTR than otherwise equivalent headlines, with the coefficient putting the effect in the range of a 30% relative reduction. Collective framing ("we/our") is the second-largest suppressor, followed by question marks and curiosity-gap openers ("how/why/what").
+The clearest finding is the one the chart title says outright: exclamation marks are the single biggest negative predictor. Headlines with "!" have substantially lower CTR than otherwise equivalent headlines — about a 25% relative reduction. Collective framing ("we/our") is the second-largest suppressor, followed by question marks and curiosity-gap openers ("how/why/what").
 
 On the positive side, numeric content wins. Headlines starting with a digit and headlines containing any number both show reliable positive effects. "Has superlative word" is also positive and significant, though smaller.
 
-Sentiment tells a counterintuitive story. The VADER score has a negative coefficient: more *positive* sentiment predicts more clicks. Readers, at least in this sample, responded better to emotionally neutral or affirmative frames than to alarming or negative ones. This runs counter to the usual claim that negative news spreads better, though the effect here is associational rather than causal.
+Sentiment tells the story most people don't expect from Upworthy, the internet's most famously optimistic publisher. The VADER score has a negative coefficient: moving a headline from neutral to fully positive sentiment predicts roughly 12% *fewer* clicks. Negativity wins. The audience of a site built on uplift still clicked the darker framing — consistent with the negativity-bias literature on news engagement, though the effect here is associational rather than causal.
 
 | Feature | Direction | Approx. effect on CTR |
 |----|:--:|:--:|
-| Has "!" | Negative | ~30% lower |
+| Has "!" | Negative | ~25% lower |
 | Contains "we/our" | Negative | ~22% lower |
-| Ends with "?" | Negative | ~25% lower |
-| VADER sentiment (positive) | Negative coeff., positive framing wins | ~12% per unit |
+| Ends with "?" | Negative | ~15% lower |
+| Positive sentiment (VADER, per full unit) | Negative | ~12% lower |
+| Has ellipsis "..." | Negative | ~8% lower |
+| Starts with how/why/what | Negative | ~8% lower |
+| Contains "you/your" | Negative | ~7% lower |
 | Starts with a digit | Positive | ~7% higher |
 | Contains any digit | Positive | ~6% higher |
 | Has superlative word | Positive | ~3% higher |
 
 The model explains about 6% of variance in log-CTR (R² = 0.059), which sounds low but is expected: the bulk of what drives any individual headline's performance is unobserved — the article itself, the image, the audience composition, the news cycle. The linguistic features are real signals; they just share the stage with a lot of noise.
 
-One robustness check tested whether the sentiment effect varies by content category — politics, health, science, economics, and others — using zero-shot classification with BART. The interaction model showed no evidence of moderation (F(6) = 1.26, p = 0.27). The negativity bias pattern appears uniform across topics.
+One robustness check tested whether the sentiment effect varies by content category — politics, health, science, economics, and others — using zero-shot classification with BART to label every headline. Topic itself matters: adding category fixed effects lifts R² from 5.9% to 9.2%. But the sentiment × topic interaction shows no evidence of moderation (F(6) = 1.26, p = 0.27) — the negativity bias is uniform across content types. It is not a politics phenomenon; it shows up in lifestyle and science headlines at statistically indistinguishable rates.
 
 ## The Practical Picture
 
@@ -102,14 +105,14 @@ Robustness checks: residual diagnostics, Cook's distance, correlation matrix acr
 
 ## Links & Resources
 
-- [GitHub Repository](https://github.com/ricardo-pc/upworthy-ab-testing): full code, notebooks, and feature engineering pipeline
+- [Interactive walkthrough](https://ricardo-pc.github.io/A-B-testing-analysis-upworthy/): the full analysis as a scrollytelling site — guess real A/B winners, watch findings survive (or dissolve under) different standard-error specifications, and score your own headline with the fitted coefficients
 - [Final Report (PDF)](STAT230_Report.pdf): complete write-up with all tables and robustness checks
 
 ## Reflection
 
 The most interesting methodological moment in this project was building the four-model progression. Adding cluster-robust standard errors inflated the SEs by 1.3 to 2.2 times relative to OLS, enough to flip a few borderline-significant features to not significant. That gap is the difference between publishing a result and not, and it came entirely from acknowledging that rows within the same A/B test are not independent observations. The data structure matters as much as the model.
 
-The sentiment finding was the biggest surprise. I expected negativity to win — most of the pop-science writing on clickbait says it does. Finding the opposite, and then finding that the pattern held uniformly across content categories, made me take the result seriously even knowing it is associational. Sometimes the data just says something different than the conventional wisdom, and the job is to report that clearly rather than explain it away.
+The sentiment finding was the one I kept interrogating. Upworthy's entire editorial identity was optimism, so I half-expected its self-selected audience to reward positive framing — yet the negativity bias shows up clearly, and testing it against content categories showed it holds uniformly: not a politics story, not a lifestyle story, but a general pattern in how readers click. When a result survives that many attempts to make it go away — robust errors, clustering, impression weighting, topic interactions — the job is to report it plainly rather than explain it away.
 
 ---
 
