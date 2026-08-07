@@ -8,7 +8,7 @@
 
 <meta name="author" content="Ricardo Pérez Castillo">
 <meta name="dcterms.date" content="2026-06-21">
-<meta name="description" content="A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical.">
+<meta name="description" content="A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical. Built at a hackathon, then rebuilt solo — live demo included.">
 
 <title>Otomedi: Multi-Agent Healthcare Automation – Ricardo Pérez Castillo</title>
 <style>
@@ -79,13 +79,13 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Otomedi: Multi-Agent Healthcare Automation – Ricardo Pérez Castillo">
-<meta property="og:description" content="A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical.">
+<meta property="og:description" content="A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical. Built at a hackathon, then rebuilt solo — live demo included.">
 <meta property="og:image" content="https://ricardo-pc.github.io/posts/otomedi/otomedic_graphic.png">
 <meta property="og:site_name" content="Ricardo Pérez Castillo">
 <meta property="og:image:height" content="1100">
 <meta property="og:image:width" content="1800">
 <meta name="twitter:title" content="Otomedi: Multi-Agent Healthcare Automation – Ricardo Pérez Castillo">
-<meta name="twitter:description" content="A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical.">
+<meta name="twitter:description" content="A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical. Built at a hackathon, then rebuilt solo — live demo included.">
 <meta name="twitter:image" content="https://ricardo-pc.github.io/posts/otomedi/otomedic_graphic.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="1100">
@@ -155,6 +155,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How It Works</a></li>
   <li><a href="#designed-around-safety" id="toc-designed-around-safety" class="nav-link" data-scroll-target="#designed-around-safety">Designed Around Safety</a></li>
   <li><a href="#technologies-tools" id="toc-technologies-tools" class="nav-link" data-scroll-target="#technologies-tools">Technologies &amp; Tools</a></li>
+  <li><a href="#the-post-hackathon-rebuild" id="toc-the-post-hackathon-rebuild" class="nav-link" data-scroll-target="#the-post-hackathon-rebuild">The Post-Hackathon Rebuild</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
   </ul>
 </nav>
@@ -174,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical.
+    A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical. Built at a hackathon, then rebuilt solo — live demo included.
   </div>
 </div>
 
@@ -195,6 +196,12 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 6, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -213,9 +220,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>An end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026). Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.</p>
-<p>Event: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase</p>
-<p><a href="https://github.com/ricardo-pc/Berkeley-AI-Hackathon">GitHub Repository</a></p>
+<p>An end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026), then rebuilt solo afterwards into the version linked here. Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.</p>
+<p>Event: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase, GitHub Actions</p>
+<p><a href="https://otomedi.vercel.app">Live demo</a> · <a href="https://github.com/ricardo-pc/otomedi">GitHub repository</a> · <a href="https://github.com/ricardo-pc/Berkeley-AI-Hackathon">original hackathon repo</a></p>
 </div>
 </div>
 <section id="the-problem" class="level2">
@@ -227,8 +234,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="how-it-works">How It Works</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="otomedic_architecture.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Otomedi pipeline: from voicemail to one-click approval.</figcaption>
+<p><img src="architecture.svg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Otomedi architecture: agents propose along the top row; the human approval loop along the bottom owns the only write path.</figcaption>
 </figure>
 </div>
 <p>A voicemail flows through a pipeline of specialized agents, each with a single job:</p>
@@ -257,9 +264,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Frontend: Next.js dashboards: a CHW approval dashboard, a demo EHR, and an audio-upload demo</p>
 <p>Data: Supabase (Postgres) as the shared task store and system of record for patients, visits, prescriptions, and schedules</p>
 </section>
+<section id="the-post-hackathon-rebuild" class="level2">
+<h2 class="anchored" data-anchor-id="the-post-hackathon-rebuild">The Post-Hackathon Rebuild</h2>
+<p>The hackathon demo stopped working about a week after the event: it spanned five separately deployed pieces (two Python services, three Next.js apps) across free-tier hosts, and the first one to lapse took the rest down with it. The rebuild treated that as the main lesson rather than an embarrassment:</p>
+<ul>
+<li><strong>One backend, one web app.</strong> The two Python services — split along team boundaries, with intentionally duplicated logic — became a single FastAPI service; the three Next.js apps became one, with the dashboard, the <a href="https://otomedi.vercel.app/demo">pipeline demo</a>, and the EHR mock as routes. The test suite stayed green through the merge.</li>
+<li><strong>A demo that cannot die.</strong> With no credentials configured, the backend swaps its Supabase repositories for in-memory adapters behind the same interface, and the web app falls back to an in-repo seed. The <a href="https://otomedi.vercel.app">hosted demo</a> is a static-hosting deployment with zero environment variables — nothing left to auto-pause.</li>
+<li><strong>Structured outputs and a pinned eval.</strong> Intake extraction moved from parse-the-markdown-fences to Claude structured outputs, with format enforcement in a JSON schema instead of prompt prose. An eval harness scores the extractor field-by-field on ten canonical voicemail transcripts against pinned expected outputs.</li>
+<li><strong>The pipeline made visible.</strong> Uploading a voicemail on <a href="https://otomedi.vercel.app/demo">/demo</a> now shows each stage’s actual output — the extracted fields, every eligibility rule’s verdict (including a drug-interaction <em>warning</em> that deliberately doesn’t block), and the task landing in the review queue.</li>
+</ul>
+<p>173 regression tests run in CI on every push.</p>
+</section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>The interesting engineering problem wasn’t getting an LLM to read a voicemail. It was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table.</p>
+<p>The interesting engineering problem wasn’t getting an LLM to read a voicemail. It was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table. The rebuild added a second lesson: a portfolio demo is a distributed system with an uptime requirement and no on-call rotation, so it has to be designed to degrade — the version that survives is the one that needs nothing to stay alive.</p>
 <hr>
 <p><em>Built at the UC Berkeley AI Hackathon, June 2026.</em></p>
 

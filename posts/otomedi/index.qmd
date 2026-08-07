@@ -1,8 +1,9 @@
 ---
 title: "Otomedi: Multi-Agent Healthcare Automation"
-description: "A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical."
+description: "A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical. Built at a hackathon, then rebuilt solo — live demo included."
 author: "Ricardo Pérez Castillo"
 date: "2026-06-21"
+date-modified: "2026-08-06"
 categories: [AI Agents, Software Engineering, Life Sciences]
 image: otomedic_graphic.png
 ---
@@ -10,11 +11,11 @@ image: otomedic_graphic.png
 ::: {.callout-note appearance="simple" icon=false}
 ## Project Overview
 
-An end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026). Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.
+An end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026), then rebuilt solo afterwards into the version linked here. Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.
 
-Event: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase
+Event: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase, GitHub Actions
 
-[GitHub Repository](https://github.com/ricardo-pc/Berkeley-AI-Hackathon)
+[Live demo](https://otomedi.vercel.app) · [GitHub repository](https://github.com/ricardo-pc/otomedi) · [original hackathon repo](https://github.com/ricardo-pc/Berkeley-AI-Hackathon)
 :::
 
 ## The Problem
@@ -25,7 +26,7 @@ Otomedi turns that voicemail backlog into a dashboard of pre-verified, one-click
 
 ## How It Works
 
-![Otomedi pipeline: from voicemail to one-click approval.](otomedic_architecture.png){width=100%}
+![Otomedi architecture: agents propose along the top row; the human approval loop along the bottom owns the only write path.](architecture.svg){width=100%}
 
 A voicemail flows through a pipeline of specialized agents, each with a single job:
 
@@ -54,9 +55,20 @@ Frontend: Next.js dashboards: a CHW approval dashboard, a demo EHR, and an audio
 
 Data: Supabase (Postgres) as the shared task store and system of record for patients, visits, prescriptions, and schedules
 
+## The Post-Hackathon Rebuild
+
+The hackathon demo stopped working about a week after the event: it spanned five separately deployed pieces (two Python services, three Next.js apps) across free-tier hosts, and the first one to lapse took the rest down with it. The rebuild treated that as the main lesson rather than an embarrassment:
+
+- **One backend, one web app.** The two Python services — split along team boundaries, with intentionally duplicated logic — became a single FastAPI service; the three Next.js apps became one, with the dashboard, the [pipeline demo](https://otomedi.vercel.app/demo), and the EHR mock as routes. The test suite stayed green through the merge.
+- **A demo that cannot die.** With no credentials configured, the backend swaps its Supabase repositories for in-memory adapters behind the same interface, and the web app falls back to an in-repo seed. The [hosted demo](https://otomedi.vercel.app) is a static-hosting deployment with zero environment variables — nothing left to auto-pause.
+- **Structured outputs and a pinned eval.** Intake extraction moved from parse-the-markdown-fences to Claude structured outputs, with format enforcement in a JSON schema instead of prompt prose. An eval harness scores the extractor field-by-field on ten canonical voicemail transcripts against pinned expected outputs.
+- **The pipeline made visible.** Uploading a voicemail on [/demo](https://otomedi.vercel.app/demo) now shows each stage's actual output — the extracted fields, every eligibility rule's verdict (including a drug-interaction *warning* that deliberately doesn't block), and the task landing in the review queue.
+
+173 regression tests run in CI on every push.
+
 ## Reflection
 
-The interesting engineering problem wasn't getting an LLM to read a voicemail. It was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table.
+The interesting engineering problem wasn't getting an LLM to read a voicemail. It was deciding where automation must stop. Healthcare punishes false confidence, so the architecture treats the human approval click as a first-class pipeline stage rather than an afterthought. Structuring agent communication through a shared database row, instead of direct agent-to-agent messages, is what made the system debuggable at hackathon speed: every intermediate decision was inspectable in one table. The rebuild added a second lesson: a portfolio demo is a distributed system with an uptime requirement and no on-call rotation, so it has to be designed to degrade — the version that survives is the one that needs nothing to stay alive.
 
 ---
 

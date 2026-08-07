@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 740" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- canvas -->
+  <rect x="0" y="0" width="1240" height="740" rx="0" fill="#f8fafc"/>
+
+  <!-- title -->
+  <text x="60" y="62" font-size="26" font-weight="700" fill="#0f172a">Otomedi — architecture</text>
+  <text x="60" y="90" font-size="14" fill="#64748b">One FastAPI service, one Next.js app. Agents propose; a human approves.</text>
+
+  <!-- ════ Row 1: the agent pipeline ════ -->
+
+  <!-- A: voicemail in -->
+  <g>
+    <rect x="60" y="130" width="240" height="135" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="80" y="164" font-size="16" font-weight="700" fill="#0f172a">Voicemail in</text>
+    <text x="80" y="196" font-size="13" fill="#475569">Audio upload on /demo,</text>
+    <text x="80" y="216" font-size="13" fill="#475569">or a telephony webhook</text>
+    <text x="80" y="236" font-size="13" fill="#475569">(SignalWire / Twilio)</text>
+  </g>
+
+  <!-- B: STT -->
+  <g>
+    <rect x="350" y="130" width="240" height="135" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="370" y="164" font-size="16" font-weight="700" fill="#0f172a">Speech-to-text</text>
+    <rect x="500" y="146" width="74" height="22" rx="5" fill="#e0f2fe"/>
+    <text x="537" y="161" font-size="10" font-weight="600" fill="#0369a1" text-anchor="middle" letter-spacing="0.5">DEEPGRAM</text>
+    <text x="370" y="196" font-size="13" fill="#475569">Raw audio becomes a</text>
+    <text x="370" y="216" font-size="13" fill="#475569">transcript the rest of the</text>
+    <text x="370" y="236" font-size="13" fill="#475569">pipeline can reason over</text>
+  </g>
+
+  <!-- C: extraction -->
+  <g>
+    <rect x="640" y="130" width="240" height="135" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="660" y="164" font-size="16" font-weight="700" fill="#0f172a">Intake extraction</text>
+    <rect x="806" y="146" width="58" height="22" rx="5" fill="#ffedd5"/>
+    <text x="835" y="161" font-size="10" font-weight="600" fill="#c2410c" text-anchor="middle" letter-spacing="0.5">CLAUDE</text>
+    <text x="660" y="196" font-size="13" fill="#475569">Structured outputs: identity,</text>
+    <text x="660" y="216" font-size="13" fill="#475569">one entry per request,</text>
+    <text x="660" y="236" font-size="13" fill="#475569">resolved dates, missing fields</text>
+  </g>
+
+  <!-- D: gates + eligibility -->
+  <g>
+    <rect x="930" y="130" width="240" height="135" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="950" y="164" font-size="16" font-weight="700" fill="#0f172a">Gates &amp; eligibility</text>
+    <rect x="1104" y="146" width="46" height="22" rx="5" fill="#f1f5f9"/>
+    <text x="1127" y="161" font-size="10" font-weight="600" fill="#475569" text-anchor="middle" letter-spacing="0.5">RULES</text>
+    <text x="950" y="196" font-size="13" fill="#475569">Emergency triage, insurance,</text>
+    <text x="950" y="216" font-size="13" fill="#475569">then deterministic checks per</text>
+    <text x="950" y="236" font-size="13" fill="#475569">type: refill · reschedule · relay</text>
+  </g>
+
+  <!-- row-1 arrows -->
+  <line x1="300" y1="197" x2="344" y2="197" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="590" y1="197" x2="634" y2="197" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="880" y1="197" x2="924" y2="197" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- backend grouping hint -->
+  <text x="350" y="120" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">BACKEND/ — FASTAPI, ONE SERVICE</text>
+  <line x1="350" y1="278" x2="1170" y2="278" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- ════ Task store ════ -->
+  <g>
+    <rect x="930" y="330" width="240" height="130" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <text x="950" y="364" font-size="16" font-weight="700" fill="#0f172a">Task queue</text>
+    <rect x="1058" y="346" width="92" height="22" rx="5" fill="#d1fae5"/>
+    <text x="1104" y="361" font-size="10" font-weight="600" fill="#047857" text-anchor="middle" letter-spacing="0.5">PG · MEMORY</text>
+    <text x="950" y="396" font-size="13" fill="#475569">Checks + proposed_action;</text>
+    <text x="950" y="416" font-size="13" fill="#475569">Postgres, or an in-memory</text>
+    <text x="950" y="436" font-size="13" fill="#475569">demo store with zero keys</text>
+  </g>
+  <line x1="1050" y1="265" x2="1050" y2="324" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="1064" y="302" font-size="11" fill="#64748b" font-style="italic">proposes, never executes</text>
+
+  <!-- ════ Row 2: the human loop ════ -->
+
+  <!-- F: dashboard -->
+  <g>
+    <rect x="930" y="525" width="240" height="135" rx="12" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+    <text x="950" y="559" font-size="16" font-weight="700" fill="#0f172a">CHW dashboard</text>
+    <rect x="1090" y="541" width="60" height="22" rx="5" fill="#e0e7ff"/>
+    <text x="1120" y="556" font-size="10" font-weight="600" fill="#4338ca" text-anchor="middle" letter-spacing="0.5">NEXT.JS</text>
+    <text x="950" y="591" font-size="13" fill="#475569">A certified health worker</text>
+    <text x="950" y="611" font-size="13" fill="#475569">reviews every check and</text>
+    <text x="950" y="631" font-size="13" fill="#475569">decides with one click</text>
+  </g>
+  <line x1="1050" y1="460" x2="1050" y2="519" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="1064" y="496" font-size="11" fill="#64748b" font-style="italic">review queue</text>
+
+  <!-- G: executor -->
+  <g>
+    <rect x="560" y="525" width="280" height="135" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="580" y="559" font-size="16" font-weight="700" fill="#0f172a">Decision executor</text>
+    <rect x="754" y="541" width="66" height="22" rx="5" fill="#e0f2fe"/>
+    <text x="787" y="556" font-size="10" font-weight="600" fill="#0369a1" text-anchor="middle" letter-spacing="0.5">FASTAPI</text>
+    <text x="580" y="591" font-size="13" fill="#475569">One idempotent endpoint runs</text>
+    <text x="580" y="611" font-size="13" fill="#475569">the approved proposed_action —</text>
+    <text x="580" y="631" font-size="13" fill="#475569">re-approving is a safe no-op</text>
+  </g>
+  <line x1="924" y1="592" x2="846" y2="592" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="885" y="580" font-size="11" fill="#64748b" font-style="italic" text-anchor="middle">approve</text>
+
+  <!-- H: clinical record -->
+  <g>
+    <rect x="60" y="525" width="400" height="135" rx="12" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+    <text x="80" y="559" font-size="16" font-weight="700" fill="#0f172a">Clinical record &amp; patient</text>
+    <rect x="367" y="541" width="73" height="22" rx="5" fill="#fef3c7"/>
+    <text x="403" y="556" font-size="10" font-weight="600" fill="#b45309" text-anchor="middle" letter-spacing="0.5">THE WRITE</text>
+    <text x="80" y="591" font-size="13" fill="#475569">Prescriptions · appointments · provider messages,</text>
+    <text x="80" y="611" font-size="13" fill="#475569">then an SMS confirmation to the patient.</text>
+    <text x="80" y="631" font-size="13" fill="#475569">EHR views reflect the change immediately.</text>
+  </g>
+  <line x1="554" y1="592" x2="466" y2="592" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="510" y="580" font-size="11" fill="#64748b" font-style="italic" text-anchor="middle">executes</text>
+
+  <!-- footer principle -->
+  <line x1="60" y1="696" x2="1170" y2="696" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="722" font-size="13" fill="#334155">
+    <tspan font-weight="700">Design principle:</tspan>
+    <tspan fill="#64748b"> no agent ever writes to the clinical tables. Every automated step ends in a proposal; only the human approval executes it.</tspan>
+  </text>
+</svg>
