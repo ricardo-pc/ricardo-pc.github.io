@@ -248,6 +248,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p>A controlled comparison of three recommender systems of increasing complexity on MovieLens 1M, retrained from scratch at five training data densities to study how sparsity shapes the bias-variance tradeoff.</p>
 <p>Course: CS 289A: Introduction to Machine Learning · Semester: Spring 2026 · Language: Python (PyTorch)</p>
+<p><strong><a href="https://ricardo-pc.github.io/cs289-ranking/">▶ Explore the interactive version</a></strong>: play recommender against the real trained model, starve a user’s data with the density slider, flip between the two metrics that tell different stories, and get movie recommendations computed live in your browser.</p>
 <p><a href="https://github.com/ricardo-pc/cs289-ranking">GitHub Repository</a></p>
 </div>
 </div>
@@ -264,7 +265,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="eda_item_popularity.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Item popularity follows a steep power law. The top 20% of movies account for roughly 80% of all ratings, leaving the long tail nearly invisible to any model trained on this data.</figcaption>
+<figcaption>Item popularity follows a steep power law. The top 20% of movies account for roughly two-thirds of all ratings — it takes the top third of the catalog to reach 80% — leaving the long tail nearly invisible to any model trained on this data.</figcaption>
 </figure>
 </div>
 <p>Data preparation followed the leave-one-out protocol from He et al.&nbsp;(2017): each user’s last interaction (by timestamp) goes to the test set, the second-to-last to validation, and everything else to training. No user features or movie metadata were used, keeping the comparison focused on interaction structure alone.</p>
@@ -358,6 +359,7 @@ window.Quarto = {
 <section id="links-resources" class="level2">
 <h2 class="anchored" data-anchor-id="links-resources">Links &amp; Resources</h2>
 <ul>
+<li><a href="https://ricardo-pc.github.io/cs289-ranking/">Interactive walkthrough</a>: the full study as an interactive site — guess what real users watched next, place your bet on the outcome before the reveal, explore the embedding map of all 3,706 movies, and rate a few films to get recommendations from the actual trained model, running entirely in your browser</li>
 <li><a href="https://github.com/ricardo-pc/cs289-ranking">GitHub Repository</a>: full codebase, training scripts, and notebooks</li>
 <li><a href="CS289_Report.pdf">Final Report (PDF)</a>: complete write-up with methodology and results</li>
 </ul>

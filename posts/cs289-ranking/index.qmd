@@ -14,6 +14,8 @@ A controlled comparison of three recommender systems of increasing complexity on
 
 Course: CS 289A: Introduction to Machine Learning · Semester: Spring 2026 · Language: Python (PyTorch)
 
+**[▶ Explore the interactive version](https://ricardo-pc.github.io/cs289-ranking/)**: play recommender against the real trained model, starve a user's data with the density slider, flip between the two metrics that tell different stories, and get movie recommendations computed live in your browser.
+
 [GitHub Repository](https://github.com/ricardo-pc/cs289-ranking)
 :::
 
@@ -31,7 +33,7 @@ We used MovieLens 1M: one million ratings from 6,040 users across 3,706 movies, 
 
 Ratings are treated as implicit feedback with confidence weighting. Rather than predicting the star rating itself, the models learn to rank items a user has interacted with above those they have not. A star rating of 5 is treated as a stronger positive signal than a 1, but both are positive. The confidence weight is $c_{ui} = 1 + \alpha \cdot r_{ui}$, where $\alpha$ is tuned per model.
 
-![Item popularity follows a steep power law. The top 20% of movies account for roughly 80% of all ratings, leaving the long tail nearly invisible to any model trained on this data.](eda_item_popularity.png){width=90%}
+![Item popularity follows a steep power law. The top 20% of movies account for roughly two-thirds of all ratings — it takes the top third of the catalog to reach 80% — leaving the long tail nearly invisible to any model trained on this data.](eda_item_popularity.png){width=90%}
 
 Data preparation followed the leave-one-out protocol from He et al. (2017): each user's last interaction (by timestamp) goes to the test set, the second-to-last to validation, and everything else to training. No user features or movie metadata were used, keeping the comparison focused on interaction structure alone.
 
@@ -93,6 +95,7 @@ Evaluation: NDCG@10 and HR@10 on a fixed held-out test set (leave-one-out split)
 
 ## Links & Resources
 
+- [Interactive walkthrough](https://ricardo-pc.github.io/cs289-ranking/): the full study as an interactive site — guess what real users watched next, place your bet on the outcome before the reveal, explore the embedding map of all 3,706 movies, and rate a few films to get recommendations from the actual trained model, running entirely in your browser
 - [GitHub Repository](https://github.com/ricardo-pc/cs289-ranking): full codebase, training scripts, and notebooks
 - [Final Report (PDF)](CS289_Report.pdf): complete write-up with methodology and results
 

@@ -88,7 +88,7 @@
     "href": "posts/cs289-ranking/index.html",
     "title": "When Does Ranking Help? A Sparsity Study of Movie Recommenders",
     "section": "",
-    "text": "NoteProject Overview\n\n\n\nA controlled comparison of three recommender systems of increasing complexity on MovieLens 1M, retrained from scratch at five training data densities to study how sparsity shapes the bias-variance tradeoff.\nCourse: CS 289A: Introduction to Machine Learning · Semester: Spring 2026 · Language: Python (PyTorch)\nGitHub Repository"
+    "text": "NoteProject Overview\n\n\n\nA controlled comparison of three recommender systems of increasing complexity on MovieLens 1M, retrained from scratch at five training data densities to study how sparsity shapes the bias-variance tradeoff.\nCourse: CS 289A: Introduction to Machine Learning · Semester: Spring 2026 · Language: Python (PyTorch)\n▶ Explore the interactive version: play recommender against the real trained model, starve a user’s data with the density slider, flip between the two metrics that tell different stories, and get movie recommendations computed live in your browser.\nGitHub Repository"
   },
   {
     "objectID": "posts/cs289-ranking/index.html#the-question",
@@ -102,7 +102,7 @@
     "href": "posts/cs289-ranking/index.html#the-data",
     "title": "When Does Ranking Help? A Sparsity Study of Movie Recommenders",
     "section": "The Data",
-    "text": "The Data\nWe used MovieLens 1M: one million ratings from 6,040 users across 3,706 movies, collected between 2000 and 2003. The dataset is a classic benchmark in recommender systems research precisely because it is dense enough to train on but realistic enough to be informative.\nRatings are treated as implicit feedback with confidence weighting. Rather than predicting the star rating itself, the models learn to rank items a user has interacted with above those they have not. A star rating of 5 is treated as a stronger positive signal than a 1, but both are positive. The confidence weight is \\(c_{ui} = 1 + \\alpha \\cdot r_{ui}\\), where \\(\\alpha\\) is tuned per model.\n\n\n\nItem popularity follows a steep power law. The top 20% of movies account for roughly 80% of all ratings, leaving the long tail nearly invisible to any model trained on this data.\n\n\nData preparation followed the leave-one-out protocol from He et al. (2017): each user’s last interaction (by timestamp) goes to the test set, the second-to-last to validation, and everything else to training. No user features or movie metadata were used, keeping the comparison focused on interaction structure alone."
+    "text": "The Data\nWe used MovieLens 1M: one million ratings from 6,040 users across 3,706 movies, collected between 2000 and 2003. The dataset is a classic benchmark in recommender systems research precisely because it is dense enough to train on but realistic enough to be informative.\nRatings are treated as implicit feedback with confidence weighting. Rather than predicting the star rating itself, the models learn to rank items a user has interacted with above those they have not. A star rating of 5 is treated as a stronger positive signal than a 1, but both are positive. The confidence weight is \\(c_{ui} = 1 + \\alpha \\cdot r_{ui}\\), where \\(\\alpha\\) is tuned per model.\n\n\n\nItem popularity follows a steep power law. The top 20% of movies account for roughly two-thirds of all ratings — it takes the top third of the catalog to reach 80% — leaving the long tail nearly invisible to any model trained on this data.\n\n\nData preparation followed the leave-one-out protocol from He et al. (2017): each user’s last interaction (by timestamp) goes to the test set, the second-to-last to validation, and everything else to training. No user features or movie metadata were used, keeping the comparison focused on interaction structure alone."
   },
   {
     "objectID": "posts/cs289-ranking/index.html#three-models-increasing-complexity",
@@ -144,7 +144,7 @@
     "href": "posts/cs289-ranking/index.html#links-resources",
     "title": "When Does Ranking Help? A Sparsity Study of Movie Recommenders",
     "section": "Links & Resources",
-    "text": "Links & Resources\n\nGitHub Repository: full codebase, training scripts, and notebooks\nFinal Report (PDF): complete write-up with methodology and results"
+    "text": "Links & Resources\n\nInteractive walkthrough: the full study as an interactive site — guess what real users watched next, place your bet on the outcome before the reveal, explore the embedding map of all 3,706 movies, and rate a few films to get recommendations from the actual trained model, running entirely in your browser\nGitHub Repository: full codebase, training scripts, and notebooks\nFinal Report (PDF): complete write-up with methodology and results"
   },
   {
     "objectID": "posts/cs289-ranking/index.html#reflection",
