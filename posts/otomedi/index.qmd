@@ -3,7 +3,7 @@ title: "Otomedi: Multi-Agent Healthcare Automation"
 description: "A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps final sign-off on everything clinical. Built at a hackathon, then rebuilt solo — live demo included."
 author: "Ricardo Pérez Castillo"
 date: "2026-06-21"
-date-modified: "2026-08-06"
+date-modified: "2026-08-09"
 categories: [AI Agents, Software Engineering, Life Sciences]
 image: otomedic_graphic.png
 ---
@@ -11,12 +11,14 @@ image: otomedic_graphic.png
 ::: {.callout-note appearance="simple" icon=false}
 ## Project Overview
 
-An end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026), then rebuilt solo afterwards into the version linked here. Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.
+An end-to-end agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026), then rebuilt solo afterwards into the version linked here. Voicemails left at a clinic front desk are transcribed, structured by Claude, verified by deterministic eligibility services, and surfaced in a dashboard where a certified healthcare worker approves each action with one click.
 
 Event: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase, GitHub Actions
 
 [Live demo](https://otomedi.vercel.app) · [GitHub repository](https://github.com/ricardo-pc/otomedi) · [original hackathon repo](https://github.com/ricardo-pc/Berkeley-AI-Hackathon)
 :::
+
+{{< include flow-story.html >}}
 
 ## The Problem
 
@@ -35,9 +37,9 @@ A voicemail flows through a pipeline of specialized agents, each with a single j
 3. **Eligibility Agents**: verify the request against patient records: insurance acceptance, refill eligibility (visit history, dosage match, conflicting medications), or scheduling constraints, depending on request type.
 4. **Scheduling Agent**: finds an appointment slot given provider availability and urgency, writing a proposed action rather than a final one.
 5. **Human approval**: a certified healthcare worker reviews the proposed action in the dashboard. Only after they click Approve does the backend execute it.
-6. **Confirmation & Summary Agents**: send SMS/email confirmations to the patient and compile a daily digest for the front desk.
+6. **Confirmation & Summary Agents**: send SMS confirmations to the patient and compile a daily digest for the front desk.
 
-The agents don't message each other directly. Every agent reads and writes a shared task row in Supabase, which makes the pipeline observable, testable, and easy to resume when a step fails.
+The agents don't message each other directly. Typed payloads move through one FastAPI service, while each final set of checks and its proposed action is persisted on a shared task row. That row makes the human review boundary observable, testable, and auditable.
 
 ## Designed Around Safety
 
@@ -62,9 +64,9 @@ The hackathon demo stopped working about a week after the event: it spanned five
 - **One backend, one web app.** The two Python services — split along team boundaries, with intentionally duplicated logic — became a single FastAPI service; the three Next.js apps became one, with the dashboard, the [pipeline demo](https://otomedi.vercel.app/demo), and the EHR mock as routes. The test suite stayed green through the merge.
 - **A demo that cannot die.** With no credentials configured, the backend swaps its Supabase repositories for in-memory adapters behind the same interface, and the web app falls back to an in-repo seed. The [hosted demo](https://otomedi.vercel.app) is a static-hosting deployment with zero environment variables — nothing left to auto-pause.
 - **Structured outputs and a pinned eval.** Intake extraction moved from parse-the-markdown-fences to Claude structured outputs, with format enforcement in a JSON schema instead of prompt prose. An eval harness scores the extractor field-by-field on ten canonical voicemail transcripts against pinned expected outputs.
-- **The pipeline made visible.** Uploading a voicemail on [/demo](https://otomedi.vercel.app/demo) now shows each stage's actual output — the extracted fields, every eligibility rule's verdict (including a drug-interaction *warning* that deliberately doesn't block), and the task landing in the review queue.
+- **The pipeline made visible.** [/demo](https://otomedi.vercel.app/demo) now starts with a self-running cached scenario — no file upload required — showing the transcript, extracted fields, every eligibility rule's verdict (including a drug-interaction *warning* that deliberately doesn't block), the human review boundary, and the final clinical write.
 
-173 regression tests run in CI on every push.
+174 regression tests run in CI on every push.
 
 ## Reflection
 

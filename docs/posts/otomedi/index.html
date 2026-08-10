@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 6, 2026</p>
+      <p class="date-modified">August 9, 2026</p>
     </div>
   </div>
     
@@ -220,11 +220,444 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>An end-to-end multi-agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026), then rebuilt solo afterwards into the version linked here. Voicemails left at a clinic front desk are transcribed, parsed, and verified by a pipeline of specialized Claude-powered agents, then surfaced in a dashboard where a certified healthcare worker approves each action with one click.</p>
+<p>An end-to-end agent system built in 36 hours at the UC Berkeley AI Hackathon (June 2026), then rebuilt solo afterwards into the version linked here. Voicemails left at a clinic front desk are transcribed, structured by Claude, verified by deterministic eligibility services, and surfaced in a dashboard where a certified healthcare worker approves each action with one click.</p>
 <p>Event: UC Berkeley AI Hackathon · June 2026 · Stack: Python, FastAPI, Claude API, Deepgram, Next.js, Supabase, GitHub Actions</p>
 <p><a href="https://otomedi.vercel.app">Live demo</a> · <a href="https://github.com/ricardo-pc/otomedi">GitHub repository</a> · <a href="https://github.com/ricardo-pc/Berkeley-AI-Hackathon">original hackathon repo</a></p>
 </div>
 </div>
+<div id="otomedi-story" class="otomedi-story page-columns page-full">
+  <div class="otomedi-story__head">
+    <div>
+      <p class="otomedi-story__kicker">No upload required</p>
+      <h2 class="anchored">A voicemail becomes a safe, reviewable action</h2>
+      <p>One real scenario from Otomedi's permanent sample data.</p>
+    </div>
+    <button type="button" class="otomedi-story__replay" data-story-replay="" aria-label="Replay the Otomedi flow">↻ Replay</button>
+  </div>
+
+  <ol class="otomedi-story__steps" aria-label="Otomedi pipeline stages">
+    <li><button type="button" data-story-step="0" class="is-active" aria-current="step"><span>1</span><b>Call</b></button></li>
+    <li><button type="button" data-story-step="1"><span>2</span><b>Transcript</b></button></li>
+    <li><button type="button" data-story-step="2"><span>3</span><b>Extract</b></button></li>
+    <li><button type="button" data-story-step="3"><span>4</span><b>Check</b></button></li>
+    <li><button type="button" data-story-step="4"><span>5</span><b>Review</b></button></li>
+    <li><button type="button" data-story-step="5"><span>6</span><b>Execute</b></button></li>
+  </ol>
+
+  <div class="otomedi-story__scene page-columns page-full" aria-live="polite">
+    <section class="otomedi-story__panel is-active" data-story-panel="0">
+      <div class="otomedi-story__visual">
+        <div class="otomedi-story__phone"><span>☎</span></div>
+        <div class="otomedi-story__wave" aria-label="Voicemail waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="otomedi-story__copy">
+        <small>1 · Patient voicemail</small>
+        <h3 class="anchored">“I need a refill for Lisinopril 10 mg.”</h3>
+        <p>Maria says who she is, what she needs, and how the clinic can reach her. No app, portal, or form required.</p>
+        <blockquote class="blockquote">Maria Gonzalez · DOB March 12, 1978 · Blue Cross PPO</blockquote>
+      </div>
+    </section>
+
+    <section class="otomedi-story__panel" data-story-panel="1">
+      <div class="otomedi-story__visual">
+        <div class="otomedi-story__transcript" aria-label="Speech-to-text transcript">
+          <p>Hi, this is <mark>Maria Gonzalez</mark>.</p>
+          <p>My date of birth is <mark>March 12, 1978</mark>.</p>
+          <p>I need a refill for <mark>Lisinopril 10 mg</mark>,</p>
+          <p>once daily with food.</p>
+        </div>
+      </div>
+      <div class="otomedi-story__copy">
+        <small>2 · Deepgram speech-to-text</small>
+        <h3 class="anchored">Audio becomes searchable text</h3>
+        <p>The recording becomes a normalized transcript while the raw provider response remains available for traceability.</p>
+      </div>
+    </section>
+
+    <section class="otomedi-story__panel" data-story-panel="2">
+      <div class="otomedi-story__visual">
+        <dl class="otomedi-story__fields" aria-label="Structured intake fields">
+          <div><dt>patient</dt><dd>Maria Gonzalez</dd></div>
+          <div><dt>date_of_birth</dt><dd>1978-03-12</dd></div>
+          <div><dt>request.type</dt><dd>refill</dd></div>
+          <div><dt>orders[0]</dt><dd>Lisinopril</dd></div>
+          <div><dt>dosage</dt><dd>10 mg</dd></div>
+          <div><dt>urgency</dt><dd>routine</dd></div>
+          <div><dt>insurance</dt><dd>Blue Cross PPO</dd></div>
+          <div><dt>missing_fields</dt><dd>[]</dd></div>
+        </dl>
+      </div>
+      <div class="otomedi-story__copy">
+        <small>3 · Claude structured output</small>
+        <h3 class="anchored">Language becomes schema-constrained intake data</h3>
+        <p>Identity, request type, medication, dosage, urgency, timing, and missing fields become typed data that deterministic services can consume.</p>
+      </div>
+    </section>
+
+    <section class="otomedi-story__panel page-columns page-full" data-story-panel="3">
+      <div class="otomedi-story__visual page-columns page-full">
+        <div class="otomedi-story__checks page-columns page-full" aria-label="Eligibility checks">
+          <p><span class="pass">✓</span><b>Insurance accepted</b><em>Pass</em></p>
+          <p><span class="pass">✓</span><b>Recent visit on file</b><em>Pass</em></p>
+          <p><span class="pass">✓</span><b>Exact dosage match</b><em>Pass</em></p>
+          <p><span class="pass">✓</span><b>Upcoming visit scheduled</b><em>Pass</em></p>
+          <p><span class="warn">!</span><b>Amlodipine interaction</b><em>Warning</em></p>
+          <aside><strong>Emergency signal?</strong> Skip every workflow and alert a human immediately.</aside>
+        </div>
+      </div>
+      <div class="otomedi-story__copy">
+        <small>4 · Deterministic eligibility</small>
+        <h3 class="anchored">Rules verify the request against clinic records</h3>
+        <p>Warnings stay visible without becoming silent blockers. Failed gates become plain-English escalations instead of automated writes.</p>
+      </div>
+    </section>
+
+    <section class="otomedi-story__panel" data-story-panel="4">
+      <div class="otomedi-story__visual">
+        <div class="otomedi-story__task" aria-label="Task awaiting human approval">
+          <header><strong>Maria Gonzalez</strong><span>Ready for approval</span></header>
+          <dl>
+            <dt>Request</dt><dd>Prescription refill</dd>
+            <dt>Action</dt><dd>Refill Lisinopril 10 mg</dd>
+            <dt>Warning</dt><dd>Also taking Amlodipine</dd>
+            <dt>Write access</dt><dd class="locked">Locked until approval</dd>
+          </dl>
+          <footer>♢ Human sign-off is the safety boundary</footer>
+        </div>
+      </div>
+      <div class="otomedi-story__copy">
+        <small>5 · Certified health worker</small>
+        <h3 class="anchored">The agent proposes. A person decides.</h3>
+        <p>The work queue shows the transcript, every check, and the exact proposed action. Nothing clinical has changed yet.</p>
+      </div>
+    </section>
+
+    <section class="otomedi-story__panel" data-story-panel="5">
+      <div class="otomedi-story__visual">
+        <div class="otomedi-story__results" aria-label="Approved action outcomes">
+          <div><span>DB</span><p><strong>Clinical record updated</strong>The existing prescription's fill date advances.</p></div>
+          <div><span>SMS</span><p><strong>Patient confirmation sent</strong>A generic text confirms the approved refill.</p></div>
+          <div><span>LOG</span><p><strong>Decision remains auditable</strong>The task records who approved it and when.</p></div>
+        </div>
+      </div>
+      <div class="otomedi-story__copy">
+        <small>6 · Idempotent executor</small>
+        <h3 class="anchored">Only human approval unlocks the write</h3>
+        <p>One backend endpoint updates the clinical record exactly once, sends confirmation, and preserves the audit trail.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="otomedi-story__controls">
+    <span data-story-caption="">Patient leaves a voicemail</span>
+    <div>
+      <button type="button" data-story-prev="" disabled="">← Back</button>
+      <button type="button" data-story-next="">Next →</button>
+    </div>
+  </div>
+  <div class="otomedi-story__links">
+    <a href="https://otomedi.vercel.app/">Open the seeded work queue</a>
+    <a href="https://otomedi.vercel.app/demo">Explore the full pipeline demo</a>
+  </div>
+</div>
+
+<style>
+  #otomedi-story {
+    --story-blue: #0284c7;
+    --story-blue-dark: #075985;
+    --story-blue-soft: #e0f2fe;
+    --story-ink: #0f172a;
+    --story-muted: #64748b;
+    --story-line: #e2e8f0;
+    --story-soft: #f8fafc;
+    --story-amber: #b45309;
+    --story-amber-soft: #fffbeb;
+    --story-rose: #be123c;
+    --story-rose-soft: #fff1f2;
+    margin: 2rem 0 2.5rem;
+    color: var(--story-ink);
+  }
+  #otomedi-story * { box-sizing: border-box; }
+  #otomedi-story button, #otomedi-story a { font: inherit; }
+  #otomedi-story .otomedi-story__head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  #otomedi-story .otomedi-story__head h2 {
+    border: 0;
+    color: var(--story-ink);
+    font-size: 1.45rem;
+    letter-spacing: -0.02em;
+    margin: .2rem 0;
+    padding: 0;
+    text-transform: none;
+  }
+  #otomedi-story .otomedi-story__head p { margin: 0; color: var(--story-muted); font-size: .84rem; }
+  #otomedi-story .otomedi-story__head .otomedi-story__kicker {
+    color: var(--story-blue-dark);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+  }
+  #otomedi-story .otomedi-story__replay,
+  #otomedi-story .otomedi-story__controls button {
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #fff;
+    color: #475569;
+    cursor: pointer;
+    font-size: .76rem;
+    font-weight: 600;
+    padding: .48rem .7rem;
+  }
+  #otomedi-story .otomedi-story__replay:hover,
+  #otomedi-story .otomedi-story__controls button:hover { border-color: var(--story-blue); color: var(--story-blue-dark); }
+  #otomedi-story .otomedi-story__steps {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 1rem .5rem;
+    position: relative;
+  }
+  #otomedi-story .otomedi-story__steps::before {
+    background: var(--story-line);
+    content: "";
+    height: 2px;
+    left: 8%;
+    position: absolute;
+    right: 8%;
+    top: 31px;
+  }
+  #otomedi-story .otomedi-story__steps li { margin: 0; padding: 0; }
+  #otomedi-story .otomedi-story__steps button {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: var(--story-muted);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  #otomedi-story .otomedi-story__steps button span {
+    align-items: center;
+    background: #fff;
+    border: 2px solid var(--story-line);
+    border-radius: 50%;
+    display: flex;
+    font-size: .68rem;
+    font-weight: 700;
+    height: 30px;
+    justify-content: center;
+    position: relative;
+    width: 30px;
+    z-index: 1;
+  }
+  #otomedi-story .otomedi-story__steps button b { font-size: .69rem; font-weight: 600; }
+  #otomedi-story .otomedi-story__steps button.is-active { color: var(--story-ink); }
+  #otomedi-story .otomedi-story__steps button.is-active span,
+  #otomedi-story .otomedi-story__steps button.is-done span {
+    background: var(--story-blue-soft);
+    border-color: var(--story-blue);
+    color: var(--story-blue-dark);
+  }
+  #otomedi-story .otomedi-story__steps button.is-active span { box-shadow: 0 0 0 5px rgba(2,132,199,.12); }
+  #otomedi-story .otomedi-story__scene {
+    border: 1px solid var(--story-line);
+    border-radius: 12px;
+    background: #fff;
+    min-height: 350px;
+    overflow: hidden;
+    padding: 1.25rem;
+  }
+  #otomedi-story .otomedi-story__panel {
+    align-items: center;
+    display: none;
+    gap: 1.5rem;
+    grid-template-columns: .92fr 1.08fr;
+    min-height: 308px;
+  }
+  #otomedi-story .otomedi-story__panel.is-active { animation: story-enter .35s ease both; display: grid; }
+  #otomedi-story .otomedi-story__visual { display: grid; min-height: 240px; place-items: center; }
+  #otomedi-story .otomedi-story__copy small {
+    color: var(--story-blue-dark);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  #otomedi-story .otomedi-story__copy h3 { color: var(--story-ink); font-size: 1.2rem; margin: .55rem 0; }
+  #otomedi-story .otomedi-story__copy p { color: var(--story-muted); font-size: .84rem; line-height: 1.65; margin: 0; }
+  #otomedi-story .otomedi-story__copy blockquote {
+    border-left: 3px solid var(--story-blue);
+    color: #334155;
+    font-size: .78rem;
+    margin: 1rem 0 0;
+    padding: .25rem 0 .25rem .75rem;
+  }
+  #otomedi-story .otomedi-story__phone {
+    align-items: center;
+    background: #fff;
+    border: 2px solid var(--story-ink);
+    border-radius: 24px;
+    display: flex;
+    height: 178px;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    width: 112px;
+  }
+  #otomedi-story .otomedi-story__phone::before { background: var(--story-line); border-radius: 999px; content: ""; height: 4px; position: absolute; top: 9px; width: 36px; }
+  #otomedi-story .otomedi-story__phone span {
+    align-items: center;
+    animation: story-ring 1.4s ease-in-out infinite;
+    background: var(--story-blue-soft);
+    border-radius: 50%;
+    color: var(--story-blue-dark);
+    display: flex;
+    font-size: 1.5rem;
+    height: 62px;
+    justify-content: center;
+    width: 62px;
+  }
+  #otomedi-story .otomedi-story__wave { align-items: center; display: flex; gap: 4px; height: 34px; justify-content: center; margin-top: .7rem; }
+  #otomedi-story .otomedi-story__wave i { animation: story-wave .9s ease-in-out infinite; background: var(--story-blue); border-radius: 999px; height: 10px; width: 4px; }
+  #otomedi-story .otomedi-story__wave i:nth-child(2), #otomedi-story .otomedi-story__wave i:nth-child(6) { animation-delay: .09s; }
+  #otomedi-story .otomedi-story__wave i:nth-child(3), #otomedi-story .otomedi-story__wave i:nth-child(5) { animation-delay: .18s; }
+  #otomedi-story .otomedi-story__wave i:nth-child(4) { animation-delay: .27s; }
+  #otomedi-story .otomedi-story__transcript { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; width: 100%; }
+  #otomedi-story .otomedi-story__transcript p { border-bottom: 1px solid var(--story-line); color: var(--story-muted); margin: 0; padding: .48rem 0; }
+  #otomedi-story .otomedi-story__transcript mark { background: var(--story-blue-soft); color: var(--story-ink); font-weight: 700; }
+  #otomedi-story .otomedi-story__fields { display: grid; gap: .7rem 1rem; grid-template-columns: 1fr 1fr; margin: 0; width: 100%; }
+  #otomedi-story .otomedi-story__fields div { border-bottom: 1px solid var(--story-line); padding-bottom: .45rem; }
+  #otomedi-story .otomedi-story__fields dt { color: #94a3b8; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .64rem; }
+  #otomedi-story .otomedi-story__fields dd { color: #334155; font-size: .74rem; font-weight: 600; margin: .1rem 0 0; }
+  #otomedi-story .otomedi-story__checks { width: 100%; }
+  #otomedi-story .otomedi-story__checks > p { align-items: center; border-bottom: 1px solid var(--story-line); display: grid; font-size: .73rem; gap: .5rem; grid-template-columns: 20px 1fr auto; margin: 0; padding: .45rem 0; }
+  #otomedi-story .otomedi-story__checks b { color: #334155; font-weight: 600; }
+  #otomedi-story .otomedi-story__checks em { color: var(--story-muted); font-style: normal; }
+  #otomedi-story .otomedi-story__checks .pass { color: var(--story-blue-dark); font-weight: 700; }
+  #otomedi-story .otomedi-story__checks .warn { color: var(--story-amber); font-weight: 700; }
+  #otomedi-story .otomedi-story__checks aside { background: var(--story-rose-soft); border-left: 4px solid #f43f5e; color: #9f1239; font-size: .69rem; margin-top: .7rem; padding: .55rem .65rem; }
+  #otomedi-story .otomedi-story__task { border: 1px solid var(--story-line); background: var(--story-soft); padding: .9rem; width: 100%; }
+  #otomedi-story .otomedi-story__task header { align-items: center; border-bottom: 1px solid var(--story-line); display: flex; gap: .7rem; justify-content: space-between; padding-bottom: .7rem; }
+  #otomedi-story .otomedi-story__task header strong { font-size: .8rem; }
+  #otomedi-story .otomedi-story__task header span { background: var(--story-blue-soft); color: var(--story-blue-dark); font-size: .58rem; font-weight: 700; padding: .25rem .4rem; text-transform: uppercase; }
+  #otomedi-story .otomedi-story__task dl { display: grid; font-size: .7rem; gap: .4rem .8rem; grid-template-columns: auto 1fr; margin: .7rem 0 0; }
+  #otomedi-story .otomedi-story__task dt { color: #94a3b8; }
+  #otomedi-story .otomedi-story__task dd { color: #334155; font-weight: 600; margin: 0; }
+  #otomedi-story .otomedi-story__task dd.locked { color: var(--story-rose); }
+  #otomedi-story .otomedi-story__task footer { color: var(--story-blue-dark); font-size: .66rem; font-weight: 700; margin-top: .8rem; text-align: center; }
+  #otomedi-story .otomedi-story__results { display: grid; gap: .8rem; width: 100%; }
+  #otomedi-story .otomedi-story__results > div { align-items: start; display: grid; gap: .65rem; grid-template-columns: 38px 1fr; }
+  #otomedi-story .otomedi-story__results > div > span { align-items: center; background: var(--story-blue-soft); border-radius: 50%; color: var(--story-blue-dark); display: flex; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .55rem; font-weight: 700; height: 38px; justify-content: center; }
+  #otomedi-story .otomedi-story__results p { color: var(--story-muted); font-size: .7rem; line-height: 1.45; margin: 0; }
+  #otomedi-story .otomedi-story__results strong { color: #334155; display: block; font-size: .77rem; }
+  #otomedi-story .otomedi-story__controls { align-items: center; display: flex; justify-content: space-between; margin-top: .7rem; }
+  #otomedi-story .otomedi-story__controls > span { color: var(--story-muted); font-size: .7rem; }
+  #otomedi-story .otomedi-story__controls > div { display: flex; gap: .4rem; }
+  #otomedi-story .otomedi-story__controls button[data-story-next] { background: var(--story-blue); border-color: var(--story-blue); color: #fff; }
+  #otomedi-story .otomedi-story__controls button:disabled { cursor: not-allowed; opacity: .4; }
+  #otomedi-story .otomedi-story__links { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: .8rem; }
+  #otomedi-story .otomedi-story__links a { border: 1px solid #cbd5e1; border-radius: 7px; color: var(--story-blue-dark); font-size: .72rem; font-weight: 600; padding: .48rem .7rem; text-decoration: none; }
+  #otomedi-story .otomedi-story__links a:first-child { background: var(--story-ink); border-color: var(--story-ink); color: #fff; }
+  @keyframes story-enter { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes story-ring { 0%,100% { box-shadow: 0 0 0 0 rgba(2,132,199,.18); } 50% { box-shadow: 0 0 0 13px transparent; } }
+  @keyframes story-wave { 0%,100% { height: 9px; } 50% { height: 32px; } }
+  @media (max-width: 650px) {
+    #otomedi-story .otomedi-story__head { align-items: start; }
+    #otomedi-story .otomedi-story__head h2 { font-size: 1.2rem; }
+    #otomedi-story .otomedi-story__steps { gap: .6rem 0; grid-template-columns: repeat(3, 1fr); }
+    #otomedi-story .otomedi-story__steps::before { display: none; }
+    #otomedi-story .otomedi-story__steps button { flex-direction: row; justify-content: center; }
+    #otomedi-story .otomedi-story__steps button span { height: 26px; width: 26px; }
+    #otomedi-story .otomedi-story__panel { align-content: start; grid-template-columns: 1fr; gap: .5rem; min-height: 475px; }
+    #otomedi-story .otomedi-story__visual { min-height: 245px; }
+    #otomedi-story .otomedi-story__scene { min-height: 520px; }
+    #otomedi-story .otomedi-story__copy h3 { font-size: 1.05rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #otomedi-story *, #otomedi-story *::before, #otomedi-story *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; }
+  }
+</style>
+
+<script>
+  (() => {
+    const root = document.getElementById("otomedi-story");
+    if (!root || root.dataset.ready === "true") return;
+    root.dataset.ready = "true";
+    const steps = [...root.querySelectorAll("[data-story-step]")];
+    const panels = [...root.querySelectorAll("[data-story-panel]")];
+    const caption = root.querySelector("[data-story-caption]");
+    const previous = root.querySelector("[data-story-prev]");
+    const next = root.querySelector("[data-story-next]");
+    const replay = root.querySelector("[data-story-replay]");
+    const captions = [
+      "Patient leaves a voicemail",
+      "Deepgram converts speech to text",
+      "Claude extracts structured intake data",
+      "Deterministic services check clinic records",
+      "A certified health worker reviews the proposal",
+      "Approval executes the clinical write exactly once"
+    ];
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let current = 0;
+    let timer;
+
+    const stop = () => {
+      if (timer) window.clearInterval(timer);
+      timer = undefined;
+    };
+    const render = (index, automated = false) => {
+      current = Math.max(0, Math.min(panels.length - 1, index));
+      steps.forEach((step, position) => {
+        step.classList.toggle("is-active", position === current);
+        step.classList.toggle("is-done", position < current);
+        if (position === current) step.setAttribute("aria-current", "step");
+        else step.removeAttribute("aria-current");
+      });
+      panels.forEach((panel, position) => panel.classList.toggle("is-active", position === current));
+      caption.textContent = captions[current];
+      previous.disabled = current === 0;
+      next.textContent = current === panels.length - 1 ? "↻ Replay" : "Next →";
+      if (!automated) stop();
+    };
+    const play = () => {
+      stop();
+      render(0, true);
+      if (reduceMotion) return;
+      timer = window.setInterval(() => {
+        if (current >= panels.length - 1) return stop();
+        render(current + 1, true);
+      }, 3200);
+    };
+
+    steps.forEach((step) => step.addEventListener("click", () => render(Number(step.dataset.storyStep))));
+    previous.addEventListener("click", () => render(current - 1));
+    next.addEventListener("click", () => current === panels.length - 1 ? play() : render(current + 1));
+    replay.addEventListener("click", play);
+
+    if ("IntersectionObserver" in window && !reduceMotion) {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          play();
+          observer.disconnect();
+        }
+      }, { threshold: .35 });
+      observer.observe(root);
+    } else {
+      render(0);
+    }
+  })();
+</script>
 <section id="the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
 <p>By the end of a day at a hospital front desk, tens or hundreds of missed calls have piled up. Listening to every voicemail, writing down what the patient needs, and executing the request is slow, and the majority of those calls are one of just three things: a prescription refill, a schedule change, or a message for the doctor. Each one takes a series of clicks and lookups that lasts longer than the action itself.</p>
@@ -245,9 +678,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Eligibility Agents</strong>: verify the request against patient records: insurance acceptance, refill eligibility (visit history, dosage match, conflicting medications), or scheduling constraints, depending on request type.</li>
 <li><strong>Scheduling Agent</strong>: finds an appointment slot given provider availability and urgency, writing a proposed action rather than a final one.</li>
 <li><strong>Human approval</strong>: a certified healthcare worker reviews the proposed action in the dashboard. Only after they click Approve does the backend execute it.</li>
-<li><strong>Confirmation &amp; Summary Agents</strong>: send SMS/email confirmations to the patient and compile a daily digest for the front desk.</li>
+<li><strong>Confirmation &amp; Summary Agents</strong>: send SMS confirmations to the patient and compile a daily digest for the front desk.</li>
 </ol>
-<p>The agents don’t message each other directly. Every agent reads and writes a shared task row in Supabase, which makes the pipeline observable, testable, and easy to resume when a step fails.</p>
+<p>The agents don’t message each other directly. Typed payloads move through one FastAPI service, while each final set of checks and its proposed action is persisted on a shared task row. That row makes the human review boundary observable, testable, and auditable.</p>
 </section>
 <section id="designed-around-safety" class="level2">
 <h2 class="anchored" data-anchor-id="designed-around-safety">Designed Around Safety</h2>
@@ -271,9 +704,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>One backend, one web app.</strong> The two Python services — split along team boundaries, with intentionally duplicated logic — became a single FastAPI service; the three Next.js apps became one, with the dashboard, the <a href="https://otomedi.vercel.app/demo">pipeline demo</a>, and the EHR mock as routes. The test suite stayed green through the merge.</li>
 <li><strong>A demo that cannot die.</strong> With no credentials configured, the backend swaps its Supabase repositories for in-memory adapters behind the same interface, and the web app falls back to an in-repo seed. The <a href="https://otomedi.vercel.app">hosted demo</a> is a static-hosting deployment with zero environment variables — nothing left to auto-pause.</li>
 <li><strong>Structured outputs and a pinned eval.</strong> Intake extraction moved from parse-the-markdown-fences to Claude structured outputs, with format enforcement in a JSON schema instead of prompt prose. An eval harness scores the extractor field-by-field on ten canonical voicemail transcripts against pinned expected outputs.</li>
-<li><strong>The pipeline made visible.</strong> Uploading a voicemail on <a href="https://otomedi.vercel.app/demo">/demo</a> now shows each stage’s actual output — the extracted fields, every eligibility rule’s verdict (including a drug-interaction <em>warning</em> that deliberately doesn’t block), and the task landing in the review queue.</li>
+<li><strong>The pipeline made visible.</strong> <a href="https://otomedi.vercel.app/demo">/demo</a> now starts with a self-running cached scenario — no file upload required — showing the transcript, extracted fields, every eligibility rule’s verdict (including a drug-interaction <em>warning</em> that deliberately doesn’t block), the human review boundary, and the final clinical write.</li>
 </ul>
-<p>173 regression tests run in CI on every push.</p>
+<p>174 regression tests run in CI on every push.</p>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
