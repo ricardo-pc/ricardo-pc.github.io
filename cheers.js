@@ -1,6 +1,34 @@
 (() => {
   "use strict";
 
+  const customizeConsentBanner = () => {
+    const title = document.getElementById("cc-nb-title");
+    if (!title) return false;
+
+    const text = document.getElementById("cc-nb-text");
+    const allowButton = document.querySelector(".cc-nb-okagree");
+    const rejectButton = document.querySelector(".cc-nb-reject");
+    const optionsButton = document.querySelector(".cc-nb-changep");
+
+    title.textContent = "A small cookie choice";
+    if (text) {
+      text.textContent =
+        "I use optional analytics cookies to learn which pages and projects are useful. No ads or personal profiles.";
+    }
+    if (allowButton) allowButton.textContent = "Allow analytics";
+    if (rejectButton) rejectButton.textContent = "No thanks";
+    if (optionsButton) optionsButton.textContent = "Options";
+    return true;
+  };
+
+  if (!customizeConsentBanner()) {
+    const consentObserver = new MutationObserver(() => {
+      if (!customizeConsentBanner()) return;
+      consentObserver.disconnect();
+    });
+    consentObserver.observe(document.documentElement, { childList: true, subtree: true });
+  }
+
   const launcher = document.getElementById("rpc-cheer-launcher");
   const dialog = document.getElementById("rpc-cheer-dialog");
   if (!launcher || !dialog) return;
@@ -9,24 +37,22 @@
   const optionButtons = dialog.querySelectorAll("[data-cheer]");
   const status = document.getElementById("rpc-cheer-status");
   const countsLabel = document.getElementById("rpc-cheer-counts");
-  const equivalent = document.getElementById("rpc-cheer-equivalent");
   const meterFill = document.getElementById("rpc-cheer-meter-fill");
   const effects = dialog.querySelector(".rpc-cheer-effects");
 
   const counts = { love: 0, strength: 0 };
-  const moraleMinutesPerCheer = 7;
   let lastSentAt = 0;
 
   const messages = {
     love: [
-      "Love received. The internet feels 12% kinder.",
-      "Heart successfully added to the build.",
-      "Delivered with excellent timing.",
+      "Love sent: “You are doing better than you think.”",
+      "Love sent: “The world is better with you in it.”",
+      "Love sent: “You deserve good things.”",
     ],
     strength: [
-      "Strength delivered. One more hard thing looks doable.",
-      "Extra voltage received. Grit reserves topped up.",
-      "Power-up delivered. The next problem should be worried.",
+      "Strength sent: “Keep moving forward.”",
+      "Strength sent: “You can do it.”",
+      "Strength sent: “One step at a time is still progress.”",
     ],
   };
 
@@ -41,9 +67,6 @@
     const choices = messages[type];
     status.textContent = choices[(counts[type] - 1) % choices.length];
     countsLabel.textContent = `This visit: ${counts.love} love · ${counts.strength} strength`;
-    equivalent.textContent = `In highly unscientific units, you have powered ${
-      total * moraleMinutesPerCheer
-    } minutes of brave debugging.`;
     meterFill.style.width = `${Math.min(100, total * 12.5)}%`;
   };
 

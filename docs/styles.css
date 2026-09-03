@@ -477,6 +477,74 @@ hr {
   color: var(--rpc-accent);
 }
 
+/* ── Compact cookie consent ──────────────────────────── */
+.termsfeed-com---nb.termsfeed-com---nb-simple {
+  right: 1rem !important;
+  bottom: 1rem !important;
+  max-width: 340px !important;
+  border: 1px solid var(--rpc-border);
+  border-radius: 12px;
+  background: #ffffff !important;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.16);
+}
+
+.termsfeed-com---nb .cc-nb-main-container {
+  padding: 1rem !important;
+}
+
+.termsfeed-com---nb .cc-nb-title {
+  margin: 0 0 0.25rem !important;
+  color: var(--rpc-text) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+}
+
+.termsfeed-com---nb .cc-nb-text {
+  margin: 0 0 0.7rem !important;
+  color: var(--rpc-text-2) !important;
+  font-size: 0.7rem !important;
+  line-height: 1.45 !important;
+}
+
+.termsfeed-com---nb .cc-nb-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.termsfeed-com---nb .cc-nb-okagree,
+.termsfeed-com---nb .cc-nb-reject,
+.termsfeed-com---nb .cc-nb-changep {
+  display: inline-flex !important;
+  width: auto !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0.42rem 0.62rem;
+  font-size: 0.67rem !important;
+  font-weight: 600 !important;
+  line-height: 1.2;
+}
+
+.termsfeed-com---palette-light .cc-nb-okagree {
+  background: var(--rpc-accent) !important;
+  color: #ffffff !important;
+}
+
+.termsfeed-com---palette-light .cc-nb-reject {
+  border-color: var(--rpc-border);
+  background: #ffffff !important;
+  color: var(--rpc-text-2) !important;
+}
+
+.termsfeed-com---palette-light .cc-nb-changep {
+  background: #f1f5f9 !important;
+  color: var(--rpc-text-2) !important;
+}
+
 /* ── Visitor boost station ───────────────────────────── */
 .rpc-cheer-launcher {
   position: fixed;
@@ -705,23 +773,11 @@ hr {
   transition: width 0.35s ease;
 }
 
-.rpc-cheer-counts,
-.rpc-cheer-equivalent {
+.rpc-cheer-counts {
   margin: 0.55rem 0 0;
   color: var(--rpc-text-2);
   font-size: 0.73rem;
   line-height: 1.4;
-}
-
-.rpc-cheer-equivalent {
-  color: var(--rpc-text-3);
-}
-
-.rpc-cheer-privacy {
-  margin: 0.75rem 0 0;
-  color: var(--rpc-text-3);
-  font-size: 0.66rem;
-  line-height: 1.45;
 }
 
 .rpc-cheer-effects {
@@ -824,6 +880,12 @@ hr {
 
   .rpc-cheer-options {
     grid-template-columns: 1fr;
+  }
+
+  .termsfeed-com---nb.termsfeed-com---nb-simple {
+    right: 0.65rem !important;
+    bottom: 0.65rem !important;
+    max-width: calc(100% - 1.3rem) !important;
   }
 }
 
