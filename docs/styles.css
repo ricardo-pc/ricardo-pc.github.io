@@ -477,6 +477,298 @@ hr {
   color: var(--rpc-accent);
 }
 
+/* ── Visitor boost station ───────────────────────────── */
+.rpc-cheer-launcher {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1040;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  background: var(--rpc-hero-bg);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.22);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.rpc-cheer-launcher:hover {
+  background: #172554;
+  color: #ffffff;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.28);
+  transform: translateY(-2px);
+}
+
+.rpc-cheer-launcher:focus-visible,
+.rpc-cheer-close:focus-visible,
+.rpc-cheer-option:focus-visible {
+  outline: 3px solid var(--rpc-accent-light);
+  outline-offset: 3px;
+}
+
+.rpc-cheer-launcher-icon {
+  color: #f9a8d4;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.rpc-cheer-dialog {
+  width: min(470px, calc(100vw - 2rem));
+  max-width: none;
+  max-height: calc(100vh - 2rem);
+  margin: auto;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  color: var(--rpc-text);
+}
+
+.rpc-cheer-dialog::backdrop {
+  background: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(4px);
+}
+
+.rpc-cheer-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 18px;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(249, 168, 212, 0.2), transparent 32%),
+    radial-gradient(circle at 94% 5%, rgba(147, 197, 253, 0.24), transparent 34%),
+    #ffffff;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.3);
+}
+
+.rpc-cheer-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.85rem;
+  z-index: 4;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--rpc-text-2);
+  font: inherit;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.rpc-cheer-close:hover {
+  background: #ffffff;
+  color: var(--rpc-text);
+}
+
+.rpc-cheer-eyebrow {
+  margin: 0 2.5rem 0.35rem 0;
+  color: var(--rpc-accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.rpc-cheer-dialog h2 {
+  margin: 0 2.5rem 0.55rem 0;
+  padding: 0;
+  border: 0;
+  color: var(--rpc-text);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.rpc-cheer-intro {
+  margin: 0 0 1.35rem;
+  color: var(--rpc-text-2);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.rpc-cheer-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.rpc-cheer-option {
+  display: flex;
+  min-height: 94px;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid;
+  border-radius: 13px;
+  padding: 0.9rem;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.rpc-cheer-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+}
+
+.rpc-cheer-option.is-sent {
+  transform: scale(0.97);
+}
+
+.rpc-cheer-love {
+  border-color: #fecdd3;
+  background: #fff1f2;
+  color: #9f1239;
+}
+
+.rpc-cheer-strength {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+.rpc-cheer-option-icon {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  flex: 0 0 2.35rem;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 1.15rem;
+}
+
+.rpc-cheer-option-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.rpc-cheer-option-copy strong {
+  font-size: 0.88rem;
+}
+
+.rpc-cheer-option-copy small {
+  color: var(--rpc-text-2);
+  font-size: 0.71rem;
+  line-height: 1.35;
+}
+
+.rpc-cheer-receipt {
+  margin-top: 1.1rem;
+  border: 1px solid var(--rpc-border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: rgba(248, 250, 252, 0.82);
+}
+
+.rpc-cheer-status {
+  min-height: 1.35rem;
+  margin: 0 0 0.65rem;
+  color: var(--rpc-text);
+  font-size: 0.83rem;
+  font-weight: 600;
+}
+
+.rpc-cheer-meter {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.rpc-cheer-meter span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6, #2563eb);
+  transition: width 0.35s ease;
+}
+
+.rpc-cheer-counts,
+.rpc-cheer-equivalent {
+  margin: 0.55rem 0 0;
+  color: var(--rpc-text-2);
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+
+.rpc-cheer-equivalent {
+  color: var(--rpc-text-3);
+}
+
+.rpc-cheer-privacy {
+  margin: 0.75rem 0 0;
+  color: var(--rpc-text-3);
+  font-size: 0.66rem;
+  line-height: 1.45;
+}
+
+.rpc-cheer-effects {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.rpc-cheer-particle {
+  position: absolute;
+  left: var(--rpc-particle-x);
+  top: var(--rpc-particle-y);
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0;
+  animation: rpc-cheer-burst 720ms cubic-bezier(0.2, 0.75, 0.25, 1) forwards;
+  animation-delay: var(--rpc-particle-delay);
+}
+
+.rpc-cheer-particle-love {
+  color: #db2777;
+}
+
+.rpc-cheer-particle-strength {
+  color: #2563eb;
+}
+
+@keyframes rpc-cheer-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--rpc-particle-dx)),
+      calc(-50% + var(--rpc-particle-dy))
+    ) scale(1.15) rotate(12deg);
+  }
+}
+
 /* ── Responsive ──────────────────────────────────────── */
 @media (max-width: 768px) {
   .rpc-hero-inner {
@@ -519,5 +811,31 @@ hr {
 
   .rpc-course-grid {
     grid-template-columns: 1fr;
+  }
+
+  .rpc-cheer-launcher {
+    right: 0.85rem;
+    bottom: 0.85rem;
+  }
+
+  .rpc-cheer-panel {
+    padding: 1.5rem;
+  }
+
+  .rpc-cheer-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rpc-cheer-launcher,
+  .rpc-cheer-option,
+  .rpc-cheer-meter span {
+    transition: none;
+  }
+
+  .rpc-cheer-particle {
+    animation: none;
+    display: none;
   }
 }

@@ -11,7 +11,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Some came out of graduate coursework at UC Berkeley, some out of hackathons, and some out of wanting to know whether an idea would hold up.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nVouchNet: A Trust Layer for AI Agents\n\n\n\nAI Agents\n\nBayesian Inference\n\nSoftware Engineering\n\n\n\nA reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet’s trust score by six hundredths…\n\n\n\nJul 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMutationRx: Deciding Which Docking Hits to Believe\n\n\n\nAI Agents\n\nBayesian Inference\n\nLife Sciences\n\n\n\nA resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic…\n\n\n\nJul 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nOtomedi: Multi-Agent Healthcare Automation\n\n\n\nAI Agents\n\nSoftware Engineering\n\nLife Sciences\n\n\n\nA multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps…\n\n\n\nJun 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive\n\n\n\nMachine Learning\n\nBayesian Inference\n\nStatistical Computing\n\n\n\nA Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhen Does Ranking Help? A Sparsity Study of Movie Recommenders\n\n\n\nMachine Learning\n\nDeep Learning\n\nRecommender Systems\n\n\n\nThree recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Makes a Headline Work? Lessons from 55,000 Tested Headlines\n\n\n\nExperimentation\n\nNLP\n\nStatistical Computing\n\n\n\nUsing 54,956 headline variants from 11,649 Upworthy A/B tests, I model which linguistic features predict click-through rate and discover that exclamation marks destroy…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\nBerkeley Grocery Tracker\n\n\n\nData Engineering\n\nSoftware Engineering\n\n\n\nA live price tracker for Trader Joe’s, Whole Foods, and Safeway across Berkeley, built end-to-end with OpenAI Codex.\n\n\n\nApr 26, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\n\nMachine Learning\n\nBayesian Inference\n\nLife Sciences\n\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\n\nEvolutionary Feature Selection: A Genetic Algorithm Package\n\n\n\nMachine Learning\n\nStatistical Computing\n\nSoftware Engineering\n\n\n\nBuilding a production-quality Python package for automated variable selection using evolutionary computation principles.\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\n\nDigital Water: Forecasting the Water Supply That Later Ran Out\n\n\n\nMachine Learning\n\nDeep Learning\n\nData Engineering\n\n\n\nAn LSTM forecasting platform for Monterrey’s water demand and dam capacity, built in 2020. It took 2nd place globally at the Atos IT Challenge, and the shortfall scenario it…\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
+    "text": "Some came out of graduate coursework at UC Berkeley, some out of hackathons, and some out of wanting to know whether an idea would hold up.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery\n\n\n\nMachine Learning\n\nRemote Sensing\n\nData Engineering\n\n\n\nPixel-level cloud classification on NASA MISR imagery, where clouds and sea ice are equally bright and equally cold. 0.996 AUC on the held-out orbit, 0.89 on a different one…\n\n\n\nAug 17, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nVouchNet: A Trust Layer for AI Agents\n\n\n\nAI Agents\n\nBayesian Inference\n\nSoftware Engineering\n\n\n\nA reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet’s trust score by six hundredths…\n\n\n\nJul 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMutationRx: Deciding Which Docking Hits to Believe\n\n\n\nAI Agents\n\nBayesian Inference\n\nLife Sciences\n\n\n\nA resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic…\n\n\n\nJul 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nOtomedi: Multi-Agent Healthcare Automation\n\n\n\nAI Agents\n\nSoftware Engineering\n\nLife Sciences\n\n\n\nA multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions, while a human worker keeps…\n\n\n\nJun 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive\n\n\n\nMachine Learning\n\nBayesian Inference\n\nStatistical Computing\n\n\n\nA Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhen Does Ranking Help? A Sparsity Study of Movie Recommenders\n\n\n\nMachine Learning\n\nDeep Learning\n\nRecommender Systems\n\n\n\nThree recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Makes a Headline Work? Lessons from 55,000 Tested Headlines\n\n\n\nExperimentation\n\nNLP\n\nStatistical Computing\n\n\n\nUsing 54,956 headline variants from 11,649 Upworthy A/B tests, I model which linguistic features predict click-through rate and discover that exclamation marks destroy…\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\nBerkeley Grocery Tracker\n\n\n\nData Engineering\n\nSoftware Engineering\n\n\n\nA live price tracker for Trader Joe’s, Whole Foods, and Safeway across Berkeley, built end-to-end with OpenAI Codex.\n\n\n\nApr 26, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\n\nMachine Learning\n\nBayesian Inference\n\nLife Sciences\n\n\n\nEDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage.\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\n\nEvolutionary Feature Selection: A Genetic Algorithm Package\n\n\n\nMachine Learning\n\nStatistical Computing\n\nSoftware Engineering\n\n\n\nBuilding a production-quality Python package for automated variable selection using evolutionary computation principles.\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\n\nDigital Water: Forecasting the Water Supply That Later Ran Out\n\n\n\nMachine Learning\n\nDeep Learning\n\nData Engineering\n\n\n\nAn LSTM forecasting platform for Monterrey’s water demand and dam capacity, built in 2020. It took 2nd place globally at the Atos IT Challenge, and the shortfall scenario it…\n\n\n\nAug 1, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/vouchnet/index.html",
@@ -210,160 +210,6 @@
     "text": "Reflection\nThis lab made concrete a tension that is easy to state but hard to internalize: in high-stakes classification, the right model depends on what you are optimizing for. A 91% sensitivity rule that sends 3,500 children to unnecessary CT scans is not obviously better or worse than an 84% sensitivity model that reduces that number to 1,300. That tradeoff depends on how you weigh radiation risk against missed diagnoses, which is a clinical and ethical judgment, not a statistical one.\nThe EDA finding that missed patients are not asymptomatic was the most satisfying result. It meant the 32 children were not random noise beyond any model’s reach, but a structured subset the Kuppermann rule was never designed to catch. That kind of gap, visible only after careful data exploration, is exactly what motivates moving beyond fixed decision rules toward learned models.\n\nCompleted March 2026 as Lab 1 for STAT 214 at UC Berkeley."
   },
   {
-    "objectID": "posts/berkeley-grocery-tracker/index.html",
-    "href": "posts/berkeley-grocery-tracker/index.html",
-    "title": "Berkeley Grocery Tracker",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nA fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe’s, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.\nLive site"
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#the-problem",
-    "href": "posts/berkeley-grocery-tracker/index.html#the-problem",
-    "title": "Berkeley Grocery Tracker",
-    "section": "The Problem",
-    "text": "The Problem\nLiving in Berkeley, I noticed that grocery prices vary a lot depending on which store you go to and when. A dozen eggs at Trader Joe’s and the same dozen at Whole Foods are rarely the same price, and the gap shifts over time. There was no easy way to see this data in one place, let alone track it over time or figure out which store makes the most sense for your weekly basket. I wanted to build exactly that."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#why-codex",
-    "href": "posts/berkeley-grocery-tracker/index.html#why-codex",
-    "title": "Berkeley Grocery Tracker",
-    "section": "Why Codex",
-    "text": "Why Codex\nOpenAI opened a challenge for developers to build with Codex, offering $100 in API credits and a Pro subscription to participants. I treated it as an opportunity to see how far an AI coding agent could take a real, multi-layer software project. The answer turned out to be: pretty far.\nThe entire stack was designed and built through Codex. I described what I wanted, iterated on the output, reviewed the code, and pushed forward. It was less about avoiding effort and more about compressing weeks of setup into days, without cutting corners on architecture."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#what-it-does",
-    "href": "posts/berkeley-grocery-tracker/index.html#what-it-does",
-    "title": "Berkeley Grocery Tracker",
-    "section": "What It Does",
-    "text": "What It Does\nThe live site shows price data for a curated set of staple items, things like eggs, milk, bananas, chicken breast, olive oil, across multiple Berkeley-area locations. You can:\n\nSee the latest prices for each item across stores\nExplore price trends over time with a time-series view\nBuild a basket and estimate total cost, both at the cheapest individual store per item and at the single best store overall\nCompare against Berkeley meal plan pricing as a reference point"
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#how-it-works",
-    "href": "posts/berkeley-grocery-tracker/index.html#how-it-works",
-    "title": "Berkeley Grocery Tracker",
-    "section": "How It Works",
-    "text": "How It Works\nThe data pipeline runs automatically. Three scrapers, one per grocery chain, pull full product catalogs from each store on a monthly schedule using GitHub Actions. Trader Joe’s exposes an internal GraphQL API; Whole Foods has a structured product feed; Safeway required Playwright to handle anti-bot protections on some runs.\nRaw scraped data lands in a staging table first. From there, a matching pipeline normalizes product names across stores into canonical items, using fuzzy text matching with quantity-awareness, a semantic embedding stage via the OpenAI API for harder cases, and a hand-curated staples bridge for the most important items. The confidence of each match is tracked, so auto-matched, semantically matched, and manually curated prices are all distinguished.\nOnce matched, prices flow into an append-only observations table that gives historical trends for free. The frontend, a Next.js app connected to Supabase Postgres, reads this data at request time and renders it on the dashboard.\nFor Trader Joe’s historical pricing before the scraper launched, I filtered a publicly available third-party price dump through the curated staples allowlist and loaded it into a separate proxy history table, keeping it isolated from live scrape data.\nThe whole infrastructure costs $0 per month. Vercel hosts the frontend, Supabase handles the database on its free tier, and GitHub Actions runs the scrapers."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
-    "href": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
-    "title": "Berkeley Grocery Tracker",
-    "section": "What Codex Actually Did",
-    "text": "What Codex Actually Did\nA lot. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. My role was to define the architecture, make the key design calls, review and validate every piece of output, catch edge cases, and course-correct when things drifted. Codex accelerated the implementation significantly, but the product decisions and data model were mine to own.\nThe most impressive part was how it kept up with schema changes across iterations. As the data model evolved, it updated migrations, scripts, and pipeline logic in sync without losing track of what had changed."
-  },
-  {
-    "objectID": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
-    "href": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
-    "title": "Berkeley Grocery Tracker",
-    "section": "What Is Still Being Built",
-    "text": "What Is Still Being Built\nThe matching pipeline is solid for Trader Joe’s and Whole Foods. Safeway is scraped but the matching pass hasn’t run at full scale yet. The next phases are a staples-focused weekly scrape cadence, QA dashboards to monitor scrape quality, and eventually crowdsourced price contributions with receipt upload.\n\nBuilt April 2026 as part of the OpenAI Codex challenge. Stack: Next.js, Supabase, GitHub Actions, Vercel, OpenAI API."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html",
-    "href": "posts/bayesian-optimization/index.html",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nA from-scratch implementation of Bayesian Optimization using a Gaussian Process surrogate with squared-exponential kernel and Expected Improvement acquisition, applied to three experiments spanning a synthetic benchmark, neural network hyperparameter tuning, and classifier threshold optimization.\nCourse: STAT 238: Bayesian Statistics · Semester: Spring 2026 · Language: Python\nGitHub Repository"
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#the-problem",
-    "href": "posts/bayesian-optimization/index.html#the-problem",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "The Problem",
-    "text": "The Problem\nTuning a machine learning model involves making a sequence of decisions under uncertainty. You pick a learning rate, train for hours, observe validation performance, and then have to decide what to try next. Grid search wastes evaluations on systematically spaced points regardless of what the results say. Random search is better, but it treats each trial independently, ignoring everything learned from previous runs.\nBayesian Optimization (BO) does something smarter: it builds a probabilistic model of the objective function from every evaluation so far, then uses that model to decide where to look next. It is the principled answer to the question of how to optimize an expensive black-box function with a tight budget.\nFor this project, I implemented the full BO pipeline from scratch, with no hyperopt and no optuna, and ran it on three problems with very different cost structures."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#the-method",
-    "href": "posts/bayesian-optimization/index.html#the-method",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "The Method",
-    "text": "The Method\nThe implementation has three components, each in its own module.\nGaussian Process surrogate (gp.py). A GP is a distribution over functions. Given observations, it produces a posterior: a mean function \\(\\mu(x)\\) (best guess at each point) and a variance function \\(\\sigma^2(x)\\) (uncertainty). The kernel is squared-exponential with three hyperparameters: output scale \\(\\alpha\\), length scale \\(\\ell\\), and noise variance \\(\\sigma^2_n\\). These are fit by maximizing the log marginal likelihood at each iteration via L-BFGS-B. Cholesky decomposition keeps the linear algebra numerically stable.\nExpected Improvement acquisition (acquisition.py). EI is the expected amount by which the next evaluation will beat the current best:\n\\[\\text{EI}(x) = (\\mu(x) - f^*)\\,\\Phi(Z) + \\sigma(x)\\,\\phi(Z), \\quad Z = \\frac{\\mu(x) - f^*}{\\sigma(x)}\\]\nThe first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence, with no manual tuning of an exploration parameter.\nBO loop (bo.py). Inputs are normalized to \\([0,1]^d\\) before each GP fit, and outputs are standardized to zero mean and unit variance. This keeps the kernel hyperparameters in comparable ranges regardless of the original scales. Each iteration fits the GP on all observations so far, maximizes EI over the input space (multi-start L-BFGS-B), evaluates the objective at the new point, and appends to the history."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#three-experiments",
-    "href": "posts/bayesian-optimization/index.html#three-experiments",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Three Experiments",
-    "text": "Three Experiments\n\nBranin Benchmark\nBefore running BO on real problems, I validated it on the Branin function: a classic 2D test with three known global minima at \\(f^* \\approx 0.398\\). A correct BO implementation should converge reliably across random seeds; grid search should fail when the optimum falls between grid lines.\n\n\n\nGP surrogate (top row) and Expected Improvement surface (bottom row) at trials 5, 10, 20, and 40. The posterior concentrates around the three Branin optima as observations accumulate. EI collapses near already-explored regions, forcing the algorithm to search elsewhere.\n\n\n\n\n\nBO converges to within 0.03 of the true optimum across 5 random seeds. Random search plateaus more than 2x worse; grid search never escapes its fixed points.\n\n\n\n\nNCF on MovieLens 1M\nThe first real application was hyperparameter tuning for the Neural Collaborative Filtering model from my CS 289A recommender systems project. Each evaluation required training NCF for 10 epochs on an RTX 2080 Ti, costing about 22 minutes per trial. With a budget of 15 trials total (5 random initialization, 10 BO steps), there was no room to waste evaluations.\nThe search space was 5-dimensional: embedding dimension (4 discrete values), MLP architecture (3 options), learning rate and L2 decay (both log-encoded continuous), and WMF confidence scale (linear continuous).\n\n\n\nAfter 5 random trials, the best NDCG@10 was 0.3745. BO improved this to 0.4056 in 10 more steps, an 8.3% relative gain. The dashed line marks the best random-init result; every BO step from trial 8 onward exceeds it.\n\n\nThe configuration BO converged to was interpretable: largest embedding dimension (256), deepest MLP (four layers), minimal L2 regularization, and the smallest confidence scale. These cluster around a coherent region of parameter space, which suggests the GP genuinely learned the landscape rather than finding a lucky outlier.\n\n\nUpworthy Classifier Thresholds\nThe second real application came from my STAT 230A headline analysis project, where I used a BART zero-shot NLI model to classify 54,956 headlines into topic categories. The classifier outputs a confidence score, and two thresholds control how those scores are used: a minimum confidence to accept a label, and a minimum category size to keep in the analysis.\nThe objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR), where higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.\n\n\n\nBO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO’s advantage here shows up in the path as much as the final value: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.\n\n\nThe BO-optimal confidence threshold was 0.256, lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#results",
-    "href": "posts/bayesian-optimization/index.html#results",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Results",
-    "text": "Results\n\n\n\n\n\n\n\n\n\n\nExperiment\nBudget\nBO result\nBest baseline\nGain\n\n\n\n\nBranin (2D synthetic)\n40 trials\n-0.43\nRandom: -0.83\n2x better\n\n\nNCF hyperparameters (5D, GPU)\n15 trials\nNDCG = 0.406\nRandom: 0.375\n+8.3%\n\n\nUpworthy thresholds (2D, fast)\n60 trials\nF = 1,569\nRandom: 1,514\n+3.6%\n\n\n\nOne consistent observation across all three: BO’s advantage is largest when the budget is tightest relative to the search space. The Branin result (2x improvement over random) reflects a 40-trial budget over a smooth 2D space where the GP can learn the landscape quickly. The NCF result (+8.3%) came from 15 trials over a 5-dimensional mixed space where each random trial burns 22 minutes. The Upworthy result (+3.6%) is smaller partly because 60 trials over a 2D smooth space is generous enough that random search also converges reasonably well."
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#technologies-tools",
-    "href": "posts/bayesian-optimization/index.html#technologies-tools",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nCore stack: Python, NumPy, SciPy (L-BFGS-B, ANOVA), matplotlib\nImplementation: GP with squared-exponential kernel, Cholesky decomposition for posterior inference, log marginal likelihood maximization for kernel hyperparameter fitting, multi-start EI maximization\nExperiments: Branin benchmark (analytic), NCF black-box wrapper (subprocess CLI to PyTorch training script), Upworthy black-box wrapper (pandas + SciPy F-test)"
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#links",
-    "href": "posts/bayesian-optimization/index.html#links",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Links",
-    "text": "Links\n\nGitHub Repository: full implementation, notebooks, and experiment results"
-  },
-  {
-    "objectID": "posts/bayesian-optimization/index.html#reflection",
-    "href": "posts/bayesian-optimization/index.html#reflection",
-    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
-    "section": "Reflection",
-    "text": "Reflection\nThe most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch stopped being a course exercise and became a tool that made two other projects better, with quantifiable improvements in both cases.\nThe hardest implementation detail was the input/output normalization. Mapping inputs to \\([0,1]^d\\) and standardizing outputs before each GP fit sounds simple, but getting it wrong causes the kernel hyperparameters to drift into bad regions and the EI surface to behave unexpectedly. The Branin simulation study was essential for catching those bugs before running on experiments that cost hours of GPU time.\n\nCompleted May 2026 as a final project for STAT 238: Bayesian Statistics at UC Berkeley."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html",
-    "href": "posts/mutationrx/index.html",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "",
-    "text": "NoteProject Overview\n\n\n\nA mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor’s driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility, separating believable leads from coincidental docking scores.\nEvent: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP\nLive App"
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#the-problem",
-    "href": "posts/mutationrx/index.html#the-problem",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "The Problem",
-    "text": "The Problem\nTargeted cancer drugs fail by resistance: the tumor mutates, the protein changes shape, and the drug no longer binds. Deciding what to try next, or whether some cheap already-approved drug could be repurposed for the mutant, means slow, expensive cell-based screening. There are always too many candidates and too little bench budget.\nComputational docking can rank candidates cheaply, but it has a fatal flaw for this use: it happily scores drugs that have no real business binding the target. A robust docking score is not a real hit, and a bench researcher usually can’t tell signal from artifact. That gap, not the docking itself, is the actual problem worth solving."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#the-approach",
-    "href": "posts/mutationrx/index.html#the-approach",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "The Approach",
-    "text": "The Approach\n\n\n\nThe MutationRx workspace: a real mutant structure, the wild-type→mutant binding shifts, and Claude’s read of which hit is worth a bench test.\n\n\nThe design thesis is one line:\n\nThe docking finds candidates. Claude decides which to believe.\n\nFor a tumor’s driver mutation, MutationRx docks a panel of 62 approved drugs against both the wild-type and mutant structure, rescores the poses, and runs a Bayesian bootstrap over replicate docking runs to put a 95% credible interval on each wild-type→mutant shift. Every drug lands in one of four buckets: weakened (resistance), robust (safe bet), improved, or non-binder.\nThen Claude reviews each hit for mechanistic plausibility. This is the step a script can’t do: a beta-blocker that “binds” EGFR is almost certainly an artifact, while a drug whose real mechanism fits the target is worth the assay. Remove the reviewer and you are back to an untrustworthy hit list, so the reviewer is load-bearing rather than decorative."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#why-its-credible",
-    "href": "posts/mutationrx/index.html#why-its-credible",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "Why It’s Credible",
-    "text": "Why It’s Credible\nEvery claim the tool makes is built to be checkable:\n\nIt reproduces known biology on unseen real data. Run on a genuine, de-identified TCGA lung tumor carrying EGFR L858R+T790M, it recovers the clinic from docking alone: erlotinib and gefitinib fail, and osimertinib holds, on a single patient tumor it had never seen.\nIt shows why statistics alone aren’t enough. Screening 300 approved drugs against the resistant mutant, docking plus bootstrap flagged ten as significantly improved binders with tight credible intervals, and every one is a mechanistic artifact (antidepressants, antipsychotics, antibiotics). Only mechanism separates them, which is exactly the judgment Claude adds.\nThe reviewer’s judgment is grounded, not asserted. Each drug carries two orthogonal evidence axes the docking never sees: pathway grounding (is the drug’s real target in the driver’s pathway or enzyme class?) and DepMap dependency (is that target a gene lung adenocarcinoma actually needs, from CRISPR essentiality?). On-target inhibitors corroborate on both; the statin and antidepressant artifacts fail both. That turns the artifact-vs-lead call into an auditable, cited read rather than a black-box assertion.\nIt flags its own blind spots. Docking affinity is a proxy, not efficacy; repurposing hits are hypotheses; and non-covalent docking can’t capture covalent mechanisms (KRAS G12C, osimertinib on C797S), so those cases are labeled as blind spots, never read as findings."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#the-non-obvious-lead-and-the-overnight-test",
-    "href": "posts/mutationrx/index.html#the-non-obvious-lead-and-the-overnight-test",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "The Non-Obvious Lead, and the Overnight Test",
-    "text": "The Non-Obvious Lead, and the Overnight Test\nTwo moments show the pipeline doing its job. First, the reviewer surfaced a credible, non-obvious lead: imatinib, the leukemia (CML) drug, is predicted to gain binding across every EGFR mutant tested. Pooling the replicate evidence across four mutant structures gives a mean gain that clears both statistical and practical-significance floors, and it survives review where the statin artifacts don’t, because imatinib is a kinase inhibitor and docking it against a kinase is legitimate. Strictly a hypothesis worth an assay, never a finding.\nSecond, to prove the tool outlasts the week, I modeled and docked EGFR C797S, the mutation that defeats osimertinib itself and a genotype the tool had never seen, overnight on Berkeley’s GPU cluster. The tool did two honest things at once: it added a fourth consistent data point to the imatinib hypothesis, and it flagged its own limitation, warning not to read osimertinib as “still working” because C797S removes the cysteine that osimertinib binds covalently. A tool that knows where it fails is more trustworthy than one that always answers."
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#technologies-tools",
-    "href": "posts/mutationrx/index.html#technologies-tools",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "Technologies & Tools",
-    "text": "Technologies & Tools\nTriage engine: Python, DiffDock + gnina for docking and rescoring, NumPy for the Bayesian-bootstrap credible intervals over replicates\nClaude: the Agent SDK and API power the plausibility reviewer; the whole tool was built with Claude Code\nWeb app: FastAPI backend with a staged background-job runner, a single-page workspace, a grounded per-result chat, and a vendored NGL 3D structure viewer (wild-type ↔︎ mutant, offline)\nInterfaces: a hosted web app, a CLI, and an MCP server so Claude Code / Desktop can call the triage tools directly\nData: real de-identified TCGA lung tumors via the open-access cBioPortal API, structures from RCSB PDB, and drug chemistry from PubChem / ChEMBL with RDKit"
-  },
-  {
-    "objectID": "posts/mutationrx/index.html#reflection",
-    "href": "posts/mutationrx/index.html#reflection",
-    "title": "MutationRx: Deciding Which Docking Hits to Believe",
-    "section": "Reflection",
-    "text": "Reflection\nThe interesting problem wasn’t running a docking pipeline, since those exist. It was designing around the fact that docking is an unreliable proxy, and turning that unreliability into the thing the product solves. The scarce, valuable step is the mechanistic judgment about which computational hits to believe, and that maps almost exactly onto what a language model with grounded evidence can do and a script cannot. Building for a named user, a bench researcher rather than a computational biologist, forced every result to be honest by construction: uncertainty on every call, hypotheses labeled as hypotheses, and blind spots flagged rather than hidden.\n\nBuilt with Claude for the “Built with Claude: Life Sciences” hackathon (Anthropic × Gladstone Institutes), July 2026."
-  },
-  {
     "objectID": "posts/genetic-algorithm/index.html",
     "href": "posts/genetic-algorithm/index.html",
     "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
@@ -432,6 +278,237 @@
     "title": "Evolutionary Feature Selection: A Genetic Algorithm Package",
     "section": "Reflection",
     "text": "Reflection\nBuilding a production-quality statistical computing package taught me that good statistical software requires more than correct algorithms; it demands thoughtful architecture, comprehensive testing, performance optimization, and clear documentation.\nThe collaborative aspect was equally valuable. Working as a team meant negotiating interfaces, reviewing each other’s code, and maintaining consistency across components. These skills translate directly to professional data science and software engineering.\n\nCompleted December 2025 as the final project for STAT 243: Statistical Computing at UC Berkeley."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html",
+    "href": "posts/mutationrx/index.html",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor’s driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility, separating believable leads from coincidental docking scores.\nEvent: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP\nLive App"
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#the-problem",
+    "href": "posts/mutationrx/index.html#the-problem",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "The Problem",
+    "text": "The Problem\nTargeted cancer drugs fail by resistance: the tumor mutates, the protein changes shape, and the drug no longer binds. Deciding what to try next, or whether some cheap already-approved drug could be repurposed for the mutant, means slow, expensive cell-based screening. There are always too many candidates and too little bench budget.\nComputational docking can rank candidates cheaply, but it has a fatal flaw for this use: it happily scores drugs that have no real business binding the target. A robust docking score is not a real hit, and a bench researcher usually can’t tell signal from artifact. That gap, not the docking itself, is the actual problem worth solving."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#the-approach",
+    "href": "posts/mutationrx/index.html#the-approach",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "The Approach",
+    "text": "The Approach\n\n\n\nThe MutationRx workspace: a real mutant structure, the wild-type→mutant binding shifts, and Claude’s read of which hit is worth a bench test.\n\n\nThe design thesis is one line:\n\nThe docking finds candidates. Claude decides which to believe.\n\nFor a tumor’s driver mutation, MutationRx docks a panel of 62 approved drugs against both the wild-type and mutant structure, rescores the poses, and runs a Bayesian bootstrap over replicate docking runs to put a 95% credible interval on each wild-type→mutant shift. Every drug lands in one of four buckets: weakened (resistance), robust (safe bet), improved, or non-binder.\nThen Claude reviews each hit for mechanistic plausibility. This is the step a script can’t do: a beta-blocker that “binds” EGFR is almost certainly an artifact, while a drug whose real mechanism fits the target is worth the assay. Remove the reviewer and you are back to an untrustworthy hit list, so the reviewer is load-bearing rather than decorative."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#why-its-credible",
+    "href": "posts/mutationrx/index.html#why-its-credible",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "Why It’s Credible",
+    "text": "Why It’s Credible\nEvery claim the tool makes is built to be checkable:\n\nIt reproduces known biology on unseen real data. Run on a genuine, de-identified TCGA lung tumor carrying EGFR L858R+T790M, it recovers the clinic from docking alone: erlotinib and gefitinib fail, and osimertinib holds, on a single patient tumor it had never seen.\nIt shows why statistics alone aren’t enough. Screening 300 approved drugs against the resistant mutant, docking plus bootstrap flagged ten as significantly improved binders with tight credible intervals, and every one is a mechanistic artifact (antidepressants, antipsychotics, antibiotics). Only mechanism separates them, which is exactly the judgment Claude adds.\nThe reviewer’s judgment is grounded, not asserted. Each drug carries two orthogonal evidence axes the docking never sees: pathway grounding (is the drug’s real target in the driver’s pathway or enzyme class?) and DepMap dependency (is that target a gene lung adenocarcinoma actually needs, from CRISPR essentiality?). On-target inhibitors corroborate on both; the statin and antidepressant artifacts fail both. That turns the artifact-vs-lead call into an auditable, cited read rather than a black-box assertion.\nIt flags its own blind spots. Docking affinity is a proxy, not efficacy; repurposing hits are hypotheses; and non-covalent docking can’t capture covalent mechanisms (KRAS G12C, osimertinib on C797S), so those cases are labeled as blind spots, never read as findings."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#the-non-obvious-lead-and-the-overnight-test",
+    "href": "posts/mutationrx/index.html#the-non-obvious-lead-and-the-overnight-test",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "The Non-Obvious Lead, and the Overnight Test",
+    "text": "The Non-Obvious Lead, and the Overnight Test\nTwo moments show the pipeline doing its job. First, the reviewer surfaced a credible, non-obvious lead: imatinib, the leukemia (CML) drug, is predicted to gain binding across every EGFR mutant tested. Pooling the replicate evidence across four mutant structures gives a mean gain that clears both statistical and practical-significance floors, and it survives review where the statin artifacts don’t, because imatinib is a kinase inhibitor and docking it against a kinase is legitimate. Strictly a hypothesis worth an assay, never a finding.\nSecond, to prove the tool outlasts the week, I modeled and docked EGFR C797S, the mutation that defeats osimertinib itself and a genotype the tool had never seen, overnight on Berkeley’s GPU cluster. The tool did two honest things at once: it added a fourth consistent data point to the imatinib hypothesis, and it flagged its own limitation, warning not to read osimertinib as “still working” because C797S removes the cysteine that osimertinib binds covalently. A tool that knows where it fails is more trustworthy than one that always answers."
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#technologies-tools",
+    "href": "posts/mutationrx/index.html#technologies-tools",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nTriage engine: Python, DiffDock + gnina for docking and rescoring, NumPy for the Bayesian-bootstrap credible intervals over replicates\nClaude: the Agent SDK and API power the plausibility reviewer; the whole tool was built with Claude Code\nWeb app: FastAPI backend with a staged background-job runner, a single-page workspace, a grounded per-result chat, and a vendored NGL 3D structure viewer (wild-type ↔︎ mutant, offline)\nInterfaces: a hosted web app, a CLI, and an MCP server so Claude Code / Desktop can call the triage tools directly\nData: real de-identified TCGA lung tumors via the open-access cBioPortal API, structures from RCSB PDB, and drug chemistry from PubChem / ChEMBL with RDKit"
+  },
+  {
+    "objectID": "posts/mutationrx/index.html#reflection",
+    "href": "posts/mutationrx/index.html#reflection",
+    "title": "MutationRx: Deciding Which Docking Hits to Believe",
+    "section": "Reflection",
+    "text": "Reflection\nThe interesting problem wasn’t running a docking pipeline, since those exist. It was designing around the fact that docking is an unreliable proxy, and turning that unreliability into the thing the product solves. The scarce, valuable step is the mechanistic judgment about which computational hits to believe, and that maps almost exactly onto what a language model with grounded evidence can do and a script cannot. Building for a named user, a bench researcher rather than a computational biologist, forced every result to be honest by construction: uncertainty on every call, hypotheses labeled as hypotheses, and blind spots flagged rather than hidden.\n\nBuilt with Claude for the “Built with Claude: Life Sciences” hackathon (Anthropic × Gladstone Institutes), July 2026."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html",
+    "href": "posts/bayesian-optimization/index.html",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA from-scratch implementation of Bayesian Optimization using a Gaussian Process surrogate with squared-exponential kernel and Expected Improvement acquisition, applied to three experiments spanning a synthetic benchmark, neural network hyperparameter tuning, and classifier threshold optimization.\nCourse: STAT 238: Bayesian Statistics · Semester: Spring 2026 · Language: Python\nGitHub Repository"
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#the-problem",
+    "href": "posts/bayesian-optimization/index.html#the-problem",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "The Problem",
+    "text": "The Problem\nTuning a machine learning model involves making a sequence of decisions under uncertainty. You pick a learning rate, train for hours, observe validation performance, and then have to decide what to try next. Grid search wastes evaluations on systematically spaced points regardless of what the results say. Random search is better, but it treats each trial independently, ignoring everything learned from previous runs.\nBayesian Optimization (BO) does something smarter: it builds a probabilistic model of the objective function from every evaluation so far, then uses that model to decide where to look next. It is the principled answer to the question of how to optimize an expensive black-box function with a tight budget.\nFor this project, I implemented the full BO pipeline from scratch, with no hyperopt and no optuna, and ran it on three problems with very different cost structures."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#the-method",
+    "href": "posts/bayesian-optimization/index.html#the-method",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "The Method",
+    "text": "The Method\nThe implementation has three components, each in its own module.\nGaussian Process surrogate (gp.py). A GP is a distribution over functions. Given observations, it produces a posterior: a mean function \\(\\mu(x)\\) (best guess at each point) and a variance function \\(\\sigma^2(x)\\) (uncertainty). The kernel is squared-exponential with three hyperparameters: output scale \\(\\alpha\\), length scale \\(\\ell\\), and noise variance \\(\\sigma^2_n\\). These are fit by maximizing the log marginal likelihood at each iteration via L-BFGS-B. Cholesky decomposition keeps the linear algebra numerically stable.\nExpected Improvement acquisition (acquisition.py). EI is the expected amount by which the next evaluation will beat the current best:\n\\[\\text{EI}(x) = (\\mu(x) - f^*)\\,\\Phi(Z) + \\sigma(x)\\,\\phi(Z), \\quad Z = \\frac{\\mu(x) - f^*}{\\sigma(x)}\\]\nThe first term rewards exploitation (high predicted mean); the second rewards exploration (high uncertainty). The balance shifts automatically as the GP gains confidence, with no manual tuning of an exploration parameter.\nBO loop (bo.py). Inputs are normalized to \\([0,1]^d\\) before each GP fit, and outputs are standardized to zero mean and unit variance. This keeps the kernel hyperparameters in comparable ranges regardless of the original scales. Each iteration fits the GP on all observations so far, maximizes EI over the input space (multi-start L-BFGS-B), evaluates the objective at the new point, and appends to the history."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#three-experiments",
+    "href": "posts/bayesian-optimization/index.html#three-experiments",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Three Experiments",
+    "text": "Three Experiments\n\nBranin Benchmark\nBefore running BO on real problems, I validated it on the Branin function: a classic 2D test with three known global minima at \\(f^* \\approx 0.398\\). A correct BO implementation should converge reliably across random seeds; grid search should fail when the optimum falls between grid lines.\n\n\n\nGP surrogate (top row) and Expected Improvement surface (bottom row) at trials 5, 10, 20, and 40. The posterior concentrates around the three Branin optima as observations accumulate. EI collapses near already-explored regions, forcing the algorithm to search elsewhere.\n\n\n\n\n\nBO converges to within 0.03 of the true optimum across 5 random seeds. Random search plateaus more than 2x worse; grid search never escapes its fixed points.\n\n\n\n\nNCF on MovieLens 1M\nThe first real application was hyperparameter tuning for the Neural Collaborative Filtering model from my CS 289A recommender systems project. Each evaluation required training NCF for 10 epochs on an RTX 2080 Ti, costing about 22 minutes per trial. With a budget of 15 trials total (5 random initialization, 10 BO steps), there was no room to waste evaluations.\nThe search space was 5-dimensional: embedding dimension (4 discrete values), MLP architecture (3 options), learning rate and L2 decay (both log-encoded continuous), and WMF confidence scale (linear continuous).\n\n\n\nAfter 5 random trials, the best NDCG@10 was 0.3745. BO improved this to 0.4056 in 10 more steps, an 8.3% relative gain. The dashed line marks the best random-init result; every BO step from trial 8 onward exceeds it.\n\n\nThe configuration BO converged to was interpretable: largest embedding dimension (256), deepest MLP (four layers), minimal L2 regularization, and the smallest confidence scale. These cluster around a coherent region of parameter space, which suggests the GP genuinely learned the landscape rather than finding a lucky outlier.\n\n\nUpworthy Classifier Thresholds\nThe second real application came from my STAT 230A headline analysis project, where I used a BART zero-shot NLI model to classify 54,956 headlines into topic categories. The classifier outputs a confidence score, and two thresholds control how those scores are used: a minimum confidence to accept a label, and a minimum category size to keep in the analysis.\nThe objective was maximizing the ANOVA F-statistic across 7 topic categories of log(CTR), where higher F means the categories are more statistically distinct, validating that the classification is meaningful. Each trial costs about 15 milliseconds (pure pandas + scipy, no GPU), so I could afford a full three-way comparison with 60 trials each.\n\n\n\nBO reaches F = 1,569 vs random search at 1,514 and grid search at 1,435. BO’s advantage here shows up in the path as much as the final value: it converges to a high-quality region by trial 30 while random search is still exploring at trial 50.\n\n\nThe BO-optimal confidence threshold was 0.256, lower than the 0.30 default I had used in the STAT 230A project. At that threshold, about 88% of headlines receive a label. Pushing the threshold higher improves per-label quality but discards too many observations, collapsing the F-statistic. The sweet spot the GP found was not obvious from inspection alone."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#results",
+    "href": "posts/bayesian-optimization/index.html#results",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Results",
+    "text": "Results\n\n\n\n\n\n\n\n\n\n\nExperiment\nBudget\nBO result\nBest baseline\nGain\n\n\n\n\nBranin (2D synthetic)\n40 trials\n-0.43\nRandom: -0.83\n2x better\n\n\nNCF hyperparameters (5D, GPU)\n15 trials\nNDCG = 0.406\nRandom: 0.375\n+8.3%\n\n\nUpworthy thresholds (2D, fast)\n60 trials\nF = 1,569\nRandom: 1,514\n+3.6%\n\n\n\nOne consistent observation across all three: BO’s advantage is largest when the budget is tightest relative to the search space. The Branin result (2x improvement over random) reflects a 40-trial budget over a smooth 2D space where the GP can learn the landscape quickly. The NCF result (+8.3%) came from 15 trials over a 5-dimensional mixed space where each random trial burns 22 minutes. The Upworthy result (+3.6%) is smaller partly because 60 trials over a 2D smooth space is generous enough that random search also converges reasonably well."
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#technologies-tools",
+    "href": "posts/bayesian-optimization/index.html#technologies-tools",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nCore stack: Python, NumPy, SciPy (L-BFGS-B, ANOVA), matplotlib\nImplementation: GP with squared-exponential kernel, Cholesky decomposition for posterior inference, log marginal likelihood maximization for kernel hyperparameter fitting, multi-start EI maximization\nExperiments: Branin benchmark (analytic), NCF black-box wrapper (subprocess CLI to PyTorch training script), Upworthy black-box wrapper (pandas + SciPy F-test)"
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#links",
+    "href": "posts/bayesian-optimization/index.html#links",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Links",
+    "text": "Links\n\nGitHub Repository: full implementation, notebooks, and experiment results"
+  },
+  {
+    "objectID": "posts/bayesian-optimization/index.html#reflection",
+    "href": "posts/bayesian-optimization/index.html#reflection",
+    "title": "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expensive",
+    "section": "Reflection",
+    "text": "Reflection\nThe most satisfying part of this project was that the three experiments genuinely connected to each other. The NCF tuning used the BO implementation to fix hyperparameters before running the CS 289A sparsity sweep. The Upworthy threshold tuning improved the category labels used in the STAT 230A regression. Building BO from scratch stopped being a course exercise and became a tool that made two other projects better, with quantifiable improvements in both cases.\nThe hardest implementation detail was the input/output normalization. Mapping inputs to \\([0,1]^d\\) and standardizing outputs before each GP fit sounds simple, but getting it wrong causes the kernel hyperparameters to drift into bad regions and the EI surface to behave unexpectedly. The Branin simulation study was essential for catching those bugs before running on experiments that cost hours of GPU time.\n\nCompleted May 2026 as a final project for STAT 238: Bayesian Statistics at UC Berkeley."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html",
+    "href": "posts/berkeley-grocery-tracker/index.html",
+    "title": "Berkeley Grocery Tracker",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe’s, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.\nLive site"
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#the-problem",
+    "href": "posts/berkeley-grocery-tracker/index.html#the-problem",
+    "title": "Berkeley Grocery Tracker",
+    "section": "The Problem",
+    "text": "The Problem\nLiving in Berkeley, I noticed that grocery prices vary a lot depending on which store you go to and when. A dozen eggs at Trader Joe’s and the same dozen at Whole Foods are rarely the same price, and the gap shifts over time. There was no easy way to see this data in one place, let alone track it over time or figure out which store makes the most sense for your weekly basket. I wanted to build exactly that."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#why-codex",
+    "href": "posts/berkeley-grocery-tracker/index.html#why-codex",
+    "title": "Berkeley Grocery Tracker",
+    "section": "Why Codex",
+    "text": "Why Codex\nOpenAI opened a challenge for developers to build with Codex, offering $100 in API credits and a Pro subscription to participants. I treated it as an opportunity to see how far an AI coding agent could take a real, multi-layer software project. The answer turned out to be: pretty far.\nThe entire stack was designed and built through Codex. I described what I wanted, iterated on the output, reviewed the code, and pushed forward. It was less about avoiding effort and more about compressing weeks of setup into days, without cutting corners on architecture."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-it-does",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-it-does",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What It Does",
+    "text": "What It Does\nThe live site shows price data for a curated set of staple items, things like eggs, milk, bananas, chicken breast, olive oil, across multiple Berkeley-area locations. You can:\n\nSee the latest prices for each item across stores\nExplore price trends over time with a time-series view\nBuild a basket and estimate total cost, both at the cheapest individual store per item and at the single best store overall\nCompare against Berkeley meal plan pricing as a reference point"
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#how-it-works",
+    "href": "posts/berkeley-grocery-tracker/index.html#how-it-works",
+    "title": "Berkeley Grocery Tracker",
+    "section": "How It Works",
+    "text": "How It Works\nThe data pipeline runs automatically. Three scrapers, one per grocery chain, pull full product catalogs from each store on a monthly schedule using GitHub Actions. Trader Joe’s exposes an internal GraphQL API; Whole Foods has a structured product feed; Safeway required Playwright to handle anti-bot protections on some runs.\nRaw scraped data lands in a staging table first. From there, a matching pipeline normalizes product names across stores into canonical items, using fuzzy text matching with quantity-awareness, a semantic embedding stage via the OpenAI API for harder cases, and a hand-curated staples bridge for the most important items. The confidence of each match is tracked, so auto-matched, semantically matched, and manually curated prices are all distinguished.\nOnce matched, prices flow into an append-only observations table that gives historical trends for free. The frontend, a Next.js app connected to Supabase Postgres, reads this data at request time and renders it on the dashboard.\nFor Trader Joe’s historical pricing before the scraper launched, I filtered a publicly available third-party price dump through the curated staples allowlist and loaded it into a separate proxy history table, keeping it isolated from live scrape data.\nThe whole infrastructure costs $0 per month. Vercel hosts the frontend, Supabase handles the database on its free tier, and GitHub Actions runs the scrapers."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-codex-actually-did",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What Codex Actually Did",
+    "text": "What Codex Actually Did\nA lot. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. My role was to define the architecture, make the key design calls, review and validate every piece of output, catch edge cases, and course-correct when things drifted. Codex accelerated the implementation significantly, but the product decisions and data model were mine to own.\nThe most impressive part was how it kept up with schema changes across iterations. As the data model evolved, it updated migrations, scripts, and pipeline logic in sync without losing track of what had changed."
+  },
+  {
+    "objectID": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
+    "href": "posts/berkeley-grocery-tracker/index.html#what-is-still-being-built",
+    "title": "Berkeley Grocery Tracker",
+    "section": "What Is Still Being Built",
+    "text": "What Is Still Being Built\nThe matching pipeline is solid for Trader Joe’s and Whole Foods. Safeway is scraped but the matching pass hasn’t run at full scale yet. The next phases are a staples-focused weekly scrape cadence, QA dashboards to monitor scrape quality, and eventually crowdsourced price contributions with receipt upload.\n\nBuilt April 2026 as part of the OpenAI Codex challenge. Stack: Next.js, Supabase, GitHub Actions, Vercel, OpenAI API."
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html",
+    "href": "posts/arctic-cloud-detection/index.html",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "",
+    "text": "NoteProject Overview\n\n\n\nA pixel-level cloud detector trained on NASA MISR multi-angle satellite imagery of the Arctic, where standard brightness-based cloud detection fails because snow-covered ice is just as bright and just as cold as a cloud top. The headline model scores 0.9958 AUC on its held-out test image — rotate which of the three available images gets held out instead, and the same model scores as low as 0.8874. That gap, not the leaderboard, is the real finding.\nCourse: STAT 214: Data Analysis and Machine Learning for Real-World Decision Making · Semester: Spring 2026 · Language: Python\n▶ Explore the interactive version: play cloud detector against the real trained model, inspect any of 115,032 real pixels on a live raster map, drag a threshold across real feature distributions, and see exactly where — and why — the model gets it wrong.\nGitHub Repository"
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#the-problem",
+    "href": "posts/arctic-cloud-detection/index.html#the-problem",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "The Problem",
+    "text": "The Problem\nMost cloud-detection algorithms lean on a simple rule: clouds are bright, the ground underneath usually isn’t. That rule collapses in the Arctic. Snow and sea ice are just as reflective and just as cold as cloud tops, so a brightness threshold that works over open ocean or temperate land is close to useless here — exactly the problem NASA’s Multi-angle Imaging SpectroRadiometer (MISR) was built to solve.\nMISR photographs the same 275-metre patch of ground from five camera angles within minutes of each other: DF (70.5°), CF (60°), BF (45.6°), AF (26.1°), and AN, looking straight down (0°). The physics is the signal: cloud tops scatter light strongly forward, so the DF camera sees them as much brighter than the AN camera does. Flat ice and snow scatter close to uniformly across angles. The difference between camera angles carries the classification signal that raw brightness cannot."
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#the-data",
+    "href": "posts/arctic-cloud-detection/index.html#the-data",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "The Data",
+    "text": "The Data\nThree labeled MISR orbits over the same Arctic region (path 26, 2002 daylight season), spanning a full seasonal transition — late April through mid June — plus 161 additional unlabeled orbits available for unsupervised pre-training.\n\n~345,000 total pixels; 207,681 carry expert cloud/not-cloud labels\nTraining set: O012791 + O013257 (125,598 labeled pixels, 33.2% cloud)\nTest set: O013490, held out by date (82,083 labeled pixels, 47.8% cloud — real seasonal drift as the melt season progresses)\nEight raw/engineered features per pixel going into the final model: the five radiances, SD (local texture), CORR (cross-angle correlation), and NDAI_DF_AF (an angular scattering ratio)"
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#before-any-model-auditing-the-data",
+    "href": "posts/arctic-cloud-detection/index.html#before-any-model-auditing-the-data",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "Before Any Model: Auditing the Data",
+    "text": "Before Any Model: Auditing the Data\nEvery accuracy number in this project rests on two things I checked before training anything.\nOutlier detection. A 3σ rule across all eight features flags 21,609 pixels (6.3%) across the three orbits. The reflex is to drop them. Instead I checked where they were — they weren’t scattered randomly, they clustered on one specific coastline. That’s Greenland’s edge, a region with known poor cross-angle terrain registration at sharp elevation changes (Shi et al. 2008). Real sensor-geometry artifact, not noise. Retained and flagged, not dropped.\nThe label buffer. This is the finding that isn’t in our submitted report. Across all three labeled orbits, every single pair of side-by-side labeled pixels shares the same label — 161,367 adjacent pairs in the test orbit, 139,631 and 107,028 in the two training orbits, zero disagreements anywhere. That’s not a fact about clouds; it’s a property of how the labels were drawn. Experts assigned regions, not individual pixels, and left an unlabeled buffer around every class transition — an empirical minimum of 6.0 grid units between opposite-class labels, against a theoretical grid spacing of 1.0.\nThe consequence: the labeled test set structurally excludes the pixels the model finds hardest. Every accuracy number in this project — and probably in the source literature — is computed on the easy pixels."
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#feature-engineering",
+    "href": "posts/arctic-cloud-detection/index.html#feature-engineering",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "Feature Engineering",
+    "text": "Feature Engineering\nEight features, ranked by separability (AUC / KS statistic / mutual information, computed independently so no single metric’s blind spot could inflate a feature’s apparent value):\n\n\n\n\n\n\n\n\nFeature\nAUC\nNotes\n\n\n\n\nSD\n0.935\nLocal texture. Cloud pixels average 4.4× the SD of not-cloud pixels.\n\n\nNDAI (textbook)\n0.823\n(DF−AN)/(DF+AN)\n\n\nAF\n0.799\nStrongest single raw radiance angle\n\n\nCORR\n0.524\nBarely better than chance — see below\n\n\n\nCORR — one of three pillars of the original Shi et al. labeling rule — is nearly useless alone on this data (AUC 0.524). It’s built to catch high-altitude clouds, where cross-angle registration shift is large; these three orbits are dominated by low-altitude cloud that looks nearly identical from every angle. Kept in the final feature set anyway, since a tree-based model can use it in combination even when it contributes almost nothing alone — and permutation importance later confirms it does (0.0196), unlike the raw DF radiance, which goes measurably negative.\nI also swept six ways of building an angular scattering ratio, (a−b)/(a+b), across every camera pair. NDAI_DF_AF (comparing DF to AF instead of AN) beat the textbook version on all three metrics and is what the selected model uses. NDAI_AF_AN landed at exactly 0.500 AUC — chance — because AF and AN are only 26° apart, not enough angular separation to carry any signal. A clean negative result, and useful for the same reason a positive one is."
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#transfer-learning-an-autoencoder-on-unlabeled-patches",
+    "href": "posts/arctic-cloud-detection/index.html#transfer-learning-an-autoencoder-on-unlabeled-patches",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "Transfer Learning: An Autoencoder on Unlabeled Patches",
+    "text": "Transfer Learning: An Autoencoder on Unlabeled Patches\nHand-built features are defined at a single pixel; cloud is a spatially coherent thing. With 161 unlabeled orbits sitting unused, I trained a convolutional autoencoder on 9×9×8 patches (648 dims → 32-dim embedding → 648 reconstruction, MSE loss) to learn spatial texture without any labels, then fused the 32 embeddings with the eight hand-built features.\nThe honest result: it didn’t help. Random Forest actually got worse with the embeddings added (AUC 0.9944 on 3 features down to 0.9861 on 40). HGB gained +0.0001 (0.9958 → 0.9959). The eight hand-built features already carried the signal that mattered — a real, working transfer-learning pipeline that also happens to be evidence this particular problem didn’t need one."
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#why-a-random-split-would-have-been-a-lie",
+    "href": "posts/arctic-cloud-detection/index.html#why-a-random-split-would-have-been-a-lie",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "Why a Random Split Would Have Been a Lie",
+    "text": "Why a Random Split Would Have Been a Lie\nBecause neighboring pixels always share a label, a random pixel-level train/test split would put a pixel in training and its immediate neighbor in test — that’s not generalization, it’s memorizing a map. I used a temporal holdout instead: train on the two earlier orbits, test on the later one, mirroring real deployment (score a future pass with a model trained on the past).\nThen I went further. Rotating which of the three orbits gets held out (leave-one-orbit-out cross-validation — a follow-up analysis run after the report was submitted) shows what that single holdout number was hiding:\n\n\n\n\n\n\n\n\n\nHeld-out orbit\nHGB-Base (8 feat.)\nHGB-Full (40 feat.)\nRF-Full (40 feat.)\n\n\n\n\nO012791\n0.8874\n0.9088\n0.7842\n\n\nO013257\n0.9739\n0.9840\n0.9814\n\n\nO013490\n0.9958\n0.9959\n0.9861\n\n\n\nThe headline 0.9958 is the best of three possible holdouts, not a stable property of the model. With only three orbit groups, there’s no averaging your way out of that spread — the honest error bar on this project is closer to ±0.05 AUC than the ±0.0003 seed-to-seed variance a naive robustness check would suggest."
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#results",
+    "href": "posts/arctic-cloud-detection/index.html#results",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "Results",
+    "text": "Results\nEvery tree-based model cleared 0.98 AUC; every linear model fell over once handed all 40 features.\n\n\n\nModel\nFeatures\nROC AUC\n\n\n\n\nRF (Base)\n3\n0.9944\n\n\nHGB (Base) — selected\n8\n0.9958\n\n\nHGB (Full)\n40\n0.9959\n\n\nSVM (Full)\n40\n0.4148\n\n\nLasso Logistic (Full)\n40\n0.5109\n\n\n\nThree orders of magnitude of extra machinery (3 features → 40, RF → HGB) bought 0.0015 AUC. Handing the SVM the same 40 features it handled fine at 3 dropped it to 0.4148 — below chance — because margin-based models don’t shrug off collinearity the way trees do.\nHGB-Base (8 features) was selected over HGB-Full (40 features, 0.0001 AUC better) because the better model needs a trained autoencoder and a patch-extraction pipeline running at inference time. That trade is an engineering decision, not a leaderboard result.\n\n\n\nSpatial map of HGB-Base classification errors on the temporal holdout. Errors cluster tightly at cloud-edge boundaries rather than scattering randomly across the image.\n\n\nThe confusion matrix is deliberately lopsided: 198 missed clouds against 3,017 false alarms (recall 0.9950, precision 0.9283) — a trade that fell out of class weighting, not a deliberate choice, but plausibly the right one for a downstream climate product where missing a cloud is costlier than a false alarm.\n\n\n\nPermutation importance for the selected model. SD dominates; the raw DF radiance — the camera angle the textbook NDAI index is built around — is measurably negative.\n\n\nTwo distinct failure modes fall out of the error analysis, both traceable to specific features rather than “the model got confused”: missed clouds run texture-masked (false negatives average SD = 1,376, nearly double the 706 of correctly caught clouds — the cloud’s own texture disappears into an already-heterogeneous surface), while false alarms are suspiciously smooth (false positives have a median CORR of 0.909 against 0.161 for true clouds — a clear-sky surface at the right angle can register almost identically across every camera, exactly what fools that feature)."
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#technologies-tools",
+    "href": "posts/arctic-cloud-detection/index.html#technologies-tools",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "Technologies & Tools",
+    "text": "Technologies & Tools\nCore stack: Python, PyTorch (autoencoder), scikit-learn (RF, HGB, SVM, logistic regression), pandas / NumPy\nFeature engineering: AUC / KS / mutual-information separability ranking, angular-ratio sweep across all camera pairs, PCA on the radiance block\nModel selection: temporal holdout + 5-fold stratified CV, leave-one-orbit-out cross-validation as a follow-up robustness check\nStability checks: label-noise robustness (5% training-label flip, 3 independent repetitions), unseen-orbit sanity checks on three fully unlabeled scenes"
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#links-resources",
+    "href": "posts/arctic-cloud-detection/index.html#links-resources",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "Links & Resources",
+    "text": "Links & Resources\n\nInteractive walkthrough: the full analysis as an interactive site — play cloud detector against the real model, drag a live threshold across real feature histograms, and inspect any of 115,032 real pixels on a hoverable raster map showing raw radiances, engineered features, and the model’s prediction for that exact pixel\nGitHub Repository: full codebase, feature engineering pipeline, and autoencoder training\nFinal Report (PDF): complete write-up with methodology and results"
+  },
+  {
+    "objectID": "posts/arctic-cloud-detection/index.html#reflection",
+    "href": "posts/arctic-cloud-detection/index.html#reflection",
+    "title": "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery",
+    "section": "Reflection",
+    "text": "Reflection\nThe most useful finding in this project isn’t in the leaderboard — it’s the discovery that the labeled test set structurally excludes the pixels the model finds hardest. Nobody asked me to check whether adjacent pixels ever disagreed on their label; I checked because it seemed like the kind of thing worth verifying before trusting any accuracy number downstream. It turned out to be the single most important caveat on the whole project, and it reframes what “0.9958 AUC” actually means: not “the model is almost never wrong,” but “the model is almost never wrong on the pixels we were confident enough to label.”\nThe leave-one-orbit-out analysis made the same point from a different angle. A single holdout number is a point estimate with an invisible error bar; rotating the holdout made that error bar visible, and it was much larger than the seed-to-seed variance anyone would normally report. Between the two, I came away convinced that for a project like this, the data-quality audit and the validation design matter more than which model wins the leaderboard — the model was the easy part.\n\nCompleted August 2026 as a project for STAT 214: Data Analysis and Machine Learning for Real-World Decision Making at UC Berkeley."
   },
   {
     "objectID": "posts/otomedi/index.html",
@@ -620,14 +697,14 @@
     "href": "index.html#featured-projects",
     "title": "Ricardo Pérez Castillo",
     "section": "Featured Projects",
-    "text": "Featured Projects\n\n\n\n\n\nMutationRx: Deciding Which Docking Hits to Believe\n\n\nBuilt with Claude: Life Sciences (Anthropic × Gladstone) · FastAPI · Docking · MCP\n\n\nA resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.\n\n\nView project →\n\n\n\n\n\n\n\n\nVouchNet: A Trust Layer for AI Agents\n\n\nNANDAHack (MIT Media Lab) · Bayesian Inference · TrustRank · FastAPI\n\n\nA reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet’s trust score by six hundredths of one.\n\n\nView project →\n\n\n\n\n\n\n\n\nOtomedi: Multi-Agent Healthcare Automation\n\n\nUC Berkeley AI Hackathon · Claude API · FastAPI · Next.js\n\n\nA multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions while a healthcare worker keeps final sign-off on everything clinical.\n\n\nView project →\n\n\n\n\n\n\n\n\nBayesian Optimization from Scratch\n\n\nSTAT 238 · Gaussian Processes · Python · Machine Learning\n\n\nA Gaussian Process surrogate and Expected Improvement acquisition built without hyperopt or optuna, then used to tune two other projects on this site: +8.3% NDCG on a recommender and +3.6% on a classifier threshold.\n\n\nView project →\n\n\n\n\n\n\n\n\nWhat Makes a Headline Work? Lessons from 55,000 Tested Headlines\n\n\nSTAT 230A · Python · Statistical Computing · NLP\n\n\nRegression analysis of 54,956 Upworthy headline variants reveals that exclamation marks destroy engagement while numeric openings quietly win, with cluster-robust inference to match the nested A/B test structure.\n\n\nView project →\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\nSTAT 214 · Bayesian Inference · Machine Learning · Python\n\n\nOn 43,399 pediatric head trauma patients, a random forest cuts unnecessary CT scans by 63% against the standard Kuppermann clinical rule while holding the same 84.2% sensitivity.\n\n\nView project →\n\n\n\n\n\nSee all projects →"
+    "text": "Featured Projects\n\n\n\n\n\nMutationRx: Deciding Which Docking Hits to Believe\n\n\nBuilt with Claude: Life Sciences (Anthropic × Gladstone) · FastAPI · Docking · MCP\n\n\nA resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor’s wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.\n\n\nView project →\n\n\n\n\n\n\n\n\nVouchNet: A Trust Layer for AI Agents\n\n\nNANDAHack (MIT Media Lab) · Bayesian Inference · TrustRank · FastAPI\n\n\nA reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet’s trust score by six hundredths of one.\n\n\nView project →\n\n\n\n\n\n\n\n\nOtomedi: Multi-Agent Healthcare Automation\n\n\nUC Berkeley AI Hackathon · Claude API · FastAPI · Next.js\n\n\nA multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions while a healthcare worker keeps final sign-off on everything clinical.\n\n\nView project →\n\n\n\n\n\n\n\n\nBayesian Optimization from Scratch\n\n\nSTAT 238 · Gaussian Processes · Python · Machine Learning\n\n\nA Gaussian Process surrogate and Expected Improvement acquisition built without hyperopt or optuna, then used to tune two other projects on this site: +8.3% NDCG on a recommender and +3.6% on a classifier threshold.\n\n\nView project →\n\n\n\n\n\n\n\n\nWhat Makes a Headline Work? Lessons from 55,000 Tested Headlines\n\n\nSTAT 230A · Python · Statistical Computing · NLP\n\n\nRegression analysis of 54,956 Upworthy headline variants reveals that exclamation marks destroy engagement while numeric openings quietly win, with cluster-robust inference to match the nested A/B test structure.\n\n\nView project →\n\n\n\n\n\n\n\n\nPECARN Traumatic Brain Injury Analysis\n\n\nSTAT 214 · Bayesian Inference · Machine Learning · Python\n\n\nOn 43,399 pediatric head trauma patients, a random forest cuts unnecessary CT scans by 63% against the standard Kuppermann clinical rule while holding the same 84.2% sensitivity.\n\n\nView project →\n\n\n\n\n\n\n\n\nCloud or Ice: Arctic Cloud Detection from Satellite Imagery\n\n\nSTAT 214 · NASA MISR · Data Quality · Machine Learning\n\n\nPixel-level cloud classification where clouds and sea ice are equally bright and cold. The headline 0.996 AUC drops to 0.89 depending on which orbit is held out — the real finding is a data-quality audit, not the leaderboard.\n\n\nView project →\n\n\n\n\n\nSee all projects →"
   },
   {
     "objectID": "index.html#skills",
     "href": "index.html#skills",
     "title": "Ricardo Pérez Castillo",
     "section": "Skills",
-    "text": "Skills\n\n  \n    Analytics & ML\n    \n      A/B Testing\n      Experimentation Design\n      Statistical Inference\n      Causal Inference\n      Forecasting\n      Regression\n      Classification\n      Clustering\n      NLP\n      Recommendation Systems\n      Feature Engineering\n    \n  \n  \n    AI Engineering\n    \n      Claude API\n      Multi-Agent Systems\n      MCP\n      FastAPI\n      Bayesian Optimization\n      Supabase\n    \n  \n  \n    Programming & Data\n    \n      Python\n      pandas\n      NumPy\n      scikit-learn\n      statsmodels\n      PyTorch\n      spaCy\n      R\n      SQL\n      Snowflake\n      SQL Server\n      AWS S3\n      ETL\n      Dimensional Modeling\n    \n  \n  \n    BI & Infrastructure\n    \n      Tableau\n      Power BI\n      Azure\n      GCP\n      Git\n      REST APIs\n      SnapLogic"
+    "text": "Skills\n\n  \n    Analytics & ML\n    \n      A/B Testing\n      Experimentation Design\n      Statistical Inference\n      Causal Inference\n      Bayesian Inference\n      Bayesian Optimization\n      Forecasting\n      Regression\n      Classification\n      Clustering\n      NLP\n      LLMs\n      Recommendation Systems\n      Feature Engineering\n    \n  \n  \n    Programming & Data\n    \n      Python\n      pandas\n      NumPy\n      scikit-learn\n      statsmodels\n      PyTorch\n      spaCy\n      R\n      SQL\n      Snowflake\n      dbt\n      Microsoft SQL Server\n      PostgreSQL\n      AWS S3\n      ETL\n      Dimensional Modeling\n    \n  \n  \n    BI & Infrastructure\n    \n      Tableau\n      Power BI\n      GCP\n      Git\n      GitHub Actions\n      REST APIs\n      SnapLogic\n      Claude API\n      MCP\n      Multi-Agent Systems"
   },
   {
     "objectID": "index.html#education",

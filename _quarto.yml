@@ -5,6 +5,8 @@ project:
     - robots.txt
     - favicon.svg
     - og-card.png
+    - analytics.js
+    - cheers.js
 
 website:
   title: "Ricardo Pérez Castillo"
@@ -17,6 +19,13 @@ website:
   open-graph: true
   twitter-card:
     card-style: summary_large_image
+  google-analytics:
+    tracking-id: "G-ERRXK3H3TZ"
+    anonymize-ip: true
+  cookie-consent:
+    type: express
+    style: simple
+    palette: light
   navbar:
     left:
       - href: index.qmd
@@ -50,6 +59,9 @@ format:
     theme: cosmo
     toc: true
     css: styles.css
+    include-after-body:
+      - _includes/analytics.html
+      - _includes/cheers.html
     include-in-header:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">

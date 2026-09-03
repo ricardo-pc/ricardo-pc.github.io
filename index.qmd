@@ -114,6 +114,17 @@ include-in-header:
 </div>
 :::
 
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+<div class="card h-100 rpc-card">
+<div class="card-body">
+<h3 class="card-title">Cloud or Ice: Arctic Cloud Detection from Satellite Imagery</h3>
+<p class="card-text text-muted small">STAT 214 · NASA MISR · Data Quality · Machine Learning</p>
+<p class="card-text">Pixel-level cloud classification where clouds and sea ice are equally bright and cold. The headline 0.996 AUC drops to 0.89 depending on which orbit is held out — the real finding is a data-quality audit, not the leaderboard.</p>
+<p><a href="posts/arctic-cloud-detection/index.html" class="rpc-card-link">View project →</a></p>
+</div>
+</div>
+:::
+
 ::::
 
 ```{=html}
@@ -133,24 +144,16 @@ include-in-header:
       <span class="rpc-pill">Experimentation Design</span>
       <span class="rpc-pill">Statistical Inference</span>
       <span class="rpc-pill">Causal Inference</span>
+      <span class="rpc-pill">Bayesian Inference</span>
+      <span class="rpc-pill">Bayesian Optimization</span>
       <span class="rpc-pill">Forecasting</span>
       <span class="rpc-pill">Regression</span>
       <span class="rpc-pill">Classification</span>
       <span class="rpc-pill">Clustering</span>
       <span class="rpc-pill">NLP</span>
+      <span class="rpc-pill">LLMs</span>
       <span class="rpc-pill">Recommendation Systems</span>
       <span class="rpc-pill">Feature Engineering</span>
-    </div>
-  </div>
-  <div class="rpc-skill-group">
-    <span class="rpc-skill-label">AI Engineering</span>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Claude API</span>
-      <span class="rpc-pill">Multi-Agent Systems</span>
-      <span class="rpc-pill">MCP</span>
-      <span class="rpc-pill">FastAPI</span>
-      <span class="rpc-pill">Bayesian Optimization</span>
-      <span class="rpc-pill">Supabase</span>
     </div>
   </div>
   <div class="rpc-skill-group">
@@ -166,7 +169,9 @@ include-in-header:
       <span class="rpc-pill">R</span>
       <span class="rpc-pill">SQL</span>
       <span class="rpc-pill">Snowflake</span>
-      <span class="rpc-pill">SQL Server</span>
+      <span class="rpc-pill">dbt</span>
+      <span class="rpc-pill">Microsoft SQL Server</span>
+      <span class="rpc-pill">PostgreSQL</span>
       <span class="rpc-pill">AWS S3</span>
       <span class="rpc-pill">ETL</span>
       <span class="rpc-pill">Dimensional Modeling</span>
@@ -177,11 +182,14 @@ include-in-header:
     <div class="rpc-skill-pills">
       <span class="rpc-pill">Tableau</span>
       <span class="rpc-pill">Power BI</span>
-      <span class="rpc-pill">Azure</span>
       <span class="rpc-pill">GCP</span>
       <span class="rpc-pill">Git</span>
+      <span class="rpc-pill">GitHub Actions</span>
       <span class="rpc-pill">REST APIs</span>
       <span class="rpc-pill">SnapLogic</span>
+      <span class="rpc-pill">Claude API</span>
+      <span class="rpc-pill">MCP</span>
+      <span class="rpc-pill">Multi-Agent Systems</span>
     </div>
   </div>
 </div>

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ricardo Pérez Castillo">
-<meta name="dcterms.date" content="2026-05-27">
-<meta name="description" content="Three recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking models at every data density.">
+<meta name="dcterms.date" content="2026-08-17">
+<meta name="description" content="Pixel-level cloud classification on NASA MISR imagery, where clouds and sea ice are equally bright and equally cold. 0.996 AUC on the held-out orbit, 0.89 on a different one — and why that gap is the real result.">
 
-<title>When Does Ranking Help? A Sparsity Study of Movie Recommenders – Ricardo Pérez Castillo</title>
+<title>Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery – Ricardo Pérez Castillo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,49 +105,20 @@ cookieconsent.run({
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="When Does Ranking Help? A Sparsity Study of Movie Recommenders – Ricardo Pérez Castillo">
-<meta property="og:description" content="Three recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking models at every data density.">
-<meta property="og:image" content="https://ricardo-pc.github.io/posts/cs289-ranking/sparsity_results.png">
+<meta property="og:title" content="Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery – Ricardo Pérez Castillo">
+<meta property="og:description" content="Pixel-level cloud classification on NASA MISR imagery, where clouds and sea ice are equally bright and equally cold. 0.996 AUC on the held-out orbit, 0.89 on a different one — and why that gap is the real result.">
+<meta property="og:image" content="https://ricardo-pc.github.io/posts/arctic-cloud-detection/spatial_errors.png">
 <meta property="og:site_name" content="Ricardo Pérez Castillo">
-<meta property="og:image:height" content="591">
-<meta property="og:image:width" content="1483">
-<meta name="twitter:title" content="When Does Ranking Help? A Sparsity Study of Movie Recommenders – Ricardo Pérez Castillo">
-<meta name="twitter:description" content="Three recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking models at every data density.">
-<meta name="twitter:image" content="https://ricardo-pc.github.io/posts/cs289-ranking/sparsity_results.png">
+<meta property="og:image:height" content="1020">
+<meta property="og:image:width" content="1360">
+<meta name="twitter:title" content="Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery – Ricardo Pérez Castillo">
+<meta name="twitter:description" content="Pixel-level cloud classification on NASA MISR imagery, where clouds and sea ice are equally bright and equally cold. 0.996 AUC on the held-out orbit, 0.89 on a different one — and why that gap is the real result.">
+<meta name="twitter:image" content="https://ricardo-pc.github.io/posts/arctic-cloud-detection/spatial_errors.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="591">
-<meta name="twitter:image-width" content="1483">
+<meta name="twitter:image-height" content="1020">
+<meta name="twitter:image-width" content="1360">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -209,12 +180,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question">The Question</a></li>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link active" data-scroll-target="#the-problem">The Problem</a></li>
   <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a></li>
-  <li><a href="#three-models-increasing-complexity" id="toc-three-models-increasing-complexity" class="nav-link" data-scroll-target="#three-models-increasing-complexity">Three Models, Increasing Complexity</a></li>
-  <li><a href="#the-sparsity-sweep" id="toc-the-sparsity-sweep" class="nav-link" data-scroll-target="#the-sparsity-sweep">The Sparsity Sweep</a></li>
+  <li><a href="#before-any-model-auditing-the-data" id="toc-before-any-model-auditing-the-data" class="nav-link" data-scroll-target="#before-any-model-auditing-the-data">Before Any Model: Auditing the Data</a></li>
+  <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering">Feature Engineering</a></li>
+  <li><a href="#transfer-learning-an-autoencoder-on-unlabeled-patches" id="toc-transfer-learning-an-autoencoder-on-unlabeled-patches" class="nav-link" data-scroll-target="#transfer-learning-an-autoencoder-on-unlabeled-patches">Transfer Learning: An Autoencoder on Unlabeled Patches</a></li>
+  <li><a href="#why-a-random-split-would-have-been-a-lie" id="toc-why-a-random-split-would-have-been-a-lie" class="nav-link" data-scroll-target="#why-a-random-split-would-have-been-a-lie">Why a Random Split Would Have Been a Lie</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  <li><a href="#why-simple-wins" id="toc-why-simple-wins" class="nav-link" data-scroll-target="#why-simple-wins">Why Simple Wins</a></li>
   <li><a href="#technologies-tools" id="toc-technologies-tools" class="nav-link" data-scroll-target="#technologies-tools">Technologies &amp; Tools</a></li>
   <li><a href="#links-resources" id="toc-links-resources" class="nav-link" data-scroll-target="#links-resources">Links &amp; Resources</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
@@ -226,17 +198,17 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">When Does Ranking Help? A Sparsity Study of Movie Recommenders</h1>
+<h1 class="title">Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Machine Learning</div>
-    <div class="quarto-category">Deep Learning</div>
-    <div class="quarto-category">Recommender Systems</div>
+    <div class="quarto-category">Remote Sensing</div>
+    <div class="quarto-category">Data Engineering</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Three recommender systems trained across five sparsity levels on MovieLens 1M reveal a surprising result: well-tuned matrix factorization beats neural and two-stage ranking models at every data density.
+    Pixel-level cloud classification on NASA MISR imagery, where clouds and sea ice are equally bright and equally cold. 0.996 AUC on the held-out orbit, 0.89 on a different one — and why that gap is the real result.
   </div>
 </div>
 
@@ -253,7 +225,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 27, 2026</p>
+      <p class="date">August 17, 2026</p>
     </div>
   </div>
   
@@ -275,130 +247,200 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A controlled comparison of three recommender systems of increasing complexity on MovieLens 1M, retrained from scratch at five training data densities to study how sparsity shapes the bias-variance tradeoff.</p>
-<p>Course: CS 289A: Introduction to Machine Learning · Semester: Spring 2026 · Language: Python (PyTorch)</p>
-<p><strong><a href="https://ricardo-pc.github.io/cs289-ranking/">▶ Explore the interactive version</a></strong>: play recommender against the real trained model, starve a user’s data with the density slider, flip between the two metrics that tell different stories, and get movie recommendations computed live in your browser.</p>
-<p><a href="https://github.com/ricardo-pc/cs289-ranking">GitHub Repository</a></p>
+<p>A pixel-level cloud detector trained on NASA MISR multi-angle satellite imagery of the Arctic, where standard brightness-based cloud detection fails because snow-covered ice is just as bright and just as cold as a cloud top. The headline model scores 0.9958 AUC on its held-out test image — rotate which of the three available images gets held out instead, and the same model scores as low as 0.8874. That gap, not the leaderboard, is the real finding.</p>
+<p>Course: STAT 214: Data Analysis and Machine Learning for Real-World Decision Making · Semester: Spring 2026 · Language: Python</p>
+<p><strong><a href="https://ricardo-pc.github.io/arctic-cloud-detection/">▶ Explore the interactive version</a></strong>: play cloud detector against the real trained model, inspect any of 115,032 real pixels on a live raster map, drag a threshold across real feature distributions, and see exactly where — and why — the model gets it wrong.</p>
+<p><a href="https://github.com/ricardo-pc/stat-214/tree/main/lab2">GitHub Repository</a></p>
 </div>
 </div>
-<section id="the-question" class="level2">
-<h2 class="anchored" data-anchor-id="the-question">The Question</h2>
-<p>Modern recommendation pipelines almost always have two stages. First, a fast retrieval model narrows millions of items down to a few hundred candidates. Then, a more powerful ranking model re-scores those candidates and picks the top results. It is the architecture behind what YouTube, Spotify, and Netflix serve you every day.</p>
-<p>But does the extra ranking stage actually help? And does the answer change when training data is scarce?</p>
-<p>That is what this project set out to test. We trained three systems of increasing complexity on the same dataset, then progressively starved them of training data to see which architecture holds up best when interactions are sparse.</p>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>Most cloud-detection algorithms lean on a simple rule: clouds are bright, the ground underneath usually isn’t. That rule collapses in the Arctic. Snow and sea ice are just as reflective and just as cold as cloud tops, so a brightness threshold that works over open ocean or temperate land is close to useless here — exactly the problem NASA’s Multi-angle Imaging SpectroRadiometer (MISR) was built to solve.</p>
+<p>MISR photographs the same 275-metre patch of ground from five camera angles within minutes of each other: DF (70.5°), CF (60°), BF (45.6°), AF (26.1°), and AN, looking straight down (0°). The physics is the signal: cloud tops scatter light strongly forward, so the DF camera sees them as much brighter than the AN camera does. Flat ice and snow scatter close to uniformly across angles. The difference between camera angles carries the classification signal that raw brightness cannot.</p>
 </section>
 <section id="the-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-data">The Data</h2>
-<p>We used MovieLens 1M: one million ratings from 6,040 users across 3,706 movies, collected between 2000 and 2003. The dataset is a classic benchmark in recommender systems research precisely because it is dense enough to train on but realistic enough to be informative.</p>
-<p>Ratings are treated as implicit feedback with confidence weighting. Rather than predicting the star rating itself, the models learn to rank items a user has interacted with above those they have not. A star rating of 5 is treated as a stronger positive signal than a 1, but both are positive. The confidence weight is <span class="math inline">\(c_{ui} = 1 + \alpha \cdot r_{ui}\)</span>, where <span class="math inline">\(\alpha\)</span> is tuned per model.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="eda_item_popularity.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Item popularity follows a steep power law. The top 20% of movies account for roughly two-thirds of all ratings — it takes the top third of the catalog to reach 80% — leaving the long tail nearly invisible to any model trained on this data.</figcaption>
-</figure>
-</div>
-<p>Data preparation followed the leave-one-out protocol from He et al.&nbsp;(2017): each user’s last interaction (by timestamp) goes to the test set, the second-to-last to validation, and everything else to training. No user features or movie metadata were used, keeping the comparison focused on interaction structure alone.</p>
+<p>Three labeled MISR orbits over the same Arctic region (path 26, 2002 daylight season), spanning a full seasonal transition — late April through mid June — plus 161 additional unlabeled orbits available for unsupervised pre-training.</p>
+<ul>
+<li>~345,000 total pixels; 207,681 carry expert cloud/not-cloud labels</li>
+<li>Training set: O012791 + O013257 (125,598 labeled pixels, 33.2% cloud)</li>
+<li>Test set: O013490, held out by date (82,083 labeled pixels, 47.8% cloud — real seasonal drift as the melt season progresses)</li>
+<li>Eight raw/engineered features per pixel going into the final model: the five radiances, SD (local texture), CORR (cross-angle correlation), and NDAI_DF_AF (an angular scattering ratio)</li>
+</ul>
 </section>
-<section id="three-models-increasing-complexity" class="level2">
-<h2 class="anchored" data-anchor-id="three-models-increasing-complexity">Three Models, Increasing Complexity</h2>
-<p>We built three systems, each a strict superset of the previous.</p>
-<p><strong>Matrix Factorization (MF).</strong> The baseline. Each user and item gets an embedding vector, and the relevance score is just their dot product passed through a sigmoid. Simple, low variance, and well understood. Loss is confidence-weighted binary cross-entropy.</p>
-<p><strong>Neural Collaborative Filtering (NCF).</strong> Same embeddings as MF, but instead of a dot product, the user and item vectors are concatenated and fed into a multi-layer perceptron (256, 128, 64, 32 hidden units with batch normalization and dropout). The idea is that the MLP can capture non-linear interaction patterns that a dot product misses.</p>
-<p><strong>Two-Stage Ranker (MF + Ranker).</strong> MF scores all items and selects the top 100 candidates. A separate ranking MLP then re-scores those 100 using Bayesian Personalized Ranking (BPR) loss, which directly optimizes for correct pairwise ordering. The MF embeddings are frozen; only the ranking head is trained in stage two.</p>
-<p>Both MF and NCF were tuned independently with Bayesian Optimization (20 trials each, Gaussian process with expected improvement acquisition) before the sparsity sweep.</p>
+<section id="before-any-model-auditing-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="before-any-model-auditing-the-data">Before Any Model: Auditing the Data</h2>
+<p>Every accuracy number in this project rests on two things I checked before training anything.</p>
+<p><strong>Outlier detection.</strong> A 3σ rule across all eight features flags 21,609 pixels (6.3%) across the three orbits. The reflex is to drop them. Instead I checked where they were — they weren’t scattered randomly, they clustered on one specific coastline. That’s Greenland’s edge, a region with known poor cross-angle terrain registration at sharp elevation changes (Shi et al.&nbsp;2008). Real sensor-geometry artifact, not noise. Retained and flagged, not dropped.</p>
+<p><strong>The label buffer.</strong> This is the finding that isn’t in our submitted report. Across all three labeled orbits, every single pair of side-by-side labeled pixels shares the same label — 161,367 adjacent pairs in the test orbit, 139,631 and 107,028 in the two training orbits, zero disagreements anywhere. That’s not a fact about clouds; it’s a property of how the labels were drawn. Experts assigned regions, not individual pixels, and left an unlabeled buffer around every class transition — an empirical minimum of 6.0 grid units between opposite-class labels, against a theoretical grid spacing of 1.0.</p>
+<p>The consequence: the labeled test set structurally excludes the pixels the model finds hardest. Every accuracy number in this project — and probably in the source literature — is computed on the easy pixels.</p>
 </section>
-<section id="the-sparsity-sweep" class="level2">
-<h2 class="anchored" data-anchor-id="the-sparsity-sweep">The Sparsity Sweep</h2>
-<p>After tuning, all three models were retrained from scratch at five training data densities: 100%, 80%, 60%, 40%, and 20% of each user’s training interactions. The validation and test sets stay fixed. At 20% density, roughly 9% of users have fewer than five training interactions, pushing into genuine cold-start territory.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="eda_sparsity_distributions.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Training interactions per user at each density level. As density drops from 100% to 20%, the distribution compresses sharply and the cold-start regime grows. All 6,040 users remain in every condition.</figcaption>
-</figure>
-</div>
-<p>This gives 15 independent training runs total. The design is intentionally clean: same architecture, same hyperparameters, same test set, only the training density changes. Any difference in performance isolates the effect of data quantity on model complexity.</p>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>The main result is both clean and counterintuitive.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="sparsity_results.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>NDCG@10 (ranking quality, left) and HR@10 (hit rate, right) across all five density levels. MF leads on ranking quality at every density with no crossover. The two-stage ranker gains a small hit rate advantage in the sparser regimes (d ≤ 0.4) but never improves ranking quality.</figcaption>
-</figure>
-</div>
-<p>On ranking quality (NDCG@10), MF wins at every density. There is no crossover point where NCF or the two-stage Ranker catches up as data grows. At full density, MF scores 0.396 vs.&nbsp;0.378 for NCF and 0.376 for the Ranker. At 20% density, the gap persists: MF at 0.300, NCF at 0.280, Ranker at 0.299.</p>
+<section id="feature-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="feature-engineering">Feature Engineering</h2>
+<p>Eight features, ranked by separability (AUC / KS statistic / mutual information, computed independently so no single metric’s blind spot could inflate a feature’s apparent value):</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 18%">
-<col style="width: 18%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Model</th>
-<th style="text-align: center;">NDCG@10 (d=1.0)</th>
-<th style="text-align: center;">NDCG@10 (d=0.2)</th>
-<th style="text-align: center;">HR@10 (d=1.0)</th>
-<th style="text-align: center;">HR@10 (d=0.2)</th>
+<th>Feature</th>
+<th>AUC</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>MF (A)</strong></td>
-<td style="text-align: center;"><strong>0.396</strong></td>
-<td style="text-align: center;"><strong>0.300</strong></td>
-<td style="text-align: center;"><strong>0.677</strong></td>
-<td style="text-align: center;">0.539</td>
+<td>SD</td>
+<td>0.935</td>
+<td>Local texture. Cloud pixels average 4.4× the SD of not-cloud pixels.</td>
 </tr>
 <tr class="even">
-<td>NCF (B)</td>
-<td style="text-align: center;">0.378</td>
-<td style="text-align: center;">0.280</td>
-<td style="text-align: center;">0.658</td>
-<td style="text-align: center;">0.517</td>
+<td>NDAI (textbook)</td>
+<td>0.823</td>
+<td>(DF−AN)/(DF+AN)</td>
 </tr>
 <tr class="odd">
-<td>MF + Ranker (C)</td>
-<td style="text-align: center;">0.376</td>
-<td style="text-align: center;">0.299</td>
-<td style="text-align: center;">0.657</td>
-<td style="text-align: center;"><strong>0.552</strong></td>
+<td>AF</td>
+<td>0.799</td>
+<td>Strongest single raw radiance angle</td>
+</tr>
+<tr class="even">
+<td>CORR</td>
+<td>0.524</td>
+<td>Barely better than chance — see below</td>
 </tr>
 </tbody>
 </table>
-<p>The two-stage Ranker does show one partial win: at low density (d ≤ 0.4), it surpasses MF on hit rate (HR@10) by up to 1.2 percentage points. But this improvement in coverage does not come with better ranking. The Ranker is placing the correct item in the top 10 more often, but further down the list than MF does. For most applications, that distinction matters.</p>
+<p>CORR — one of three pillars of the original Shi et al.&nbsp;labeling rule — is nearly useless alone on this data (AUC 0.524). It’s built to catch high-altitude clouds, where cross-angle registration shift is large; these three orbits are dominated by low-altitude cloud that looks nearly identical from every angle. Kept in the final feature set anyway, since a tree-based model can use it in combination even when it contributes almost nothing alone — and permutation importance later confirms it does (0.0196), unlike the raw DF radiance, which goes measurably negative.</p>
+<p>I also swept six ways of building an angular scattering ratio, (a−b)/(a+b), across every camera pair. <code>NDAI_DF_AF</code> (comparing DF to AF instead of AN) beat the textbook version on all three metrics and is what the selected model uses. <code>NDAI_AF_AN</code> landed at exactly 0.500 AUC — chance — because AF and AN are only 26° apart, not enough angular separation to carry any signal. A clean negative result, and useful for the same reason a positive one is.</p>
 </section>
-<section id="why-simple-wins" class="level2">
-<h2 class="anchored" data-anchor-id="why-simple-wins">Why Simple Wins</h2>
-<p>The result is surprising until you think about the structure of the data. MovieLens 1M is well described by a low-rank model: user preferences and item attributes align in a way that a dot product captures accurately. The MLP in NCF adds representational capacity, but on this dataset there is no additional non-linearity to capture. More capacity just means more variance and a harder optimization problem.</p>
-<p>This is consistent with Rendle et al.&nbsp;(2020), who showed that carefully tuned MF frequently matches or outperforms NCF on standard benchmarks. The gap in our results narrows slightly at higher density (more data helps the complex models close the gap somewhat), but it never closes.</p>
-<p>The Bayesian Optimization runs reinforce this story. MF improved 11% from its default hyperparameters, while NCF improved only 3%: NCF’s defaults were already near its optimum, and MF was simply being underestimated before proper tuning.</p>
-<p>The takeaway is not that two-stage ranking is bad. It is that its value depends on whether the data and the retrieval bottleneck actually create a re-ranking problem worth solving. On clean, moderately dense, low-rank data, a well-tuned retrieval model can be enough.</p>
+<section id="transfer-learning-an-autoencoder-on-unlabeled-patches" class="level2">
+<h2 class="anchored" data-anchor-id="transfer-learning-an-autoencoder-on-unlabeled-patches">Transfer Learning: An Autoencoder on Unlabeled Patches</h2>
+<p>Hand-built features are defined at a single pixel; cloud is a spatially coherent thing. With 161 unlabeled orbits sitting unused, I trained a convolutional autoencoder on 9×9×8 patches (648 dims → 32-dim embedding → 648 reconstruction, MSE loss) to learn spatial texture without any labels, then fused the 32 embeddings with the eight hand-built features.</p>
+<p>The honest result: it didn’t help. Random Forest actually got worse with the embeddings added (AUC 0.9944 on 3 features down to 0.9861 on 40). HGB gained +0.0001 (0.9958 → 0.9959). The eight hand-built features already carried the signal that mattered — a real, working transfer-learning pipeline that also happens to be evidence this particular problem didn’t need one.</p>
+</section>
+<section id="why-a-random-split-would-have-been-a-lie" class="level2">
+<h2 class="anchored" data-anchor-id="why-a-random-split-would-have-been-a-lie">Why a Random Split Would Have Been a Lie</h2>
+<p>Because neighboring pixels always share a label, a random pixel-level train/test split would put a pixel in training and its immediate neighbor in test — that’s not generalization, it’s memorizing a map. I used a temporal holdout instead: train on the two earlier orbits, test on the later one, mirroring real deployment (score a future pass with a model trained on the past).</p>
+<p>Then I went further. Rotating which of the three orbits gets held out (leave-one-orbit-out cross-validation — a follow-up analysis run after the report was submitted) shows what that single holdout number was hiding:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Held-out orbit</th>
+<th>HGB-Base (8 feat.)</th>
+<th>HGB-Full (40 feat.)</th>
+<th>RF-Full (40 feat.)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>O012791</td>
+<td>0.8874</td>
+<td>0.9088</td>
+<td>0.7842</td>
+</tr>
+<tr class="even">
+<td>O013257</td>
+<td>0.9739</td>
+<td>0.9840</td>
+<td>0.9814</td>
+</tr>
+<tr class="odd">
+<td>O013490</td>
+<td><strong>0.9958</strong></td>
+<td>0.9959</td>
+<td>0.9861</td>
+</tr>
+</tbody>
+</table>
+<p>The headline 0.9958 is the <em>best</em> of three possible holdouts, not a stable property of the model. With only three orbit groups, there’s no averaging your way out of that spread — the honest error bar on this project is closer to ±0.05 AUC than the ±0.0003 seed-to-seed variance a naive robustness check would suggest.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>Every tree-based model cleared 0.98 AUC; every linear model fell over once handed all 40 features.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Features</th>
+<th>ROC AUC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RF (Base)</td>
+<td>3</td>
+<td>0.9944</td>
+</tr>
+<tr class="even">
+<td><strong>HGB (Base) — selected</strong></td>
+<td><strong>8</strong></td>
+<td><strong>0.9958</strong></td>
+</tr>
+<tr class="odd">
+<td>HGB (Full)</td>
+<td>40</td>
+<td>0.9959</td>
+</tr>
+<tr class="even">
+<td>SVM (Full)</td>
+<td>40</td>
+<td>0.4148</td>
+</tr>
+<tr class="odd">
+<td>Lasso Logistic (Full)</td>
+<td>40</td>
+<td>0.5109</td>
+</tr>
+</tbody>
+</table>
+<p>Three orders of magnitude of extra machinery (3 features → 40, RF → HGB) bought 0.0015 AUC. Handing the SVM the same 40 features it handled fine at 3 dropped it to 0.4148 — below chance — because margin-based models don’t shrug off collinearity the way trees do.</p>
+<p>HGB-Base (8 features) was selected over HGB-Full (40 features, 0.0001 AUC better) because the better model needs a trained autoencoder and a patch-extraction pipeline running at inference time. That trade is an engineering decision, not a leaderboard result.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="spatial_errors.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Spatial map of HGB-Base classification errors on the temporal holdout. Errors cluster tightly at cloud-edge boundaries rather than scattering randomly across the image.</figcaption>
+</figure>
+</div>
+<p>The confusion matrix is deliberately lopsided: 198 missed clouds against 3,017 false alarms (recall 0.9950, precision 0.9283) — a trade that fell out of class weighting, not a deliberate choice, but plausibly the right one for a downstream climate product where missing a cloud is costlier than a false alarm.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="permutation_importance.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Permutation importance for the selected model. SD dominates; the raw DF radiance — the camera angle the textbook NDAI index is built around — is measurably negative.</figcaption>
+</figure>
+</div>
+<p>Two distinct failure modes fall out of the error analysis, both traceable to specific features rather than “the model got confused”: missed clouds run texture-masked (false negatives average SD = 1,376, nearly double the 706 of correctly caught clouds — the cloud’s own texture disappears into an already-heterogeneous surface), while false alarms are suspiciously smooth (false positives have a median CORR of 0.909 against 0.161 for true clouds — a clear-sky surface at the right angle can register almost identically across every camera, exactly what fools that feature).</p>
 </section>
 <section id="technologies-tools" class="level2">
 <h2 class="anchored" data-anchor-id="technologies-tools">Technologies &amp; Tools</h2>
-<p>Core stack: Python, PyTorch, scikit-learn, matplotlib</p>
-<p>Training infrastructure: Adam optimizer, confidence-weighted BCE (MF and NCF), BPR pairwise loss (Ranker), single NVIDIA GPU for NCF and Ranker training</p>
-<p>Hyperparameter tuning: Bayesian Optimization with Gaussian Process (squared-exponential kernel, expected improvement acquisition, 20 trials per model)</p>
-<p>Evaluation: NDCG@10 and HR@10 on a fixed held-out test set (leave-one-out split), 15 total training runs across the sparsity sweep</p>
+<p>Core stack: Python, PyTorch (autoencoder), scikit-learn (RF, HGB, SVM, logistic regression), pandas / NumPy</p>
+<p>Feature engineering: AUC / KS / mutual-information separability ranking, angular-ratio sweep across all camera pairs, PCA on the radiance block</p>
+<p>Model selection: temporal holdout + 5-fold stratified CV, leave-one-orbit-out cross-validation as a follow-up robustness check</p>
+<p>Stability checks: label-noise robustness (5% training-label flip, 3 independent repetitions), unseen-orbit sanity checks on three fully unlabeled scenes</p>
 </section>
 <section id="links-resources" class="level2">
 <h2 class="anchored" data-anchor-id="links-resources">Links &amp; Resources</h2>
 <ul>
-<li><a href="https://ricardo-pc.github.io/cs289-ranking/">Interactive walkthrough</a>: the full study as an interactive site — guess what real users watched next, place your bet on the outcome before the reveal, explore the embedding map of all 3,706 movies, and rate a few films to get recommendations from the actual trained model, running entirely in your browser</li>
-<li><a href="https://github.com/ricardo-pc/cs289-ranking">GitHub Repository</a>: full codebase, training scripts, and notebooks</li>
-<li><a href="CS289_Report.pdf">Final Report (PDF)</a>: complete write-up with methodology and results</li>
+<li><a href="https://ricardo-pc.github.io/arctic-cloud-detection/">Interactive walkthrough</a>: the full analysis as an interactive site — play cloud detector against the real model, drag a live threshold across real feature histograms, and inspect any of 115,032 real pixels on a hoverable raster map showing raw radiances, engineered features, and the model’s prediction for that exact pixel</li>
+<li><a href="https://github.com/ricardo-pc/stat-214/tree/main/lab2">GitHub Repository</a>: full codebase, feature engineering pipeline, and autoencoder training</li>
+<li><a href="https://ricardo-pc.github.io/arctic-cloud-detection/report.pdf">Final Report (PDF)</a>: complete write-up with methodology and results</li>
 </ul>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>The most useful thing this project taught me is how easy it is to assume complexity helps. The two-stage ranking pipeline is elegant: retrieval narrows the field, then a dedicated ranker polishes the output. It makes intuitive sense. But sense is not evidence, and on this dataset, with this data density, the evidence pointed the other way.</p>
-<p>Running all 15 training runs with fixed hyperparameters and a fixed test set made the result hard to explain away. The gap was consistent across every density level, and the partial win the Ranker showed on hit rate came at no improvement in actual ranking quality. That kind of clean, controlled comparison is what makes a result believable, and designing the experiment that way was the most important decision we made.</p>
+<p>The most useful finding in this project isn’t in the leaderboard — it’s the discovery that the labeled test set structurally excludes the pixels the model finds hardest. Nobody asked me to check whether adjacent pixels ever disagreed on their label; I checked because it seemed like the kind of thing worth verifying before trusting any accuracy number downstream. It turned out to be the single most important caveat on the whole project, and it reframes what “0.9958 AUC” actually means: not “the model is almost never wrong,” but “the model is almost never wrong on the pixels we were confident enough to label.”</p>
+<p>The leave-one-orbit-out analysis made the same point from a different angle. A single holdout number is a point estimate with an invisible error bar; rotating the holdout made that error bar visible, and it was much larger than the seed-to-seed variance anyone would normally report. Between the two, I came away convinced that for a project like this, the data-quality audit and the validation design matter more than which model wins the leaderboard — the model was the easy part.</p>
 <hr>
-<p><em>Completed May 2026 as a final project for CS 289A: Introduction to Machine Learning at UC Berkeley.</em></p>
+<p><em>Completed August 2026 as a project for STAT 214: Data Analysis and Machine Learning for Real-World Decision Making at UC Berkeley.</em></p>
 
 
 </section>
