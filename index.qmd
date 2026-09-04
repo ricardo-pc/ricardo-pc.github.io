@@ -23,7 +23,7 @@ include-in-header:
     <div class="rpc-hero-copy">
       <p class="rpc-hero-kicker">Data Scientist · Berkeley M.A. Statistics</p>
       <div class="rpc-hero-name" aria-hidden="true">Hi, I’m Ricardo.</div>
-      <p class="rpc-hero-blurb">I’m a data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. I enjoy taking projects from a messy question to a working analysis—and, when it makes sense, to an interactive tool people can use themselves.</p>
+      <p class="rpc-hero-blurb">I’m a data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. I enjoy taking projects from a messy question to a working analysis.</p>
       <div class="rpc-hero-actions">
         <a class="rpc-button rpc-button-primary" href="#selected-work">Explore selected work</a>
         <a class="rpc-button rpc-button-secondary" href="projects.html">View all projects</a>
@@ -36,7 +36,7 @@ include-in-header:
       </div>
     </div>
     <figure class="rpc-hero-portrait">
-      <img src="RJ1_5539.jpg" alt="Portrait of Ricardo Pérez Castillo" width="420" height="520">
+      <img src="RJ1_5540_edited.jpg" alt="Portrait of Ricardo Pérez Castillo" width="1280" height="1600">
       <figcaption>Statistics, product thinking, and enough engineering to make the demo real.</figcaption>
     </figure>
   </div>
