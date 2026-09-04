@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ricardo-pc.github.io/coursework.html</loc>
-    <lastmod>2026-08-06T22:27:23.229Z</lastmod>
+    <lastmod>2026-09-03T17:24:19.368Z</lastmod>
   </url>
   <url>
     <loc>https://ricardo-pc.github.io/projects.html</loc>
-    <lastmod>2026-08-06T22:26:41.489Z</lastmod>
+    <lastmod>2026-09-03T17:24:24.124Z</lastmod>
   </url>
   <url>
     <loc>https://ricardo-pc.github.io/posts/vouchnet/index.html</loc>
@@ -55,5 +55,9 @@
   <url>
     <loc>https://ricardo-pc.github.io/index.html</loc>
     <lastmod>2026-09-03T02:24:28.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ricardo-pc.github.io/posts/stat214-lab3/index.html</loc>
+    <lastmod>2026-09-03T17:23:58.909Z</lastmod>
   </url>
 </urlset>

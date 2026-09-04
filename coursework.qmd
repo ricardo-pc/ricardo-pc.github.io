@@ -19,6 +19,8 @@ toc: false
       <span class="rpc-pill">Causal Inference</span>
     </div>
     <a class="rpc-course-link" href="posts/stat214-lab1/index.html">PECARN Traumatic Brain Injury Analysis →</a>
+    <a class="rpc-course-link" href="posts/arctic-cloud-detection/index.html">Cloud or Ice: Arctic Cloud Detection →</a>
+    <a class="rpc-course-link" href="posts/stat214-lab3/index.html">Connecting Language to fMRI →</a>
   </div>
 
   <div class="rpc-course">

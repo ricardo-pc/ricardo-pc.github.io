@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Ten projects across AI agent systems, machine learning, and applied statistics. Each write-up covers what it does, what the numbers were, and where it falls short."
+description: "Twelve projects across AI agent systems, machine learning, and applied statistics. Each write-up covers what it does, what the numbers were, and where it falls short."
 listing:
   contents: posts
   sort: "date desc"

@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Eight graduate courses for the M.A.&nbsp;in Statistics at UC Berkeley, completed between August 2025 and May 2026. Five produced a project written up on this site.">
+<meta name="author" content="Ricardo Pérez Castillo">
+<meta name="dcterms.date" content="2026-09-03">
+<meta name="description" content="A ridge-regression pipeline maps eight text embeddings onto fMRI voxel responses from two people listening to podcast stories. The best configuration beats a GloVe baseline by up to 193%, but almost all of that gain traces back to reading BERT’s middle four layers instead of its last four.">
 
-<title>Coursework – Ricardo Pérez Castillo</title>
+<title>Connecting Language to fMRI: From Bag-of-Words to Fine-Tuned BERT – Ricardo Pérez Castillo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,27 +26,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,32 +105,61 @@ cookieconsent.run({
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Coursework – Ricardo Pérez Castillo">
-<meta property="og:description" content="Eight graduate courses for the M.A.&nbsp;in Statistics at UC Berkeley, completed between August 2025 and May 2026. Five produced a project written up on this site.">
-<meta property="og:image" content="https://ricardo-pc.github.io/og-card.png">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Connecting Language to fMRI: From Bag-of-Words to Fine-Tuned BERT – Ricardo Pérez Castillo">
+<meta property="og:description" content="A ridge-regression pipeline maps eight text embeddings onto fMRI voxel responses from two people listening to podcast stories. The best configuration beats a GloVe baseline by up to 193%, but almost all of that gain traces back to reading BERT’s middle four layers instead of its last four.">
+<meta property="og:image" content="https://ricardo-pc.github.io/posts/stat214-lab3/method_progression.png">
 <meta property="og:site_name" content="Ricardo Pérez Castillo">
-<meta property="og:image:height" content="630">
-<meta property="og:image:width" content="1200">
-<meta name="twitter:title" content="Coursework – Ricardo Pérez Castillo">
-<meta name="twitter:description" content="Eight graduate courses for the M.A.&nbsp;in Statistics at UC Berkeley, completed between August 2025 and May 2026. Five produced a project written up on this site.">
-<meta name="twitter:image" content="https://ricardo-pc.github.io/og-card.png">
+<meta property="og:image:height" content="733">
+<meta property="og:image:width" content="1184">
+<meta name="twitter:title" content="Connecting Language to fMRI: From Bag-of-Words to Fine-Tuned BERT – Ricardo Pérez Castillo">
+<meta name="twitter:description" content="A ridge-regression pipeline maps eight text embeddings onto fMRI voxel responses from two people listening to podcast stories. The best configuration beats a GloVe baseline by up to 193%, but almost all of that gain traces back to reading BERT’s middle four layers instead of its last four.">
+<meta name="twitter:image" content="https://ricardo-pc.github.io/posts/stat214-lab3/method_progression.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="630">
-<meta name="twitter:image-width" content="1200">
+<meta name="twitter:image-height" content="733">
+<meta name="twitter:image-width" content="1184">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Ricardo Pérez Castillo</span>
     </a>
   </div>
@@ -139,15 +170,15 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./coursework.html" aria-current="page"> 
+    <a class="nav-link" href="../../coursework.html"> 
 <span class="menu-text">Coursework</span></a>
   </li>  
 </ul>
@@ -173,25 +204,57 @@ cookieconsent.run({
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#the-pipeline-i-built" id="toc-the-pipeline-i-built" class="nav-link" data-scroll-target="#the-pipeline-i-built">The Pipeline I Built</a></li>
+  <li><a href="#eight-ways-to-represent-a-word" id="toc-eight-ways-to-represent-a-word" class="nav-link" data-scroll-target="#eight-ways-to-represent-a-word">Eight Ways to Represent a Word</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#checking-whether-it-generalizes" id="toc-checking-whether-it-generalizes" class="nav-link" data-scroll-target="#checking-whether-it-generalizes">Checking Whether It Generalizes</a></li>
+  <li><a href="#whats-actually-driving-the-predictions" id="toc-whats-actually-driving-the-predictions" class="nav-link" data-scroll-target="#whats-actually-driving-the-predictions">What’s Actually Driving the Predictions</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#related-projects" id="toc-related-projects" class="nav-link" data-scroll-target="#related-projects">Related Projects</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Coursework</h1>
-</div>
+<h1 class="title">Connecting Language to fMRI: From Bag-of-Words to Fine-Tuned BERT</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">NLP</div>
+    <div class="quarto-category">Neuroscience</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    Eight graduate courses for the M.A.&nbsp;in Statistics at UC Berkeley, completed between August 2025 and May 2026. Five produced a project written up on this site.
+    A ridge-regression pipeline maps eight text embeddings onto fMRI voxel responses from two people listening to podcast stories. The best configuration beats a GloVe baseline by up to 193%, but almost all of that gain traces back to reading BERT’s middle four layers instead of its last four.
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ricardo Pérez Castillo </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 3, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -201,118 +264,135 @@ cookieconsent.run({
 </header>
 
 
-<h2 class="rpc-term-heading anchored">Spring 2026</h2>
-
-<div class="rpc-course-grid">
-
-  <div class="rpc-course">
-    <div class="rpc-course-code">STAT 214</div>
-    <div class="rpc-course-name">Data Analysis and Machine Learning for Real-World Decision Making</div>
-    <p class="rpc-course-desc">Applied machine learning for real-world decision-making. Model evaluation under uncertainty, causal inference methods, and practical deployment of ML systems for high-impact decisions.</p>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Python</span>
-      <span class="rpc-pill">Applied ML</span>
-      <span class="rpc-pill">Causal Inference</span>
-    </div>
-    <a class="rpc-course-link" href="posts/stat214-lab1/index.html">PECARN Traumatic Brain Injury Analysis →</a>
-    <a class="rpc-course-link" href="posts/arctic-cloud-detection/index.html">Cloud or Ice: Arctic Cloud Detection →</a>
-    <a class="rpc-course-link" href="posts/stat214-lab3/index.html">Connecting Language to fMRI →</a>
-  </div>
-
-  <div class="rpc-course">
-    <div class="rpc-course-code">STAT 230A</div>
-    <div class="rpc-course-name">Linear Models</div>
-    <p class="rpc-course-desc">Regression theory from OLS and the Gauss-Markov theorem through GLMs and generalized estimating equations. Heteroskedasticity, cluster-robust inference, model selection, shrinkage methods, and extensions to categorical and count outcomes.</p>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Python</span>
-      <span class="rpc-pill">Regression</span>
-      <span class="rpc-pill">GLMs</span>
-    </div>
-    <a class="rpc-course-link" href="posts/upworthy-ab-testing/index.html">What Makes a Headline Work? →</a>
-  </div>
-
-  <div class="rpc-course">
-    <div class="rpc-course-code">STAT 238</div>
-    <div class="rpc-course-name">Bayesian Statistics</div>
-    <p class="rpc-course-desc">Bayesian inference including prior elicitation, conjugate analysis, and hierarchical modeling. MCMC methods (Gibbs sampling, Metropolis-Hastings), modern computational techniques (HMC, variational inference), and applications to complex models.</p>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Python</span>
-      <span class="rpc-pill">MCMC</span>
-      <span class="rpc-pill">Hierarchical Models</span>
-    </div>
-    <a class="rpc-course-link" href="posts/bayesian-optimization/index.html">Bayesian Optimization from Scratch →</a>
-  </div>
-
-  <div class="rpc-course">
-    <div class="rpc-course-code">CS 289A</div>
-    <div class="rpc-course-name">Introduction to Machine Learning</div>
-    <p class="rpc-course-desc">Theoretical foundations and applications of ML from problem formulation to deployment. Unsupervised learning (k-means, PCA), regression and classification, deep learning architectures (CNNs, RNNs, transformers), and generative models. Includes PyTorch implementation and backpropagation.</p>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Python</span>
-      <span class="rpc-pill">ML Theory</span>
-      <span class="rpc-pill">Deep Learning</span>
-    </div>
-    <a class="rpc-course-link" href="posts/cs289-ranking/index.html">When Does Ranking Help? →</a>
-  </div>
-
-  <div class="rpc-course">
-    <div class="rpc-course-code">STAT 254</div>
-    <div class="rpc-course-name">Modern Statistical Prediction and Machine Learning</div>
-    <p class="rpc-course-desc">Probabilistic machine learning theory covering empirical risk minimization, complexity bounds, and uniform laws. Model evaluation via cross-validation, regularization schemes, classification with proxy losses, and connections between linear models and more sophisticated methods.</p>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Statistical Learning Theory</span>
-      <span class="rpc-pill">Regularization</span>
-      <span class="rpc-pill">Cross-Validation</span>
-    </div>
-  </div>
-
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-
-<h2 class="rpc-term-heading anchored">Fall 2025</h2>
-
-<div class="rpc-course-grid">
-
-  <div class="rpc-course">
-    <div class="rpc-course-code">STAT 243</div>
-    <div class="rpc-course-name">Statistical Computing</div>
-    <p class="rpc-course-desc">Statistical computing and data science in Python. UNIX and bash scripting, version control, data manipulation, text processing, object-oriented programming, parallel processing, databases and big data, computer arithmetic, simulation and Monte Carlo methods, numerical linear algebra, and optimization.</p>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Python</span>
-      <span class="rpc-pill">UNIX / Bash</span>
-      <span class="rpc-pill">Parallel Computing</span>
-      <span class="rpc-pill">Numerical Methods</span>
-    </div>
-    <a class="rpc-course-link" href="posts/genetic-algorithm/index.html">Evolutionary Feature Selection →</a>
-  </div>
-
-  <div class="rpc-course">
-    <div class="rpc-course-code">STAT 201A</div>
-    <div class="rpc-course-name">Advanced Probability</div>
-    <p class="rpc-course-desc">Measure-theoretic probability, convergence concepts, laws of large numbers, central limit theorems, and the foundational theory underpinning statistical inference.</p>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Measure Theory</span>
-      <span class="rpc-pill">Convergence</span>
-      <span class="rpc-pill">Probability Theory</span>
-    </div>
-  </div>
-
-  <div class="rpc-course">
-    <div class="rpc-course-code">STAT 201B</div>
-    <div class="rpc-course-name">Advanced Statistics</div>
-    <p class="rpc-course-desc">Statistical inference theory including sufficiency, exponential families, hypothesis testing, asymptotic theory, and the foundations of decision theory.</p>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Inference</span>
-      <span class="rpc-pill">Asymptotics</span>
-      <span class="rpc-pill">Decision Theory</span>
-    </div>
-  </div>
-
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Project Overview
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A ridge-regression brain-encoding pipeline that predicts fMRI voxel responses to spoken stories from eight text embeddings, starting from a plain word-count baseline and ending on a podcast-fine-tuned, LoRA-adapted BERT. The best configuration beats a GloVe baseline by 193% on one subject and 133% on the other. The single biggest jump in the whole project came from an unglamorous change: reading BERT’s middle four layers instead of its last four.</p>
+<p>Course: STAT 214: Data Analysis and Machine Learning for Real-World Decision Making · Semester: Spring 2026 · Language: Python · Team of 4 · Code: private course repository</p>
+<p><strong>My role.</strong> I set the project architecture and built the ridge-regression framework that every embedding method in this post ran through, including the SVD solver that makes per-voxel regularization search cheap at close to 95,000 voxels per subject. I also built the Enhanced BERT embedding stage. The LoRA fine-tuning, the SHAP and LIME interpretation, and the cross-subject stability analysis below came from my teammates Gongyao Xu, Chun-Kai Hsu, and Shizhe Zhang. I’m walking through their results here too, because the pipeline I built is what those results ran on, and the layer-depth finding only exists because of it.</p>
+</div>
+</div>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>The question is simple to state and hard to answer: if you know what words someone just heard, can you predict how their brain responded? Prior work out of the Huth Lab (Jain and Huth, 2018) showed the answer is yes, at least partially, using ridge regression to map text features onto fMRI signal. What’s less settled is which text representation to use. A word can be a raw count, a static vector, or a context-sensitive embedding pulled from a specific layer of a language model, and that choice changes what the resulting model can and can’t predict.</p>
+<p>We used data from the Huth Lab at UT Austin: two people, labeled s2 and s3, listening to 101 podcast stories inside an fMRI scanner, split into 81 training stories and 20 held-out test stories. Subject s2 has 94,251 cortical voxels; s3 has 95,556. For each subject we fit an independent ridge regression per voxel, mapping delay-stacked text embeddings onto that voxel’s blood-oxygen response, then scored the fit by Pearson correlation on the held-out stories.</p>
+</section>
+<section id="the-pipeline-i-built" class="level2">
+<h2 class="anchored" data-anchor-id="the-pipeline-i-built">The Pipeline I Built</h2>
+<p>Two things happen before any model gets fit. Words arrive at roughly 2 to 4 per second, while the scanner samples once every 2 seconds, so every embedding first gets resampled onto that grid with Lanczos interpolation. Then, because the brain’s blood-oxygen response to a word lags by 4 to 6 seconds and that lag isn’t fixed, I stack four time-shifted copies of each embedding, at delays of 1, 2, 3, and 4 scanner intervals, instead of picking one delay and hoping it’s close enough. That quadruples the feature count, but it lets the ridge model learn its own delay filter for every voxel straight from the data.</p>
+<p>Fitting a separate ridge regression for tens of thousands of voxels, across eight embedding methods and two subjects, adds up to a lot of regressions. The part I’m proudest of here is the solver. Instead of re-inverting <span class="math inline">\((X^\top X + \lambda I)\)</span> for every candidate <span class="math inline">\(\lambda\)</span>, I take the thin SVD of the training design matrix once and reduce each new <span class="math inline">\(\lambda\)</span> to an <span class="math inline">\(O(r)\)</span> diagonal rescale. Per-voxel regularization search, which would otherwise be too slow to run at this scale, comes essentially for free. The one representation this trick doesn’t work for is bag-of-words: its roughly 48,000-dimensional, 99.99%-sparse matrix breaks a dense SVD, so that one gets a sparse LU solve instead, with a single <span class="math inline">\(\lambda\)</span> chosen from a random sample of 200 voxels.</p>
+</section>
+<section id="eight-ways-to-represent-a-word" class="level2">
+<h2 class="anchored" data-anchor-id="eight-ways-to-represent-a-word">Eight Ways to Represent a Word</h2>
+<p>We tested eight embedding configurations across five families: a bag-of-words count vector over a roughly 12,000-word vocabulary, Word2Vec and GloVe (both 300-dimensional, pretrained on large web and news corpora), and four variants built on <code>bert-base-uncased</code>. The plain BERT baseline splits each story into independent 128-word chunks, so words near a chunk boundary get no context from what comes after it. Enhanced BERT, the piece I built, instead uses overlapping 256-word sliding windows and averages the last four transformer layers, giving every word richer context from both directions. The three LoRA variants build on a version of BERT that Shizhe fine-tuned on the podcast transcripts themselves using masked language modeling; they differ only in training recipe and in which layers get read out at inference time.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>Contextual embeddings beat static ones by a wide margin, and that margin is bigger than the gap between any two contextual training recipes. Mean per-voxel correlation, averaged across both subjects:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Method</th>
+<th style="text-align: right;">Mean r (s2)</th>
+<th style="text-align: right;">Mean r (s3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BoW</td>
+<td style="text-align: right;">0.0069</td>
+<td style="text-align: right;">0.0137</td>
+</tr>
+<tr class="even">
+<td>Word2Vec</td>
+<td style="text-align: right;">0.0124</td>
+<td style="text-align: right;">0.0231</td>
+</tr>
+<tr class="odd">
+<td>GloVe</td>
+<td style="text-align: right;">0.0128</td>
+<td style="text-align: right;">0.0219</td>
+</tr>
+<tr class="even">
+<td>Vanilla BERT</td>
+<td style="text-align: right;">0.0218</td>
+<td style="text-align: right;">0.0353</td>
+</tr>
+<tr class="odd">
+<td>Enhanced BERT</td>
+<td style="text-align: right;">0.0349</td>
+<td style="text-align: right;">0.0493</td>
+</tr>
+<tr class="even">
+<td>LoRA BERT (last4)</td>
+<td style="text-align: right;">0.0343</td>
+<td style="text-align: right;">0.0489</td>
+</tr>
+<tr class="odd">
+<td>LoRA BERT (improved)</td>
+<td style="text-align: right;">0.0345</td>
+<td style="text-align: right;">0.0491</td>
+</tr>
+<tr class="even">
+<td><strong>LoRA BERT (mid4)</strong></td>
+<td style="text-align: right;"><strong>0.0374</strong></td>
+<td style="text-align: right;"><strong>0.0512</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Every number in that table looks small on its own. fMRI is noisy, and most of the cortex isn’t doing language processing at all, so a correlation of 0.05 in a language-responsive voxel is a real signal, not a rounding error. What matters more than any single row is the size of the jumps between rows. Enhanced BERT over vanilla BERT is a 60% gain on s2 and a 40% gain on s3, just from giving the model overlapping context and averaging four layers instead of one. Almost everything else in the table barely moves.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="method_progression.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Percent improvement in mean voxel correlation relative to the GloVe baseline, for both subjects. The layer-depth change (mid4) produces the largest single jump in the whole hierarchy.</figcaption>
+</figure>
+</div>
+<p>Then Shizhe found something that shouldn’t have mattered as much as it did. Reading the fine-tuned BERT’s last four layers, the ones closest to its training objective, instead of its middle four gave almost nothing over Enhanced BERT: a 1.7% drop on s2, effectively no change on s3. Switching to the middle four layers instead, layers 5 through 8, while keeping everything else fixed, produced the single largest jump anywhere in the hierarchy: 9.1% on s2, 4.7% on s3, for a total of 193% and 133% over the GloVe baseline. The Spearman rank correlation between which voxels each variant predicts well drops from about 0.98 between two last-four variants to about 0.87 to 0.91 between last-four and middle-four. That gap means this isn’t a small tweak; layers 5 through 8 are picking out a genuinely different, more brain-relevant set of voxels than layers 9 through 12.</p>
+<p>The likely reason is that BERT’s top layers get progressively reshaped by their training objective, predicting masked words, into something closer to a lexical-prediction score than a general semantic representation. The middle layers still carry phrase structure and compositional meaning, and that seems to line up better with how association cortex actually processes language. Every step in this eight-method hierarchy but one is statistically significant at p &lt; 10⁻¹⁵ on a paired Wilcoxon test across all voxels.</p>
+</section>
+<section id="checking-whether-it-generalizes" class="level2">
+<h2 class="anchored" data-anchor-id="checking-whether-it-generalizes">Checking Whether It Generalizes</h2>
+<p>Two subjects is a small sample for claiming anything definitive about how brains process language, so the last piece of the project checks whether the pattern above replicates across s2 and s3 rather than being an artifact of one person’s scan session.</p>
+<p>At the story level, the two subjects’ 20-story correlation profiles agree at r = 0.745: stories that are easy to predict for s2 are also easy for s3, and the hard ones line up too. s3 beats s2 on 17 of the 20 test stories; the three reversals look like ordinary individual variation rather than anything systematic.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="story_replication.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Per-story mean correlation for both subjects under the best model, LoRA mid4, sorted by average difficulty. The ranking of easy versus hard stories holds up across both people.</figcaption>
+</figure>
+</div>
+<p>The check I find more convincing is what happens to the gap between subjects as the embeddings improve. Under BoW, s3’s mean correlation is 1.99 times s2’s. Under the best model, that ratio shrinks to 1.37. If the model were fitting noise specific to one subject, a better embedding wouldn’t systematically close that gap; it would just make both subjects’ numbers bigger or smaller at random. Watching the ratio shrink as the embeddings get richer is what makes the layer-depth finding look like a real property of language processing rather than a fluke in one person’s data.</p>
+</section>
+<section id="whats-actually-driving-the-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="whats-actually-driving-the-predictions">What’s Actually Driving the Predictions</h2>
+<p>Gongyao and Chun-Kai ran the interpretability half of the project: closed-form SHAP on the linear ridge weights, fast but precise only down to the 2-second scanner window, and LIME with word-level masking, slower but precise to individual words, on the 256 best-predicted voxels for two test stories. One story follows the New Horizons spacecraft’s flyby of Pluto; the other follows a family’s living arrangement.</p>
+<p>Both methods land on the same content independently, which is the part worth noting. For the space story, SHAP flags a scanner window dense with time markers (“year,” “old,” “five”), and LIME’s word-level scores independently pick out “july,” “fourth,” and “horizons,” the exact vocabulary of the mission timeline. For the family story, SHAP’s top window is a cluster of physical-scene nouns (“wooden,” “chair,” “propped”), and LIME’s top contributors across the two subjects’ voxels are relational and spatial words like “together,” “live,” and “door.” Neither method was told what the other found. That two very different attribution techniques converge on the same passages is reasonable evidence that the model is tracking real narrative content, not an artifact of how either method works.</p>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>The finding I keep coming back to isn’t the leaderboard number, it’s how little the fine-tuning itself mattered next to which layers got read out afterward. Domain-adapting BERT on podcast transcripts and then reading the same layers as before bought almost nothing. Reading four different layers off that exact same fine-tuned checkpoint bought the single biggest gain in the project. That’s a strange result, and it says something uncomfortable about how many “fine-tuning helps” claims in NLP might actually be “layer selection helps” claims wearing a fine-tuning label.</p>
+<p>On the engineering side, the piece I’d point to as my actual contribution is the SVD reformulation of ridge regression. A naive per-voxel grid search over roughly 95,000 voxels, eight embedding methods, and two subjects would have meant refitting a large linear system tens of millions of times. Precomputing the SVD once per representation and reducing each new <span class="math inline">\(\lambda\)</span> to a diagonal rescale is what made per-voxel regularization tractable at all, and it’s the piece of infrastructure the rest of the team’s results are sitting on.</p>
+</section>
+<section id="related-projects" class="level2">
+<h2 class="anchored" data-anchor-id="related-projects">Related Projects</h2>
+<ul>
+<li><a href="../stat214-lab1/index.html">PECARN Traumatic Brain Injury Analysis</a>: Lab 1 for the same course</li>
+<li><a href="../arctic-cloud-detection/index.html">Cloud or Ice: Arctic Cloud Detection</a>: Lab 2 for the same course</li>
+</ul>
+<hr>
+<p><em>Completed May 2026 as Lab 3 for STAT 214 at UC Berkeley, with Gongyao Xu, Chun-Kai Hsu, and Shizhe Zhang.</em></p>
 
 
+</section>
 
 </main> <!-- /main -->
-<script defer="" src="./analytics.js?v=20260903-2"></script>
+<script defer="" src="../../analytics.js?v=20260903-2"></script>
 <button class="rpc-cheer-launcher" id="rpc-cheer-launcher" type="button" aria-haspopup="dialog" aria-controls="rpc-cheer-dialog">
   <span class="rpc-cheer-launcher-icon" aria-hidden="true">♥</span>
   <span>Send a little boost</span>
@@ -359,7 +439,7 @@ cookieconsent.run({
   </div>
 </dialog>
 
-<script defer="" src="./cheers.js?v=20260903-2"></script>
+<script defer="" src="../../cheers.js?v=20260903-2"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
