@@ -3,7 +3,7 @@ title: "Connecting Language to fMRI: From Bag-of-Words to Fine-Tuned BERT"
 description: "A ridge-regression pipeline maps eight text embeddings onto fMRI voxel responses from two people listening to podcast stories. The best configuration beats a GloVe baseline by up to 193%, but almost all of that gain traces back to reading BERT's middle four layers instead of its last four."
 author: "Ricardo Pérez Castillo"
 date: "2026-09-03"
-priority: 7
+priority: 8
 categories: [Machine Learning, NLP, Neuroscience]
 image: method_progression.png
 ---

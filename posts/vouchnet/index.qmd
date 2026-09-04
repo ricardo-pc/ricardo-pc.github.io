@@ -3,7 +3,7 @@ title: "VouchNet: A Trust Layer for AI Agents"
 description: "A reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet's trust score by six hundredths of one."
 author: "Ricardo Pérez Castillo"
 date: "2026-07-15"
-priority: 10
+priority: 6
 categories: [AI Agents, Bayesian Inference, Software Engineering]
 image: vouchnet_attack.png
 ---

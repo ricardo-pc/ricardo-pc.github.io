@@ -28,7 +28,7 @@ website:
     palette: light
   search: false
   navbar:
-    title: "Ricardo P. Castillo"
+    title: "Ricardo Pérez Castillo"
     left:
       - href: projects.qmd
         text: Work

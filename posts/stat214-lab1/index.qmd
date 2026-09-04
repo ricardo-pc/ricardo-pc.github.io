@@ -3,7 +3,7 @@ title: "PECARN Traumatic Brain Injury Analysis"
 description: "EDA, Bayesian inference, and classification models on 43,399 pediatric head trauma patients to validate and extend the Kuppermann clinical decision rule for CT triage."
 author: "Ricardo Pérez Castillo"
 date: "2026-03-01"
-priority: 8
+priority: 9
 categories: [Machine Learning, Bayesian Inference, Life Sciences]
 image: finding2_tradeoff.png
 ---

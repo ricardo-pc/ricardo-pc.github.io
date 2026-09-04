@@ -3,7 +3,7 @@ title: "Berkeley Grocery Tracker"
 description: "A live grocery price tracker across nine Berkeley-area stores, with automated collection, product matching, price history, and basket comparison."
 author: "Ricardo Pérez Castillo"
 date: "2026-04-26"
-priority: 9
+priority: 10
 categories: [Data Engineering, Software Engineering]
 ---
 

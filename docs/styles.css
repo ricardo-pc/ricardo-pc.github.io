@@ -152,11 +152,11 @@ button:focus-visible {
 }
 
 .rpc-hero-name {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0;
   color: var(--rpc-ink);
   font-family: var(--rpc-serif);
-  font-size: clamp(3.2rem, 6vw, 5.7rem);
+  font-size: clamp(3rem, 5.2vw, 4.9rem);
   font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 0.95;
@@ -253,8 +253,8 @@ button:focus-visible {
 .rpc-featured-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.6rem;
-  margin-top: 2.5rem;
+  gap: 1.3rem;
+  margin-top: 2rem;
 }
 
 .rpc-work-card {
@@ -282,14 +282,14 @@ button:focus-visible {
 
 .rpc-work-image {
   display: block;
-  min-height: 235px;
+  min-height: 190px;
   overflow: hidden;
   border-bottom: 1px solid var(--rpc-line);
   background: #eef1f5;
 }
 
 .rpc-work-card-lead .rpc-work-image {
-  min-height: 390px;
+  min-height: 320px;
   border-right: 1px solid var(--rpc-line);
   border-bottom: 0;
 }
@@ -297,25 +297,25 @@ button:focus-visible {
 .rpc-work-image img {
   width: 100%;
   height: 100%;
-  min-height: 235px;
+  min-height: 190px;
   object-fit: cover;
   object-position: center;
   transition: transform 300ms ease;
 }
 
-.rpc-work-card-lead .rpc-work-image img { min-height: 390px; }
+.rpc-work-card-lead .rpc-work-image img { min-height: 320px; }
 .rpc-work-card:hover .rpc-work-image img { transform: scale(1.012); }
 
 .rpc-work-copy {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 1.65rem;
+  padding: 1.35rem;
 }
 
 .rpc-work-card-lead .rpc-work-copy {
   justify-content: center;
-  padding: clamp(2rem, 4vw, 3.5rem);
+  padding: clamp(1.7rem, 3vw, 2.6rem);
 }
 
 .rpc-work-type {
@@ -331,18 +331,18 @@ button:focus-visible {
   margin: 0 0 0.8rem;
   color: var(--rpc-ink);
   font-family: var(--rpc-serif);
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.05rem);
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1.07;
 }
 
-.rpc-work-card-lead .rpc-work-copy h3 { font-size: clamp(2.3rem, 4vw, 3.35rem); }
+.rpc-work-card-lead .rpc-work-copy h3 { font-size: clamp(2.05rem, 3.4vw, 2.85rem); }
 
 .rpc-work-copy > p:not(.rpc-work-type):not(.rpc-work-result) {
   margin: 0;
   color: var(--rpc-text);
-  font-size: 0.92rem;
+  font-size: 0.87rem;
   line-height: 1.68;
 }
 
@@ -356,7 +356,7 @@ button:focus-visible {
 .rpc-work-links {
   gap: 0.65rem 1.2rem;
   margin-top: auto;
-  padding-top: 1.5rem;
+  padding-top: 1.2rem;
 }
 
 .rpc-work-links a,

@@ -21,9 +21,9 @@ include-in-header:
 <div class="rpc-hero-section">
   <div class="rpc-hero-inner">
     <div class="rpc-hero-copy">
-      <p class="rpc-hero-kicker">Ricardo Pérez Castillo · Data Scientist</p>
-      <div class="rpc-hero-name" aria-hidden="true">I build models and the tools that let people try them.</div>
-      <p class="rpc-hero-blurb">I’m a data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. I like taking analysis past the notebook—into interactive tools, reproducible evaluations, and products people can actually use.</p>
+      <p class="rpc-hero-kicker">Data Scientist · Berkeley M.A. Statistics</p>
+      <div class="rpc-hero-name" aria-hidden="true">Hi, I’m Ricardo.</div>
+      <p class="rpc-hero-blurb">I’m a data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. I enjoy taking projects from a messy question to a working analysis—and, when it makes sense, to an interactive tool people can use themselves.</p>
       <div class="rpc-hero-actions">
         <a class="rpc-button rpc-button-primary" href="#selected-work">Explore selected work</a>
         <a class="rpc-button rpc-button-secondary" href="projects.html">View all projects</a>
@@ -47,7 +47,7 @@ include-in-header:
 
 ## Selected work {#selected-work}
 
-The projects I would start with. Each one has something you can inspect, challenge, or try for yourself.
+Five projects spanning experimentation, applied machine learning, and AI systems—each with a case study and something you can try.
 
 ```{=html}
 <div class="rpc-featured-grid">
