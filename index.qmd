@@ -1,14 +1,12 @@
 ---
 title: "Ricardo Pérez Castillo"
-description: "Data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. Projects in AI agents, machine learning, and applied statistics."
+description: "Data scientist building interactive projects across experimentation, applied machine learning, and AI systems."
 image: og-card.png
 page-layout: full
+body-classes: rpc-home-page
 toc: false
 title-block-banner: false
 include-in-header:
-  # The real <h1> lives in Quarto's title block for SEO and screen readers.
-  # It is visually hidden here because the hero below presents the name;
-  # clip rather than display:none so it stays in the accessibility tree.
   text: |
     <style>
       #title-block-header {
@@ -22,229 +20,207 @@ include-in-header:
 ```{=html}
 <div class="rpc-hero-section">
   <div class="rpc-hero-inner">
-    <img src="RJ1_5539.jpg" alt="Ricardo Pérez Castillo" class="rpc-hero-photo" width="180" height="180">
-    <div>
-      <div class="rpc-hero-name" aria-hidden="true">Ricardo Pérez Castillo</div>
-      <p class="rpc-hero-blurb">Data scientist with 4+ years at McKinsey and Deloitte across data engineering, analytics, and applied ML for enterprise clients. Recently completed an M.A. in Statistics at UC Berkeley, where I built AI agents and ML systems that ship.</p>
-      <div class="rpc-hero-badges">
-        <span class="rpc-badge">McKinsey &amp; Deloitte &nbsp;·&nbsp; 4+ yrs</span>
-        <span class="rpc-badge">M.A. Statistics, UC Berkeley &nbsp;·&nbsp; 2026</span>
-        <span class="rpc-badge rpc-badge-accent">Open to Data Science &amp; ML roles</span>
+    <div class="rpc-hero-copy">
+      <p class="rpc-hero-kicker">Ricardo Pérez Castillo · Data Scientist</p>
+      <div class="rpc-hero-name" aria-hidden="true">I build models and the tools that let people try them.</div>
+      <p class="rpc-hero-blurb">I’m a data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. I like taking analysis past the notebook—into interactive tools, reproducible evaluations, and products people can actually use.</p>
+      <div class="rpc-hero-actions">
+        <a class="rpc-button rpc-button-primary" href="#selected-work">Explore selected work</a>
+        <a class="rpc-button rpc-button-secondary" href="projects.html">View all projects</a>
       </div>
-      <div class="rpc-hero-links">
-        <a class="rpc-hero-cta" href="projects.html">View projects</a>
-        <a href="https://www.linkedin.com/in/ricardoperezcastillo/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/ricardo-pc" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
-        <a href="mailto:ricardoperez@berkeley.edu"><i class="bi bi-envelope"></i> ricardoperez@berkeley.edu</a>
+      <div class="rpc-hero-foot">
+        <span class="rpc-availability"><span aria-hidden="true"></span> Open to data science and applied ML roles</span>
+        <a href="mailto:ricardoperez@berkeley.edu">Email</a>
+        <a href="https://www.linkedin.com/in/ricardoperezcastillo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/ricardo-pc" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
+    <figure class="rpc-hero-portrait">
+      <img src="RJ1_5539.jpg" alt="Portrait of Ricardo Pérez Castillo" width="420" height="520">
+      <figcaption>Statistics, product thinking, and enough engineering to make the demo real.</figcaption>
+    </figure>
   </div>
 </div>
 ```
 
 ::: {.rpc-body}
 
-## Featured Projects
+## Selected work {#selected-work}
 
-:::: {.grid}
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h3 class="card-title">MutationRx: Deciding Which Docking Hits to Believe</h3>
-<p class="card-text text-muted small">Built with Claude: Life Sciences (Anthropic × Gladstone) · FastAPI · Docking · MCP</p>
-<p class="card-text">A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor's wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts.</p>
-<p><a href="posts/mutationrx/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h3 class="card-title">VouchNet: A Trust Layer for AI Agents</h3>
-<p class="card-text text-muted small">NANDAHack (MIT Media Lab) · Bayesian Inference · TrustRank · FastAPI</p>
-<p class="card-text">A reputation service where buying your way to the top does not work. Ten fake accounts move a star average by a full star. They move VouchNet's trust score by six hundredths of one.</p>
-<p><a href="posts/vouchnet/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h3 class="card-title">Otomedi: Multi-Agent Healthcare Automation</h3>
-<p class="card-text text-muted small">UC Berkeley AI Hackathon · Claude API · FastAPI · Next.js</p>
-<p class="card-text">A multi-agent pipeline that turns missed clinic voicemails into one-click approvals: Claude-powered agents parse, verify, and propose actions while a healthcare worker keeps final sign-off on everything clinical.</p>
-<p><a href="posts/otomedi/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h3 class="card-title">Bayesian Optimization from Scratch</h3>
-<p class="card-text text-muted small">STAT 238 · Gaussian Processes · Python · Machine Learning</p>
-<p class="card-text">A Gaussian Process surrogate and Expected Improvement acquisition built without hyperopt or optuna, then used to tune two other projects on this site: +8.3% NDCG on a recommender and +3.6% on a classifier threshold.</p>
-<p><a href="posts/bayesian-optimization/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h3 class="card-title">What Makes a Headline Work? Lessons from 55,000 Tested Headlines</h3>
-<p class="card-text text-muted small">STAT 230A · Python · Statistical Computing · NLP</p>
-<p class="card-text">Regression analysis of 54,956 Upworthy headline variants reveals that exclamation marks destroy engagement while numeric openings quietly win, with cluster-robust inference to match the nested A/B test structure.</p>
-<p><a href="posts/upworthy-ab-testing/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h3 class="card-title">PECARN Traumatic Brain Injury Analysis</h3>
-<p class="card-text text-muted small">STAT 214 · Bayesian Inference · Machine Learning · Python</p>
-<p class="card-text">On 43,399 pediatric head trauma patients, a random forest cuts unnecessary CT scans by 63% against the standard Kuppermann clinical rule while holding the same 84.2% sensitivity.</p>
-<p><a href="posts/stat214-lab1/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-<div class="card h-100 rpc-card">
-<div class="card-body">
-<h3 class="card-title">Cloud or Ice: Arctic Cloud Detection from Satellite Imagery</h3>
-<p class="card-text text-muted small">STAT 214 · NASA MISR · Data Quality · Machine Learning</p>
-<p class="card-text">Pixel-level cloud classification where clouds and sea ice are equally bright and cold. The headline 0.996 AUC drops to 0.89 depending on which orbit is held out — the real finding is a data-quality audit, not the leaderboard.</p>
-<p><a href="posts/arctic-cloud-detection/index.html" class="rpc-card-link">View project →</a></p>
-</div>
-</div>
-:::
-
-::::
+The projects I would start with. Each one has something you can inspect, challenge, or try for yourself.
 
 ```{=html}
-<p class="rpc-see-all"><a href="projects.html">See all projects →</a></p>
-```
-
----
-
-## Skills
-
-```{=html}
-<div class="rpc-skills-grid">
-  <div class="rpc-skill-group">
-    <span class="rpc-skill-label">Analytics &amp; ML</span>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">A/B Testing</span>
-      <span class="rpc-pill">Experimentation Design</span>
-      <span class="rpc-pill">Statistical Inference</span>
-      <span class="rpc-pill">Causal Inference</span>
-      <span class="rpc-pill">Bayesian Inference</span>
-      <span class="rpc-pill">Bayesian Optimization</span>
-      <span class="rpc-pill">Forecasting</span>
-      <span class="rpc-pill">Regression</span>
-      <span class="rpc-pill">Classification</span>
-      <span class="rpc-pill">Clustering</span>
-      <span class="rpc-pill">NLP</span>
-      <span class="rpc-pill">LLMs</span>
-      <span class="rpc-pill">Recommendation Systems</span>
-      <span class="rpc-pill">Feature Engineering</span>
+<div class="rpc-featured-grid">
+  <article class="rpc-work-card rpc-work-card-lead">
+    <a class="rpc-work-image" href="posts/upworthy-ab-testing/index.html" aria-label="Read the Upworthy headline analysis case study">
+      <img src="posts/upworthy-ab-testing/coefficients.png" alt="Coefficient chart from the Upworthy headline analysis" loading="lazy">
+    </a>
+    <div class="rpc-work-copy">
+      <p class="rpc-work-type">Lead case study · Interactive</p>
+      <h3>What Makes a Headline Work?</h3>
+      <p>Using 54,956 headline variants from 11,649 A/B tests, I found which writing choices consistently changed click-through rate—and which apparent findings disappeared once the uncertainty was estimated correctly.</p>
+      <p class="rpc-work-result"><strong>Result:</strong> ten stable signals, one false positive caught, and an interactive version built from the fitted model.</p>
+      <div class="rpc-work-links">
+        <a href="posts/upworthy-ab-testing/index.html">Read case study →</a>
+        <a href="https://ricardo-pc.github.io/A-B-testing-analysis-upworthy/" target="_blank" rel="noopener noreferrer">Try the interactive analysis ↗</a>
+      </div>
     </div>
-  </div>
-  <div class="rpc-skill-group">
-    <span class="rpc-skill-label">Programming &amp; Data</span>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Python</span>
-      <span class="rpc-pill">pandas</span>
-      <span class="rpc-pill">NumPy</span>
-      <span class="rpc-pill">scikit-learn</span>
-      <span class="rpc-pill">statsmodels</span>
-      <span class="rpc-pill">PyTorch</span>
-      <span class="rpc-pill">spaCy</span>
-      <span class="rpc-pill">R</span>
-      <span class="rpc-pill">SQL</span>
-      <span class="rpc-pill">Snowflake</span>
-      <span class="rpc-pill">dbt</span>
-      <span class="rpc-pill">Microsoft SQL Server</span>
-      <span class="rpc-pill">PostgreSQL</span>
-      <span class="rpc-pill">AWS S3</span>
-      <span class="rpc-pill">ETL</span>
-      <span class="rpc-pill">Dimensional Modeling</span>
+  </article>
+
+  <article class="rpc-work-card">
+    <a class="rpc-work-image" href="posts/mutationrx/index.html" aria-label="Read the MutationRx case study">
+      <img src="posts/mutationrx/mutationrx_app.png" alt="MutationRx workspace showing mutation-aware docking results" loading="lazy">
+    </a>
+    <div class="rpc-work-copy">
+      <p class="rpc-work-type">Applied AI · Live app</p>
+      <h3>MutationRx</h3>
+      <p>A resistance-aware drug-repurposing tool that combines docking, uncertainty estimates, and grounded review to help researchers decide which computational hits are worth testing.</p>
+      <div class="rpc-work-links">
+        <a href="posts/mutationrx/index.html">Case study →</a>
+        <a href="https://mutationrx.onrender.com" target="_blank" rel="noopener noreferrer">Open app ↗</a>
+      </div>
     </div>
-  </div>
-  <div class="rpc-skill-group">
-    <span class="rpc-skill-label">BI &amp; Infrastructure</span>
-    <div class="rpc-skill-pills">
-      <span class="rpc-pill">Tableau</span>
-      <span class="rpc-pill">Power BI</span>
-      <span class="rpc-pill">GCP</span>
-      <span class="rpc-pill">Git</span>
-      <span class="rpc-pill">GitHub Actions</span>
-      <span class="rpc-pill">REST APIs</span>
-      <span class="rpc-pill">SnapLogic</span>
-      <span class="rpc-pill">Claude API</span>
-      <span class="rpc-pill">MCP</span>
-      <span class="rpc-pill">Multi-Agent Systems</span>
+  </article>
+
+  <article class="rpc-work-card">
+    <a class="rpc-work-image" href="posts/otomedi/index.html" aria-label="Read the Otomedi case study">
+      <img src="posts/otomedi/otomedic_graphic.png" alt="Otomedi healthcare workflow" loading="lazy">
+    </a>
+    <div class="rpc-work-copy">
+      <p class="rpc-work-type">AI systems · Interactive demo</p>
+      <h3>Otomedi</h3>
+      <p>A multi-agent workflow that turns missed clinic voicemails into reviewed actions, with deterministic checks and a human owning every clinical write.</p>
+      <div class="rpc-work-links">
+        <a href="posts/otomedi/index.html">Case study →</a>
+        <a href="https://otomedi.vercel.app/demo" target="_blank" rel="noopener noreferrer">Run the demo ↗</a>
+      </div>
     </div>
-  </div>
+  </article>
+
+  <article class="rpc-work-card">
+    <a class="rpc-work-image" href="posts/arctic-cloud-detection/index.html" aria-label="Read the Arctic cloud detection case study">
+      <img src="posts/arctic-cloud-detection/spatial_errors.png" alt="Spatial error map from the Arctic cloud detector" loading="lazy">
+    </a>
+    <div class="rpc-work-copy">
+      <p class="rpc-work-type">Applied ML · Interactive</p>
+      <h3>Cloud or Ice?</h3>
+      <p>A pixel-level cloud detector whose 0.996 AUC fell to 0.89 on a different orbit. The useful result was understanding why—and making that failure explorable.</p>
+      <div class="rpc-work-links">
+        <a href="posts/arctic-cloud-detection/index.html">Case study →</a>
+        <a href="https://ricardo-pc.github.io/arctic-cloud-detection/" target="_blank" rel="noopener noreferrer">Explore the detector ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="rpc-work-card">
+    <a class="rpc-work-image" href="posts/cs289-ranking/index.html" aria-label="Read the recommender systems case study">
+      <img src="posts/cs289-ranking/sparsity_results.png" alt="Performance comparison across recommender systems and sparsity levels" loading="lazy">
+    </a>
+    <div class="rpc-work-copy">
+      <p class="rpc-work-type">Machine learning · Interactive</p>
+      <h3>When Does Ranking Help?</h3>
+      <p>Three recommender systems, five sparsity levels, and a result that favored the simplest model. The interactive version lets you change the data density and test the models yourself.</p>
+      <div class="rpc-work-links">
+        <a href="posts/cs289-ranking/index.html">Case study →</a>
+        <a href="https://ricardo-pc.github.io/cs289-ranking/" target="_blank" rel="noopener noreferrer">Try the recommender ↗</a>
+      </div>
+    </div>
+  </article>
 </div>
 ```
 
----
-
-## Education
-
 ```{=html}
-<div class="rpc-entries">
-
-  <div class="rpc-entry">
-    <div class="rpc-entry-header">
-      <span class="rpc-entry-org">University of California, Berkeley</span>
-      <span class="rpc-entry-date">Aug 2025 – May 2026</span>
-    </div>
-    <div class="rpc-entry-sub">M.A. in Statistics &nbsp;·&nbsp; Berkeley, CA</div>
-    <div class="rpc-entry-note"><a href="coursework.html">View coursework →</a></div>
-  </div>
-
-  <div class="rpc-entry">
-    <div class="rpc-entry-header">
-      <span class="rpc-entry-org">Tecnológico de Monterrey, Campus Monterrey</span>
-      <span class="rpc-entry-date">Jan 2015 – Dec 2019</span>
-    </div>
-    <div class="rpc-entry-sub">B.S. in Chemical Engineering &nbsp;·&nbsp; Monterrey, México</div>
-  </div>
-
-</div>
+<p class="rpc-see-all"><a href="projects.html">Browse all twelve projects →</a></p>
 ```
 
----
+## What I work on
+
+```{=html}
+<div class="rpc-capabilities">
+  <div class="rpc-capability">
+    <span>01</span>
+    <h3>Experimentation &amp; statistics</h3>
+    <p>A/B testing, regression, Bayesian methods, causal inference, and the unglamorous checks that keep a result honest.</p>
+  </div>
+  <div class="rpc-capability">
+    <span>02</span>
+    <h3>Applied machine learning</h3>
+    <p>Classification, NLP, recommenders, forecasting, and model evaluation under real data constraints.</p>
+  </div>
+  <div class="rpc-capability">
+    <span>03</span>
+    <h3>AI products &amp; data systems</h3>
+    <p>Agent workflows, human review boundaries, APIs, data pipelines, and interfaces that make the model usable.</p>
+  </div>
+</div>
+<p class="rpc-tool-line"><strong>Tools I reach for:</strong> Python, SQL, R, scikit-learn, PyTorch, FastAPI, Postgres, dbt, Snowflake, GCP, and GitHub Actions.</p>
+```
+
+## About {#about}
+
+```{=html}
+<div class="rpc-about-grid">
+  <p class="rpc-about-lead">Most of my projects start with a concrete question, not a model.</p>
+  <div>
+    <p>I enjoy the full path from messy data and model design to the interface or system that makes the result useful. That is why several projects here include an interactive version alongside the technical write-up.</p>
+    <p>I spent more than four years at McKinsey and Deloitte working across data engineering, analytics, and consulting before completing the M.A. in Statistics at UC Berkeley.</p>
+  </div>
+</div>
+```
 
 ## Experience
 
 ```{=html}
 <div class="rpc-entries">
-
   <div class="rpc-entry">
     <div class="rpc-entry-header">
       <span class="rpc-entry-org">McKinsey &amp; Company</span>
       <span class="rpc-entry-date">Jul 2022 – Jul 2025</span>
     </div>
-    <div class="rpc-entry-sub">Data Engineer / Data Analyst / Consultant &nbsp;·&nbsp; San Pedro Garza García, México</div>
+    <div class="rpc-entry-sub">Data Engineer / Data Analyst / Consultant</div>
   </div>
-
   <div class="rpc-entry">
     <div class="rpc-entry-header">
       <span class="rpc-entry-org">Deloitte</span>
       <span class="rpc-entry-date">Jan 2021 – Jun 2022</span>
     </div>
-    <div class="rpc-entry-sub">Consulting Analyst &nbsp;·&nbsp; Monterrey, México</div>
+    <div class="rpc-entry-sub">Consulting Analyst</div>
   </div>
+</div>
+```
 
+## Education
+
+```{=html}
+<div class="rpc-entries">
+  <div class="rpc-entry">
+    <div class="rpc-entry-header">
+      <span class="rpc-entry-org">University of California, Berkeley</span>
+      <span class="rpc-entry-date">Aug 2025 – May 2026</span>
+    </div>
+    <div class="rpc-entry-sub">M.A. in Statistics</div>
+    <div class="rpc-entry-note"><a href="coursework.html">View coursework →</a></div>
+  </div>
+  <div class="rpc-entry">
+    <div class="rpc-entry-header">
+      <span class="rpc-entry-org">Tecnológico de Monterrey</span>
+      <span class="rpc-entry-date">Jan 2015 – Dec 2019</span>
+    </div>
+    <div class="rpc-entry-sub">B.S. in Chemical Engineering</div>
+  </div>
+</div>
+```
+
+## Let’s talk {#contact}
+
+```{=html}
+<div class="rpc-contact-block">
+  <p>I’m open to data science and applied ML roles. If the work here connects with something your team is building, I’d be glad to talk.</p>
+  <div class="rpc-contact-links">
+    <a href="mailto:ricardoperez@berkeley.edu">ricardoperez@berkeley.edu</a>
+    <a href="https://www.linkedin.com/in/ricardoperezcastillo/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <a href="https://github.com/ricardo-pc" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </div>
 </div>
 ```
 

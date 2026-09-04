@@ -3,6 +3,7 @@ title: "Digital Water: Forecasting the Water Supply That Later Ran Out"
 description: "An LSTM forecasting platform for Monterrey's water demand and dam capacity, built in 2020. It took 2nd place globally at the Atos IT Challenge, and the shortfall scenario it was designed to flag arrived in 2022."
 author: "Ricardo Pérez Castillo"
 date: "2020-08-01"
+priority: 12
 categories: [Machine Learning, Deep Learning, Data Engineering]
 ---
 

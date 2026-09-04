@@ -4,6 +4,7 @@ description: "A multi-agent pipeline that turns missed clinic voicemails into on
 author: "Ricardo Pérez Castillo"
 date: "2026-06-21"
 date-modified: "2026-08-09"
+priority: 3
 categories: [AI Agents, Software Engineering, Life Sciences]
 image: otomedic_graphic.png
 ---

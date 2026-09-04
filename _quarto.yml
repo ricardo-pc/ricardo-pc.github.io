@@ -10,7 +10,7 @@ project:
 
 website:
   title: "Ricardo Pérez Castillo"
-  description: "Data scientist with 4+ years at McKinsey and Deloitte and an M.A. in Statistics from UC Berkeley. Projects in AI agents, machine learning, and applied statistics."
+  description: "Data scientist building interactive projects across experimentation, applied machine learning, and AI systems."
   site-url: https://ricardo-pc.github.io
   favicon: favicon.svg
   # Root-relative: a bare filename would be resolved against each post's own
@@ -26,14 +26,14 @@ website:
     type: express
     style: simple
     palette: light
+  search: false
   navbar:
+    title: "Ricardo P. Castillo"
     left:
-      - href: index.qmd
-        text: Home
       - href: projects.qmd
-        text: Projects
-      - href: coursework.qmd
-        text: Coursework
+        text: Work
+      - href: index.qmd#about
+        text: About
     right:
       - icon: github
         href: https://github.com/ricardo-pc
@@ -41,6 +41,9 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/ricardoperezcastillo/
         aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:ricardoperez@berkeley.edu
+        aria-label: Email
   page-footer:
     left: "© 2026 Ricardo Pérez Castillo"
     right:
@@ -66,4 +69,4 @@ format:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">

@@ -2,16 +2,16 @@
   {
     "listing": "/projects.html",
     "items": [
-      "/posts/stat214-lab3/index.html",
-      "/posts/arctic-cloud-detection/index.html",
-      "/posts/vouchnet/index.html",
+      "/posts/upworthy-ab-testing/index.html",
       "/posts/mutationrx/index.html",
       "/posts/otomedi/index.html",
-      "/posts/bayesian-optimization/index.html",
+      "/posts/arctic-cloud-detection/index.html",
       "/posts/cs289-ranking/index.html",
-      "/posts/upworthy-ab-testing/index.html",
-      "/posts/berkeley-grocery-tracker/index.html",
+      "/posts/bayesian-optimization/index.html",
+      "/posts/stat214-lab3/index.html",
       "/posts/stat214-lab1/index.html",
+      "/posts/berkeley-grocery-tracker/index.html",
+      "/posts/vouchnet/index.html",
       "/posts/genetic-algorithm/index.html",
       "/posts/digital-water/index.html"
     ]

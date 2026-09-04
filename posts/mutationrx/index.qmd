@@ -1,8 +1,9 @@
 ---
 title: "MutationRx: Deciding Which Docking Hits to Believe"
-description: "A resistance-aware drug-repurposing triage tool: it docks approved drugs against a tumor's wild-type and mutant protein, then has Claude review each hit for mechanistic plausibility, separating real leads from coincidental docking artifacts."
+description: "A resistance-aware drug-repurposing tool that combines docking, uncertainty estimates, and grounded mechanistic review to help researchers decide which computational hits are worth testing."
 author: "Ricardo Pérez Castillo"
 date: "2026-07-13"
+priority: 2
 categories: [AI Agents, Bayesian Inference, Life Sciences]
 image: mutationrx_app.png
 ---
@@ -10,7 +11,7 @@ image: mutationrx_app.png
 ::: {.callout-note appearance="simple" icon=false}
 ## Project Overview
 
-A mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor's driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and then has Claude review every hit for mechanistic plausibility, separating believable leads from coincidental docking scores.
+A mutation-aware drug-repurposing triage tool for translational-oncology researchers. For a tumor's driver mutation it docks a panel of approved drugs against the wild-type and mutant protein, quantifies each binding shift with a 95% credible interval, and combines the result with grounded mechanistic evidence so researchers can separate believable leads from coincidental docking scores.
 
 Event: Built with Claude: Life Sciences (Anthropic × Gladstone Institutes), Builder track · July 2026 · Stack: Python, FastAPI, Claude (Agent SDK + API), DiffDock + gnina docking, Bayesian bootstrap, MCP
 
@@ -29,11 +30,11 @@ Computational docking can rank candidates cheaply, but it has a fatal flaw for t
 
 The design thesis is one line:
 
-> **The docking finds candidates. Claude decides which to believe.**
+> **Docking proposes candidates. Grounded review helps researchers decide what to test.**
 
 For a tumor's driver mutation, MutationRx docks a panel of 62 approved drugs against both the **wild-type and mutant** structure, rescores the poses, and runs a **Bayesian bootstrap over replicate docking runs** to put a 95% credible interval on each wild-type→mutant shift. Every drug lands in one of four buckets: *weakened* (resistance), *robust* (safe bet), *improved*, or *non-binder*.
 
-Then **Claude reviews each hit for mechanistic plausibility**. This is the step a script can't do: a beta-blocker that "binds" EGFR is almost certainly an artifact, while a drug whose real mechanism fits the target is worth the assay. Remove the reviewer and you are back to an untrustworthy hit list, so the reviewer is load-bearing rather than decorative.
+Then a **grounded Claude review checks each hit for mechanistic plausibility** and shows its evidence to the researcher. A beta-blocker that "binds" EGFR is almost certainly an artifact, while a drug whose real mechanism fits the target may be worth an assay. Remove that review and the interface falls back to an untrustworthy hit list; keep it visible and the researcher still owns the decision.
 
 ## Why It's Credible
 

@@ -3,6 +3,7 @@ title: "Cloud or Ice: Arctic Cloud Detection from Multi-Angle Satellite Imagery"
 description: "Pixel-level cloud classification on NASA MISR imagery, where clouds and sea ice are equally bright and equally cold. 0.996 AUC on the held-out orbit, 0.89 on a different one — and why that gap is the real result."
 author: "Ricardo Pérez Castillo"
 date: "2026-08-17"
+priority: 4
 categories: [Machine Learning, Remote Sensing, Data Engineering]
 image: spatial_errors.png
 ---

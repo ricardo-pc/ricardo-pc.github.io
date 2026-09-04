@@ -3,6 +3,7 @@ title: "What Makes a Headline Work? Lessons from 55,000 Tested Headlines"
 description: "Using 54,956 headline variants from 11,649 Upworthy A/B tests, I model which linguistic features predict click-through rate and discover that exclamation marks destroy engagement, negativity wins everywhere, and numbers quietly deliver."
 author: "Ricardo Pérez Castillo"
 date: "2026-05-27"
+priority: 1
 categories: [Experimentation, NLP, Statistical Computing]
 image: coefficients.png
 ---

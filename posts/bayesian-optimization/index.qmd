@@ -3,6 +3,7 @@ title: "Bayesian Optimization from Scratch: Tuning ML When Evaluations Are Expen
 description: "A Gaussian Process surrogate and Expected Improvement acquisition function built from scratch, validated on a synthetic benchmark and applied to two real tuning problems where evaluations cost minutes to hours of GPU time."
 author: "Ricardo Pérez Castillo"
 date: "2026-05-27"
+priority: 6
 categories: [Machine Learning, Bayesian Inference, Statistical Computing]
 image: branin_bo_snapshots.png
 ---

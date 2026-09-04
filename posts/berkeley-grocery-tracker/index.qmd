@@ -1,15 +1,16 @@
 ---
 title: "Berkeley Grocery Tracker"
-description: "A live price tracker for Trader Joe's, Whole Foods, and Safeway across Berkeley, built end-to-end with OpenAI Codex."
+description: "A live grocery price tracker across nine Berkeley-area stores, with automated collection, product matching, price history, and basket comparison."
 author: "Ricardo Pérez Castillo"
 date: "2026-04-26"
+priority: 9
 categories: [Data Engineering, Software Engineering]
 ---
 
 ::: {.callout-note appearance="simple" icon=false}
 ## Project Overview
 
-A fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe's, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. Built with OpenAI Codex, using $100 in API credits and a Pro subscription provided by OpenAI for the Codex challenge.
+A fully automated grocery price tracker covering nine Berkeley-area stores across Trader Joe's, Whole Foods, and Safeway. Scrapers run on a monthly schedule, prices land in a Postgres database, and a Next.js dashboard lets you compare items across stores and estimate basket cost. I designed the product, data model, and validation approach; Codex accelerated implementation as part of an OpenAI challenge.
 
 [Live site](https://berkeley-grocery-tracker.vercel.app/)
 :::
@@ -18,9 +19,9 @@ A fully automated grocery price tracker covering nine Berkeley-area stores acros
 
 Living in Berkeley, I noticed that grocery prices vary a lot depending on which store you go to and when. A dozen eggs at Trader Joe's and the same dozen at Whole Foods are rarely the same price, and the gap shifts over time. There was no easy way to see this data in one place, let alone track it over time or figure out which store makes the most sense for your weekly basket. I wanted to build exactly that.
 
-## Why Codex
+## The Experiment: Building with Codex
 
-OpenAI opened a challenge for developers to build with Codex, offering $100 in API credits and a Pro subscription to participants. I treated it as an opportunity to see how far an AI coding agent could take a real, multi-layer software project. The answer turned out to be: pretty far.
+OpenAI opened a challenge for developers to build with Codex. I used it to test a practical question: how much of a real, multi-layer product could I delegate while still owning the architecture and quality of the result?
 
 The entire stack was designed and built through Codex. I described what I wanted, iterated on the output, reviewed the code, and pushed forward. It was less about avoiding effort and more about compressing weeks of setup into days, without cutting corners on architecture.
 
@@ -45,9 +46,9 @@ For Trader Joe's historical pricing before the scraper launched, I filtered a pu
 
 The whole infrastructure costs $0 per month. Vercel hosts the frontend, Supabase handles the database on its free tier, and GitHub Actions runs the scrapers.
 
-## What Codex Actually Did
+## What I Owned—and What Codex Accelerated
 
-A lot. Schema design, migrations, all three scrapers, the matching pipeline, the semantic embedding stage, the web app, the dashboard UI with charts and basket logic. My role was to define the architecture, make the key design calls, review and validate every piece of output, catch edge cases, and course-correct when things drifted. Codex accelerated the implementation significantly, but the product decisions and data model were mine to own.
+I owned the product scope, architecture, data model, matching strategy, and validation decisions. Codex accelerated the implementation across migrations, scrapers, pipeline code, and the web interface. The useful distinction was not who typed each line; it was which decisions required context, tradeoffs, and verification—and those stayed with me.
 
 The most impressive part was how it kept up with schema changes across iterations. As the data model evolved, it updated migrations, scripts, and pipeline logic in sync without losing track of what had changed.
 

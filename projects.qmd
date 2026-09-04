@@ -1,16 +1,19 @@
 ---
-title: "Projects"
-description: "Twelve projects across AI agent systems, machine learning, and applied statistics. Each write-up covers what it does, what the numbers were, and where it falls short."
+title: "Selected work"
+description: "Case studies across experimentation, applied machine learning, and AI systems—ordered by what I would show first, not by publication date."
+page-layout: full
+body-classes: rpc-projects-page
+toc: false
 listing:
   contents: posts
-  sort: "date desc"
+  sort: "priority asc"
   type: grid
-  fields: [image, title, description, date, categories]
+  fields: [image, title, description, categories]
   grid-columns: 2
-  categories: true
+  categories: false
   sort-ui: false
-  filter-ui: true
-  image-height: 200px
+  filter-ui: false
+  image-height: 225px
 ---
 
-Some came out of graduate coursework at UC Berkeley, some out of hackathons, and some out of wanting to know whether an idea would hold up.
+Start with the projects you can try. The rest go deeper into the methods, experiments, and engineering decisions behind the result.

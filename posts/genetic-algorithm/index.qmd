@@ -3,6 +3,7 @@ title: "Evolutionary Feature Selection: A Genetic Algorithm Package"
 description: "Building a production-quality Python package for automated variable selection using evolutionary computation principles."
 author: "Ricardo Pérez Castillo"
 date: "2025-12-15"
+priority: 11
 categories: [Machine Learning, Statistical Computing, Software Engineering]
 ---
 
@@ -20,9 +21,9 @@ In predictive modeling, choosing the right set of variables is crucial. Too few 
 
 The assignment: build a Python package implementing genetic algorithms for variable selection that balances predictive accuracy against model complexity.
 
-## What Are Genetic Algorithms?
+## The Design
 
-Genetic algorithms mimic natural selection to solve optimization problems. Instead of evaluating every possible solution, they:
+Instead of evaluating every possible feature subset, the package searches iteratively:
 
 1. Initialize a population of random variable combinations (chromosomes)
 2. Evaluate fitness using cross-validated predictive performance
